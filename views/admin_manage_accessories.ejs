@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include includes/head-content.include.ejs %>
+		<%	include includes/icons.include.ejs %>
+		<%	include includes/css.include.ejs %>
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/js/stay_standalone.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<% include includes/header.include.ejs %>
+		<%- include("includes/navbar.include.ejs", {nav : nav})%>
+		<div id='manage_accessories' class='page page-nav'>
+			<div id="access_header">
+				<div id='change_disp' class='hide_options'>
+					<i id='show_options' class="fa fa-caret-down" aria-hidden="true"></i>
+					<i id='hide_options' class="fa fa-caret-up" aria-hidden="true"></i>
+					<div id='change_dispo'>
+						<div id='display_list'>
+							<i  class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;
+							<span id='label_disp'>Liste</span>
+						</div>
+						<span id='disp_bar' style="border-left:1px solid #D8D8D8; margin: 0 0.2%;height:95%;"></span>&nbsp;&nbsp;
+						<div id='display_block'>
+							<i class="fa fa-th" aria-hidden="true"></i>
+							<span id='label_disp'>Grille</span>
+						</div>
+					</div>
+				</div>
+				<h2 id='all_acch2'>Tous les accessoires</h2>
+			</div>
+			<img id='loading_accessories' src="/img/loading.gif"/>
+			<div id='all_accessories'></div>
+			<div id='update'>Modifier</div>
+			<div class='updating_page'>
+				<h2>Modifier l'accessoire</h2>
+					<div id='div1'>
+						<span id='change_pic'></span>
+						<input type='hidden' id='acc_aid'/>
+						<input type='text' id='update_accessory_name' value='Raspberry Pi'/>
+					</div>
+					<div id='div2'>
+						<label for="update_accessory_model">Modèle : </label>
+						<input type='text' id='update_accessory_model'/>
+						<br />
+						<label for="update_accessory_manufacturer">Fabricant : </label>
+						<input type='text' id='update_accessory_manufacturer'/>
+					</div>
+					<button id='validate_update_accessory' onclick='validate_update_accessory()'>Valider</button>
+			</div>
+			<div class='updating_pic'>
+				<h2>Sélectionner une icône</h2>
+				<div id='select_ico'></div>
+				<table id='image_chosen'>
+					<tr>
+						<td>Allumé</td>
+						<td><img src='' id='image_chosen1'/></td>
+					</tr>
+					<tr>
+						<td>Éteint</td>
+						<td><img src='' id='image_chosen2'/></td>
+					</tr>
+				</table>
+				<label for='upload_img' id='add_ico'>Importer</label>
+				<div id='update_selected_pic'>
+					<label for='upload_img' id='update_selected_pic_button'>Modifier</label>
+					<button onclick='validate_import_ico()' id='validate_import_ico'>OK</button>
+				</div>
+				<input type='file' name='files' multiple id='upload_img'/>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		var is_updating = false, //pour savoir si on est en train de modifier les accessoires
+			accesorie_editing_aid = null,
+			first_load = true, //pour savoir si l'image de chargement a deja ete cachee
+			all_accessories = {}, //stocke le tableau de tous les accessoires
+			show_actual = '#empty', //lors ce que l'on edit, pour savoir qu'elle popup cacher lorsqu'on clique a cote
+			img_correspond = 0,
+			form_display = '';//tableau faisant correspondre les identifiants des accessoires aux icones correspondantes
+	</script>
+	<script src='/js/navbar_auto.js'></script>
+	<script src='/js/accessories.js'></script>
+	<script src='/js/change_disp.js'></script>
+	<script>
+		$.getJSON( "/accessories_icon/", function(data){
+				img_correspond = data;
+				get_accessories();
+			});
+		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
+			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
+				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
+   				$(show_actual).hide(1000); //on cache le popup actuel
+			}
+		});
+	$(function(){
+		 //on recupere et on affiche les accessoires
+		var t = setInterval(get_accessories, 10000); //on initialise une boucle qui toutes les 10 sec rafraichira la liste
+		$('#update').click(function(){//si on appuie sur le bouton modifier
+			if(!is_updating){//si on est pas en cours de modification
+				is_updating = true;//on indique que l'on est en cours de modification
+				clearInterval(t);//on empeche de refraichir la liste des accessoires
+				$('.update_object').show(1000);//on fait apparaitre les boutons de modifications
+
+			}
+			else{//si on est en cours de modification
+				is_updating = false;//on indique que l'on arrete la modification
+				t = setInterval(get_accessories,10000);//on relance le rafraichissement des accessoires 
+				$('.update_object').hide(1000);//on cache les boutons de modifications
+				$(show_actual).hide(1000); //on cache le popup actuel
+			}
+
+		});
+	});
+	$('#change_pic').click(function(){//si on clique sur l'icone pour changer l'icone de l'accessoire
+		show_actual = '.updating_pic';//on indique le popup dans lequel on travaille
+		aid = $('#change_pic').attr('aid');
+			if(all_accessories[aid].state_format == 'bool'){
+$('#select_ico').html('');
+				$.each(img_correspond.bool, function(key,val){
+
+
+					if(key.indexOf(all_accessories[aid]['state']) !== -1){
+						$('#select_ico').html($('#select_ico').html() + '<img class="all_ico" onclick="select_ico(\''+val + '\' )" src="/img/icons/' + val +'"/>').promise().done(function(){
+			$('.updating_page').hide(1000);
+			$('.updating_pic').show(1000);
+				});
+					}
+				});
+			}
+		});
+function update_accessory(aid){
+show_actual = '.updating_page';
+accesorie_editing_aid = aid;
+$('#acc_aid').val(aid);
+	$('.updating_page').show(1000);
+if($('#' + aid + ' > img').length){
+$('#change_pic').html('<img src="' + $('#' + aid + ' > img').attr('src') +'"/>');
+}
+else{
+$('#change_pic').html('');
+}
+$('#change_pic').attr('aid', aid);
+$('#update_accessory_name').val($('#' + aid + ' > #accessory_name').text());
+$('#update_accessory_model').val(all_accessories[aid].model);
+$('#update_accessory_manufacturer').val(all_accessories[aid].manufacturer);
+
+}
+function select_ico(k){
+	$('.updating_page').show(1000);
+	$('#change_pic > img').attr('src', "/img/icons/" + k);
+	show_actual = '.updating_page';
+			$('.updating_pic').hide();
+}
+
+document.querySelector('#upload_img').addEventListener('change', function() {
+
+	var f = this.files;
+	for(var i = 0; i < 2; i++){
+		if (f[i].type.match('image.*')) {
+			var reader = new FileReader();
+			reader.onload = function() {
+				var image = new Image();
+				image.src = this.result;
+				image.onload = function() {
+					if(this.width > 32){
+						alert('La taille conseillée pour les icônes est un carré de 32 pixels');
+					}
+				};
+				$('#image_chosen' + (this.i + 1)).attr('src', this.result); //rfhchocuebfobcfoucbeknfi
+			};
+			reader.i = i;
+			reader.readAsDataURL(f[i]);
+		}
+	}
+		$('#image_chosen').show(1000);
+		$('#update_selected_pic').css('display', 'flex');
+		$('#add_ico').hide(1000).promise().done(function(){
+		$('#update_selected_pic').css('display', 'flex');
+		});
+});
+$('#add_ico').click(function(){
+alert('Sélectionnez d\'abord l\'image pour l\'accessoire allumé puis celle pour l\'accessoire éteint.');
+});
+function validate_import_ico(){
+
+var i = document.querySelector('#upload_img').files;
+
+
+    var form = new FormData();
+	form.append("type", all_accessories[accesorie_editing_aid].state_format);
+	form.append('file1', i[0]);
+	form.append('file2', i[1]);
+    $.ajax({
+        url: '/register_new_icon/',
+        type: 'POST',
+        success: function(data){
+			var an = JSON.parse(data);
+			if(all_accessories[accesorie_editing_aid]['state'] == 1){
+				select_ico('/' + an.icon_on);
+			}
+			else{
+				select_ico('/' + an.icon_off);
+			}
+			$.getJSON( "/accessories_icon/", function(res){
+				img_correspond = res;
+			});
+		},
+        error: function(data){alert(data);},
+        // Form data
+        data: form,
+        //Options to tell jQuery not to process data or worry about content-type.
+        cache: false,
+        contentType: false,
+        processData: false
+    });
+
+
+ 
+}
+function validate_update_accessory(){
+var icon_src = '';
+if($('#change_pic > img').length){
+icon_src = $('#change_pic > img').attr('src');
+}
+$.post('/update_accessory/', {
+		aid : accesorie_editing_aid,
+		name : $('#update_accessory_name').val(),
+		icon_on : icon_src.replace('0', '1'),
+		icon_off : icon_src.replace('1', '0'),
+		model : $('#update_accessory_model').val(),
+		manufacturer : $('#update_accessory_manufacturer').val()
+	},function(res){
+		if(res == 'error'){
+			alert("Erreur lors de la transmission. Rechargez la page et réessayez.");
+		}
+		else{
+			$('.updating_page').hide(1000);
+			$('#' + accesorie_editing_aid + ' > #accessory_name').text($('#update_accessory_name').val());
+			$('#' + accesorie_editing_aid + ' > img').attr('src', $('#change_pic > img').attr('src'));
+all_accessories[accesorie_editing_aid].icon_on = icon_src.replace('0', '1');
+all_accessories[accesorie_editing_aid].icon_off = icon_src.replace('1', '0');
+all_accessories[accesorie_editing_aid].name = $('#update_accessory_name').val();
+all_accessories[accesorie_editing_aid].model = $('#update_accessory_model').val();
+all_accessories[accesorie_editing_aid].manufacturer = $('#update_accessory_manufacturer').val();
+		}
+	});
+}
+
+	</script>
+	<% 
+		var contentL = content.length;
+		for(var u = 0; u < contentL; u++){ %>
+	<%- content[u] %>
+	<%	}
+	%>
+</html>

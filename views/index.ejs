@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include includes/head-content.include.ejs %>
+		<%	include includes/icons.include.ejs %>
+		<%	include includes/css.include.ejs %>
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/js/stay_standalone.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+	</head>
+	<body>
+		<% include includes/header.include.ejs %>
+		<div class='page' id='home_page'>
+			<div id='password_page'>
+				<div id='password_state'></div>
+				<div id='password_part'>
+					<div>
+						<button>1</button>							<button>2</button>
+						<button>3</button>
+					</div>
+					<div>
+						<button>4</button>							<button>5</button>
+						<button>6</button>
+					</div>
+					<div>
+						<button>7</button>							<button>8</button>
+						<button>9</button>
+					</div>
+					<div id='zero_button_password'>
+						<button>0</button>
+					</div>
+					<div id='delete_n'>Effacer</div>
+					<form action="/user_connect/" id='validate' method="post">
+						<input type="hidden" id='password' name="password"/>
+					</form>
+				</div>
+			</div>
+			<div id='right_block'>
+				<div id="current_time">
+					<% var d = new Date();
+						var h = d.getHours();
+						if(h < 10){
+							h = '0' + h;
+						}
+						var m = d.getMinutes();
+						if(m < 10){
+							m = '0' + m;
+						}
+					%><%= h %> : <%= m %>
+</div>
+				<div id="current_date"><%= show_date(); %></div>
+			</div>
+		</div>
+	</body>
+	<script src="/js/passcode_page.js"></script>
+</html>
+<%
+function show_date(){
+	var d = new Date(),
+	mois = ['Janvier', 'F&eacute;vrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Ao&ucirc;t', 'Septembre', 'Octobre', 'Novembre', 'D&eacute;cembre'],
+	jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+	return jours[d.getDay()] + ' ' + d.getDate() + ' ' + mois[d.getMonth()];
+}
+%>

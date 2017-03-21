@@ -1,0 +1,53 @@
+	<nav id='nav' class='small-nav'>
+		<div class="fa fa-bars" aria-hidden="true"></div>		<div class="closebtn">&times;</div>
+		<div class="fa fa-chevron-left fa-2x" id="menu-step-back" aria-hidden="true"></div>
+		<div id='menu'>
+			<div id='menu-flex'>
+<% 
+	var linksName = Object.keys(nav),
+		nbLinks = linksName.length,
+		colors = Array('not_colored','colored');
+	var nC = 0;
+	for(var u = 0; u < nbLinks; u++){
+		nC = ((nC-1) * (nC - 1));
+		if(nav[linksName[u]].is_group){
+			var id =linksName[u].toLowerCase().replace(' ','_'); %>
+			<div class='menu-button grouped-button first-menu-button <%= colors[nC] %>' act='<%= id %>'>
+				<%- nav[linksName[u]].icon %><br />
+				<%= linksName[u] %>
+			</div>
+	<%	}
+		else{ %>
+			<a href="<%- nav[linksName[u]].link %>" class="menu-button first-menu-button <%= colors[nC] %>" >
+				<%- nav[linksName[u]].icon %><br />
+				<%= linksName[u] %>
+			</a>
+	<% }
+	} %>
+</div>
+</div>
+<%
+for(var u = 0; u < nbLinks; u++){
+	if(nav[linksName[u]].is_group){
+		var id = linksName[u].toLowerCase().replace(' ','_'),
+			linksOfGroup = Object.keys(nav[linksName[u]]),
+			nbGroupedLinks = linksOfGroup.length,
+			nT = 0; %>
+			<div id="<%= id %>_group" class='group'>
+				<div id='menu-flex'>
+<%
+		for(var o = 0; o < nbGroupedLinks; o++){
+			if(linksOfGroup[o] != "is_group" && linksOfGroup[o] != "icon"){ %>
+			<a href="<%- nav[linksName[u]][linksOfGroup[o]].link %>" class="menu-button <%= colors[nT] %>" >
+				<%- nav[linksName[u]][linksOfGroup[o]].icon %><br />
+				<%= linksOfGroup[o] %>
+			</a>
+				<%	nT = ((nT-1) * (nT - 1));			} 
+		} %>
+</div>
+</div>
+<%
+	}
+}
+%>
+</nav>

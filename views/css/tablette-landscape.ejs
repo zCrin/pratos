@@ -1,0 +1,519 @@
+<%
+	var green = "#9AFE2E";
+	var global_color = green;
+%>
+header{
+	max-width: 100%;
+	height: 15%;
+	background-color: black;
+	padding: 1%;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+/* height final 17% */
+}
+header h1{
+	margin: 0;
+	font-family: San Francisco;
+	font-weight: 400;
+	font-size: 260%;
+}
+header img{
+	width: auto;
+	height : 13vh;
+}
+h2{
+	margin:0;
+	font-family: San Francisco;
+	font-weight: 300;
+	font-size: 160%;
+	color: <%= global_color %>;
+	text-align: center;
+}
+.page{
+	height: 83%;
+width:100%;
+}
+.page-nav{
+	 height: 74.5%; 
+/*Page with a navbar */
+
+}
+#nav{
+		padding: 0% 4%;
+}
+.small-nav{
+display: flex;
+	height: 8%;
+flex-direction: column;
+  justify-content: center; /* alignement vertical */
+    text-align: left;
+}
+/* height final 8% */
+#nav .fa-bars{
+	font-size: 180%;
+	display: block;
+}
+#nav .closebtn{
+	font-size: 260%;
+	color: white;
+	display: none;
+}
+#menu, .group{
+	display: none;
+	padding: 2%;
+}
+#menu-flex{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+  	transition: all 2s linear;
+}
+#menu a, 	.group a{
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+#menu-step-back{
+	font-size: 140%;
+	color: white;
+	display: none;
+}
+.menu-button{
+	border-radius: 15px;
+	text-align: center;
+	font-family: San Francisco;
+	font-weight: 300;
+	font-size: 120%;
+	padding-top: 8vh;
+	height: 14vh;
+	width: 25vh;
+	margin-top: 5%;
+	margin-left: 1%;
+  	transition: all 2s linear;
+	flex-direction: row;
+}
+#nav .not_colored{
+	border: 2px solid white;
+	color: white;
+}	
+#nav .colored{
+	border: 2px solid <%= global_color %>;
+	color: <%= global_color %>;
+}
+.full-nav{
+	border-top: solid <%= global_color %> 1px;
+	background-color: black;
+	min-height: 82.5%;
+display: block;
+
+}
+.full-nav .closebtn, .full-nav #menu-step-back{
+margin-top: 4%;
+}
+/*Specific*/
+
+/* --Beginning Of Password Page-- */
+.menu-button{
+	cursor: pointer;
+}
+#home_page{
+display: flex;
+    	justify-content: center;
+    	align-items: center;
+
+justify-content: space-around;
+}
+	#password_page{
+		display: flex;
+
+    	justify-content: center;
+    	align-items: center;
+    	flex-direction: column;
+height: 100%;
+overflow: hidden;
+
+width: 50%;
+	}
+	#password_page button{
+		display: block;
+		font-size: 3.1em;
+		color: grey;
+		background: 0;
+		opacity: 1;
+		border-radius: 50%;
+		padding: 1%;
+		height: 1.6em;
+		width: 1.9em;
+		font-weight: 200;
+		margin: 3%;
+		border: 1px solid  <%= global_color %>;
+		-webkit-tap-highlight-color:  <%= global_color %>;
+	}
+	#password_part div{
+		display: flex;
+		justify-content: space-around;
+	}
+	#password_state{
+		height: 3vh;
+		margin-top: 3%;
+		margin-bottom: 3%;
+		color: #D8D8D8;
+		text-align: center;
+		justify-content: space-around;
+	}
+	#zero_button_password button{
+		height: 1.6em;
+		width: 1.6em;
+	}
+	#delete_n{
+		color: #D8D8D8;
+		display: inline-block;
+		margin-left: 10em;
+		position: relative;
+		top: -7vh;
+	}
+	#right_block{
+height: 94%;
+
+
+	}
+#right_block #current_time{
+font-family: San Francisco;
+		font-weight: 200;
+		font-size: 4.5em;
+text-align: center;
+margin-top: 25%;
+color: <%= global_color %>;
+}
+#right_block #current_date{
+font-family: San Francisco;
+		font-weight: 200;
+		font-size: 1.8em;
+text-align: center;
+margin-top: 8%;
+color: #D8D8D8;
+}
+/* --End Of Password Page-- */
+/* --Beginning Of manage_acesssories-- */
+#manage_accessories{
+position: relative;
+}
+#access_header{
+	margin: 3%;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+width: 96%;
+margin: 2%;
+background-color: white;
+}
+#access_header #change_disp{
+padding: 0.5%;
+border: 1px solid #D8D8D8;
+color: #D8D8D8;
+font-size: 120%;
+border-radius: 7px;
+background-color: white;
+text-align: center;
+width: 12%;
+}
+#change_dispo{
+display: block;
+padding: 1%;
+}
+.show_options{
+display: block;
+
+
+
+}
+
+#hide_options, #show_options{
+display: none;
+}
+#disp_bar, #display_list, #display_block{
+display: inline;
+}
+#display_list span, #display_block span{
+display: none;
+}
+#loading_accessories{
+display: block;
+margin: 8% auto;
+}
+#all_accessories{
+
+
+display: flex;
+	   margin : 8% auto 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+max-width: 100vw;
+
+
+}
+.accessory-buttons{
+border-radius: 15px;
+	border: 1px solid #D8D8D8;
+	color: #D8D8D8;
+	padding: 3%;
+	font-size: 120%;
+	text-align: center;
+	font-family: San Francisco;
+	font-weight: 300;
+	margin: 1% 3% 1% 3%;
+	width: 12%;
+	min-height: 12vh;
+	display: flex;
+flex-direction: column;
+    justify-content: center;
+
+}
+.accessory-buttons img{
+display: block;
+margin: 10% auto 3% auto;
+height: 70%;
+width:auto;
+}
+.accessory-buttons div{
+font-size: 120%;
+font-weight: 400;
+}
+.accessory_on{
+
+	border: 1px solid <%= global_color %>;
+	color: <%= global_color %>;
+	
+}
+.accessory-buttons_list{
+width: 88%;
+padding: 1% 1%;
+margin: 2% auto 1% auto;
+flex-direction: row-reverse;
+justify-content: space-between;
+border-radius: 6px;
+min-height: initial;
+}
+		#update{
+			background: 0;
+			border: 1px solid #D8D8D8;
+text-align: center;
+display: none;
+	color: #D8D8D8;
+	padding: 1.5%;
+	font-size: 90%;
+border-radius: 15px;
+margin: 5% auto;
+ 
+
+		}
+.updating_page, .updating_pic{
+position: absolute;
+  top: 0;
+  left: 50%;
+display: none;
+z-index: 99;
+background-color: white;
+border: 2px ;
+    transform: translate(-50%);
+width: 96%;
+margin: 0 auto;
+box-shadow: 0 0 0 100vh rgba(0,0,0,.5); 
+ 
+}
+
+.updating_page h2, .updating_pic h2{
+margin: 2% auto;
+}
+label, *[onclick]{
+
+ -webkit-tap-highlight-color: #9AFE2E;
+}
+input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+border-radius:0;border:1px  <%= global_color %> solid;
+	text-align:center;
+	
+	
+	font-family: San Francisco;
+	font-weight:200;padding:1%; 
+}
+#update_accessory_name{
+
+width: 40%;
+}
+#update_accessory_name, #update_accessory_model, #update_accessory_manufacturer{
+border:0;
+display: inline-block;
+
+vertical-align: middle;
+
+font-size: 140%;
+}
+#access_header i, .fa-pencil{
+color: <%= global_color %>;
+}
+#all_acch2{
+margin: 0 3%;
+}
+
+#upload_img{
+display: none;
+}
+
+.update_object{
+color: #D8D8D8;
+display: none;
+}
+
+#validate_import_ico, #validate_update_accessory, #update_selected_pic_button, #add_ico{
+background: 0;
+			border: 1px solid #D8D8D8;
+text-align: center;
+display: table;
+	color: #D8D8D8;
+	padding: 1%;
+	font-size: 90%;
+border-radius: 15px;
+
+margin: 2% auto ;
+}
+.updating_page div {
+
+margin: 1% auto;
+text-align: center;
+
+
+}
+#div1 #change_pic{
+margin-right:2%;
+display: inline-block;
+vertical-align: middle;
+}
+#select_ico{
+	display: flex;
+	justify-content: space-around;
+	margin: 3% auto;
+}
+#update_selected_pic{
+	display: none;
+	justify-content: space-around;
+	width: 50%;
+	margin: 2% auto;
+}
+#image_chosen1, #image_chosen2{
+max-height: 32px;
+max-width: 32px;
+
+}
+#image_chosen{
+text-align: center;
+display: none;
+margin: 1% auto;
+width: 75%;
+}
+#image_chosen td{
+width: 50%;
+}
+.updating_page label{
+color: <%= global_color %>;
+}
+/* --End Of manage_acesssories-- */
+/* --Beginning Of allow_device and unallow_device-- */
+p{
+			font-weight: 200;
+			text-align: center;
+			color: #D8D8D8;
+padding: 1%;
+		}
+		#add_device{
+			width: 15%;
+			color: <%= global_color %>;
+			text-decoration: none;
+			border: 1px <%= global_color %> solid;
+			padding: 1% 2%;
+			margin: 8% auto;
+			font-size: 140%;
+			font-weight: 400;
+			text-align: center;
+display: block;
+		}
+/* -- End Of allow_device and unallow_device-- */
+#debanpopup table{
+
+width: 94%;
+margin: 2% auto;
+}
+#debanpopup table td {
+padding: 1% 0;
+border: 1px solid #D8D8D8;
+width: 33%;
+
+}
+#validate_ban, .popup button{
+background: 0;
+			border: 1px solid #D8D8D8;
+text-align: center;
+display: table;
+	color: #D8D8D8;
+	padding: 1% 3%;
+	font-size: 90%;
+border-radius: 15px;
+
+margin: 2% auto ;
+}
+		#banUnban_buttonBlock{
+			display: flex;
+			justify-content: space-around;
+			
+			margin: 6% auto 0 auto;
+
+		}
+		#banUnban_buttonBlock button{
+
+			color: <%= global_color %>;
+			text-decoration: none;
+			border: 1px <%= global_color %> solid;
+			font-size: 120%;
+			font-weight: 400;
+			text-align: center;
+		}
+input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+border-radius:0;border:1px  #D8D8D8 solid;
+	text-align:center;
+	
+	
+	font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 100%;
+}
+		.popup{
+position: absolute;
+  top: 0;
+  left: 50%;
+display: none;
+z-index: 99;
+background-color: white;
+border: 2px ;
+    transform: translate(-50%);
+width: 94%;
+margin: 0 auto;
+box-shadow: 0 0 0 100vh rgba(0,0,0,.5); 
+ padding: 1%;
+text-align: center;
+}
+		.popup h2{
+margin-bottom: 3%;
+}
+label{
+border:0;
+display: inline-block;
+color: #D8D8D8;
+vertical-align: middle;
+
+font-size: 100%;
+}
+#manage_ban{
+position: absolute;
+}

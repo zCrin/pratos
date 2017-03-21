@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include includes/head-content.include.ejs %>
+		<%	include includes/icons.include.ejs %>
+		<%	include includes/css.include.ejs %>
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/js/stay_standalone.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<% include includes/header.include.ejs %>
+		<%- include("includes/navbar.include.ejs", {nav : nav})%>
+		<div id='manage_ban' class='page page-nav'>
+		<h2>Bannir, Débannir</h2>
+		<p>Bannir ou débannir une adresse IP. <br />
+			Elle ne pourra plus se connecter à Prometheus</p>
+		<div id='banUnban_buttonBlock'>
+			<button id="bannir">Bannir</button> <button id="debannir">Débannir</button>
+		</div>
+		<div id='banpopup' class='popup'>
+			<h2>Bannir</h2>
+			<label for='ipInput'>Adresse IP </label>
+			<input type='text' placeholder='ex : 82.456.9.0' id='ip_toBan'/>
+					<button onclick='validate_ban()' id='validate_ban'>Bannir</button>
+		</div>
+		<div id='debanpopup' class='popup'>
+			<h2>Débannir</h2>
+			<table>
+				<thead>
+					<tr>
+						<td>IP</td>
+						<td>Infos</td>
+						<td>Débannir</td>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</body>
+	<script src='/js/navbar_auto.js'></script>
+<script>
+var show_actual;
+		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
+			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
+				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
+   				$('.popup').each(function(){
+					$(show_actual).hide(1000);
+});//on cache le popup actuel
+			}
+		});
+$('#bannir').click(function(){
+show_actual = '#banpopup';
+$('#banpopup').show(1000);
+});
+$('#debannir').click(function(){
+show_actual = '#debanpopup';
+$('tbody').html('');
+$.getJSON('/get_banned_ip/', function(data){
+$.each(data, function(key, val){
+$('tbody').append('<tr><td>' + key + '</td><td>' + val + '</td><td><button onClick="unban(\'' + key + '\')">Débannir</button></td></tr>');
+});
+$('#debanpopup').show(1000);
+});
+});
+function validate_ban(){
+	$.post('/ban_ip/', { ip : $('#ip_toBan').val() }, function(data){
+if(data != "true"){
+alert('Erreur');}
+else{
+$('#banpopup').hide(1000);
+}
+});
+}
+function unban(ipt){
+	$.post('/unban_ip/', { ip : ipt }, function(data){
+		if(data != "true"){
+alert('Erreur');}
+else{
+$('#debanpopup').hide(1000);
+}
+});
+}
+</script>
+	<% 
+		var contentL = content.length;
+		for(var u = 0; u < contentL; u++){ %>
+	<%- content[u] %>
+	<%	}
+	%>
+</html>
