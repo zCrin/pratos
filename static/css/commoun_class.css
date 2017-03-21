@@ -1,0 +1,52 @@
+.align_middle{
+	display: inline-block;
+	vertical-align: middle;
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("fonts/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("fonts/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("fonts/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("fonts/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("fonts/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("fonts/sanfranciscodisplay-bold-webfont.woff");
+}
+html,body{
+	width:100%;
+	margin: 0;
+	height:100%;
+	font-family: Arial;
+
+ -webkit-tap-highlight-color: transparent;
+}
