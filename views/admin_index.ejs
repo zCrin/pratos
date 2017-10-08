@@ -8,17 +8,108 @@
 		<script src="/js/stay_standalone.js"></script>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
 		<% include includes/header.include.ejs %>
 		<%- include("includes/navbar.include.ejs", {nav : nav})%>
 		<div class='page page-nav'>
-			<h2>Bienvenu</h2>
-			<img id='loading_accessories' src="/img/loading.gif"/>
+			<h2>Bienvenue</h2>
+			<div id='admin_index_page'></div>
 		</div>
+<div id='formation' style='display:none;'></div>
 	</body>
+<style>
+
+
+
+</style>
 	<script src='/js/navbar_auto.js'></script>
+	<script type="text/javascript" src="/js/slick.min.js"></script>
+	<script type="text/javascript">
+		var colors  = Array("colored", "black", "grey"),
+			homepage = <%- JSON.stringify(homepage) %>,
+			t = homepage.length,
+			o = 0;
+			if($(window).width() < 768){
+				var number_of_boxes = Math.round((t+2)/4);
+				var nbOfObjects = Math.round(t/number_of_boxes);
+				var toWrite = "";
+for(var y = 0; y <= number_of_boxes; y++){
+	toWrite += "<div class='slider'>";
+	for(var l = 0; l < nbOfObjects; l++){
+		var objectId = (l + ( y *nbOfObjects) );
+		if(homepage[objectId]){
+			o++;
+			if(o == 3){
+							o = 0;
+						}
+						toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_") +"_plugin' class='slide'>";
+					var classTo = "", 
+						title = "<div class='slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
+						if(!homepage[objectId].show_name){
+							classTo += " no_title ";
+							title = "";
+						}
+				toWrite += 	"<div class='content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
+			delete homepage[objectId];
+		}
+		else{
+			break;
+		}
+	}
+	toWrite += "</div>";
+}
+
+				$("#admin_index_page").html(toWrite);
+			}
+			else{
+				var toWrite = "";
+				
+	
+	for(var l = 0; l < t; l++){
+		var objectId = l;
+		if(homepage[objectId]){
+			o++;
+			if(o == 3){ o = 0; }
+			toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_")  +"_plugin' class='slide'>";
+			var classTo = "", 
+				title = "<div class='slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
+			if(!homepage[objectId].show_name){
+				classTo += " no_title ";
+				title = "";
+			}
+			toWrite += 	"<div class='content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
+			delete homepage[objectId];
+		}
+		else{
+			break;
+		}
+	}
+
+
+				$("#admin_index_page").html(toWrite);
+			}
+		
+
+
+    $(document).ready(function(){
+if($(window).width() < 768){
+      $('.slider').slick({
+  			dots: true,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 1,
+arrows: false
+			
+		}); 
+}
+if($(window).width() > 768 && $(window).width() < 1024){
+}
+    });
+  </script>
 	<% 
 		var contentL = content.length;
 		for(var u = 0; u < contentL; u++){ %>

@@ -1,0 +1,19 @@
+(node:644) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+_http_outgoing.js:354
+    throw new Error('"value" required in setHeader("' + name + '", value)');
+    ^
+
+Error: "value" required in setHeader("x-forwarded-for", value)
+    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:354:11)
+    at new ClientRequest (_http_client.js:86:14)
+    at Object.exports.request (http.js:31:10)
+    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
+    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
+    at Server.<anonymous> (/var/www/pratos/server.js:409:7)
+    at emitTwo (events.js:106:13)
+    at Server.emit (events.js:191:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
+(node:1641) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:20171) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:20285) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0

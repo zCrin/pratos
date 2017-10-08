@@ -1,6 +1,6 @@
 {
   "name": "pratos",
-  "version": "2.0.0",
+  "version": "3.1.0",
   "description": "Controll your house anywhere.",
   "main": "server.js",
   "scripts": {
@@ -11,15 +11,33 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
+    "cookies": "*",
     "express": "*",
     "express-fileupload": "*",
     "express-session": "*",
-    "cookies": "*",
-    "uuid": "*",
-    "sharp": "*",
-    "pratos_user_class": "*",
-    "pratos_navbar_class": "*",
     "pratos_accessories_class": "*",
-    "pratos_ban_class": "*"
-  }
+    "pratos_ban_class": "*",
+    "pratos_navbar_class": "*",
+    "pratos_user_class": "*",
+    "sharp": "*",
+    "user-agent-parser": "^0.6.0",
+    "uuid": "*",
+    "pratos_homepage_class": "*",
+    "node-cmd": "*",
+    "http-proxy": "*",
+    "serialport": "*"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zCrin/pratos.git"
+  },
+  "keywords": [
+    "domotic;",
+    "homebridge"
+  ],
+  "bugs": {
+    "url": "https://github.com/zCrin/pratos/issues"
+  },
+  "homepage": "https://github.com/zCrin/pratos#readme"
 }

@@ -16,6 +16,7 @@ function get_accessories(){
 						img = img_correspond;
 					} 
 				}
+				
 				if(val.state_format == 'bool'){
 					if(val.state == 1){
 						class_attr += "accessory_on ";
@@ -41,10 +42,12 @@ function get_accessories(){
 					}
 				}
 				accessories += '<div ';
-				if(val.iid != ""){
+
+				if(val.iid != "" && !(/Sensor/).test(val.category)){
 					accessories += 'onClick="change_statut('+ val.aid + ')" iid="'+ val.iid + '" ';
 				} 
 				accessories += 'class="'+ class_attr + '" id="'+ val.aid + '">';
+
 				if(img){
 					var img_style = '';
 					if(form_display == "accessory-buttons_list"){
@@ -61,6 +64,7 @@ function get_accessories(){
 				}
 				accessories += '<span id="accessory_name">' + val.name + '</span><span onClick="update_accessory(' + val.aid + ')" class="update_object"><i class="fa fa-pencil" aria-hidden="true"></i></span></div>';
 		});
+
 if(first_load){
 			$("#loading_accessories").hide(1000,function(){
 				$('#all_accessories').html(accessories).promise().done(function(){
@@ -76,12 +80,11 @@ else{
 }
 function change_statut(aid){
 	if(!is_updating){
-
 		var newState;
 		if(all_accessories[aid].state_format == 'bool'){
 			newState = (all_accessories[aid].state - 1) *  (all_accessories[aid].state - 1);
 			all_accessories[aid].state = newState;
-		}
+		
 		if(newState.length != 0){
 			if(all_accessories[aid].state_format.length != 0){
 				img = img_correspond[all_accessories[aid].state_format];
@@ -111,4 +114,5 @@ var img_style = " ";
 			$('#' + aid).html('<img ' + img_style + ' src="' + img +'"/><span id="accessory_name">' + all_accessories[aid].name + '</span><span onClick="update_accessory(' + aid + ')" class="update_object"><i class="fa fa-pencil" aria-hidden="true"></i></span>');
 		}
 	}
+}
 }

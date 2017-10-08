@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include includes/head-content.include.ejs %>
+		<%	include includes/icons.include.ejs %>
+		<%	include includes/css.include.ejs %>
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/js/stay_standalone.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	</head>
+	<body>
+		<% include includes/header.include.ejs %>
+		<%- include("includes/navbar.include.ejs", {nav : nav})%>
+		<div  id='settings_page'  class='page page-nav'>
+
+<div id="settings-step-back"> <i class='fa fa-chevron-left'></i>  Retour</div>
+<div id='settings_main_menu'>
+			<h2>Réglages</h2>
+<div id='pluginsButton' class='settings_menu_button'>
+<i class='fa fa-plug'></i><span>Plugins</span> </div>
+<div class='settings_menu_button'>
+<i class='fa fa-pencil'></i><span>Style</span></div>
+
+</div>
+<div class='settings_page settings_menu' id='pluginsBox'>
+<h2>Plugins</h2>
+<div id='deletePluginsButton' class='settings_menu_button'>
+<i class='fa fa-trash'></i><span>Supprimer</span> </div>
+<div id='turnPluginsButton' class='settings_menu_button'>
+<i class='fa fa-eye-slash'></i><span>Gérer</span> </div>
+</div>
+
+<div class='settings_page settings_pagebox  settings_menu' id='deletePluginsBox'>
+
+
+</div>
+
+<div class='settings_page settings_pagebox settings_menu' id='turnPluginsBox'>
+
+</div>
+		<div id='rebootpopup' class='popup'>
+			<h2>Redémarrer</h2>
+			<p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez -vous redémarrer maintenant ?</p>
+					<button id='validate_ban'>Oui</button>
+					<button id='validate_ban'>Non</button>
+		</div>
+		</div>
+
+	</body>
+	<script src='/js/navbar_auto.js'></script>
+<script>
+var show_actual;
+		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
+			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
+				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
+   				$('.popup').each(function(){
+					$(show_actual).hide(1000);
+});//on cache le popup actuel
+			}
+		});
+
+$(".settings_menu_button").click(function(){
+var toOpen = $(this).attr("id").replace("Button","Box");
+
+$("#"+toOpen).show(500);
+$(this).parent().hide(500);
+$("#settings-step-back").show(100);
+});
+
+
+$("#settings-step-back").click(function(){
+	var toClose = '#'+$('.settings_page:visible').attr("id");
+	var toOpenButton = toClose.replace("Box","Button");
+var toOpen = $(toOpenButton).parent();
+
+	
+
+
+	
+$(toClose).hide(500);
+toOpen.show(500);
+if(toOpen.attr('id') == 'settings_main_menu'){
+$("#settings-step-back").hide(100);
+}
+});
+$("#turnPluginsButton").click(function(){
+$.getJSON("/list_plugins/",function(data){
+var old = put_in_object(data.plugins);
+var pluginsName = Object.keys(data.plugins),
+	dataLength = pluginsName.length;
+var txt ='';
+var arrayCheck = ['','checked'];
+for(var i = 0; i < dataLength; i++){
+
+txt += '<div class="downloaded_plugin"><div class="downloaded_plugin_name">'+ pluginsName[i].replace('pratos_',''). replace('_plugin','') + '</div><label class="switch"><input '+ arrayCheck[data.plugins [pluginsName[i]]] + '  type="checkbox" id="'+ pluginsName[i]+'"><span class="sliderSettings round"></span></label></div>';
+
+}
+$("#turnPluginsBox").html('<h2>Gérer</h2> '+txt);
+
+$(".switch > input").change(function(){
+var type = 0;
+if($(this).is(":checked")){type=1;}
+data.plugins[$(this).attr('id')] = type;
+if(!is_same(data.plugins,old)){
+$("#turnPluginsBox").append("<div class='savedPluginsTurn ' id='savedPlugins'><button>Sauvegarder</button></div>");
+$('.savedPluginsTurn').show(1000);
+$(".savedPluginsTurn > button"). click(function(){
+
+alert('=');
+});
+}
+else{
+$('.savedPluginsTurn').hide(1000);
+$(".savedPluginsTurn").remove();
+}
+});
+});
+
+});
+
+$("#deletePluginsButton").click(function(){
+$.getJSON("/list_plugins/",function(data){
+var pluginsName = Object.keys(data.plugins),
+	dataLength = pluginsName.length;
+var txt ='';
+var arrayCheck = ['inactive_plugin','active_plugin'];
+for(var i = 0; i < dataLength; i++){
+
+txt += '<div class="downloaded_plugin '+ arrayCheck[data.plugins [pluginsName[i]]] + '"><div class="downloaded_plugin_name">'+ pluginsName[i].replace('pratos_',''). replace('_plugin','') + '</div><input  class="delete_plugin_check" type="checkbox"></div>';
+
+}
+$("#deletePluginsBox").html('<h2>Supprimer</h2> '+ txt);
+$(".delete_plugin_check").change(function(){
+var has_checked = 0;
+var listPlugins = Array();
+$(".delete_plugin_check").each(function(){
+
+if($(this).is(':checked')){
+listPlugins.push('pratos_'  + $(this).siblings('.downloaded_plugin_name').text() + '_plugin');
+has_checked = 1;
+}
+
+});
+if(has_checked){
+has_checked=0;
+$("#deletePluginsBox").append("<div class='savedPluginsDelete' id='savedPlugins'><button>Sauvegarder</button></div>");
+
+$('.savedPluginsDelete').show(1000);
+$(".savedPluginsDelete > button"). unbind();
+$(".savedPluginsDelete > button"). click(function(){
+
+alert(JSON.stringify(listPlugins));
+$.post('/remove_plugins/', {pluginsList:listPlugins},function(response){
+if(response == 'reboot_allowed'){
+$('#rebootpopup').show(1000);
+show_actual = '#rebootpopup';
+}
+else{
+alert('Erreur');
+}
+});
+});
+}
+else{
+$('.savedPluginsDelete').hide(1000);
+$(".savedPluginsDelete").remove();
+}
+});
+});
+
+});
+function is_same(objOne, objTwo){
+var objOneKeys = Object.keys(objOne),
+	objOneLength = objOneKeys.length,
+	objTwoKeys = Object.keys(objTwo),
+	objTwoLength = objTwoKeys.length;
+
+if(objOneLength==objTwoLength){
+for(var i = 0; i < objOneLength; i++){
+
+if(objOne[objOneKeys[i]] != objTwo[objTwoKeys[i]]){
+return false;
+}
+else if(objOne[objOneKeys[i]] == objTwo[objTwoKeys[i]] && i == (objOneLength-1)){
+return true;
+}
+}
+
+}
+else{
+
+return false;
+}
+}
+function put_in_object(objOne){
+var objOneKeys = Object.keys(objOne),
+	objOneLength = objOneKeys.length;
+var n = Object();
+for(var i = 0; i < objOneLength; i++){
+n[objOneKeys[i]] = objOne[objOneKeys[i]];
+}
+
+return n;
+}
+</script>
+	<% 
+		var contentL = content.length;
+		for(var u = 0; u < contentL; u++){ %>
+	<%- content[u] %>
+	<%	}
+	%>
+</html>

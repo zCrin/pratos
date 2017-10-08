@@ -1,19 +1,27 @@
 {
-	"website" : {
-		"code" : 543678,
-		"admin_email" : "receive.prometheus@gmail.com"
+	"website": {
+		"code": 543678,
+		"admin_email": "receive.prometheus@gmail.com"
 	},
-	"logs" : {
-		"user_log" : "/log/user.log",
-		"accessory_log" : "/log/accessory.log"
+	"logs": {
+		"user_log": "/log/user.log",
+		"accessory_log": "/log/accessory.log"
 	},
-	"homebridge" : {
-		"host" : "http://localhost",
+	"homebridge": {
+		"host": "http://localhost",
 		"port": 8644,
 		"pin": "031-45-154"
 	},
-	"plugins" : [
-		"pratos_restart_homebridge",
-		"pratos_favorite_accessories"
+	"DNS": {
+		"pratos.ga": "http://localhost:3003",
+		"cloud.pratos.ga": "http://192.168.0.41",
+		"webcam.pratos.ga": "http://localhost:8081",
+		"webcam-setting.pratos.ga": "http://localhost:8080"
+	},
+	"plugins": [
+		"pratos_arduino_433",
+		"pratos_favorite_accessories",
+		"pratos_firewall",
+		"pratos_restart_homebridge"
 	]
 }

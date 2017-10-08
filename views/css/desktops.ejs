@@ -1,17 +1,21 @@
 <%
 	var green = "#9AFE2E";
-	var global_color = 'blue';
+	var global_color = '#05FEFF';
 %>
+html,body{
+background-color: #350E00;
+}
 header{
 	max-width: 100%;
 	height: 15%;
-	background-color: black;
+	background-color: white;
 	padding: 1%;
-	color: white;
+	color: <%= global_color %>;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 /* height final 17% */
+border-bottom: solid <%= global_color %> 2px;
 }
 header h1{
 	margin: 0;
@@ -24,12 +28,13 @@ header img{
 	height : 13vh;
 }
 h2{
-	margin:0;
+	margin:-4% auto 3% auto;
 	font-family: San Francisco;
 	font-weight: 300;
 	font-size: 160%;
 	color: <%= global_color %>;
 	text-align: center;
+width:60%;
 }
 .page{
 	height: 80.5%;
@@ -41,7 +46,7 @@ h2{
 width: 100%;
 }
 #nav{
-		padding: 0% 4%;
+		padding: 2% 4%;
 }
 .small-nav{
 display: flex;
@@ -52,12 +57,15 @@ flex-direction: column;
 }
 /* height final 8% */
 #nav .fa-bars{
+cursor: pointer;
 	font-size: 180%;
 	display: block;
+color: <%= global_color %>;
 }
 #nav .closebtn{
 	font-size: 260%;
-	color: white;
+cursor: pointer;
+	color: <%= global_color %>;
 	display: none;
 }
 #menu, .group{
@@ -86,6 +94,7 @@ flex-direction: column;
 	text-align: center;
 	font-family: San Francisco;
 	font-weight: 300;
+background-color: white; 
 	font-size: 120%;
 	padding-top: 8vh;
 	height: 14vh;
@@ -97,15 +106,14 @@ flex-direction: column;
 }
 #nav .not_colored{
 	border: 2px solid white;
-	color: white;
+	color: #350E00;
 }	
 #nav .colored{
 	border: 2px solid <%= global_color %>;
 	color: <%= global_color %>;
 }
 .full-nav{
-	border-top: solid <%= global_color %> 1px;
-	background-color: black;
+	background-color: #350E00;
 	min-height: 80.5%;
 display: block;
 
@@ -140,12 +148,13 @@ width: 50%;
 	#password_page button{
 		display: block;
 		font-size: 3.1em;
-		color: grey;
+		color: white;
 		background: 0;
 		opacity: 1;
 		border-radius: 50%;
 		padding: 1%;
-		height: 1.6em;
+		height: 1.6em; cursor: pointer;
+
 		width: 1.9em;
 		font-weight: 200;
 		margin: 3%;
@@ -209,7 +218,7 @@ position: relative;
     align-items: center;
 width: 96%;
 margin: 2%;
-background-color: white;
+
 }
 #access_header #change_disp{
 padding: 0.5%;
@@ -224,6 +233,7 @@ width: 12%;
 #change_dispo{
 display: block;
 padding: 1%;
+background-color: white;
 }
 .show_options{
 display: block;
@@ -236,6 +246,7 @@ display: block;
 display: none;
 }
 #disp_bar, #display_list, #display_block{
+cursor:pointer;
 display: inline;
 }
 #display_list span, #display_block span{
@@ -262,6 +273,7 @@ border-radius: 15px;
 	color: #D8D8D8;
 	padding: 3%;
 	font-size: 120%;
+background-color: white;
 	text-align: center;
 	font-family: San Francisco;
 	font-weight: 300;
@@ -276,8 +288,9 @@ flex-direction: column;
 .accessory-buttons img{
 display: block;
 margin: 10% auto 3% auto;
-height: 70%;
-width:auto;
+height: 30%;
+width:30%;
+
 }
 .accessory-buttons div{
 font-size: 120%;
@@ -303,12 +316,13 @@ min-height: initial;
 			border: 1px solid #D8D8D8;
 text-align: center;
 display: none;
+cursor:pointer;
 	color: #D8D8D8;
 	padding: 1.5%;
 	font-size: 90%;
 border-radius: 15px;
 margin: 5% auto;
- 
+ background-color: white;
 
 		}
 .updating_page, .updating_pic{
@@ -333,14 +347,7 @@ label, *[onclick]{
 
  -webkit-tap-highlight-color: #9AFE2E;
 }
-input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
-border-radius:0;border:1px  <%= global_color %> solid;
-	text-align:center;
-	
-	
-	font-family: San Francisco;
-	font-weight:200;padding:1%; 
-}
+
 #update_accessory_name{
 
 width: 40%;
@@ -353,7 +360,7 @@ vertical-align: middle;
 
 font-size: 140%;
 }
-#access_header i, .fa-pencil{
+#access_header i,.accessory-buttons .fa-pencil{
 color: <%= global_color %>;
 }
 #all_acch2{
@@ -365,6 +372,7 @@ display: none;
 }
 
 .update_object{
+cursor:pointer;
 color: #D8D8D8;
 display: none;
 }
@@ -458,6 +466,7 @@ background: 0;
 			border: 1px solid #D8D8D8;
 text-align: center;
 display: table;
+cursor:pointer;
 	color: #D8D8D8;
 	padding: 1% 3%;
 	font-size: 90%;
@@ -473,15 +482,19 @@ margin: 2% auto ;
 
 		}
 		#banUnban_buttonBlock button{
-
+cursor:pointer;
 			color: <%= global_color %>;
 			text-decoration: none;
 			border: 1px <%= global_color %> solid;
 			font-size: 120%;
 			font-weight: 400;
 			text-align: center;
+padding:1%;
+border-radius:15px;
+background-color:white;
 		}
-input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+input[type=text],input[type=submit]{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+
 border-radius:0;border:1px  #D8D8D8 solid;
 	text-align:center;
 	
@@ -504,8 +517,10 @@ box-shadow: 0 0 0 100vh rgba(0,0,0,.5);
  padding: 1%;
 text-align: center;
 }
-		.popup h2{
-margin-bottom: 3%;
+.popup h2{
+
+
+	margin:0% auto 4% auto;
 }
 label{
 border:0;
@@ -515,6 +530,212 @@ vertical-align: middle;
 
 font-size: 100%;
 }
-#manage_ban{
+#manage_ban, #settings_page{
 position: absolute;
+}
+#admin_index_page{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.slide{
+height: 50vh;
+margin: 1% auto;
+box-shadow: 1px 1px 12px #555;
+background-color:white;
+width: 350px;
+}
+.slide .content{
+height: 43vh;
+color: #D8D8D8;
+
+width: 100%;
+}
+.slide .slide-title{
+  display: flex; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+padding-left: 2%;
+height: 7.4vh;
+color: white;
+
+font-size: 120%;
+}
+.slide-colored{
+background-color: <%= global_color %>;
+}
+.slide-black{
+background-color: black;
+}
+.slide-grey{
+background-color: grey;
+}
+.no_title{
+min-height: 50vh;
+}
+.settings_pagebox{
+margin:8% auto;
+}
+#validateRebootBlock{
+display: flex;
+			justify-content: space-around;
+			
+			margin: 6% auto 0 auto;
+}
+#validateRebootBlock button{
+
+			color: <%= global_color %>;
+			text-decoration: none;
+			border: 1px <%= global_color %> solid;
+			font-size: 120%;
+			font-weight: 400;
+			text-align: center;
+		}
+#settings_page{
+
+color:white;
+}
+
+#settings_main_menu, .settings_menu{
+width: 90%;
+margin: 0 auto;
+font-size: 120%;
+
+
+}
+ .settings_menu_button{ 
+border: 2px solid <%= global_color %>;
+border-radius: 10px;
+display: flex;
+text-align: center;
+cursor:pointer;
+padding: 1%;
+color: white;
+margin: 1% auto;
+justify-content: space-around;
+}
+.settings_page{
+display: none;
+}
+#settings-step-back{
+font-size: 130%;
+	color: white;
+	padding-left: 5%;
+cursor:pointer;
+	display: none;
+font-family: San Francisco;
+}
+
+/* The switch - the box around the slider */
+.settings_pagebox .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.settings_pagebox .switch input {display:none;}
+
+/* The slider */
+.sliderSettings {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderSettings:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.settings_pagebox input:checked + .sliderSettings {
+  background-color: <%= global_color %>;
+}
+
+.settings_pagebox input:focus + .sliderSettings {
+  box-shadow: 0 0 1px <%= global_color %>;
+}
+
+.settings_pagebox input:checked + .sliderSettings:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.sliderSettings.round {
+  border-radius: 34px;
+}
+
+.sliderSettings.round:before {
+  border-radius: 50%;
+}
+
+.downloaded_plugin{
+
+display: flex;
+text-align: center;
+padding: 1%;
+border-bottom: 1px solid white;
+align-items: center;
+width: 95%;
+margin: 0 auto;
+justify-content: space-around;
+}
+.downloaded_plugin_name{
+width: 70%;
+font-size: 120%;
+text-align: left;
+
+}
+#savedPlugins{
+
+display: none;
+text-align: center;
+margin: 2% auto 0 auto;
+}
+#savedPlugins button{
+background: 0;
+			border: 1px solid #D8D8D8;
+cursor:pointer;
+text-align: center;
+
+	color: #D8D8D8;
+	padding: 1.5%;
+	font-size: 90%;
+border-radius: 15px;
+margin: 5% auto;
+ 
+}
+
+.delete_plugin_check{
+	-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+border-radius:0;outline: 1px solid white;
+border: 2px solid black;
+	height: 20px;
+
+	width: 20px;
+}
+.settings_pagebox input:checked{
+  background-color: white;
+}
+.settings_pagebox .active_plugin{
+color: lightgreen;
+}
+.settings_pagebox .inactive_plugin{
+color: red;
 }

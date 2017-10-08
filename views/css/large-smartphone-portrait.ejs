@@ -1,16 +1,20 @@
 <%
 	var green = "#9AFE2E";
-	var global_color = 'purple';
+	var global_color = '#05FEFF';
 %>
+html,body{
+background-color: #350E00;
+}
 header{
 	max-width: 100%;
-	height: 10%;
-	background-color: black;
+	height: 15%;
+	background-color: white;
 	padding: 1%;
-	color: white;
+	color: <%= global_color %>;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+border-bottom: solid <%= global_color %> 2px;
 /* height final 17% */
 }
 header h1{
@@ -21,54 +25,59 @@ header h1{
 }
 header img{
 	width: auto;
+
 	height : 13vh;
 }
 h2{
-	margin:0;
+	margin:-10% auto 7% auto;
 	font-family: San Francisco;
 	font-weight: 300;
 	font-size: 160%;
+display:block;
+width:60%;
+text-align:center;
 	color: <%= global_color %>;
-	text-align: center;
+	
 }
 .page{
-	height: 88.5%;
+	height: 83%;
 }
 .page-nav{
-	 height: 80.5%; 
+	height: 69.5%; 
+	width:100%;
 /*Page with a navbar */
-width: 100%;
-
 }
 #nav{
-	
-	
-
-	padding: 0% 4%;
-}
-.small-nav{
-display: flex;
-	height: 8%;
-flex-direction: column;
-  justify-content: center; /* alignement vertical */
-    text-align: left;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	height: 12%;
+	padding-left: 4%;
+padding-top: 2%;
 }
 /* height final 8% */
 #nav .fa-bars{
 	font-size: 180%;
 	display: block;
+color: <%= global_color %>;
 }
 #nav .closebtn{
 	font-size: 260%;
 	color: white;
 	display: none;
+color: <%= global_color %>;
 }
 #menu, .group{
 	display: none;
 	padding: 2%;
 }
+#menu-step-back{
+	font-size: 140%;
+	color: white;
+	display: none;
+color: <%= global_color %>;
+}
 #menu-flex{
-
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -80,41 +89,34 @@ flex-direction: column;
 	text-decoration: none;
 	display: block;
 }
-#menu-step-back{
-	font-size: 140%;
-	color: white;
-	display: none;
-}
 .menu-button{
 	border-radius: 15px;
 	text-align: center;
 	font-family: San Francisco;
 	font-weight: 300;
 	font-size: 120%;
-	padding-top: 4vh;
-	height: 10vh;
-	width: 16vh;
+	padding-top: 5vh;
+background-color: white; 
+
+	height: 14vh;
+	width: 22vh;
 	margin-top: 5%;
   	transition: all 2s linear;
 	flex-direction: row;
 }
 #nav .not_colored{
 	border: 2px solid white;
-	color: white;
+	color: #350E00;
 }	
 #nav .colored{
 	border: 2px solid <%= global_color %>;
 	color: <%= global_color %>;
 }
-.full-nav{
-	border-top: solid <%= global_color %> 1px;
-	background-color: black;
-	min-height: 89%;
-display: block;
 
-}
-.full-nav .closebtn, .full-nav #menu-step-back{
-margin-top: 4%;
+.full-nav{
+	
+	background-color: #350E00;
+	min-height: 84.5%;
 }
 /*Specific*/
 
@@ -128,16 +130,16 @@ margin-top: 4%;
 #password_page{
 	height: 100%;
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	justify-content: center;
+   align-items: center;
+   flex-direction: column;
 	min-height: inherit;
 	overflow: hidden;
 }
 #password_page button{
 	display: block;
-	font-size: 3em;
-	color: grey;
+	font-size: 2.8em;
+	color: white;
 	background: 0;
 	opacity: 1;
 	border-radius: 50%;
@@ -182,13 +184,14 @@ position: relative;
 	display: flex;
     justify-content: space-between;
     align-items: center;
-width: 96%;
-margin: 2%;
-background-color: white;
+	width: 96%;
+	margin: 2%;
+	
 }
 #access_header #change_disp{
-padding: 0.5%;
-border: 1px solid #D8D8D8;
+background-color: white;
+	padding: 0.5%;
+	border: 1px solid #D8D8D8;
 color: #D8D8D8;
 font-size: 120%;
 border-radius: 7px;
@@ -236,10 +239,11 @@ border-radius: 15px;
 	font-size: 120%;
 	text-align: center;
 	font-family: San Francisco;
+background-color: white;
 	font-weight: 300;
 	margin: 1% 3% 1% 3%;
 	width: 30%;
-	min-height: 10vh;
+	min-height: 14vh;
 	display: flex;
 flex-direction: column;
     justify-content: center;
@@ -248,8 +252,8 @@ flex-direction: column;
 .accessory-buttons img{
 display: block;
 margin: 10% auto 3% auto;
-height: 70%;
-width:auto;
+height: 40%;
+width:40%;
 }
 .accessory-buttons div{
 font-size: 120%;
@@ -303,16 +307,9 @@ margin: 2% auto;
 }
 label, *[onclick]{
 
- -webkit-tap-highlight-color: #9AFE2E;
+ -webkit-tap-highlight-color: <%= global_color %>;
 }
-input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
-border-radius:0;border:1px  <%= global_color %> solid;
-	text-align:center;
-	
-	
-	font-family: San Francisco;
-	font-weight:200;padding:1%; 
-}
+
 #update_accessory_name{
 
 width: 40%;
@@ -325,7 +322,7 @@ vertical-align: middle;
 
 font-size: 140%;
 }
-#access_header i, .fa-pencil{
+#access_header i,.accessory-buttons .fa-pencil{
 color: <%= global_color %>;
 }
 #all_acch2{
@@ -353,7 +350,7 @@ border-radius: 15px;
 
 margin: 2% auto ;
 }
-.updating_page div{
+.updating_page div {
 
 margin: 1% auto;
 text-align: center;
@@ -390,7 +387,7 @@ width: 75%;
 #image_chosen td{
 width: 50%;
 }
-.updating_page label {
+.updating_page label{
 color: <%= global_color %>;
 }
 /* --End Of manage_acesssories-- */
@@ -407,13 +404,14 @@ padding: 1%;
 			text-decoration: none;
 			border: 1px <%= global_color %> solid;
 			padding: 1% 2%;
-			margin: 8% auto;
+			margin: 15% auto;
 			font-size: 140%;
 			font-weight: 400;
 			text-align: center;
 display: block;
 		}
 /* -- End Of allow_device and unallow_device-- */
+
 #debanpopup table{
 
 width: 94%;
@@ -445,7 +443,9 @@ margin: 2% auto ;
 
 		}
 		#banUnban_buttonBlock button{
-
+padding:2%;
+border-radius:15px;
+background-color:white;
 			color: <%= global_color %>;
 			text-decoration: none;
 			border: 1px <%= global_color %> solid;
@@ -453,7 +453,7 @@ margin: 2% auto ;
 			font-weight: 400;
 			text-align: center;
 		}
-input{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+input[type=text],input[type=submit]{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
 border-radius:0;border:1px  #D8D8D8 solid;
 	text-align:center;
 	
@@ -476,8 +476,10 @@ box-shadow: 0 0 0 100vh rgba(0,0,0,.5);
  padding: 1%;
 text-align: center;
 }
-		.popup h2{
-margin-bottom: 3%;
+.popup h2{
+
+
+	margin:0% auto 4% auto;
 }
 label{
 border:0;
@@ -487,6 +489,207 @@ vertical-align: middle;
 
 font-size: 100%;
 }
-#manage_ban{
+#manage_ban, #settings_page{
 position: absolute;
+}
+
+.slider{
+background-color: white;
+margin: 2% auto;
+padding:0;
+width:90%;
+  box-shadow: 1px 1px 12px #555;
+}
+.slider .slide{
+padding:0;
+width:100%;
+min-height: 50vh;
+}
+.slide .content{
+height: 42vh;
+color: #D8D8D8;
+overflow-y: scroll;
+width: 100%;
+}
+.slide .slide-title{
+  display: flex; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+padding-left: 2%;
+height: 8.2vh;
+color: white;
+
+font-size: 120%;
+}
+.slide-colored{
+background-color: <%= global_color %>;
+}
+.slide-black{
+background-color: black;
+}
+.slide-grey{
+background-color: grey;
+}
+.no_title{
+min-height: 50vh;
+}
+.settings_pagebox{
+color:white;
+margin: 8% auto;
+}
+#validateRebootBlock{
+display: flex;
+			justify-content: space-around;
+			
+			margin: 6% auto 0 auto;
+}
+#validateRebootBlock button{
+
+			color: <%= global_color %>;
+			text-decoration: none;
+			border: 1px <%= global_color %> solid;
+			font-size: 120%;
+			font-weight: 400;
+			text-align: center;
+		}
+
+#settings_main_menu, .settings_menu{
+width: 90%;
+margin: 0 auto;
+font-size: 120%;
+
+
+}
+ .settings_menu_button{ 
+border: 2px solid <%= global_color %>;
+border-radius: 10px;
+display: flex;
+text-align: center;
+padding: 1%;
+color: white;
+margin: 2% auto;
+justify-content: space-around;
+}
+.settings_page{
+display: none;
+}
+#settings-step-back{
+font-size: 130%;
+	color: white;
+	padding-left: 5%;
+	display: none;
+font-family: San Francisco;
+}
+
+/* The switch - the box around the slider */
+.settings_pagebox .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.settings_pagebox .switch input {display:none;}
+
+/* The slider */
+.sliderSettings {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sliderSettings:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.settings_pagebox input:checked + .sliderSettings {
+  background-color: <%= global_color %>;
+}
+
+.settings_pagebox input:focus + .sliderSettings {
+  box-shadow: 0 0 1px <%= global_color %>;
+}
+
+.settings_pagebox input:checked + .sliderSettings:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.sliderSettings.round {
+  border-radius: 34px;
+}
+
+.sliderSettings.round:before {
+  border-radius: 50%;
+}
+
+.downloaded_plugin{
+
+display: flex;
+text-align: center;
+padding: 1%;
+border-bottom: 1px solid white;
+align-items: center;
+color:white;
+width: 95%;
+margin: 0 auto;
+justify-content: space-around;
+}
+.downloaded_plugin_name{
+width: 70%;
+font-size: 100%;
+text-align: left;
+
+}
+#savedPlugins{
+display: none;
+text-align: center;
+margin: 2% auto 0 auto;
+}
+#savedPlugins button{
+background: 0;
+			border: 1px solid #D8D8D8;
+text-align: center;
+
+	color: #D8D8D8;
+	padding: 1.5%;
+	font-size: 90%;
+border-radius: 15px;
+margin: 5% auto;
+ 
+}
+
+.delete_plugin_check{
+	-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+border-radius:0;outline: 1px solid white;
+border: 2px solid black;
+	height: 20px;
+
+	width: 20px;
+}
+.settings_pagebox input:checked{
+  background-color: white;
+}
+.settings_pagebox .active_plugin{
+color: lightgreen;
+}
+.settings_pagebox .inactive_plugin{
+color: red;
 }
