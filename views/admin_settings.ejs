@@ -43,8 +43,8 @@
 		<div id='rebootpopup' class='popup'>
 			<h2>Redémarrer</h2>
 			<p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez -vous redémarrer maintenant ?</p>
-					<button id='validate_ban'>Oui</button>
-					<button id='validate_ban'>Non</button>
+					<button onClick='reboot(true)'  id='validate_ban'>Oui</button>
+					<button onClick='reboot(false)' id='validate_ban'>Non</button>
 		</div>
 		</div>
 
@@ -98,17 +98,29 @@ txt += '<div class="downloaded_plugin"><div class="downloaded_plugin_name">'+ pl
 
 }
 $("#turnPluginsBox").html('<h2>Gérer</h2> '+txt);
-
+$(".switch > input").unbind();
 $(".switch > input").change(function(){
 var type = 0;
+$(".savedPluginsTurn").remove();
 if($(this).is(":checked")){type=1;}
 data.plugins[$(this).attr('id')] = type;
 if(!is_same(data.plugins,old)){
+
 $("#turnPluginsBox").append("<div class='savedPluginsTurn ' id='savedPlugins'><button>Sauvegarder</button></div>");
 $('.savedPluginsTurn').show(1000);
-$(".savedPluginsTurn > button"). click(function(){
+$(".savedPluginsTurn > button").unbind();
+$(".savedPluginsTurn > button").click(function(){
 
-alert('=');
+$.post('/toggle_plugins/', {pluginsList:data},function(response){
+if(response == 'reboot_allowed'){
+$('#rebootpopup').show(1000);
+show_actual = '#rebootpopup';
+}
+else{
+alert('Erreur');
+}
+});
+
 });
 }
 else{
@@ -145,13 +157,14 @@ has_checked = 1;
 });
 if(has_checked){
 has_checked=0;
+$(".savedPluginsDelete").remove();
 $("#deletePluginsBox").append("<div class='savedPluginsDelete' id='savedPlugins'><button>Sauvegarder</button></div>");
 
 $('.savedPluginsDelete').show(1000);
 $(".savedPluginsDelete > button"). unbind();
 $(".savedPluginsDelete > button"). click(function(){
 
-alert(JSON.stringify(listPlugins));
+
 $.post('/remove_plugins/', {pluginsList:listPlugins},function(response){
 if(response == 'reboot_allowed'){
 $('#rebootpopup').show(1000);
@@ -204,6 +217,25 @@ n[objOneKeys[i]] = objOne[objOneKeys[i]];
 
 return n;
 }
+function reboot(t){
+if(!t){
+		$(show_actual).hide(1000);
+}
+else{
+$.get('/reboot/',function(data){
+	if(data == 'rebooting'){
+		alert('Pratos is rebooting, please wait');
+		setTimeout(function(){location.reload()},5000);
+}
+else{
+alert('Erreur');
+}
+});
+
+}
+}
+
+
 </script>
 	<% 
 		var contentL = content.length;
