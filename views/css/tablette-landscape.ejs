@@ -5,6 +5,9 @@
 html,body{
 background-color: #350E00;
 }
+a{
+color:orange;
+}
 header{
 	max-width: 100%;
 	height: 15%;
@@ -306,10 +309,15 @@ font-weight: 400;
 width: 88%;
 padding: 1% 1%;
 margin: 2% auto 1% auto;
+font-size:140%;
 flex-direction: row-reverse;
 justify-content: space-between;
 border-radius: 6px;
 min-height: initial;
+align-items: center;
+}
+.accessory-buttons_list img{
+width:4%;
 }
 		#update{
 			background: 0;
@@ -345,7 +353,7 @@ margin: 2% auto;
 }
 label, *[onclick]{
 
- -webkit-tap-highlight-color: #9AFE2E;
+ -webkit-tap-highlight-color:  <%= global_color %>;
 }
 
 #update_accessory_name{

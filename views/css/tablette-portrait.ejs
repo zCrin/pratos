@@ -7,7 +7,7 @@ background-color: #350E00;
 }
 header{
 	max-width: 100%;
-	height: 10%;
+	height: 12%;
 	background-color: white;
 	padding: 1%;
 	color: <%= global_color %>;
@@ -18,17 +18,18 @@ border-bottom: solid <%= global_color %> 2px;
 /* height final 17% */
 }
 header h1{
-	margin: 0;
+	margin: 0; 
 	font-family: San Francisco;
 	font-weight: 400;
-	font-size: 240%;
+	font-size: 360%;
 }
 header img{
 	width: auto;
-	height : 12vh;
+
+	height : 13vh;
 }
 h2{
-	margin:-8% auto 7% auto;
+	margin:-10% auto 7% auto;
 	font-family: San Francisco;
 	font-weight: 300;
 	font-size: 160%;
@@ -36,28 +37,23 @@ display:block;
 width:60%;
 text-align:center;
 	color: <%= global_color %>;
+	
 }
 .page{
-	height: 88.5%;
+	height: 83%;
 }
 .page-nav{
-	 height: 80.5%; 
+	height: 69.5%; 
+	width:100%;
 /*Page with a navbar */
-width: 100%;
-
 }
 #nav{
-	
-	
-
-	padding: 2% 4%;
-}
-.small-nav{
-display: flex;
-	height: 8%;
-flex-direction: column;
-  justify-content: center; /* alignement vertical */
-    text-align: left;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	height: 12%;
+	padding-left: 4%;
+padding-top: 2%;
 }
 /* height final 8% */
 #nav .fa-bars{
@@ -75,8 +71,13 @@ color: <%= global_color %>;
 	display: none;
 	padding: 2%;
 }
+#menu-step-back{
+	font-size: 140%;
+	color: white;
+	display: none;
+color: <%= global_color %>;
+}
 #menu-flex{
-
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -88,21 +89,17 @@ color: <%= global_color %>;
 	text-decoration: none;
 	display: block;
 }
-#menu-step-back{
-	font-size: 140%;
-	color: <%= global_color %>;
-	display: none;
-}
 .menu-button{
 	border-radius: 15px;
 	text-align: center;
 	font-family: San Francisco;
 	font-weight: 300;
+	font-size: 140%;
+	padding-top: 5vh;
 background-color: white; 
-	font-size: 120%;
-	padding-top: 4vh;
+
 	height: 10vh;
-	width: 17vh;
+	width: 18vh;
 	margin-top: 5%;
   	transition: all 2s linear;
 	flex-direction: row;
@@ -115,15 +112,11 @@ background-color: white;
 	border: 2px solid <%= global_color %>;
 	color: <%= global_color %>;
 }
+
 .full-nav{
 	
 	background-color: #350E00;
-	min-height: 89%;
-display: block;
-
-}
-.full-nav .closebtn, .full-nav #menu-step-back{
-margin-top: 4%;
+	min-height: 84.5%;
 }
 /*Specific*/
 
@@ -137,24 +130,24 @@ margin-top: 4%;
 #password_page{
 	height: 100%;
 	display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	justify-content: center;
+   align-items: center;
+   flex-direction: column;
 	min-height: inherit;
 	overflow: hidden;
 }
 #password_page button{
 	display: block;
-	font-size: 3.6em;
+	font-size: 3.3em;
 	color: white;
 	background: 0;
 	opacity: 1;
 	border-radius: 50%;
 	padding: 1%;
-	height: 1.6em;
-	width: 1.9em;
+	height: 2.3em;
+	width: 3em;
 	font-weight: 200;
-	margin: 2.5% 3% 2% 2.5%;
+	margin: 2.5% 3% 4% 4.5%;
 	border: 1px solid <%= global_color %>;
 	-webkit-tap-highlight-color: <%= global_color %>;
 }
@@ -171,14 +164,15 @@ margin-top: 4%;
 	justify-content: space-around;
 }
 #zero_button_password button{
-	height: 1.6em;
-	width: 1.6em;
+	height: 2.2em;
+	width: 2.2em;
 }
 #delete_n{
 	color: #D8D8D8;
 	display: inline-block;
-	margin-left: 10em;
+	margin-left: 12em;
 	position: relative;
+font-size:150%;
 	top: -9vh;
 }
 /* --End Of Password Page-- */
@@ -191,14 +185,14 @@ position: relative;
 	display: flex;
     justify-content: space-between;
     align-items: center;
-width: 96%;
-margin: 2%;
-
+	width: 96%;
+	margin: 2%;
+	
 }
 #access_header #change_disp{
 background-color: white;
-padding: 0.5%;
-border: 1px solid #D8D8D8;
+	padding: 0.5%;
+	border: 1px solid #D8D8D8;
 color: #D8D8D8;
 font-size: 120%;
 border-radius: 7px;
@@ -243,14 +237,14 @@ border-radius: 15px;
 	border: 1px solid #D8D8D8;
 	color: #D8D8D8;
 	padding: 3%;
-	font-size: 120%;
+	font-size: 140%;
 	text-align: center;
 	font-family: San Francisco;
 background-color: white;
 	font-weight: 300;
 	margin: 1% 3% 1% 3%;
-	width: 30%;
-	min-height: 10vh;
+	width: 20%;
+	min-height: 14vh;
 	display: flex;
 flex-direction: column;
     justify-content: center;
@@ -258,9 +252,9 @@ flex-direction: column;
 }
 .accessory-buttons img{
 display: block;
-margin: 10% auto 3% auto;
-height: 40%;
-width:40%;
+margin: 10% auto 5% auto;
+height: 30%;
+width:30%;
 }
 .accessory-buttons div{
 font-size: 120%;
@@ -274,12 +268,16 @@ font-weight: 400;
 }
 .accessory-buttons_list{
 width: 88%;
-padding: 2% 1%;
+padding: 1% 1%;
 margin: 2% auto 1% auto;
 flex-direction: row-reverse;
 justify-content: space-between;
 border-radius: 6px;
+align-items: center;
 min-height: initial;
+}
+.accessory-buttons_list img{
+width:6%;
 }
 		#update{
 			background: 0;
@@ -313,6 +311,7 @@ box-shadow: 0 0 0 100vh rgba(0,0,0,.5);
 margin: 2% auto;
 }
 label, *[onclick]{
+
  -webkit-tap-highlight-color: <%= global_color %>;
 }
 
@@ -356,7 +355,7 @@ border-radius: 15px;
 
 margin: 2% auto ;
 }
-.updating_page div{
+.updating_page div {
 
 margin: 1% auto;
 text-align: center;
@@ -393,7 +392,7 @@ width: 75%;
 #image_chosen td{
 width: 50%;
 }
-.updating_page label {
+.updating_page label{
 color: <%= global_color %>;
 }
 /* --End Of manage_acesssories-- */
@@ -410,13 +409,14 @@ padding: 1%;
 			text-decoration: none;
 			border: 1px <%= global_color %> solid;
 			padding: 1% 2%;
-			margin: 8% auto;
+			margin: 15% auto;
 			font-size: 140%;
 			font-weight: 400;
 			text-align: center;
 display: block;
 		}
 /* -- End Of allow_device and unallow_device-- */
+
 #debanpopup table{
 
 width: 94%;
@@ -447,11 +447,8 @@ margin: 2% auto ;
 			margin: 6% auto 0 auto;
 
 		}
-		.popup h2{
-margin-bottom: 3%;
-}
 		#banUnban_buttonBlock button{
-padding:1% 2%;
+padding:2%;
 border-radius:15px;
 background-color:white;
 			color: <%= global_color %>;
@@ -487,7 +484,7 @@ text-align: center;
 .popup h2{
 
 
-	margin:0% auto 3% auto;
+	margin:0% auto 4% auto;
 }
 label{
 border:0;
@@ -502,10 +499,10 @@ position: absolute;
 }
 
 .slider{
+background-color: white;
 margin: 2% auto;
 padding:0;
 width:90%;
-background-color:white;
   box-shadow: 1px 1px 12px #555;
 }
 .slider .slide{
@@ -517,7 +514,6 @@ min-height: 50vh;
 height: 42vh;
 color: #D8D8D8;
 overflow-y: scroll;
-
 width: 100%;
 }
 .slide .slide-title{
@@ -543,6 +539,7 @@ background-color: grey;
 min-height: 50vh;
 }
 .settings_pagebox{
+color:white;
 margin: 8% auto;
 }
 #validateRebootBlock{
@@ -560,16 +557,7 @@ display: flex;
 			font-weight: 400;
 			text-align: center;
 		}
-#settings_page{
 
-color:white;
-}
-#settings_page #nav .fa-bars{
-color: white;
-}
-#settings_page #nav {
-border-top: 1px <%= global_color %> solid;
-}
 #settings_main_menu, .settings_menu{
 width: 90%;
 margin: 0 auto;
@@ -584,7 +572,7 @@ display: flex;
 text-align: center;
 padding: 1%;
 color: white;
-margin: 6% auto;
+margin: 2% auto;
 justify-content: space-around;
 }
 .settings_page{
@@ -664,13 +652,14 @@ text-align: center;
 padding: 1%;
 border-bottom: 1px solid white;
 align-items: center;
+color:white;
 width: 95%;
 margin: 0 auto;
 justify-content: space-around;
 }
 .downloaded_plugin_name{
 width: 70%;
-font-size: 120%;
+font-size: 100%;
 text-align: left;
 
 }
@@ -708,4 +697,7 @@ color: lightgreen;
 }
 .settings_pagebox .inactive_plugin{
 color: red;
+}
+a{
+color:orange;
 }

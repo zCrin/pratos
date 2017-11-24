@@ -22,12 +22,21 @@
 <i class='fa fa-plug'></i><span>Plugins</span> </div>
 <div class='settings_menu_button'>
 <i class='fa fa-pencil'></i><span>Style</span></div>
-
+<% 
+		var settingsN = Object.keys(settings);
+	var settingsL = settingsN.length;
+for(var i = 0; i < settingsL; i++){ %>
+	<%- "<div id='"+ settings [settingsN[i]]. buttonName +"'class='settings_menu_button'>"+ settings [settingsN[i]]. buttonIcon +"<span>"+ settings [settingsN[i]].title+"</span></div> "%>
+	<%	}
+	%>
 </div>
+
 <div class='settings_page settings_menu' id='pluginsBox'>
 <h2>Plugins</h2>
+
 <div id='deletePluginsButton' class='settings_menu_button'>
 <i class='fa fa-trash'></i><span>Supprimer</span> </div>
+
 <div id='turnPluginsButton' class='settings_menu_button'>
 <i class='fa fa-eye-slash'></i><span>Gérer</span> </div>
 </div>
@@ -40,6 +49,11 @@
 <div class='settings_page settings_pagebox settings_menu' id='turnPluginsBox'>
 
 </div>
+<%
+for(var i = 0; i < settingsL; i++){ %>
+	<%- "<div class='settings_page settings_pagebox settings_menu' id='"+ settings [settingsN[i]].buttonName.replace("Button","Box")+"'>"+ settings [settingsN[i]].boxContent +"</div> "%>
+	<%	}
+	%>
 		<div id='rebootpopup' class='popup'>
 			<h2>Redémarrer</h2>
 			<p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez -vous redémarrer maintenant ?</p>
@@ -49,6 +63,8 @@
 		</div>
 
 	</body>
+
+	
 	<script src='/js/navbar_auto.js'></script>
 <script>
 var show_actual;
@@ -61,13 +77,14 @@ var show_actual;
 			}
 		});
 
-$(".settings_menu_button").click(function(){
+$(".settings_menu_button").click(menuButton);
+function menuButton(){
 var toOpen = $(this).attr("id").replace("Button","Box");
 
 $("#"+toOpen).show(500);
 $(this).parent().hide(500);
 $("#settings-step-back").show(100);
-});
+}
 
 
 $("#settings-step-back").click(function(){
@@ -243,4 +260,5 @@ alert('Erreur');
 	<%- content[u] %>
 	<%	}
 	%>
+
 </html>

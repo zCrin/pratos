@@ -14,8 +14,9 @@ var http = require('http'),
 	uuidV1 = require('uuid/v1');
 	globalVariable.event = new EventEmitter(),
 	cmd=require('node-cmd'),
-	proxyPort=3000; 
-	
+	proxyPort=3000,
+	webserverPort=3003;
+
 /** Configuration */
 app.use(bodyParser.json())
 .use(fileUpload())
@@ -98,6 +99,13 @@ app.get('/admin/:adminURI/', function(req, res){
 				if(req.params.adminURI == "index"){
 					require("pratos_homepage_class").construct(globalVariable.homepagePlugins, function(res_homepage){
 						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, homepage: res_homepage});
+					});
+				}
+else if(req.params.adminURI == "settings"){
+					
+
+require("pratos_homepage_class").construct(globalVariable.homepagePlugins, function(res_homepage){
+						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, settings: globalVariable. pluginsSettings});
 					});
 				}
 				else{
@@ -379,9 +387,18 @@ globalVariable.event.removeListener("cookiesLoaded", cookiesLoadedCallback);
 globalVariable[user_id].cookies = data;
 callback();
 }
+var AccessoriesHomebridge = require("pratos_accessories_class");
+var intervalHomebridge = setInterval(function(){
+
+AccessoriesHomebridge. has_change_happened(globalVariable);
+
+},3000);
+
+
 app.use(express.static(__dirname + '/static'));
-cmd.get("sudo kill $(sudo lsof -t -i:3003)", function(){
-	app.listen(3003);
+cmd.get("sudo kill $(sudo lsof -t -i:"+ webserverPort+")", function(){
+	app.listen(webserverPort);
+console.log("Pratos : webserver listening on port :"+ webserverPort);
 });
 fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, data){
 						var settings = JSON.parse(data);
@@ -391,7 +408,7 @@ var httpProxy = require('http-proxy'),
 cmd.get("sudo kill $(sudo lsof -t -i:"+ proxyPort+")", function(){
 
 
-http.createServer(function(req, res) {
+var serverCreated = http.createServer(function(req, res) {
 globalVariable.event.emit("http","Request Received",req);
 req.headers.host = (!req.headers.host)? "": req.headers.host;
     var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host;
@@ -399,7 +416,7 @@ req.headers.host = (!req.headers.host)? "": req.headers.host;
 req.headers['x-forwarded-for'] = getClientIP(req);
 if(req.headers['x-forwarded-for'] != undefined){ 
 		if(settings.DNS[hostname]){
-
+//console.log(req.headers['accept']);
 			proxy.web(req, res, { target: settings.DNS[hostname],
   
     xforward: true,
@@ -407,16 +424,51 @@ if(req.headers['x-forwarded-for'] != undefined){
   changeOrigin: false // changes the origin of the host header to the target URL 
 },function(e) { res.end("Serveur Indisponible");});
 		}else{
-proxy.web(req, res, { target: "http://localhost:3003",
+proxy.web(req, res, { target: "http://localhost:"+ webserverPort,
 xforward: true,
   changeOrigin: false});
 }
         }
-}).listen(proxyPort, function() {
-    console.log('Proxy:listening on port : ' + proxyPort);
+});
+var io = require('socket.io')(serverCreated);
+
+
+
+io.on('connection', function(client){
+
+
+  client.on('sendAccessoriesList', function(data) {
+var u = /\/admin\/manage_accessories\//;
+if(u.test(client.handshake.headers.referer)){
+       var Accessories = require("pratos_accessories_class");
+				Accessories.list_accessories(globalVariable);
+				globalVariable.event.on("accessories", show_list_accessories);
+				function show_list_accessories (answer, data){
+					if(answer == "list:obtained"){
+						globalVariable.event.removeListener("accessories", show_list_accessories);
+						
+        client.emit('accessoriesList', data);
+					}
+				}
+}
+else{
+client.emit('accessoriesList', "not_connected");
+}
+globalVariable.event.on("accessories", send_accessories_message);
+function send_accessories_message(answer,data){
+if(answer == "change:detected"){
+						
+						
+        client.emit('accessoriesList', data);
+					}
+}
+    });
+});
+serverCreated.listen(proxyPort, function() {
+    console.log('Pratos : proxyserver listening on port :' + proxyPort);
 });
 });
 // We simulate the 3 target applications
 
-console.log("Serveur web lancé sur localhost:3003 ...");
+
 });

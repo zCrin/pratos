@@ -1,4 +1,5 @@
 $('#display_list').click(function(){
+localStorage.setItem('accessoriesDisplay','list');
 $('#all_accessories').css('flex-direction', 'column');
 form_display = 'accessory-buttons_list';
 $('.accessory-buttons').addClass("accessory-buttons_list");
@@ -6,6 +7,7 @@ $('.accessory-buttons img').css('margin', '0');
 
 });
 $('#display_block').click(function(){
+localStorage.setItem('accessoriesDisplay','block');
 $('#all_accessories').css('flex-direction', 'row');
 form_display = '';
 $('.accessory-buttons').removeClass("accessory-buttons_list");
@@ -36,4 +38,16 @@ $('#change_disp').toggleClass('hide_options show_options');
 showed_options = true;
 $('#all_acch2').css('color', h2_color);
 });
+});
+$(document).on('accessoriesLoaded', function (e) { 
+var y = localStorage.getItem('accessoriesDisplay');
+
+switch(y){
+case 'list':
+$('#display_list').trigger('click');
+break;
+default:
+$('#display_block').trigger('click');
+break;
+}
 });

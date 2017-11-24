@@ -29,14 +29,16 @@
 	<script src='/js/navbar_auto.js'></script>
 	<script type="text/javascript" src="/js/slick.min.js"></script>
 	<script type="text/javascript">
+
 		var colors  = Array("colored", "black", "grey"),
 			homepage = <%- JSON.stringify(homepage) %>,
 			t = homepage.length,
 			o = 0;
-			if($(window).width() < 768){
+			if($(window).width() <= 768){
 				var number_of_boxes = Math.round((t+2)/4);
 				var nbOfObjects = Math.round(t/number_of_boxes);
 				var toWrite = "";
+var corres = [];
 for(var y = 0; y <= number_of_boxes; y++){
 	toWrite += "<div class='slider'>";
 	for(var l = 0; l < nbOfObjects; l++){
@@ -47,6 +49,7 @@ for(var y = 0; y <= number_of_boxes; y++){
 							o = 0;
 						}
 						toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_") +"_plugin' class='slide'>";
+corres[homepage[objectId].name.replace(" ","_")] = l;
 					var classTo = "", 
 						title = "<div class='slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
 						if(!homepage[objectId].show_name){
@@ -96,7 +99,8 @@ for(var y = 0; y <= number_of_boxes; y++){
 
 
     $(document).ready(function(){
-if($(window).width() < 768){
+
+if($(window).width() <= 768){
       $('.slider').slick({
   			dots: true,
 			infinite: true,
@@ -106,8 +110,7 @@ arrows: false
 			
 		}); 
 }
-if($(window).width() > 768 && $(window).width() < 1024){
-}
+
     });
   </script>
 	<% 

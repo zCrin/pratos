@@ -1,46 +1,32 @@
-function get_accessories(){
-	var accessories = '';
-	$.getJSON( "/list_accessories/", function( data ) {
-			 all_infos = data.accessories;
+
+var socket = io.connect("http://" + document.domain);
+ socket.on('connect', function(data) {
+    socket.emit('sendAccessoriesList');
+	socket.on('accessoriesList', function(data) {
+data = JSON.parse(data);
+                var accessories = '';
+all_infos = data.accessories;
   			$.each( all_infos, function(key, val ){
 				all_accessories[val.aid] = val;
 				var class_attr = 'accessory-buttons ' + form_display + ' ', img = false;
-				if(val.state.length == 0){
-					val.state = 0;
-				}
-				if(val.state == 0 || val.state == 1){
-					if(val.state_format.length != 0){
-						img = img_correspond[val.state_format];
-					}
-					else{
-						img = img_correspond;
-					} 
-				}
 				
-				if(val.state_format == 'bool'){
+				
+				
+				if(val.state_format != 'float'){
 					if(val.state == 1){
 						class_attr += "accessory_on ";
 						if(val.icon_on){
 							img = val.icon_on;
 						}
-						else{
-							img = '/img/icons/' + img[val.category + val.state];
-						}
+						
 					}
 					else{
 						if(val.icon_off){
 							img = val.icon_off;
 						}
-						else{
-							img = '/img/icons/' + img[val.category + val.state];
 						}
-					}
 				}
-				else{
-					if(img){
-						img = '/img/icons/' + img[val.category + val.state];
-					}
-				}
+				
 				accessories += '<div ';
 
 				if(val.iid != "" && !(/Sensor/).test(val.category)){
@@ -56,9 +42,7 @@ function get_accessories(){
 					accessories += '<img ' + img_style + ' src="' + img +'"/>';
 				}
 				else{
-					if(val.category == "Temperature Sensor"){
-						val.state = Math.round(val.state) + " \260C";
-					}
+					
 					accessories += '<div>' + val.state + '</div>';
 
 				}
@@ -69,15 +53,28 @@ if(first_load){
 			$("#loading_accessories").hide(1000,function(){
 				$('#all_accessories').html(accessories).promise().done(function(){
 							$('#update').css({display: "table"});
+
+$(document).trigger( "accessoriesLoaded");
+
+if(is_updating){
+				$('.update_object').show(1000);
+
+}
 				});
 			});
+
 			first_load = false;
 }
 else{
 				$('#all_accessories').html(accessories);
+if(is_updating){
+				$('.update_object').show(1000);
+
 }
-	});
 }
+        });
+ });
+
 function change_statut(aid){
 	if(!is_updating){
 		var newState;
@@ -86,13 +83,7 @@ function change_statut(aid){
 			all_accessories[aid].state = newState;
 		
 		if(newState.length != 0){
-			if(all_accessories[aid].state_format.length != 0){
-				img = img_correspond[all_accessories[aid].state_format];
-			}
-			else{
-				img = img_correspond;
-			}
-			img = '/img/icons/' + img[all_accessories[aid].category + newState];
+		
 			if(newState == 1){
 				if(all_accessories[aid].icon_on){
 					img = all_accessories[aid].icon_on;

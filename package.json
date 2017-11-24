@@ -15,17 +15,18 @@
     "express": "*",
     "express-fileupload": "*",
     "express-session": "*",
+    "http-proxy": "*",
+    "node-cmd": "*",
     "pratos_accessories_class": "*",
     "pratos_ban_class": "*",
+    "pratos_homepage_class": "*",
     "pratos_navbar_class": "*",
     "pratos_user_class": "*",
+    "serialport": "*",
     "sharp": "*",
+    "string-similarity": "^1.2.0",
     "user-agent-parser": "^0.6.0",
-    "uuid": "*",
-    "pratos_homepage_class": "*",
-    "node-cmd": "*",
-    "http-proxy": "*",
-    "serialport": "*"
+    "uuid": "*"
   },
   "devDependencies": {},
   "repository": {
