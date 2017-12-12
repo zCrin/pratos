@@ -1,57 +1,15 @@
-(node:644) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:354
-    throw new Error('"value" required in setHeader("' + name + '", value)');
-    ^
+(node:23028) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+(node:21610) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-Error: "value" required in setHeader("x-forwarded-for", value)
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:354:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:409:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:1641) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:20171) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:20285) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:25635) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:25808) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:26250) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:30879) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:31254) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:10733) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:25674) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:25828) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:25994) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-SyntaxError: Missing catch or finally after try in /var/www/pratos/views/admin_settings.ejs while compiling ejs
-
-If the above error is not helpful, you may want to try EJS-Lint:
-https://github.com/RyanZim/EJS-Lint
-    at Object.compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12)
-    at Object.compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:338:16)
-    at handleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:181:18)
-    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:14)
-    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
-    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
-    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
-    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
-    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
-    at /var/www/pratos/server.js:107:11
-(node:639) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:640) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-ReferenceError: /var/www/pratos/views/admin_settings.ejs:55
-    53| 
-    54| 	</body>
- >> 55| <% 
-    56| 		var settingsN = Object.keys(settings);
-    57| 	var settingL = settingsN.length;
-    58| for(var i = 0; i < settingsL; i++){ %>
-
-settingsL is not defined
-    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:69:20)
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
     at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
     at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
     at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
@@ -59,189 +17,158 @@ settingsL is not defined
     at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
     at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
     at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
-    at /var/www/pratos/server.js:107:11
-    at /var/www/pratos/node_modules/pratos_homepage_class/index.js:34:6
-(node:444) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:697) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-TypeError: Cannot read property 'length' of undefined
-    at /var/www/pratos/node_modules/pratos_weather_plugin/index.js:35:13
+    at /var/www/pratos/server.js:309:6
     at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
-    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/var/www/pratos/node_modules/express/lib/router/route.js:112:3)
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
+
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
     at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
-    at /var/www/pratos/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/var/www/pratos/node_modules/express/lib/router/index.js:335:12)
-    at next (/var/www/pratos/node_modules/express/lib/router/index.js:275:10)
-    at next (/var/www/pratos/node_modules/express/lib/router/route.js:127:14)
-    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
-(node:922) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:1090) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:351
-    throw new TypeError(
-    ^
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-TypeError: Header name must be a valid HTTP Token ["accept "]
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:351:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:417:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:14299) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:351
-    throw new TypeError(
-    ^
-
-TypeError: Header name must be a valid HTTP Token ["accept "]
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:351:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:417:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:14414) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:351
-    throw new TypeError(
-    ^
-
-TypeError: Header name must be a valid HTTP Token ["accept "]
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:351:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:417:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:14618) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:351
-    throw new TypeError(
-    ^
-
-TypeError: Header name must be a valid HTTP Token ["accept "]
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:351:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:417:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:14756) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:14947) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-_http_outgoing.js:351
-    throw new TypeError(
-    ^
-
-TypeError: Header name must be a valid HTTP Token ["accept "]
-    at ClientRequest.OutgoingMessage.setHeader (_http_outgoing.js:351:11)
-    at new ClientRequest (_http_client.js:86:14)
-    at Object.exports.request (http.js:31:10)
-    at Array.stream (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/passes/web-incoming.js:119:74)
-    at ProxyServer.<anonymous> (/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:80:21)
-    at Server.<anonymous> (/var/www/pratos/server.js:417:7)
-    at emitTwo (events.js:106:13)
-    at Server.emit (events.js:191:7)
-    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:546:12)
-    at HTTPParser.parserOnHeadersComplete (_http_common.js:99:23)
-(node:636) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-                                                                                                                                                              (node:636) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:637) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:609) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:639) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:636) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:638) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:602) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:633) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:612) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-(node:610) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
-/var/www/pratos/node_modules/pratos_google_home_plugin/index.js:20
-		});
-		 ^
-SyntaxError: Unexpected token )
-    at Object.exports.runInThisContext (vm.js:76:16)
-    at Module._compile (module.js:542:28)
-    at Object.Module._extensions..js (module.js:579:10)
-    at Module.load (module.js:487:32)
-    at tryModuleLoad (module.js:446:12)
-    at Function.Module._load (module.js:438:3)
-    at Module.require (module.js:497:17)
-    at require (internal/module.js:20:19)
-    at /var/www/pratos/node_modules/pratos_plugin_class/index.js:23:16
-    at tryToString (fs.js:455:3)
-TypeError: Cannot read property 'trim' of undefined
-    at analyse_request (/var/www/pratos/node_modules/pratos_google_home_plugin/index.js:44:12)
-    at /var/www/pratos/node_modules/pratos_google_home_plugin/index.js:35:1
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
     at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
-    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/var/www/pratos/node_modules/express/lib/router/route.js:112:3)
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
+
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
     at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
-    at /var/www/pratos/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/var/www/pratos/node_modules/express/lib/router/index.js:335:12)
-    at next (/var/www/pratos/node_modules/express/lib/router/index.js:275:10)
-    at SendStream.error (/var/www/pratos/node_modules/serve-static/index.js:121:7)
-(node:5790) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
-events.js:160
-      throw er; // Unhandled 'error' event
-      ^
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-Error: connect ECONNREFUSED 192.168.0.6:3005
-    at Object.exports._errnoException (util.js:1026:11)
-    at exports._exceptionWithHostPort (util.js:1049:20)
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
-events.js:160
-      throw er; // Unhandled 'error' event
-      ^
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-Error: connect ECONNREFUSED 192.168.0.6:3005
-    at Object.exports._errnoException (util.js:1026:11)
-    at exports._exceptionWithHostPort (util.js:1049:20)
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
-events.js:160
-      throw er; // Unhandled 'error' event
-      ^
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+(node:653) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-Error: connect ECONNREFUSED 192.168.0.6:3007
-    at Object.exports._errnoException (util.js:1026:11)
-    at exports._exceptionWithHostPort (util.js:1049:20)
-    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
-undefined:1
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+ReferenceError: /var/www/pratos/views/css/tablette-landscape.ejs:753
+    751| }
+    752| #addRoom, #updateRoom{
+ >> 753| color:<%= background_color %>;
+    754| display:block;
+    755| margin: 2% auto;
+    756| font-size:110%;
 
-
-SyntaxError: Unexpected end of JSON input
-    at Object.parse (native)
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:141:16
-    at /var/www/pratos/node_modules/node-cmd/cmd.js:25:21
-    at ChildProcess.exithandler (child_process.js:213:5)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:877:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-(node:23373) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
-undefined:1
-
-
-
-SyntaxError: Unexpected end of JSON input
-    at Object.parse (native)
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:161:16
-    at /var/www/pratos/node_modules/node-cmd/cmd.js:25:21
-    at ChildProcess.exithandler (child_process.js:213:5)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:877:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-(node:28676) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+background_color is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:524:12), <anonymous>:91:26)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:555:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/server.js:309:6
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)

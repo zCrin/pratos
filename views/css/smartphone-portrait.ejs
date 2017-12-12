@@ -1,9 +1,6 @@
-<%
-	var green = "#9AFE2E";
-	var global_color = '#05FEFF';
-%>
+
 html,body{
-background-color: #350E00;
+background-color: <%= background_color %>;
 }
 a{
 color:orange;
@@ -109,7 +106,7 @@ background-color: white;
 }
 #nav .not_colored{
 	border: 2px solid white;
-	color: #350E00;
+	color: <%= background_color %>;
 }	
 #nav .colored{
 	border: 2px solid <%= global_color %>;
@@ -118,7 +115,7 @@ background-color: white;
 
 .full-nav{
 	
-	background-color: #350E00;
+	background-color: <%= background_color %>;
 	min-height: 84.5%;
 }
 /*Specific*/
@@ -294,7 +291,7 @@ margin: 5% auto;
  
 
 		}
-.updating_page, .updating_pic{
+.updating_page, .updating_pic, .rooms_list, .rooms_add{
 position: absolute;
   top: 0;
   left: 50%;
@@ -309,7 +306,7 @@ box-shadow: 0 0 0 100vh rgba(0,0,0,.5);
  
 }
 
-.updating_page h2, .updating_pic h2{
+.updating_page h2, .updating_pic h2, .rooms_list h2, .rooms_add h2{
 margin: 2% auto;
 }
 label, *[onclick]{
@@ -334,6 +331,7 @@ color: <%= global_color %>;
 }
 #all_acch2{
 margin: 0 3%;
+cursor:pointer;
 }
 
 #upload_img{

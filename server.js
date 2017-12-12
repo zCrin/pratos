@@ -16,6 +16,12 @@ var http = require('http'),
 	cmd=require('node-cmd'),
 	proxyPort=3000,
 	webserverPort=3003;
+//var global_color = '#05FEFF';
+//var background_color = "#350E00";
+var style = require("pratos_style_class");
+var colorStyle={r:5,g:254,b:255,a:255};
+var secondColorStyle = {r:53,g:14,b:0,a:255};
+style. change_logo_color(colorStyle.r, colorStyle.g, colorStyle.b, colorStyle.a);
 
 /** Configuration */
 app.use(bodyParser.json())
@@ -132,11 +138,32 @@ app.get('/list_accessories/', function(req, res) {
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
 			var Accessories = require("pratos_accessories_class");
-				Accessories.list_accessories(globalVariable);
-				globalVariable.event.on("accessories", show_list_accessories);
-				function show_list_accessories (answer, data){
-					if(answer == "list:obtained"){
-						globalVariable.event.removeListener("accessories", show_list_accessories);
+				Accessories.list_accessories(globalVariable, function(data){
+			
+					res.end(data);
+					delete globalVariable[req.user_id];
+				});
+				
+			}
+		else{
+			res.redirect('/');
+delete globalVariable[req.user_id];
+		}
+	});
+});
+//page list_rooms
+app.get('/list_rooms/', function(req, res) {
+	
+	
+	User.verify_connection(req.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+			res.setHeader('Content-Type', 'application/json');
+			var Accessories = require("pratos_accessories_class");
+				Accessories.list_rooms(globalVariable);
+				globalVariable.event.on("accessories", show_list_rooms);
+				function show_list_rooms (answer, data){
+					if(answer == "listRooms:obtained"){
+						globalVariable.event.removeListener("accessories", show_list_rooms);
 						res.end(data);
 delete globalVariable[req.user_id];
 					}
@@ -148,8 +175,63 @@ delete globalVariable[req.user_id];
 		}
 	});
 });
-
-
+app.get('/add_room/', function(req, res) {
+	
+	
+	User.verify_connection(req.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+			res.setHeader('Content-Type', 'text/html');
+			var Accessories = require("pratos_accessories_class");
+				Accessories.add_rooms(req.user_id, globalVariable, function(data){
+						res.end(data);
+delete globalVariable[req.user_id];
+					});
+				
+			}
+		else{
+			res.redirect('/');
+delete globalVariable[req.user_id];
+		}
+	});
+});
+app.get('/update_room/', function(req, res) {
+	
+	
+	User.verify_connection(req.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+			res.setHeader('Content-Type', 'text/html');
+			var Accessories = require("pratos_accessories_class");
+				Accessories.update_rooms(req.user_id, globalVariable, function(data){
+						res.end(data);
+delete globalVariable[req.user_id];
+					});
+				
+			}
+		else{
+			res.redirect('/');
+delete globalVariable[req.user_id];
+		}
+	});
+});
+app.get('/delete_room/', function(req, res) {
+	
+	
+	User.verify_connection(req.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+			res.setHeader('Content-Type', 'text/html');
+			var Accessories = require("pratos_accessories_class");
+				Accessories.delete_rooms(req.user_id, globalVariable, function(data){
+						res.end(data);
+delete globalVariable[req.user_id];
+					});
+				
+			}
+		else{
+			res.redirect('/');
+delete globalVariable[req.user_id];
+		}
+	});
+});
 app.get('/accessories_icon/', function(req, res) {
 
 	
@@ -227,10 +309,12 @@ delete globalVariable[req.user_id];
 });
 
 app.get('/css/:file.ejs', function(req, res) {
-	
+	var global_color = 'rgb('+ colorStyle.r+","+ colorStyle.g+","+ colorStyle.b+")";
+var background_color = 'rgb('+ secondColorStyle.r+","+ secondColorStyle.g+","+ secondColorStyle.b+")";
+
 	globalVariable.session = req.session;
 	res.setHeader('Content-Type', 'text/css');
-	res.render(__dirname + '/views/css/' + req.params.file + '.ejs', {variable: globalVariable});
+	res.render(__dirname + '/views/css/' + req.params.file + '.ejs', {variable: globalVariable, global_color:global_color, background_color: background_color});
 delete globalVariable[req.user_id];
 });
 
@@ -270,8 +354,8 @@ fs.writeFile(__dirname + '/static/img/icons/' + path2, outputBuffer);
   });
 				fs.readFile( __dirname + "/conf/auto_accessories_icon.json", 'utf8', function(err, data){
 					var txt = JSON.parse(data);
-					txt[req.body.type][path1] = '\/' + path1;
-					txt[req.body.type][path2] = '\/' + path2;
+					txt[path1] = '\/' + path1;
+					txt[path2] = '\/' + path2;
 					fs.writeFile(__dirname + "/conf/auto_accessories_icon.json", JSON.stringify(txt));
 					res.setHeader('Content-Type', 'application/json');
 					globalVariable.event.emit("accessories", "uploading_images:successed");
@@ -388,11 +472,9 @@ globalVariable[user_id].cookies = data;
 callback();
 }
 var AccessoriesHomebridge = require("pratos_accessories_class");
-var intervalHomebridge = setInterval(function(){
 
-AccessoriesHomebridge. has_change_happened(globalVariable);
 
-},3000);
+AccessoriesHomebridge.has_change_happened(globalVariable);
 
 
 app.use(express.static(__dirname + '/static'));
@@ -441,15 +523,11 @@ io.on('connection', function(client){
 var u = /\/admin\/manage_accessories\//;
 if(u.test(client.handshake.headers.referer)){
        var Accessories = require("pratos_accessories_class");
-				Accessories.list_accessories(globalVariable);
-				globalVariable.event.on("accessories", show_list_accessories);
-				function show_list_accessories (answer, data){
-					if(answer == "list:obtained"){
-						globalVariable.event.removeListener("accessories", show_list_accessories);
+				Accessories.list_accessories(globalVariable,function(data){
 						
         client.emit('accessoriesList', data);
-					}
-				}
+					});
+				
 }
 else{
 client.emit('accessoriesList', "not_connected");
@@ -462,10 +540,13 @@ if(answer == "change:detected"){
         client.emit('accessoriesList', data);
 					}
 }
-    });
+
+	
+});
 });
 serverCreated.listen(proxyPort, function() {
     console.log('Pratos : proxyserver listening on port :' + proxyPort);
+	
 });
 });
 // We simulate the 3 target applications
