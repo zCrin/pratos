@@ -164,10 +164,14 @@ if(rooms[e]["_id"] == all_accessories[aid].room){
 isRoom = ' selected="selected" ';
 }
 $('#update_accessory_room').append('<option '+isRoom+' roomid ="'+rooms[e]["_id"]+'">'+ (e+1)+". " + rooms[e].name +'</option>');
+
 		}
 
 $('#update_accessory_room').selectmenu();
 menuGenerated=1;
+$('.ui-button:focus').css('border','1px solid #cccccc');
+$('#update_accessory_room').on( "selectmenuclose", function( event, ui ) {$('.ui-button').blur();} );
+
 $('.ui-button').css('background-color','white');
 $('.ui-selectmenu-button.ui-button').css('text-align','center');
 $('.ui-selectmenu-button.ui-button').css('width', ($('#update_accessory_model').css('width').replace('px','')-60)+"px");

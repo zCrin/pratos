@@ -275,7 +275,7 @@ border-radius: 15px;
 	border: 1px solid #D8D8D8;
 	color: #D8D8D8;
 	padding: 3%;
-	font-size: 120%;
+	font-size: 130%;
 background-color: white;
 	text-align: center;
 	font-family: San Francisco;
@@ -291,19 +291,25 @@ flex-direction: column;
 .accessory-buttons img{
 display: block;
 margin: 10% auto 3% auto;
-height: 30%;
+
 width:30%;
 
 }
 .accessory-buttons div{
 font-size: 120%;
-font-weight: 400;
+font-weight: 600;
 }
 .accessory_on{
 
 	border: 1px solid <%= global_color %>;
 	color: <%= global_color %>;
 	
+}
+.accessory-buttons #accessory_name{
+margin-top:7%;
+}
+.accessory-buttons_list #accessory_name{
+margin-top:0% !important;
 }
 .accessory-buttons_list{
 width: 88%;
@@ -313,7 +319,7 @@ font-size:140%;
 flex-direction: row-reverse;
 justify-content: space-between;
 border-radius: 6px;
-min-height: initial;
+min-height: initial; 
 align-items: center;
 }
 .accessory-buttons_list img{

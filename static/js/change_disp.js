@@ -19,15 +19,14 @@ var showed_options = true,
 closed = true;
 $('#show_options').click(function(){
 
-h2_color = $('#all_acch2').css('color');
-$('h2').css('color', 'white').promise().done(function(){
+
+
 $('#change_disp').toggleClass('hide_options show_options');
 
 $('#change_dispo').toggle(1000);
 showed_options = false;
 $('#hide_options').show();
 $('#show_options').hide();
-});
 
 });
 $('#hide_options').click(function(){
@@ -36,9 +35,9 @@ $('#show_options').show();
 $('#change_dispo').hide(1000, function(){
 $('#change_disp').toggleClass('hide_options show_options');
 showed_options = true;
-$('#all_acch2').css('color', h2_color);
 });
 });
+
 $(document).on('accessoriesLoaded', function (e) { 
 var y = localStorage.getItem('accessoriesDisplay');
 

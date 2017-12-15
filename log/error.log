@@ -172,3 +172,4 @@ background_color is not defined
     at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
     at /var/www/pratos/server.js:309:6
     at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+(node:25468) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit

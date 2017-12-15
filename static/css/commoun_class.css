@@ -50,3 +50,10 @@ html,body{
 
  -webkit-tap-highlight-color: transparent;
 }
+.ui-button:hover{
+font-weight:200;
+}
+.ui-widget{
+font-family: "San Francisco";
+font-weight:200 !important;
+}

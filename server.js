@@ -19,9 +19,16 @@ var http = require('http'),
 //var global_color = '#05FEFF';
 //var background_color = "#350E00";
 var style = require("pratos_style_class");
-var colorStyle={r:5,g:254,b:255,a:255};
-var secondColorStyle = {r:53,g:14,b:0,a:255};
-style. change_logo_color(colorStyle.r, colorStyle.g, colorStyle.b, colorStyle.a);
+var colorStyle;
+style. get_global_color(function(r,g,b,a){
+colorStyle = {r:r,g:g,b:b,a:a};
+});
+var secondColorStyle;
+style. get_background_color(function(r,g,b,a){
+secondColorStyle = {r:r,g:g,b:b,a:a};
+});
+
+//style. change_logo_color(colorStyle.r, colorStyle.g, colorStyle.b, colorStyle.a);
 
 /** Configuration */
 app.use(bodyParser.json())
@@ -221,6 +228,31 @@ app.get('/delete_room/', function(req, res) {
 			res.setHeader('Content-Type', 'text/html');
 			var Accessories = require("pratos_accessories_class");
 				Accessories.delete_rooms(req.user_id, globalVariable, function(data){
+						res.end(data);
+delete globalVariable[req.user_id];
+					});
+				
+			}
+		else{
+			res.redirect('/');
+delete globalVariable[req.user_id];
+		}
+	});
+});
+app.get('/styleChange/', function(req, res) {
+	
+	
+	User.verify_connection(req.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+			res.setHeader('Content-Type', 'text/html');
+				style.change_colorsApi(req.user_id, globalVariable, function(data){
+style. get_global_color(function(r,g,b,a){
+colorStyle = {r:r,g:g,b:b,a:a};
+});
+
+style. get_background_color(function(r,g,b,a){
+secondColorStyle = {r:r,g:g,b:b,a:a};
+});
 						res.end(data);
 delete globalVariable[req.user_id];
 					});

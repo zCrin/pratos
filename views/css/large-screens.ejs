@@ -288,12 +288,18 @@ flex-direction: column;
 .accessory-buttons img{
 display: block;
 margin: 10% auto 3% auto;
-height: 30%;
-width:30%;
+
+width:25%;
 
 }
+.accessory-buttons #accessory_name{
+margin-top:7%;
+}
+.accessory-buttons_list #accessory_name{
+margin-top:0% !important;
+}
 .accessory-buttons div{
-font-size: 120%;
+font-size: 140%;
 font-weight: 400;
 }
 .accessory_on{
@@ -345,7 +351,7 @@ box-shadow: 0 0 0 100vh rgba(0,0,0,.5);
  
 }
 
-.updating_page h2, .updating_pic h2, .rooms_list h2,.rooms_add h2{
+.updating_page h2, .updating_pic h2, .rooms_list h2, .rooms_add h2{
 margin: 2% auto;
 }
 label, *[onclick]{
@@ -746,3 +752,65 @@ color: lightgreen;
 .settings_pagebox .inactive_plugin{
 color: red;
 }
+#addRoom, #updateRoom{
+color:<%= background_color %>;
+display:block;
+margin: 2% auto;
+font-size:110%;
+text-align:center;
+cursor:pointer;
+font-weight:300;
+}
+#addRoom .fa-plus{
+font-size: 90%;
+font-weight: 200;
+}
+#room_name{
+border:0;
+display: block;
+margin: 0 auto;
+
+
+font-size: 120%;
+}
+
+#validate_room_creation, #validate_room_update, #delete_room{background: 0;
+			border: 1px solid #D8D8D8;
+text-align: center;
+display: table;
+	color: #D8D8D8;
+	padding: 1%;
+	font-size: 90%;
+border-radius: 15px;
+cursor:pointer;
+margin: 2% auto ;}
+#delete_room{
+color: red; 
+border-color: red;
+}
+#roomChange{
+color:lightgrey;
+display:block;
+margin: 1% auto;
+font-size:110%;
+text-align:center;
+cursor:pointer;
+font-weight:300;
+}
+.ui-button{
+background-color:white;
+font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 130%;
+border:0;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid <%= global_color %>;
+	background: <%= global_color %>;
+	font-weight: normal;
+	color: #ffffff;
+} 
