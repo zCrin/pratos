@@ -3,7 +3,13 @@ var http = require('http'),
 	express = require('express'),
 	fileUpload = require('express-fileupload'),
 	url = require("url"),
-	session = require('express-session'),
+	session = require("express-session")({
+    secret: "s",
+    resave: true,
+    saveUninitialized: true
+  }),
+sharedsession =require('socket.io-express-session'),
+IOcookieParser = require('socket.io-cookie'),
 	bodyParser = require('body-parser'),
 	Cookies = require("cookies"),
 	User = require("pratos_user_class"),
@@ -16,20 +22,9 @@ var http = require('http'),
 	cmd=require('node-cmd'),
 	proxyPort=3000,
 	webserverPort=3003;
-//var global_color = '#05FEFF';
-//var background_color = "#350E00";
+
 var style = require("pratos_style_class");
-var colorStyle;
-style. get_global_color(function(r,g,b,a){
-colorStyle = {r:r,g:g,b:b,a:a};
-});
-var secondColorStyle;
-style. get_background_color(function(r,g,b,a){
-secondColorStyle = {r:r,g:g,b:b,a:a};
-});
-
-//style. change_logo_color(colorStyle.r, colorStyle.g, colorStyle.b, colorStyle.a);
-
+style.init(globalVariable);
 /** Configuration */
 app.use(bodyParser.json())
 .use(fileUpload())
@@ -37,12 +32,8 @@ app.use(bodyParser.json())
 	extended: true
 }))
 .use(
-	session({
-		secret : 's',
-		saveUninitialized : false,
-		resave : false
-	}
-))
+	session
+)
 .use(function(req,res,next){
 	var user_id = uuidV1();
 
@@ -341,12 +332,13 @@ delete globalVariable[req.user_id];
 });
 
 app.get('/css/:file.ejs', function(req, res) {
-	var global_color = 'rgb('+ colorStyle.r+","+ colorStyle.g+","+ colorStyle.b+")";
-var background_color = 'rgb('+ secondColorStyle.r+","+ secondColorStyle.g+","+ secondColorStyle.b+")";
+	var global_color = 'rgb('+ globalVariable.colorStyle.r+","+ globalVariable.colorStyle.g+","+ globalVariable.colorStyle.b+")";
+var background_color = 'rgb('+ globalVariable.secondColorStyle.r+","+ globalVariable.secondColorStyle.g+","+ globalVariable.secondColorStyle.b+")";
 
 	globalVariable.session = req.session;
 	res.setHeader('Content-Type', 'text/css');
 	res.render(__dirname + '/views/css/' + req.params.file + '.ejs', {variable: globalVariable, global_color:global_color, background_color: background_color});
+
 delete globalVariable[req.user_id];
 });
 
@@ -547,23 +539,51 @@ xforward: true,
 var io = require('socket.io')(serverCreated);
 
 
+io.use(sharedsession(session, {
+    autoSave:true
+})).use( IOcookieParser).use(function(client,next){
+var user_id = uuidV1();
+globalVariable[user_id] = {
+request:{user_id: user_id,
+session: client.handshake.session,
+connection:{
+	remoteAddress: client.handshake.address
+},
+headers:{
+"user-agent":client.request.headers['user-agent'],
+"x-forwarded-for": client.handshake.address
+}
+},
+cookies: {get:function(name){return client.request.headers.cookie[name];}}
+};
+
+client.user_id = user_id;
+
+next();
+});
+
+
 
 io.on('connection', function(client){
 
-
+	
+style.ioConnection(client, globalVariable);
+client.on("disconnect",function(data){
+delete globalVariable[client.user_id];
+});
   client.on('sendAccessoriesList', function(data) {
-var u = /\/admin\/manage_accessories\//;
-if(u.test(client.handshake.headers.referer)){
+
+User.verify_connection(client.user_id,globalVariable, function(user_res){
+		if(user_res == true){
+	
+
        var Accessories = require("pratos_accessories_class");
 				Accessories.list_accessories(globalVariable,function(data){
 						
         client.emit('accessoriesList', data);
 					});
 				
-}
-else{
-client.emit('accessoriesList', "not_connected");
-}
+
 globalVariable.event.on("accessories", send_accessories_message);
 function send_accessories_message(answer,data){
 if(answer == "change:detected"){
@@ -573,7 +593,9 @@ if(answer == "change:detected"){
 					}
 }
 
-	
+	}
+
+});
 });
 });
 serverCreated.listen(proxyPort, function() {

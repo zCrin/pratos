@@ -50,6 +50,7 @@ html,body{
 
  -webkit-tap-highlight-color: transparent;
 }
+h3{color:white;}
 .ui-button:hover{
 font-weight:200;
 }

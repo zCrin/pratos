@@ -1,0 +1,5 @@
+[2017-12-20 15:00:57] [Lampe Antoine] Getting power state
+[2017-12-20 15:00:57] [Lampe Antoine] HTTP get power function failed: connect ECONNREFUSED 192.168.0.18:80
+[2017-12-20 15:00:57] [Temperature Chambre] Requesting temperature on "http://192.168.0.6/controller/get_temperature.php", method GET
+[2017-12-20 15:00:57] [Temperature Chambre] HTTP successful response: { "temperature": 0}
+

@@ -87,6 +87,7 @@ for(var i = 0; i < settingsL; i++){ %>
 	
 	<script src='/js/navbar_auto.js'></script>
 		<script src="/js/bootstrap-colorpicker.min.js"></script>
+ <script src="/socket.io/socket.io.js"></script>
 <script>
 var show_actual;
 		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
@@ -320,8 +321,36 @@ $("#resetColors").click(function(){
   $('#cp8_container'). colorpicker('setValue',"#05FEFF");
 });
 $("#saveColors").click(function(){
-$.get("/styleChange/?globalColor="+$('#cp8_container').data('colorpicker').color. toRgbString()+"&bck="+ $('#cp9_container').data('colorpicker').color. toRgbString(),function(data){
-alert(data);
+
+
+var colorSet = 0;
+var socket = io.connect("http://" + document.domain);
+var lastReceived;
+var nC = $('#cp8_container').data('colorpicker').color. toRgbString();
+ socket.on('connect', function(data) {
+if(!colorSet){
+    socket.emit('updateCSSRequest', nC, $('#cp9_container').data('colorpicker').color. toRgbString());
+$("#styleBox button").hide(1000);
+$("#flexStyle").html("<div id='progressbar'></div> <div id='styleState'>Chargement...<br /> Cela peut prendre quelques minutes. </div>");
+$( "#progressbar" ).progressbar({
+      value: false
+    });
+$( "#progressbar" ).find( ".ui-progressbar-value" ).css("background-color",nC);
+socket.on('disconnect',function(){alert('er');});
+socket.on('updateCSSERROR',function(x){alert(x);});
+	socket.on('updateCSS', function(ans,step) {
+setInterval(function(){socket.emit('updateCSSRECONNECTION');},1000);
+setTimeout(function(){alert("Quelque chose a disfonctionné");location.reload();},360000);
+
+if(step == 6){
+socket.emit('updateCSSConfirm');
+setTimeout(function(){location.reload();},2000);
+
+}
+
+colorSet = 1;
+});
+}
 });
 });
 
@@ -350,6 +379,18 @@ display: inline-block;
 border-radius: 15px;
 cursor:pointer;
 margin: 5% 5% ;}
+.ui-progressbar {
+    background-color: #ccc;
+width:80%
+margin:2% auto;
+  }
+  #progressbar .ui-progressbar-value,.ui-progressbar-indeterminate{
+width:100%;
+}
+#styleState{
+color:white;
+margin-top:3%;
+}
 </style>
 	<% 
 		var contentL = content.length;
