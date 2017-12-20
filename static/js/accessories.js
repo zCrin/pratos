@@ -3,6 +3,7 @@
 var socket = io.connect("http://" + document.domain);
 var lastReceived;
  socket.on('connect', function(data) {
+setInterval(function(){socket.emit('accessoriesRequest');},1000);
     socket.emit('sendAccessoriesList');
 	socket.on('accessoriesList', function(data) {
 lastReceived = JSON.parse(data);

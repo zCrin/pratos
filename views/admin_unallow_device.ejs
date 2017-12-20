@@ -20,10 +20,16 @@
 		</div>
 	</body>
 	<script src='/js/navbar_auto.js'></script>
-	<% 
-		var contentL = content.length;
-		for(var u = 0; u < contentL; u++){ %>
-	<%- content[u] %>
-	<%	}
+		<% 
+var contentNames = Object.keys(content);
+var contentL = contentNames.length;
+
+		var loaded ={};
+		for(var u = 0; u < contentL; u++){ 
+var y = new RegExp(content[contentNames[u]]. page,'g');
+			if(page_name.match(y) && !loaded[content[contentNames[u]].script]){
+loaded[content[contentNames[u]].script] == 1;%>
+	<%- content[contentNames[u]].script%>
+	<%	}}
 	%>
 </html>

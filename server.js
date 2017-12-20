@@ -57,7 +57,7 @@ app.get('/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res != true){
 			res.setHeader('Content-Type', 'text/html');
-			res.render( __dirname + '/views/index.ejs');
+			res.render( __dirname + '/views/index.ejs',{content: globalVariable.contentPlugins,page_name:"index"});
 delete globalVariable[req.user_id];
 }
 		else{
@@ -102,18 +102,18 @@ app.get('/admin/:adminURI/', function(req, res){
 			res.setHeader('Content-Type', 'text/html');
 				if(req.params.adminURI == "index"){
 					require("pratos_homepage_class").construct(globalVariable.homepagePlugins, function(res_homepage){
-						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, homepage: res_homepage});
+						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, homepage: res_homepage,page_name: "admin/"+req.params.adminURI});
 					});
 				}
 else if(req.params.adminURI == "settings"){
 					
 
 require("pratos_homepage_class").construct(globalVariable.homepagePlugins, function(res_homepage){
-						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, settings: globalVariable. pluginsSettings});
+						res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins, page_name: "admin/"+req.params.adminURI , settings: globalVariable. pluginsSettings});
 					});
 				}
 				else{
-					res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, content: globalVariable.contentPlugins});
+					res.render( __dirname + '/views/admin_' + req.params.adminURI + '.ejs', {nav: res_nav, page_name: "admin/"+req.params.adminURI , content: globalVariable.contentPlugins});
 
 				}
 delete globalVariable[req.user_id];
@@ -337,7 +337,7 @@ var background_color = 'rgb('+ globalVariable.secondColorStyle.r+","+ globalVari
 
 	globalVariable.session = req.session;
 	res.setHeader('Content-Type', 'text/css');
-	res.render(__dirname + '/views/css/' + req.params.file + '.ejs', {variable: globalVariable, global_color:global_color, background_color: background_color});
+	res.render(__dirname + '/views/css/' + req.params.file + '.ejs', {variable: globalVariable, global_color:global_color, page_name: req.params.file,background_color: background_color});
 
 delete globalVariable[req.user_id];
 });
@@ -568,6 +568,11 @@ io.on('connection', function(client){
 
 	
 style.ioConnection(client, globalVariable);
+var nPluginsSocket = globalVariable.socketPlugins.length;
+
+for(var ze=0;ze<nPluginsSocket;ze++){
+require(globalVariable.socketPlugins[ze]).socket(client,globalVariable);
+}
 client.on("disconnect",function(data){
 delete globalVariable[client.user_id];
 });
