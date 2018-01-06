@@ -1,7 +1,44 @@
-/var/www/pratos/node_modules/pratos_style_class/index.js:22
-client.on'(connect_timeout',function(){console.llg('er');});
-         ^^^^^^^^^^^^^^^^^^
-SyntaxError: Unexpected string
+(node:13297) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: ENOENT: no such file or directory, open '/var/www/pratos/log/homebridge.log'
+    at Error (native)
+/var/www/pratos/node_modules/pratos_accessories_class/index.js:216
+					return callback(JSON.stringify(answerBack));
+					       ^
+
+TypeError: callback is not a function
+    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:216:13
+    at callbackState (/var/www/pratos/node_modules/pratos_accessories_class/index.js:322:8)
+    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:303:1
+    at Request.request [as _callback] (/var/www/pratos/node_modules/pratos_accessories_class/index.js:391:8)
+    at Request.self.callback (/var/www/pratos/node_modules/request/request.js:188:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/var/www/pratos/node_modules/request/request.js:1171:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+/var/www/pratos/node_modules/pratos_accessories_class/index.js:216
+					return callback(JSON.stringify(answerBack));
+					       ^
+
+TypeError: callback is not a function
+    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:216:13
+    at callbackState (/var/www/pratos/node_modules/pratos_accessories_class/index.js:322:8)
+    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:303:1
+    at Request.request [as _callback] (/var/www/pratos/node_modules/pratos_accessories_class/index.js:391:8)
+    at Request.self.callback (/var/www/pratos/node_modules/request/request.js:188:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+    at Request.<anonymous> (/var/www/pratos/node_modules/request/request.js:1171:10)
+    at emitOne (events.js:96:13)
+    at Request.emit (events.js:188:7)
+/var/www/pratos/node_modules/pratos_google_home_plugin/index.js:130
+}
+^
+SyntaxError: missing ) after argument list
     at Object.exports.runInThisContext (vm.js:76:16)
     at Module._compile (module.js:542:28)
     at Object.Module._extensions..js (module.js:579:10)
@@ -10,5 +47,20 @@ SyntaxError: Unexpected string
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at Object.<anonymous> (/var/www/pratos/server.js:26:13)
-    at Module._compile (module.js:570:32)
+    at /var/www/pratos/node_modules/pratos_plugin_class/index.js:24:16
+    at tryToString (fs.js:455:3)
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES 0.0.0.0:443
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1244:19)
+    at listen (net.js:1293:10)
+    at Server.listen (net.js:1389:5)
+    at /var/www/pratos/server.js:514:9
+    at /var/www/pratos/node_modules/node-cmd/cmd.js:25:21
+    at ChildProcess.exithandler (child_process.js:213:5)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)

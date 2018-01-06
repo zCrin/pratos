@@ -1,3 +1,19 @@
+var fs = require("fs");
+
+function isJson(str) { //function to know if a variable is JSON 
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+
+fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
+		if(isJson(settings)){
+			settings = JSON.parse(settings);
+
 var http = require('http'),
 	EventEmitter = require("events").EventEmitter,
 	express = require('express'),
@@ -13,19 +29,35 @@ IOcookieParser = require('socket.io-cookie'),
 	bodyParser = require('body-parser'),
 	Cookies = require("cookies"),
 	User = require("pratos_user_class"),
-	fs = require("fs"),
+	
 	globalVariable = [],
 	app = express(),
 	plugins = require("pratos_plugin_class"),
 	uuidV1 = require('uuid/v1');
 	globalVariable.event = new EventEmitter(),
 	cmd=require('node-cmd'),
-	proxyPort=3000,
-	webserverPort=3003;
+	proxyPort=settings.website.proxy_port;
+	webserverPort= settings.website.webserver_port;
 
 var style = require("pratos_style_class");
 style.init(globalVariable);
 /** Configuration */
+
+app.enable('trust proxy');
+
+// Add a handler to inspect the req.secure flag (see 
+// http://expressjs.com/api#req.secure). This allows us 
+// to know whether the request was via http or https.
+app.use (function (req, res, next) {
+        if (req.secure) {
+                // request was via https, so do no special handling
+                next();
+        } else {
+                // request was via http, so redirect to https
+                res.redirect('https://' + req.headers.host + req.url);
+        }
+});
+
 app.use(bodyParser.json())
 .use(fileUpload())
 .use(bodyParser.urlencoded({
@@ -149,6 +181,7 @@ delete globalVariable[req.user_id];
 		}
 	});
 });
+
 //page list_rooms
 app.get('/list_rooms/', function(req, res) {
 	
@@ -504,39 +537,49 @@ AccessoriesHomebridge.has_change_happened(globalVariable);
 app.use(express.static(__dirname + '/static'));
 cmd.get("sudo kill $(sudo lsof -t -i:"+ webserverPort+")", function(){
 	app.listen(webserverPort);
+
 console.log("Pratos : webserver listening on port :"+ webserverPort);
 });
-fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, data){
-						var settings = JSON.parse(data);
+
 var httpProxy = require('http-proxy'),
-
-    proxy = httpProxy.createProxyServer({});
+	proxy = httpProxy.createProxyServer({});
 cmd.get("sudo kill $(sudo lsof -t -i:"+ proxyPort+")", function(){
-
-
-var serverCreated = http.createServer(function(req, res) {
-globalVariable.event.emit("http","Request Received",req);
-req.headers.host = (!req.headers.host)? "": req.headers.host;
-    var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host;
-    var pathname = url.parse(req.url).pathname;
-req.headers['x-forwarded-for'] = getClientIP(req);
-if(req.headers['x-forwarded-for'] != undefined){ 
-		if(settings.DNS[hostname]){
+	var serverCreated = http.createServer(function(req, res) {
+		globalVariable.event.emit("http","Request Received",req);
+		req.headers.host = (!req.headers.host)? "": req.headers.host;
+    	var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host;
+    	var pathname = url.parse(req.url).pathname;
+		req.headers['x-forwarded-for'] = getClientIP(req);
+		if(req.headers['x-forwarded-for'] != undefined){ 
+			if(settings.DNS[hostname]){
 //console.log(req.headers['accept']);
-			proxy.web(req, res, { target: settings.DNS[hostname],
+				proxy.web(req, res, { target: settings.DNS[hostname],
+  					xforward: true,
+  					changeOrigin: false // changes the origin of the host header to the target URL 
+				},function(e) { 
+					res.end("Serveur Indisponible");});
+			}else{
+				proxy.web(req, res, { target: "http://localhost:"+ webserverPort,
+					xforward: true,
+  					changeOrigin: false});
+			}
+      }
+	});
+if(settings.https.https_enable){
+	var https = require('https');
+
   
-    xforward: true,
-  
-  changeOrigin: false // changes the origin of the host header to the target URL 
-},function(e) { res.end("Serveur Indisponible");});
-		}else{
-proxy.web(req, res, { target: "http://localhost:"+ webserverPort,
-xforward: true,
-  changeOrigin: false});
-}
-        }
-});
+		var httpsServer = https.createServer({
+  			key: fs.readFileSync('key.pem'),
+  			cert: fs.readFileSync('cert.pem')
+	}, app).listen(settings.https.https_port);
+console.log("Pratos : HTTPS server started on port : "+ settings.https.https_port);
+var io = require('socket.io')(httpsServer);
+ }
+
+ else{
 var io = require('socket.io')(serverCreated);
+}
 
 
 io.use(sharedsession(session, {
@@ -600,15 +643,18 @@ if(answer == "change:detected"){
 
 	}
 
+
 });
 });
 });
 serverCreated.listen(proxyPort, function() {
     console.log('Pratos : proxyserver listening on port :' + proxyPort);
 	
-});
+
 });
 // We simulate the 3 target applications
 
 
 });
+				}
+			});
