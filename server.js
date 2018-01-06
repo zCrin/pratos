@@ -42,7 +42,7 @@ IOcookieParser = require('socket.io-cookie'),
 var style = require("pratos_style_class");
 style.init(globalVariable);
 /** Configuration */
-
+if(settings.https.https_enable){
 app.enable('trust proxy');
 
 // Add a handler to inspect the req.secure flag (see 
@@ -57,7 +57,7 @@ app.use (function (req, res, next) {
                 res.redirect('https://' + req.headers.host + req.url);
         }
 });
-
+}
 app.use(bodyParser.json())
 .use(fileUpload())
 .use(bodyParser.urlencoded({
