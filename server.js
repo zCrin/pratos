@@ -619,6 +619,9 @@ require(globalVariable.socketPlugins[ze]).socket(client,globalVariable);
 client.on("disconnect",function(data){
 delete globalVariable[client.user_id];
 });
+client.on('error', function(data) {
+   console.log(data);
+});
   client.on('sendAccessoriesList', function(data) {
 
 User.verify_connection(client.user_id,globalVariable, function(user_res){

@@ -1,0 +1,98 @@
+.align_middle{
+	display: inline-block;
+	vertical-align: middle;
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("fonts/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("fonts/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("fonts/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("fonts/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("fonts/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("fonts/sanfranciscodisplay-bold-webfont.woff");
+}
+html,body{
+	width:100%;
+	margin: 0;
+	height:100%;
+	font-family: Arial;
+
+ -webkit-tap-highlight-color: transparent;
+}
+a{
+color:orange;
+}
+h3{color:white;}
+.ui-button:hover{
+font-weight:200;
+}
+.ui-widget{
+font-family: "San Francisco";
+font-weight:200 !important;
+}
+.ui-button{
+background-color:white;
+font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 130%;
+border:0;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid <%= global_color %>;
+	background: <%= global_color %>;
+	font-weight: normal;
+	color: #ffffff;
+} 
+#createNewRecipe{
+display:none;
+-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+
+border-radius:0;border:0;
+	text-align:center;
+	box-shadow: 0 2px 2px 2px orange;
+	background-color: white;
+color:orange;
+	font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 100%;
+}
+#blocklyDiv{
+
+display:none;
+margin:2% auto;
+height:800px;
+}

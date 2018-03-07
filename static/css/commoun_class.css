@@ -61,3 +61,31 @@ font-weight:200;
 font-family: "San Francisco";
 font-weight:200 !important;
 }
+.ui-button{
+background-color:white;
+font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 130%;
+border:0;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid <%= global_color %>;
+	background: <%= global_color %>;
+	font-weight: normal;
+	color: #ffffff;
+} 
+#createNewRecipe{
+
+-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+
+border-radius:0;border:1px  #D8D8D8 solid;
+	text-align:center;
+	
+	background-color: <%= global_color %>;
+	font-family: San Francisco;
+	font-weight:200;padding:1%; font-size: 100%;
+}

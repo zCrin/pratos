@@ -1,44 +1,640 @@
-(node:13297) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at Object.parse (native)
+    at ReadFileContext.callback (/var/www/pratos/node_modules/pratos_accessories_class/index.js:138:24)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:365:13)
+/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:119
+    throw err;
+    ^
+
+Error: socket hang up
+    at createHangUpError (_http_client.js:254:15)
+    at Socket.socketOnEnd (_http_client.js:346:23)
+    at emitNone (events.js:91:20)
+    at Socket.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+TypeError: First argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.write (_http_outgoing.js:456:11)
+    at writetop (/var/www/pratos/node_modules/express-session/index.js:296:22)
+    at ServerResponse.end (/var/www/pratos/node_modules/express-session/index.js:338:16)
+    at /var/www/pratos/node_modules/pratos_my_accessories_plugin/index.js:62:5
+    at Layer.handle [as handle_request] (/var/www/pratos/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:137:13)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
+    at next (/var/www/pratos/node_modules/express/lib/router/route.js:131:14)
 events.js:160
       throw er; // Unhandled 'error' event
       ^
 
-Error: ENOENT: no such file or directory, open '/var/www/pratos/log/homebridge.log'
-    at Error (native)
-/var/www/pratos/node_modules/pratos_accessories_class/index.js:216
-					return callback(JSON.stringify(answerBack));
-					       ^
+Error: connect EHOSTUNREACH 192.168.0.22:80
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
 
-TypeError: callback is not a function
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:216:13
-    at callbackState (/var/www/pratos/node_modules/pratos_accessories_class/index.js:322:8)
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:303:1
-    at Request.request [as _callback] (/var/www/pratos/node_modules/pratos_accessories_class/index.js:391:8)
-    at Request.self.callback (/var/www/pratos/node_modules/request/request.js:188:22)
-    at emitTwo (events.js:106:13)
-    at Request.emit (events.js:191:7)
-    at Request.<anonymous> (/var/www/pratos/node_modules/request/request.js:1171:10)
-    at emitOne (events.js:96:13)
-    at Request.emit (events.js:188:7)
-/var/www/pratos/node_modules/pratos_accessories_class/index.js:216
-					return callback(JSON.stringify(answerBack));
-					       ^
+Error: connect EHOSTUNREACH 192.168.0.22:80
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
 
-TypeError: callback is not a function
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:216:13
-    at callbackState (/var/www/pratos/node_modules/pratos_accessories_class/index.js:322:8)
-    at /var/www/pratos/node_modules/pratos_accessories_class/index.js:303:1
-    at Request.request [as _callback] (/var/www/pratos/node_modules/pratos_accessories_class/index.js:391:8)
-    at Request.self.callback (/var/www/pratos/node_modules/request/request.js:188:22)
-    at emitTwo (events.js:106:13)
-    at Request.emit (events.js:191:7)
-    at Request.<anonymous> (/var/www/pratos/node_modules/request/request.js:1171:10)
-    at emitOne (events.js:96:13)
-    at Request.emit (events.js:188:7)
-/var/www/pratos/node_modules/pratos_google_home_plugin/index.js:130
-}
+Error: connect ETIMEDOUT 192.168.0.22:80
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+(node:7802) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:119
+    throw err;
+    ^
+
+Error: connect EMFILE 127.0.0.1:3003 - Local (undefined:undefined)
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at connect (net.js:879:16)
+    at net.js:1008:7
+    at GetAddrInfoReqWrap.asyncCallback [as callback] (dns.js:62:16)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:81:10)
+undefined:1
+undefined
 ^
-SyntaxError: missing ) after argument list
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at Object.parse (native)
+    at ReadFileContext.callback (/var/www/pratos/node_modules/pratos_accessories_class/index.js:138:24)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:365:13)
+undefined:1
+undefined
+^
+
+SyntaxError: Unexpected token u in JSON at position 0
+    at Object.parse (native)
+    at ReadFileContext.callback (/var/www/pratos/node_modules/pratos_accessories_class/index.js:138:24)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:365:13)
+/var/www/pratos/node_modules/pratos_accessories_class/index.js:40
+readLastLines.read(/var/www/pratos/log/homebridge.log, 1)
+                   ^
+SyntaxError: Invalid regular expression flags
     at Object.exports.runInThisContext (vm.js:76:16)
     at Module._compile (module.js:542:28)
     at Object.Module._extensions..js (module.js:579:10)
@@ -47,20 +643,48 @@ SyntaxError: missing ) after argument list
     at Function.Module._load (module.js:438:3)
     at Module.require (module.js:497:17)
     at require (internal/module.js:20:19)
-    at /var/www/pratos/node_modules/pratos_plugin_class/index.js:24:16
+    at /var/www/pratos/server.js:531:29
     at tryToString (fs.js:455:3)
-events.js:160
-      throw er; // Unhandled 'error' event
-      ^
+undefined:1
+undefined
+^
 
-Error: listen EACCES 0.0.0.0:443
+SyntaxError: Unexpected token u in JSON at position 0
+    at Object.parse (native)
+    at ReadFileContext.callback (/var/www/pratos/node_modules/pratos_accessories_class/index.js:141:24)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:365:13)
+(node:3758) Warning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+Error: EMFILE: too many open files, open '/var/www/pratos/views/css/smartphone-portrait.ejs'
+    at Error (native)
+    at Object.fs.openSync (fs.js:640:18)
+    at Object.fs.readFileSync [as fileLoader] (fs.js:508:33)
+    at fileLoader (/var/www/pratos/node_modules/ejs/lib/ejs.js:220:18)
+    at handleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:179:16)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:14)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+Error: EMFILE: too many open files, open '/var/www/pratos/views/css/smartphone-landscape.ejs'
+    at Error (native)
+    at Object.fs.openSync (fs.js:640:18)
+    at Object.fs.readFileSync [as fileLoader] (fs.js:508:33)
+    at fileLoader (/var/www/pratos/node_modules/ejs/lib/ejs.js:220:18)
+    at handleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:179:16)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:203:14)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+Error: EMFILE: too many open files, open '/var/www/pratos/static/js/stay_standalone.js'
+    at Error (native)
+Error: EMFILE: too many open files, open '/var/www/pratos/static/js/passcode_page.js'
+    at Error (native)
+/var/www/pratos/node_modules/http-proxy/lib/http-proxy/index.js:119
+    throw err;
+    ^
+
+Error: getaddrinfo EMFILE localhost:3003
     at Object.exports._errnoException (util.js:1026:11)
-    at exports._exceptionWithHostPort (util.js:1049:20)
-    at Server._listen2 (net.js:1244:19)
-    at listen (net.js:1293:10)
-    at Server.listen (net.js:1389:5)
-    at /var/www/pratos/server.js:514:9
-    at /var/www/pratos/node_modules/node-cmd/cmd.js:25:21
-    at ChildProcess.exithandler (child_process.js:213:5)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
+    at errnoException (dns.js:33:15)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:76:26)

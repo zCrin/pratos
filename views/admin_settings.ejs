@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<% include includes/head-content.include.ejs %>
 		<%	include includes/icons.include.ejs %>
 		<%	include includes/css.include.ejs %>
+
 		<script src="/js/jquery-1.11.3.min.js"></script>
 		<script src="/js/stay_standalone.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<link rel="stylesheet" type="text/css"href="/css/bootstrap-colorpicker.min.css">
 
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	</head>
 	<body>
 
@@ -25,6 +27,9 @@
 <i class='fa fa-plug'></i><span>Plugins</span> </div>
 <div id='styleButton' class='settings_menu_button'>
 <i class='fa fa-pencil'></i><span>Style</span></div>
+<div id='conditionsButton' class='settings_menu_button'>
+<i class='fa fa-codepen'></i><span>Recettes</span></div>
+
 <% 
 		var settingsN = Object.keys(settings);
 	var settingsL = settingsN.length;
@@ -51,6 +56,24 @@ for(var i = 0; i < settingsL; i++){ %>
 <button id='resetColors'>Original</button>
 <button id='saveColors'>Sauvegarder</button>
 </div>
+
+<div class='settings_page settings_menu' id='conditionsBox'>
+<h2>Recettes</h2>
+<p>Ici vous pouvez créer/modifier une nouvelle recette, des actions lancées à partir d'évênements, conditions.</p>
+<button id='createNewRecipe'>Créer une nouvelle recette</button>
+<div id="blocklyDiv"></div>
+<xml id="toolbox" style="display: none">
+  <block type="controls_if"></block>
+  <block type="controls_repeat_ext"></block>
+  <block type="logic_compare"></block>
+  <block type="math_number"></block>
+  <block type="math_arithmetic"></block>
+  <block type="text"></block>
+  <block type="text_print"></block>
+</xml>
+</div>
+
+
 <div class='settings_page settings_menu' id='pluginsBox'>
 <h2>Plugins</h2>
 
@@ -76,7 +99,7 @@ for(var i = 0; i < settingsL; i++){ %>
 	%>
 		<div id='rebootpopup' class='popup'>
 			<h2>Redémarrer</h2>
-			<p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez -vous redémarrer maintenant ?</p>
+			<p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p>
 					<button onClick='reboot(true)'  id='validate_ban'>Oui</button>
 					<button onClick='reboot(false)' id='validate_ban'>Non</button>
 		</div>
@@ -88,8 +111,51 @@ for(var i = 0; i < settingsL; i++){ %>
 	<script src='/js/navbar_auto.js'></script>
 		<script src="/js/bootstrap-colorpicker.min.js"></script>
  <script src="/socket.io/socket.io.js"></script>
+
 <script>
 var show_actual;
+var nbLoaded=0;
+$("#conditionsButton").click(function(){
+
+$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.js" ).done(function( script, textStatus ) {
+  scriptLoadedBlockly();
+});
+
+$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js" ).done(function( script, textStatus ) {
+    scriptLoadedBlockly();
+});
+$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js" ).done(function( script, textStatus ) {
+    scriptLoadedBlockly();
+});
+function scriptLoadedBlockly(){
+    nbLoaded++;
+if(nbLoaded==3){
+setTimeout(function(){
+$("#createNewRecipe").fadeIn(1000);
+},3000);
+}
+}
+//<script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_uncompressed.js'>
+//script><script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js'>
+//script><script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js'>
+//script>
+});
+jQuery.cachedScript = function( url, options ) {
+ 
+  // Allow user to set any option except for dataType, cache, and url
+  options = $.extend( options || {}, {
+    dataType: "script",
+    cache: true,
+    url: url
+  });
+ 
+  // Use $.ajax() since it is more flexible than $.getScript
+  // Return the jqXHR object so we can chain callbacks
+  return jQuery.ajax( options );
+};
+ 
+// Usage
+
 		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
 			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
 				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
@@ -273,7 +339,14 @@ alert('Erreur');
 
 }
 }
+$("#createNewRecipe").click(function(){
+$("#blocklyDiv").css("width","100%");
+$("#blocklyDiv").fadeIn(1000);
+var workspacePlayground = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
 
+
+$("#createNewRecipe").fadeOut(500);
+});
 $("#styleButton").click(function(){
 var global_color = $("h2").css("color");
 var background_color = $("body").css("background-color");
@@ -324,7 +397,7 @@ $("#saveColors").click(function(){
 
 
 var colorSet = 0;
-var socket = io.connect("http://" + document.domain);
+var socket = io.connect("https://" + document.domain,{secure:true});
 var lastReceived;
 var nC = $('#cp8_container').data('colorpicker').color. toRgbString();
  socket.on('connect', function(data) {
@@ -353,6 +426,7 @@ colorSet = 1;
 }
 });
 });
+
 
 </script>
 <style> #cp9_container,#cp8_container{

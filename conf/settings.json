@@ -2,13 +2,12 @@
 	"website": {
 		"code": 543678,
 		"admin_email": "receive.prometheus@gmail.com",
-		"proxy_port":3000,
-		"webserver_port":3003
-
+		"proxy_port": 3000,
+		"webserver_port": 3003
 	},
-	"https":{
-		"https_enable":true,
-		"https_port":443
+	"https": {
+		"https_enable": false,
+		"https_port": 443
 	},
 	"logs": {
 		"user_log": "/log/user.log",
