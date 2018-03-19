@@ -60,17 +60,417 @@ for(var i = 0; i < settingsL; i++){ %>
 <div class='settings_page settings_menu' id='conditionsBox'>
 <h2>Recettes</h2>
 <p>Ici vous pouvez créer/modifier une nouvelle recette, des actions lancées à partir d'évênements, conditions.</p>
+<div id='buttonsTopRecipe'>
 <button id='createNewRecipe'>Créer une nouvelle recette</button>
+<button id='modifyRecipe'>Modifier une recette</button>
+</div>
 <div id="blocklyDiv"></div>
-<xml id="toolbox" style="display: none">
-  <block type="controls_if"></block>
-  <block type="controls_repeat_ext"></block>
-  <block type="logic_compare"></block>
-  <block type="math_number"></block>
-  <block type="math_arithmetic"></block>
-  <block type="text"></block>
-  <block type="text_print"></block>
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+  <category name="Logic" colour="#5C81A6">
+    <block type="controls_if"></block>
+    <block type="logic_compare">
+      <field name="OP">EQ</field>
+    </block>
+    <block type="logic_operation">
+      <field name="OP">AND</field>
+    </block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean">
+      <field name="BOOL">TRUE</field>
+    </block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+  </category>
+  <category name="Loops" colour="#5CA65C">
+    <block type="controls_repeat_ext">
+      <value name="TIMES">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="controls_whileUntil">
+      <field name="MODE">WHILE</field>
+    </block>
+    <block type="controls_for">
+      <field name="VAR" id="u]Nx4ftP4QBA/2T}9ykg" variabletype="">i</field>
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+      <value name="BY">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="controls_forEach">
+      <field name="VAR" id="K1$@BMFA^!S|8]EQ.j_I" variabletype="">j</field>
+    </block>
+    <block type="controls_flow_statements">
+      <field name="FLOW">BREAK</field>
+    </block>
+  </category>
+  <category name="Math" colour="#5C68A6">
+    <block type="math_round">
+      <field name="OP">ROUND</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">3.1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_number">
+      <field name="NUM">0</field>
+    </block>
+    <block type="math_single">
+      <field name="OP">ROOT</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">9</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_trig">
+      <field name="OP">SIN</field>
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">45</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_constant">
+      <field name="CONSTANT">PI</field>
+    </block>
+    <block type="math_number_property">
+      <mutation divisor_input="false"></mutation>
+      <field name="PROPERTY">EVEN</field>
+      <value name="NUMBER_TO_CHECK">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_arithmetic">
+      <field name="OP">ADD</field>
+      <value name="A">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="B">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_on_list">
+      <mutation op="SUM"></mutation>
+      <field name="OP">SUM</field>
+    </block>
+    <block type="math_modulo">
+      <value name="DIVIDEND">
+        <shadow type="math_number">
+          <field name="NUM">64</field>
+        </shadow>
+      </value>
+      <value name="DIVISOR">
+        <shadow type="math_number">
+          <field name="NUM">10</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_constrain">
+      <value name="VALUE">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="LOW">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="HIGH">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_random_int">
+      <value name="FROM">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <value name="TO">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="math_random_float"></block>
+  </category>
+  <category name="Text" colour="#5CA68D">
+    <block type="text_charAt">
+      <mutation at="true"></mutation>
+      <field name="WHERE">FROM_START</field>
+      <value name="VALUE">
+        <block type="variables_get">
+          <field name="VAR" id="aV7QX8^GQltCt(_C]]IN" variabletype="">text</field>
+        </block>
+      </value>
+    </block>
+    <block type="text">
+      <field name="TEXT"></field>
+    </block>
+    <block type="text_append">
+      <field name="VAR" id="hNkS{Y)cUfAVZzpyNCEE" variabletype="">item</field>
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_length">
+      <value name="VALUE">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_isEmpty">
+      <value name="VALUE">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_indexOf">
+      <field name="END">FIRST</field>
+      <value name="VALUE">
+        <block type="variables_get">
+          <field name="VAR" id="aV7QX8^GQltCt(_C]]IN" variabletype="">text</field>
+        </block>
+      </value>
+      <value name="FIND">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_join">
+      <mutation items="2"></mutation>
+    </block>
+    <block type="text_getSubstring">
+      <mutation at1="true" at2="true"></mutation>
+      <field name="WHERE1">FROM_START</field>
+      <field name="WHERE2">FROM_START</field>
+      <value name="STRING">
+        <block type="variables_get">
+          <field name="VAR" id="aV7QX8^GQltCt(_C]]IN" variabletype="">text</field>
+        </block>
+      </value>
+    </block>
+    <block type="text_changeCase">
+      <field name="CASE">UPPERCASE</field>
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_trim">
+      <field name="MODE">BOTH</field>
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_print">
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="text_prompt_ext">
+      <mutation type="TEXT"></mutation>
+      <field name="TYPE">TEXT</field>
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <category name="Lists" colour="#745CA6">
+    <block type="lists_indexOf">
+      <field name="END">FIRST</field>
+      <value name="VALUE">
+        <block type="variables_get">
+          <field name="VAR" id="*fK@I}IM2?X!bM)T@,=+" variabletype="">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="lists_create_with">
+      <mutation items="0"></mutation>
+    </block>
+    <block type="lists_repeat">
+      <value name="NUM">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="lists_length"></block>
+    <block type="lists_isEmpty"></block>
+    <block type="lists_create_with">
+      <mutation items="3"></mutation>
+    </block>
+    <block type="lists_getIndex">
+      <mutation statement="false" at="true"></mutation>
+      <field name="MODE">GET</field>
+      <field name="WHERE">FROM_START</field>
+      <value name="VALUE">
+        <block type="variables_get">
+          <field name="VAR" id="*fK@I}IM2?X!bM)T@,=+" variabletype="">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="lists_setIndex">
+      <mutation at="true"></mutation>
+      <field name="MODE">SET</field>
+      <field name="WHERE">FROM_START</field>
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR" id="*fK@I}IM2?X!bM)T@,=+" variabletype="">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="lists_getSublist">
+      <mutation at1="true" at2="true"></mutation>
+      <field name="WHERE1">FROM_START</field>
+      <field name="WHERE2">FROM_START</field>
+      <value name="LIST">
+        <block type="variables_get">
+          <field name="VAR" id="*fK@I}IM2?X!bM)T@,=+" variabletype="">list</field>
+        </block>
+      </value>
+    </block>
+    <block type="lists_split">
+      <mutation mode="SPLIT"></mutation>
+      <field name="MODE">SPLIT</field>
+      <value name="DELIM">
+        <shadow type="text">
+          <field name="TEXT">,</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="lists_sort">
+      <field name="TYPE">NUMERIC</field>
+      <field name="DIRECTION">1</field>
+    </block>
+  </category>
+  <category name="Colour" colour="#A6745C">
+    <block type="colour_picker">
+      <field name="COLOUR">#ff0000</field>
+    </block>
+    <block type="colour_random"></block>
+    <block type="colour_rgb">
+      <value name="RED">
+        <shadow type="math_number">
+          <field name="NUM">100</field>
+        </shadow>
+      </value>
+      <value name="GREEN">
+        <shadow type="math_number">
+          <field name="NUM">50</field>
+        </shadow>
+      </value>
+      <value name="BLUE">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="colour_blend">
+      <value name="COLOUR1">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#ff0000</field>
+        </shadow>
+      </value>
+      <value name="COLOUR2">
+        <shadow type="colour_picker">
+          <field name="COLOUR">#3333ff</field>
+        </shadow>
+      </value>
+      <value name="RATIO">
+        <shadow type="math_number">
+          <field name="NUM">0.5</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <sep></sep>
+  <category name="Variables" colour="#A65C81" custom="VARIABLE"></category>
+  <category name="Functions" colour="#9A5CA6" custom="PROCEDURE"></category>
+  <category name="Homebridge" colour="#6da55b">
+    <block type="_teindre">
+      <field name="trnOFF">choisir</field>
+    </block>
+    <block type="allumer">
+      <field name="lightAccessories">choisir</field>
+    </block>
+    <block type="temp_rature_de">
+      <field name="NAME">choisir </field>
+    </block>
+    <block type="_tat_de">
+      <field name="NAME">choisir</field>
+    </block>
+    <block type="quand">
+      <field name="NAME">choisir</field>
+      <field name="state">act</field>
+    </block>
+  </category>
+  <category name="Pratos" colour="#5ba5a5">
+    <block type="pratos_set_state">
+      <field name="NAME">restart</field>
+    </block>
+    <block type="plugins_do">
+      <field name="plugins">choisir</field>
+      <field name="NAME">delete</field>
+    </block>
+  </category>
+  <category name="Autres" colour="#a55b80">
+    <block type="datetime">
+      <field name="day">1</field>
+      <field name="month">1</field>
+      <field name="year">2018</field>
+      <field name="hour">10</field>
+      <field name="minutes">0</field>
+      <field name="seconds">0</field>
+    </block>
+    <block type="cronjob">
+      <field name="cronval">* * * * *</field>
+    </block>
+    <block type="get_date"></block>
+  </category>
 </xml>
+<!--
+<textarea id='genratorBlockly'></textarea>
+-->
+<div id='conditionsButtons'>
+<input type='text' placeholder='Nom de la recette' id='saveConditionsFile'/>
+<button id='saveConditions'>Sauvegarder</button>
+</div>
 </div>
 
 
@@ -115,31 +515,67 @@ for(var i = 0; i < settingsL; i++){ %>
 <script>
 var show_actual;
 var nbLoaded=0;
+var workspacePlayground
+var modifyBlocks;
+var loadJS = function(url, implementationCode, location){
+    //url is URL of external file, implementationCode is the code
+    //to be called from the file, location is the location to 
+    //insert the <script> element
+
+    var scriptTag = document.createElement('script');
+    scriptTag.src = url;
+
+    scriptTag.onload = implementationCode;
+    scriptTag.onreadystatechange = implementationCode;
+
+    location.appendChild(scriptTag);
+};
+$("#modifyRecipe").click(function(){
+$("#blocklyDiv").html();
+var w = modifyBlocks.recipes.length;
+for(var c=0;c<w;c++){
+$("#blocklyDiv").append(modifyBlocks.recipes[c]);
+
+}
+$("#blocklyDiv").fadeIn(500);
+});
 $("#conditionsButton").click(function(){
-
+$("#createNewRecipe").hide(0);
+$("#saveConditions").hide(0);
+$("#saveConditionsFile").hide(0);
 $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.js" ).done(function( script, textStatus ) {
-  scriptLoadedBlockly();
+$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js" ).done(function( script, textStatus ){
+
+
+  $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js" ).done(function( script, textStatus ) {
+$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/javascript_compressed.js" ).done(function( script, textStatus ) {
+loadJS('/blocks.js', function(){
+loadJS('/js/stub.ejs', function(){
+
+
+         $("#createNewRecipe").fadeIn(1000); 
+$.getJSON('/recipes_list/',function(data){
+modifyBlocks=data;
+
+         $("#modifyRecipe").fadeIn(1000); 
+
 });
 
-$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js" ).done(function( script, textStatus ) {
-    scriptLoadedBlockly();
+}, document.body);
+}, document.body);
 });
-$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js" ).done(function( script, textStatus ) {
-    scriptLoadedBlockly();
 });
-function scriptLoadedBlockly(){
-    nbLoaded++;
-if(nbLoaded==3){
-setTimeout(function(){
-$("#createNewRecipe").fadeIn(1000);
-},3000);
-}
-}
-//<script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_uncompressed.js'>
-//script><script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js'>
-//script><script src='https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js'>
-//script>
 });
+
+
+
+});
+
+});
+
+
+
+
 jQuery.cachedScript = function( url, options ) {
  
   // Allow user to set any option except for dataType, cache, and url
@@ -218,6 +654,7 @@ $(".savedPluginsTurn > button").click(function(){
 
 $.post('/toggle_plugins/', {pluginsList:data},function(response){
 if(response == 'reboot_allowed'){
+		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
 $('#rebootpopup').show(1000);
 show_actual = '#rebootpopup';
 }
@@ -272,6 +709,7 @@ $(".savedPluginsDelete > button"). click(function(){
 
 $.post('/remove_plugins/', {pluginsList:listPlugins},function(response){
 if(response == 'reboot_allowed'){
+		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
 $('#rebootpopup').show(1000);
 show_actual = '#rebootpopup';
 }
@@ -341,12 +779,73 @@ alert('Erreur');
 }
 $("#createNewRecipe").click(function(){
 $("#blocklyDiv").css("width","100%");
+$("#genratorBlockly").css("width","100%");
+$("#genratorBlockly").css("height","200px");
 $("#blocklyDiv").fadeIn(1000);
-var workspacePlayground = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
+workspacePlayground = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
 
-
+function myUpdateFunction(event) {
+  var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
+  //document.getElementById('genratorBlockly').value = code;
+}
+workspacePlayground.addChangeListener(myUpdateFunction);
 $("#createNewRecipe").fadeOut(500);
+$("#saveConditions").fadeIn(500);
+$("#saveConditionsFile").fadeIn(500);
+$("#saveConditions").click(function(){
+var q = $("#saveConditionsFile").val();
+var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
+var wk = Blockly.Xml .domToText (Blockly.Xml.workspaceToDom(workspacePlayground));
+
+$.post('/conditionsRegister',{name:q,code:code, workspace:wk},function(data){
+data = parseInt(data);
+if(data){
+		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer votre recette, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
+$('#rebootpopup').show(1000);
+show_actual = '#rebootpopup';
+$('html, body').animate({
+        scrollTop: $('h1').offset().top
+    }, 500);
+}
+else{
+		$('#rebootpopup').html("<h2>La recette \""+q+"\"existe déjà, voulez-vous la remplacer ? </h2><button onClick='condtionsSaveForce(true)'  id='validate_ban'>Oui</button><button onClick='condtionsSaveForce(false)' id='validate_ban'>Non</button>");
+
+$('#rebootpopup').show(1000);
+show_actual = '#rebootpopup'; 
+$('html, body').animate({
+        scrollTop: $('h1').offset().top
+    }, 500);
+}
 });
+});
+
+});
+function condtionsSaveForce(sate){
+if(sate){
+		$(show_actual).hide(1000);
+var q = $("#saveConditionsFile").val();
+var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
+var wk = Blockly.Xml .domToText (Blockly.Xml.workspaceToDom(workspacePlayground));
+
+$.post('/conditionsRegister',{name:q,code:code,changeConfirmed:"true",workspace:wk},function(data){
+
+data = parseInt(data);
+if(data){
+		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer votre recette, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
+$('#rebootpopup').show(1000);
+show_actual = '#rebootpopup';
+$('html, body').animate({
+        scrollTop: $('h1').offset().top
+    }, 500);
+}
+else{
+alert('erreur');
+}
+});
+}else{
+		$(show_actual).hide(1000);
+}
+}
 $("#styleButton").click(function(){
 var global_color = $("h2").css("color");
 var background_color = $("body").css("background-color");

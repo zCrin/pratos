@@ -3,10 +3,11 @@
 		"code": 543678,
 		"admin_email": "receive.prometheus@gmail.com",
 		"proxy_port": 3000,
-		"webserver_port": 3003
+		"webserver_port": 3003,
+		"webserver_name":"pratos.ga"
 	},
 	"https": {
-		"https_enable": false,
+		"https_enable": true,
 		"https_port": 443
 	},
 	"logs": {
@@ -30,5 +31,8 @@
 		"pratos_my_accessories",
 		"pratos_restart_homebridge",
 		"pratos_weather"
-	]
+	],
+	"ports_used":["3000","3003", "3004", "3007", "3009"]
+
+	
 }

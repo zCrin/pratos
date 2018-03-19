@@ -1,0 +1,94 @@
+Blockly.JavaScript['allumer'] = function(block) {
+ 
+  var val2 = block.getFieldValue('lightAccessories');
+  var code = 'functions.homebridge_turnOn("'+val2+'",globalVariable); \n';
+  return code;
+};
+
+Blockly.JavaScript['_teindre'] = function(block) {
+  var dropdown_trnoff = block.getFieldValue('trnOFF');
+
+  var code = 'functions.homebridge_turnOff("'+ dropdown_trnoff +'", globalVariable); \n';
+  return code;
+};
+
+Blockly.JavaScript['temp_rature_de'] = function(block) {
+  var dropdown_name = block.getFieldValue('NAME');
+  var variable_state = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('state'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...';
+  // TODO: Change ORDER_NONE to the correct strength.
+  var code = 'functions.homebridge_getTemperature("'+ dropdown_name +'", globalVariable,function('+ variable_state +'){'+ statements_name +'});\n';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+Blockly.JavaScript['_tat_de'] = function(block) {
+  var dropdown_name = block.getFieldValue('NAME');
+  var variable_state = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('state'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'functions.homebridge_getState("'+ dropdown_name +'", globalVariable,function('+ variable_state +'){'+ statements_name +'});\n';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+  return code;
+};
+
+
+
+Blockly.JavaScript['quand'] = function(block) {
+  var dropdown_name = block.getFieldValue('NAME');
+  var dropdown_state = block.getFieldValue('state');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'globalVariable.event.on("'+ dropdown_name + dropdown_state+'",function(){\n'+ statements_name +'});';
+  return code;
+};
+
+Blockly.JavaScript['pratos_set_state'] = function(block) {
+  var dropdown_name = block.getFieldValue('NAME');
+  // TODO: Assemble JavaScript into code variable.
+var val = block.getFieldValue('NAME');
+  var code = 'functions.pratos_state("'+val+'",globalVariable); \n';
+  return code;
+};
+
+Blockly.JavaScript['plugins_do'] = function(block) {
+
+  var dropdown_plugins = block.getFieldValue('plugins');
+  var dropdown_name = block.getFieldValue('NAME');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+ 
+
+  var code = 'functions.pratos_pluginsDo("'+ dropdown_plugins +'", "'+ dropdown_name +'",globalVariable ,function(){\n'+ statements_name +'});';
+ 
+  return code;
+};
+
+Blockly.JavaScript['datetime'] = function(block) {
+  var number_day = block.getFieldValue('day');
+  var number_month = block.getFieldValue('month');
+  var number_year = block.getFieldValue('year');
+  var number_hour = block.getFieldValue('hour');
+  var number_minutes = block.getFieldValue('minutes');
+  var number_seconds = block.getFieldValue('seconds');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'schedule.scheduleJob(new Date('+ number_year +', '+(parseInt(number_month )-1)+', '+ number_day +', '+ number_hour +', '+ number_minutes +', '+ number_seconds +'),function(){\n '+ statements_name +'});\n';
+  return code;
+};
+
+Blockly.JavaScript['cronjob'] = function(block) {
+  var text_cronval = block.getFieldValue('cronval');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+var val = block.getFieldValue('cronval');
+  var code = 'schedule.scheduleJob("'+ val +'", function(){\n '+statements_name+'});\n';
+  return code;
+};
+
+Blockly.JavaScript['get_date'] = function(block) {
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'Date.now ()';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};

@@ -42,6 +42,8 @@ IOcookieParser = require('socket.io-cookie'),
 var style = require("pratos_style_class");
 style.init(globalVariable);
 /** Configuration */
+var conditions = require('pratos_conditions_class');
+/*
 if(settings.https.https_enable){
 app.enable('trust proxy');
 
@@ -57,7 +59,7 @@ app.use (function (req, res, next) {
                 res.redirect('https://' + req.headers.host + req.url);
         }
 });
-}
+}*/
 app.use(bodyParser.json())
 .use(fileUpload())
 .use(bodyParser.urlencoded({
@@ -77,8 +79,8 @@ app.use(bodyParser.json())
 		next();
 	});
 });
-
-
+conditions.load(globalVariable);
+conditions.webFiles(app,globalVariable);
 plugins.list(globalVariable, app, function(data){
 	globalVariable = data;
 	plugins.webPages(app, globalVariable);
@@ -104,6 +106,7 @@ delete globalVariable[req.user_id];
 app.post('/user_connect/', function(req, res) {
 	if(req.body.password){
 			User.connect_user(req.user_id,globalVariable, function(connect_res){
+
 				if(connect_res == true){
 					res.redirect('/admin/index/');
 delete globalVariable[req.user_id];
@@ -130,7 +133,9 @@ delete globalVariable[req.user_id];
 app.get('/admin/:adminURI/', function(req, res){
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
+		
 			require("pratos_navbar_class").construct(globalVariable.navbarPlugins, function(res_nav){
+				
 			res.setHeader('Content-Type', 'text/html');
 				if(req.params.adminURI == "index"){
 					require("pratos_homepage_class").construct(globalVariable.homepagePlugins, function(res_homepage){
@@ -307,7 +312,10 @@ app.get('/change_state/', function(req, res) {
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
 			var Accessories = require("pratos_accessories_class");
-				Accessories.change_state(req.user_id,globalVariable, function(data){
+		var aid = globalVariable[req.user_id].request.query.aid,
+			iid = globalVariable[req.user_id].request.query.iid,
+			value = globalVariable[req.user_id].request.query.value;
+				Accessories.change_state(aid,iid,value,globalVariable, function(data){
 					res.end(data);
 delete globalVariable[req.user_id];
 			});
@@ -375,7 +383,14 @@ var background_color = 'rgb('+ globalVariable.secondColorStyle.r+","+ globalVari
 delete globalVariable[req.user_id];
 });
 
+app.get('/js/:file.ejs', function(req, res) {
+	
+	globalVariable.session = req.session;
+	res.setHeader('Content-Type', 'application/javascript');
+	res.render(__dirname + '/views/js/' + req.params.file + '.ejs', {variable: globalVariable,  page_name: req.params.file});
 
+delete globalVariable[req.user_id];
+});
 app.post('/register_new_icon/', function(req, res) {
 	const uuidV1 = require('uuid/v1');
 	var uniqId = (uuidV1()).replace(/0/g,'').replace(/1/g,'');
@@ -568,13 +583,14 @@ cmd.get("sudo kill $(sudo lsof -t -i:"+ proxyPort+")", function(){
 if(settings.https.https_enable){
 	var https = require('https');
 
-  
+ 
 		var httpsServer = https.createServer({
   			key: fs.readFileSync('key.pem'),
   			cert: fs.readFileSync('cert.pem')
 	}, app).listen(settings.https.https_port);
 console.log("Pratos : HTTPS server started on port : "+ settings.https.https_port);
 var io = require('socket.io')(httpsServer);
+
  }
 
  else{

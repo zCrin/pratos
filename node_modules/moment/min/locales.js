@@ -6,8 +6,6 @@
 }(this, (function (moment) { 'use strict';
 
 //! moment.js locale configuration
-//! locale : Afrikaans [af]
-//! author : Werner Mollentze : https://github.com/wernerm
 
 moment.defineLocale('af', {
     months : 'Januarie_Februarie_Maart_April_Mei_Junie_Julie_Augustus_September_Oktober_November_Desember'.split('_'),
@@ -46,6 +44,7 @@ moment.defineLocale('af', {
         future : 'oor %s',
         past : '%s gelede',
         s : '\'n paar sekondes',
+        ss : '%d sekondes',
         m : '\'n minuut',
         mm : '%d minute',
         h : '\'n uur',
@@ -68,8 +67,6 @@ moment.defineLocale('af', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic (Algeria) [ar-dz]
-//! author : Noureddine LOUAHEDJ : https://github.com/noureddineme
 
 moment.defineLocale('ar-dz', {
     months : 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
@@ -98,6 +95,7 @@ moment.defineLocale('ar-dz', {
         future : 'في %s',
         past : 'منذ %s',
         s : 'ثوان',
+        ss : '%d ثانية',
         m : 'دقيقة',
         mm : '%d دقائق',
         h : 'ساعة',
@@ -116,8 +114,6 @@ moment.defineLocale('ar-dz', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic (Kuwait) [ar-kw]
-//! author : Nusret Parlak: https://github.com/nusretparlak
 
 moment.defineLocale('ar-kw', {
     months : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
@@ -146,6 +142,7 @@ moment.defineLocale('ar-kw', {
         future : 'في %s',
         past : 'منذ %s',
         s : 'ثوان',
+        ss : '%d ثانية',
         m : 'دقيقة',
         mm : '%d دقائق',
         h : 'ساعة',
@@ -164,8 +161,6 @@ moment.defineLocale('ar-kw', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic (Lybia) [ar-ly]
-//! author : Ali Hmer: https://github.com/kikoanis
 
 var symbolMap = {
     '1': '1',
@@ -178,19 +173,16 @@ var symbolMap = {
     '8': '8',
     '9': '9',
     '0': '0'
-};
-var pluralForm = function (n) {
+}, pluralForm = function (n) {
     return n === 0 ? 0 : n === 1 ? 1 : n === 2 ? 2 : n % 100 >= 3 && n % 100 <= 10 ? 3 : n % 100 >= 11 ? 4 : 5;
-};
-var plurals = {
+}, plurals = {
     s : ['أقل من ثانية', 'ثانية واحدة', ['ثانيتان', 'ثانيتين'], '%d ثوان', '%d ثانية', '%d ثانية'],
     m : ['أقل من دقيقة', 'دقيقة واحدة', ['دقيقتان', 'دقيقتين'], '%d دقائق', '%d دقيقة', '%d دقيقة'],
     h : ['أقل من ساعة', 'ساعة واحدة', ['ساعتان', 'ساعتين'], '%d ساعات', '%d ساعة', '%d ساعة'],
     d : ['أقل من يوم', 'يوم واحد', ['يومان', 'يومين'], '%d أيام', '%d يومًا', '%d يوم'],
     M : ['أقل من شهر', 'شهر واحد', ['شهران', 'شهرين'], '%d أشهر', '%d شهرا', '%d شهر'],
     y : ['أقل من عام', 'عام واحد', ['عامان', 'عامين'], '%d أعوام', '%d عامًا', '%d عام']
-};
-var pluralize = function (u) {
+}, pluralize = function (u) {
     return function (number, withoutSuffix, string, isFuture) {
         var f = pluralForm(number),
             str = plurals[u][pluralForm(number)];
@@ -199,8 +191,7 @@ var pluralize = function (u) {
         }
         return str.replace(/%d/i, number);
     };
-};
-var months = [
+}, months = [
     'يناير',
     'فبراير',
     'مارس',
@@ -253,6 +244,7 @@ moment.defineLocale('ar-ly', {
         future : 'بعد %s',
         past : 'منذ %s',
         s : pluralize('s'),
+        ss : pluralize('s'),
         m : pluralize('m'),
         mm : pluralize('m'),
         h : pluralize('h'),
@@ -279,9 +271,6 @@ moment.defineLocale('ar-ly', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic (Morocco) [ar-ma]
-//! author : ElFadili Yassine : https://github.com/ElFadiliY
-//! author : Abdel Said : https://github.com/abdelsaid
 
 moment.defineLocale('ar-ma', {
     months : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
@@ -310,6 +299,7 @@ moment.defineLocale('ar-ma', {
         future : 'في %s',
         past : 'منذ %s',
         s : 'ثوان',
+        ss : '%d ثانية',
         m : 'دقيقة',
         mm : '%d دقائق',
         h : 'ساعة',
@@ -328,8 +318,6 @@ moment.defineLocale('ar-ma', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic (Saudi Arabia) [ar-sa]
-//! author : Suhail Alkowaileet : https://github.com/xsoh
 
 var symbolMap$1 = {
     '1': '١',
@@ -342,8 +330,7 @@ var symbolMap$1 = {
     '8': '٨',
     '9': '٩',
     '0': '٠'
-};
-var numberMap = {
+}, numberMap = {
     '١': '1',
     '٢': '2',
     '٣': '3',
@@ -394,6 +381,7 @@ moment.defineLocale('ar-sa', {
         future : 'في %s',
         past : 'منذ %s',
         s : 'ثوان',
+        ss : '%d ثانية',
         m : 'دقيقة',
         mm : '%d دقائق',
         h : 'ساعة',
@@ -422,8 +410,6 @@ moment.defineLocale('ar-sa', {
 });
 
 //! moment.js locale configuration
-//! locale  :  Arabic (Tunisia) [ar-tn]
-//! author : Nader Toukabri : https://github.com/naderio
 
 moment.defineLocale('ar-tn', {
     months: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
@@ -452,6 +438,7 @@ moment.defineLocale('ar-tn', {
         future: 'في %s',
         past: 'منذ %s',
         s: 'ثوان',
+        ss : '%d ثانية',
         m: 'دقيقة',
         mm: '%d دقائق',
         h: 'ساعة',
@@ -470,10 +457,6 @@ moment.defineLocale('ar-tn', {
 });
 
 //! moment.js locale configuration
-//! locale : Arabic [ar]
-//! author : Abdel Said: https://github.com/abdelsaid
-//! author : Ahmed Elkhatib
-//! author : forabi https://github.com/forabi
 
 var symbolMap$2 = {
     '1': '١',
@@ -486,8 +469,7 @@ var symbolMap$2 = {
     '8': '٨',
     '9': '٩',
     '0': '٠'
-};
-var numberMap$1 = {
+}, numberMap$1 = {
     '١': '1',
     '٢': '2',
     '٣': '3',
@@ -498,19 +480,16 @@ var numberMap$1 = {
     '٨': '8',
     '٩': '9',
     '٠': '0'
-};
-var pluralForm$1 = function (n) {
+}, pluralForm$1 = function (n) {
     return n === 0 ? 0 : n === 1 ? 1 : n === 2 ? 2 : n % 100 >= 3 && n % 100 <= 10 ? 3 : n % 100 >= 11 ? 4 : 5;
-};
-var plurals$1 = {
+}, plurals$1 = {
     s : ['أقل من ثانية', 'ثانية واحدة', ['ثانيتان', 'ثانيتين'], '%d ثوان', '%d ثانية', '%d ثانية'],
     m : ['أقل من دقيقة', 'دقيقة واحدة', ['دقيقتان', 'دقيقتين'], '%d دقائق', '%d دقيقة', '%d دقيقة'],
     h : ['أقل من ساعة', 'ساعة واحدة', ['ساعتان', 'ساعتين'], '%d ساعات', '%d ساعة', '%d ساعة'],
     d : ['أقل من يوم', 'يوم واحد', ['يومان', 'يومين'], '%d أيام', '%d يومًا', '%d يوم'],
     M : ['أقل من شهر', 'شهر واحد', ['شهران', 'شهرين'], '%d أشهر', '%d شهرا', '%d شهر'],
     y : ['أقل من عام', 'عام واحد', ['عامان', 'عامين'], '%d أعوام', '%d عامًا', '%d عام']
-};
-var pluralize$1 = function (u) {
+}, pluralize$1 = function (u) {
     return function (number, withoutSuffix, string, isFuture) {
         var f = pluralForm$1(number),
             str = plurals$1[u][pluralForm$1(number)];
@@ -519,20 +498,19 @@ var pluralize$1 = function (u) {
         }
         return str.replace(/%d/i, number);
     };
-};
-var months$1 = [
-    'كانون الثاني يناير',
-    'شباط فبراير',
-    'آذار مارس',
-    'نيسان أبريل',
-    'أيار مايو',
-    'حزيران يونيو',
-    'تموز يوليو',
-    'آب أغسطس',
-    'أيلول سبتمبر',
-    'تشرين الأول أكتوبر',
-    'تشرين الثاني نوفمبر',
-    'كانون الأول ديسمبر'
+}, months$1 = [
+    'يناير',
+    'فبراير',
+    'مارس',
+    'أبريل',
+    'مايو',
+    'يونيو',
+    'يوليو',
+    'أغسطس',
+    'سبتمبر',
+    'أكتوبر',
+    'نوفمبر',
+    'ديسمبر'
 ];
 
 moment.defineLocale('ar', {
@@ -573,6 +551,7 @@ moment.defineLocale('ar', {
         future : 'بعد %s',
         past : 'منذ %s',
         s : pluralize$1('s'),
+        ss : pluralize$1('s'),
         m : pluralize$1('m'),
         mm : pluralize$1('m'),
         h : pluralize$1('h'),
@@ -601,8 +580,6 @@ moment.defineLocale('ar', {
 });
 
 //! moment.js locale configuration
-//! locale : Azerbaijani [az]
-//! author : topchiyev : https://github.com/topchiyev
 
 var suffixes = {
     1: '-inci',
@@ -652,6 +629,7 @@ moment.defineLocale('az', {
         future : '%s sonra',
         past : '%s əvvəl',
         s : 'birneçə saniyyə',
+        ss : '%d saniyə',
         m : 'bir dəqiqə',
         mm : '%d dəqiqə',
         h : 'bir saat',
@@ -695,10 +673,6 @@ moment.defineLocale('az', {
 });
 
 //! moment.js locale configuration
-//! locale : Belarusian [be]
-//! author : Dmitry Demidov : https://github.com/demidov91
-//! author: Praleska: http://praleska.pro/
-//! Author : Menelion Elensúle : https://github.com/Oire
 
 function plural(word, num) {
     var forms = word.split('_');
@@ -706,6 +680,7 @@ function plural(word, num) {
 }
 function relativeTimeWithPlural(number, withoutSuffix, key) {
     var format = {
+        'ss': withoutSuffix ? 'секунда_секунды_секунд' : 'секунду_секунды_секунд',
         'mm': withoutSuffix ? 'хвіліна_хвіліны_хвілін' : 'хвіліну_хвіліны_хвілін',
         'hh': withoutSuffix ? 'гадзіна_гадзіны_гадзін' : 'гадзіну_гадзіны_гадзін',
         'dd': 'дзень_дні_дзён',
@@ -818,8 +793,6 @@ moment.defineLocale('be', {
 });
 
 //! moment.js locale configuration
-//! locale : Bulgarian [bg]
-//! author : Krasen Borisov : https://github.com/kraz
 
 moment.defineLocale('bg', {
     months : 'януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември'.split('_'),
@@ -859,6 +832,7 @@ moment.defineLocale('bg', {
         future : 'след %s',
         past : 'преди %s',
         s : 'няколко секунди',
+        ss : '%d секунди',
         m : 'минута',
         mm : '%d минути',
         h : 'час',
@@ -897,9 +871,6 @@ moment.defineLocale('bg', {
 });
 
 //! moment.js locale configuration
-//! locale : Bambara [bm]
-//! author : Estelle Comment : https://github.com/estellecomment
-// Language contact person : Abdoufata Kane : https://github.com/abdoufata
 
 moment.defineLocale('bm', {
     months : 'Zanwuyekalo_Fewuruyekalo_Marisikalo_Awirilikalo_Mɛkalo_Zuwɛnkalo_Zuluyekalo_Utikalo_Sɛtanburukalo_ɔkutɔburukalo_Nowanburukalo_Desanburukalo'.split('_'),
@@ -927,6 +898,7 @@ moment.defineLocale('bm', {
         future : '%s kɔnɔ',
         past : 'a bɛ %s bɔ',
         s : 'sanga dama dama',
+        ss : 'sekondi %d',
         m : 'miniti kelen',
         mm : 'miniti %d',
         h : 'lɛrɛ kelen',
@@ -945,8 +917,6 @@ moment.defineLocale('bm', {
 });
 
 //! moment.js locale configuration
-//! locale : Bengali [bn]
-//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 var symbolMap$3 = {
     '1': '১',
@@ -959,8 +929,8 @@ var symbolMap$3 = {
     '8': '৮',
     '9': '৯',
     '0': '০'
-};
-var numberMap$2 = {
+},
+numberMap$2 = {
     '১': '1',
     '২': '2',
     '৩': '3',
@@ -999,6 +969,7 @@ moment.defineLocale('bn', {
         future : '%s পরে',
         past : '%s আগে',
         s : 'কয়েক সেকেন্ড',
+        ss : '%d সেকেন্ড',
         m : 'এক মিনিট',
         mm : '%d মিনিট',
         h : 'এক ঘন্টা',
@@ -1053,8 +1024,6 @@ moment.defineLocale('bn', {
 });
 
 //! moment.js locale configuration
-//! locale : Tibetan [bo]
-//! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 var symbolMap$4 = {
     '1': '༡',
@@ -1067,8 +1036,8 @@ var symbolMap$4 = {
     '8': '༨',
     '9': '༩',
     '0': '༠'
-};
-var numberMap$3 = {
+},
+numberMap$3 = {
     '༡': '1',
     '༢': '2',
     '༣': '3',
@@ -1107,6 +1076,7 @@ moment.defineLocale('bo', {
         future : '%s ལ་',
         past : '%s སྔན་ལ',
         s : 'ལམ་སང',
+        ss : '%d སྐར་ཆ།',
         m : 'སྐར་མ་གཅིག',
         mm : '%d སྐར་མ',
         h : 'ཆུ་ཚོད་གཅིག',
@@ -1161,8 +1131,6 @@ moment.defineLocale('bo', {
 });
 
 //! moment.js locale configuration
-//! locale : Breton [br]
-//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 function relativeTimeWithMutation(number, withoutSuffix, key) {
     var format = {
@@ -1235,6 +1203,7 @@ moment.defineLocale('br', {
         future : 'a-benn %s',
         past : '%s \'zo',
         s : 'un nebeud segondennoù',
+        ss : '%d eilenn',
         m : 'ur vunutenn',
         mm : relativeTimeWithMutation,
         h : 'un eur',
@@ -1258,13 +1227,19 @@ moment.defineLocale('br', {
 });
 
 //! moment.js locale configuration
-//! locale : Bosnian [bs]
-//! author : Nedim Cholich : https://github.com/frontyard
-//! based on (hr) translation by Bojan Marković
 
 function translate(number, withoutSuffix, key) {
     var result = number + ' ';
     switch (key) {
+        case 'ss':
+            if (number === 1) {
+                result += 'sekunda';
+            } else if (number === 2 || number === 3 || number === 4) {
+                result += 'sekunde';
+            } else {
+                result += 'sekundi';
+            }
+            return result;
         case 'm':
             return withoutSuffix ? 'jedna minuta' : 'jedne minute';
         case 'mm':
@@ -1370,6 +1345,7 @@ moment.defineLocale('bs', {
         future : 'za %s',
         past   : 'prije %s',
         s      : 'par sekundi',
+        ss     : translate,
         m      : translate,
         mm     : translate,
         h      : translate,
@@ -1390,8 +1366,6 @@ moment.defineLocale('bs', {
 });
 
 //! moment.js locale configuration
-//! locale : Catalan [ca]
-//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 moment.defineLocale('ca', {
     months : {
@@ -1438,6 +1412,7 @@ moment.defineLocale('ca', {
         future : 'd\'aquí %s',
         past : 'fa %s',
         s : 'uns segons',
+        ss : '%d segons',
         m : 'un minut',
         mm : '%d minuts',
         h : 'una hora',
@@ -1467,11 +1442,9 @@ moment.defineLocale('ca', {
 });
 
 //! moment.js locale configuration
-//! locale : Czech [cs]
-//! author : petrbela : https://github.com/petrbela
 
-var months$2 = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split('_');
-var monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_');
+var months$2 = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split('_'),
+    monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_');
 function plural$1(n) {
     return (n > 1) && (n < 5) && (~~(n / 10) !== 1);
 }
@@ -1480,6 +1453,13 @@ function translate$1(number, withoutSuffix, key, isFuture) {
     switch (key) {
         case 's':  // a few seconds / in a few seconds / a few seconds ago
             return (withoutSuffix || isFuture) ? 'pár sekund' : 'pár sekundami';
+        case 'ss': // 9 seconds / in 9 seconds / 9 seconds ago
+            if (withoutSuffix || isFuture) {
+                return result + (plural$1(number) ? 'sekundy' : 'sekund');
+            } else {
+                return result + 'sekundami';
+            }
+            break;
         case 'm':  // a minute / in a minute / a minute ago
             return withoutSuffix ? 'minuta' : (isFuture ? 'minutu' : 'minutou');
         case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
@@ -1608,6 +1588,7 @@ moment.defineLocale('cs', {
         future : 'za %s',
         past : 'před %s',
         s : translate$1,
+        ss : translate$1,
         m : translate$1,
         mm : translate$1,
         h : translate$1,
@@ -1628,8 +1609,6 @@ moment.defineLocale('cs', {
 });
 
 //! moment.js locale configuration
-//! locale : Chuvash [cv]
-//! author : Anatoly Mironov : https://github.com/mirontoli
 
 moment.defineLocale('cv', {
     months : 'кӑрлач_нарӑс_пуш_ака_май_ҫӗртме_утӑ_ҫурла_авӑн_юпа_чӳк_раштав'.split('_'),
@@ -1660,6 +1639,7 @@ moment.defineLocale('cv', {
         },
         past : '%s каялла',
         s : 'пӗр-ик ҫеккунт',
+        ss : '%d ҫеккунт',
         m : 'пӗр минут',
         mm : '%d минут',
         h : 'пӗр сехет',
@@ -1680,9 +1660,6 @@ moment.defineLocale('cv', {
 });
 
 //! moment.js locale configuration
-//! locale : Welsh [cy]
-//! author : Robert Allen : https://github.com/robgallen
-//! author : https://github.com/ryangreaves
 
 moment.defineLocale('cy', {
     months: 'Ionawr_Chwefror_Mawrth_Ebrill_Mai_Mehefin_Gorffennaf_Awst_Medi_Hydref_Tachwedd_Rhagfyr'.split('_'),
@@ -1712,6 +1689,7 @@ moment.defineLocale('cy', {
         future: 'mewn %s',
         past: '%s yn ôl',
         s: 'ychydig eiliadau',
+        ss: '%d eiliad',
         m: 'munud',
         mm: '%d munud',
         h: 'awr',
@@ -1750,8 +1728,6 @@ moment.defineLocale('cy', {
 });
 
 //! moment.js locale configuration
-//! locale : Danish [da]
-//! author : Ulrik Nielsen : https://github.com/mrbase
 
 moment.defineLocale('da', {
     months : 'januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december'.split('_'),
@@ -1779,6 +1755,7 @@ moment.defineLocale('da', {
         future : 'om %s',
         past : '%s siden',
         s : 'få sekunder',
+        ss : '%d sekunder',
         m : 'et minut',
         mm : '%d minutter',
         h : 'en time',
@@ -1799,11 +1776,6 @@ moment.defineLocale('da', {
 });
 
 //! moment.js locale configuration
-//! locale : German (Austria) [de-at]
-//! author : lluchs : https://github.com/lluchs
-//! author: Menelion Elensúle: https://github.com/Oire
-//! author : Martin Groller : https://github.com/MadMG
-//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -1847,6 +1819,7 @@ moment.defineLocale('de-at', {
         future : 'in %s',
         past : 'vor %s',
         s : 'ein paar Sekunden',
+        ss : '%d Sekunden',
         m : processRelativeTime,
         mm : '%d Minuten',
         h : processRelativeTime,
@@ -1867,10 +1840,6 @@ moment.defineLocale('de-at', {
 });
 
 //! moment.js locale configuration
-//! locale : German (Switzerland) [de-ch]
-//! author : sschueller : https://github.com/sschueller
-
-// based on: https://www.bk.admin.ch/dokumentation/sprachen/04915/05016/index.html?lang=de#
 
 function processRelativeTime$1(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -1895,12 +1864,12 @@ moment.defineLocale('de-ch', {
     weekdaysMin : 'So_Mo_Di_Mi_Do_Fr_Sa'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
-        LT: 'HH.mm',
-        LTS: 'HH.mm.ss',
+        LT: 'HH:mm',
+        LTS: 'HH:mm:ss',
         L : 'DD.MM.YYYY',
         LL : 'D. MMMM YYYY',
-        LLL : 'D. MMMM YYYY HH.mm',
-        LLLL : 'dddd, D. MMMM YYYY HH.mm'
+        LLL : 'D. MMMM YYYY HH:mm',
+        LLLL : 'dddd, D. MMMM YYYY HH:mm'
     },
     calendar : {
         sameDay: '[heute um] LT [Uhr]',
@@ -1914,6 +1883,7 @@ moment.defineLocale('de-ch', {
         future : 'in %s',
         past : 'vor %s',
         s : 'ein paar Sekunden',
+        ss : '%d Sekunden',
         m : processRelativeTime$1,
         mm : '%d Minuten',
         h : processRelativeTime$1,
@@ -1934,10 +1904,6 @@ moment.defineLocale('de-ch', {
 });
 
 //! moment.js locale configuration
-//! locale : German [de]
-//! author : lluchs : https://github.com/lluchs
-//! author: Menelion Elensúle: https://github.com/Oire
-//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 function processRelativeTime$2(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -1981,6 +1947,7 @@ moment.defineLocale('de', {
         future : 'in %s',
         past : 'vor %s',
         s : 'ein paar Sekunden',
+        ss : '%d Sekunden',
         m : processRelativeTime$2,
         mm : '%d Minuten',
         h : processRelativeTime$2,
@@ -2001,8 +1968,6 @@ moment.defineLocale('de', {
 });
 
 //! moment.js locale configuration
-//! locale : Maldivian [dv]
-//! author : Jawish Hameed : https://github.com/jawish
 
 var months$3 = [
     'ޖެނުއަރީ',
@@ -2017,8 +1982,7 @@ var months$3 = [
     'އޮކްޓޯބަރު',
     'ނޮވެމްބަރު',
     'ޑިސެމްބަރު'
-];
-var weekdays = [
+], weekdays = [
     'އާދިއްތަ',
     'ހޯމަ',
     'އަންގާރަ',
@@ -2066,6 +2030,7 @@ moment.defineLocale('dv', {
         future : 'ތެރޭގައި %s',
         past : 'ކުރިން %s',
         s : 'ސިކުންތުކޮޅެއް',
+        ss : 'd% ސިކުންތު',
         m : 'މިނިޓެއް',
         mm : 'މިނިޓު %d',
         h : 'ގަޑިއިރެއް',
@@ -2094,8 +2059,6 @@ function isFunction(input) {
 }
 
 //! moment.js locale configuration
-//! locale : Greek [el]
-//! author : Aggelos Karalias : https://github.com/mehiel
 
 moment.defineLocale('el', {
     monthsNominativeEl : 'Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος'.split('_'),
@@ -2159,6 +2122,7 @@ moment.defineLocale('el', {
         future : 'σε %s',
         past : '%s πριν',
         s : 'λίγα δευτερόλεπτα',
+        ss : '%d δευτερόλεπτα',
         m : 'ένα λεπτό',
         mm : '%d λεπτά',
         h : 'μία ώρα',
@@ -2179,8 +2143,6 @@ moment.defineLocale('el', {
 });
 
 //! moment.js locale configuration
-//! locale : English (Australia) [en-au]
-//! author : Jared Morse : https://github.com/jarcoal
 
 moment.defineLocale('en-au', {
     months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
@@ -2208,6 +2170,7 @@ moment.defineLocale('en-au', {
         future : 'in %s',
         past : '%s ago',
         s : 'a few seconds',
+        ss : '%d seconds',
         m : 'a minute',
         mm : '%d minutes',
         h : 'an hour',
@@ -2235,8 +2198,6 @@ moment.defineLocale('en-au', {
 });
 
 //! moment.js locale configuration
-//! locale : English (Canada) [en-ca]
-//! author : Jonathan Abourbih : https://github.com/jonbca
 
 moment.defineLocale('en-ca', {
     months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
@@ -2264,6 +2225,7 @@ moment.defineLocale('en-ca', {
         future : 'in %s',
         past : '%s ago',
         s : 'a few seconds',
+        ss : '%d seconds',
         m : 'a minute',
         mm : '%d minutes',
         h : 'an hour',
@@ -2287,10 +2249,118 @@ moment.defineLocale('en-ca', {
 });
 
 //! moment.js locale configuration
-//! locale : English (United Kingdom) [en-gb]
-//! author : Chris Gedrim : https://github.com/chrisgedrim
 
 moment.defineLocale('en-gb', {
+    months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
+    monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
+    weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
+    weekdaysShort : 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
+    weekdaysMin : 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
+    longDateFormat : {
+        LT : 'HH:mm',
+        LTS : 'HH:mm:ss',
+        L : 'DD/MM/YYYY',
+        LL : 'D MMMM YYYY',
+        LLL : 'D MMMM YYYY HH:mm',
+        LLLL : 'dddd, D MMMM YYYY HH:mm'
+    },
+    calendar : {
+        sameDay : '[Today at] LT',
+        nextDay : '[Tomorrow at] LT',
+        nextWeek : 'dddd [at] LT',
+        lastDay : '[Yesterday at] LT',
+        lastWeek : '[Last] dddd [at] LT',
+        sameElse : 'L'
+    },
+    relativeTime : {
+        future : 'in %s',
+        past : '%s ago',
+        s : 'a few seconds',
+        ss : '%d seconds',
+        m : 'a minute',
+        mm : '%d minutes',
+        h : 'an hour',
+        hh : '%d hours',
+        d : 'a day',
+        dd : '%d days',
+        M : 'a month',
+        MM : '%d months',
+        y : 'a year',
+        yy : '%d years'
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+    ordinal : function (number) {
+        var b = number % 10,
+            output = (~~(number % 100 / 10) === 1) ? 'th' :
+            (b === 1) ? 'st' :
+            (b === 2) ? 'nd' :
+            (b === 3) ? 'rd' : 'th';
+        return number + output;
+    },
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
+    }
+});
+
+//! moment.js locale configuration
+
+moment.defineLocale('en-ie', {
+    months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
+    monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
+    weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
+    weekdaysShort : 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
+    weekdaysMin : 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
+    longDateFormat : {
+        LT : 'HH:mm',
+        LTS : 'HH:mm:ss',
+        L : 'DD-MM-YYYY',
+        LL : 'D MMMM YYYY',
+        LLL : 'D MMMM YYYY HH:mm',
+        LLLL : 'dddd D MMMM YYYY HH:mm'
+    },
+    calendar : {
+        sameDay : '[Today at] LT',
+        nextDay : '[Tomorrow at] LT',
+        nextWeek : 'dddd [at] LT',
+        lastDay : '[Yesterday at] LT',
+        lastWeek : '[Last] dddd [at] LT',
+        sameElse : 'L'
+    },
+    relativeTime : {
+        future : 'in %s',
+        past : '%s ago',
+        s : 'a few seconds',
+        ss : '%d seconds',
+        m : 'a minute',
+        mm : '%d minutes',
+        h : 'an hour',
+        hh : '%d hours',
+        d : 'a day',
+        dd : '%d days',
+        M : 'a month',
+        MM : '%d months',
+        y : 'a year',
+        yy : '%d years'
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+    ordinal : function (number) {
+        var b = number % 10,
+            output = (~~(number % 100 / 10) === 1) ? 'th' :
+            (b === 1) ? 'st' :
+            (b === 2) ? 'nd' :
+            (b === 3) ? 'rd' : 'th';
+        return number + output;
+    },
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
+    }
+});
+
+//! moment.js locale configuration
+
+moment.defineLocale('en-il', {
     months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
     monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
     weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
@@ -2335,72 +2405,10 @@ moment.defineLocale('en-gb', {
             (b === 2) ? 'nd' :
             (b === 3) ? 'rd' : 'th';
         return number + output;
-    },
-    week : {
-        dow : 1, // Monday is the first day of the week.
-        doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
 
 //! moment.js locale configuration
-//! locale : English (Ireland) [en-ie]
-//! author : Chris Cartlidge : https://github.com/chriscartlidge
-
-moment.defineLocale('en-ie', {
-    months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
-    monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
-    weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
-    weekdaysShort : 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
-    weekdaysMin : 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
-    longDateFormat : {
-        LT : 'HH:mm',
-        LTS : 'HH:mm:ss',
-        L : 'DD-MM-YYYY',
-        LL : 'D MMMM YYYY',
-        LLL : 'D MMMM YYYY HH:mm',
-        LLLL : 'dddd D MMMM YYYY HH:mm'
-    },
-    calendar : {
-        sameDay : '[Today at] LT',
-        nextDay : '[Tomorrow at] LT',
-        nextWeek : 'dddd [at] LT',
-        lastDay : '[Yesterday at] LT',
-        lastWeek : '[Last] dddd [at] LT',
-        sameElse : 'L'
-    },
-    relativeTime : {
-        future : 'in %s',
-        past : '%s ago',
-        s : 'a few seconds',
-        m : 'a minute',
-        mm : '%d minutes',
-        h : 'an hour',
-        hh : '%d hours',
-        d : 'a day',
-        dd : '%d days',
-        M : 'a month',
-        MM : '%d months',
-        y : 'a year',
-        yy : '%d years'
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
-    ordinal : function (number) {
-        var b = number % 10,
-            output = (~~(number % 100 / 10) === 1) ? 'th' :
-            (b === 1) ? 'st' :
-            (b === 2) ? 'nd' :
-            (b === 3) ? 'rd' : 'th';
-        return number + output;
-    },
-    week : {
-        dow : 1, // Monday is the first day of the week.
-        doy : 4  // The week that contains Jan 4th is the first week of the year.
-    }
-});
-
-//! moment.js locale configuration
-//! locale : English (New Zealand) [en-nz]
-//! author : Luke McGregor : https://github.com/lukemcgregor
 
 moment.defineLocale('en-nz', {
     months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
@@ -2428,6 +2436,7 @@ moment.defineLocale('en-nz', {
         future : 'in %s',
         past : '%s ago',
         s : 'a few seconds',
+        ss : '%d seconds',
         m : 'a minute',
         mm : '%d minutes',
         h : 'an hour',
@@ -2455,10 +2464,6 @@ moment.defineLocale('en-nz', {
 });
 
 //! moment.js locale configuration
-//! locale : Esperanto [eo]
-//! author : Colin Dean : https://github.com/colindean
-//! author : Mia Nordentoft Imperatori : https://github.com/miestasmia
-//! comment : miestasmia corrected the translation by colindean
 
 moment.defineLocale('eo', {
     months : 'januaro_februaro_marto_aprilo_majo_junio_julio_aŭgusto_septembro_oktobro_novembro_decembro'.split('_'),
@@ -2497,6 +2502,7 @@ moment.defineLocale('eo', {
         future : 'post %s',
         past : 'antaŭ %s',
         s : 'sekundoj',
+        ss : '%d sekundoj',
         m : 'minuto',
         mm : '%d minutoj',
         h : 'horo',
@@ -2517,10 +2523,9 @@ moment.defineLocale('eo', {
 });
 
 //! moment.js locale configuration
-//! locale : Spanish (Dominican Republic) [es-do]
 
-var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
-var monthsShort$1 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
+var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_'),
+    monthsShort$1 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
 
 var monthsParse = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i];
 var monthsRegex = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
@@ -2577,6 +2582,7 @@ moment.defineLocale('es-do', {
         future : 'en %s',
         past : 'hace %s',
         s : 'unos segundos',
+        ss : '%d segundos',
         m : 'un minuto',
         mm : '%d minutos',
         h : 'una hora',
@@ -2597,11 +2603,9 @@ moment.defineLocale('es-do', {
 });
 
 //! moment.js locale configuration
-//! locale : Spanish (United States) [es-us]
-//! author : bustta : https://github.com/bustta
 
-var monthsShortDot$1 = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
-var monthsShort$2 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
+var monthsShortDot$1 = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_'),
+    monthsShort$2 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
 
 moment.defineLocale('es-us', {
     months : 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split('_'),
@@ -2620,12 +2624,12 @@ moment.defineLocale('es-us', {
     weekdaysMin : 'do_lu_ma_mi_ju_vi_sá'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
-        LT : 'H:mm',
-        LTS : 'H:mm:ss',
+        LT : 'h:mm A',
+        LTS : 'h:mm:ss A',
         L : 'MM/DD/YYYY',
         LL : 'MMMM [de] D [de] YYYY',
-        LLL : 'MMMM [de] D [de] YYYY H:mm',
-        LLLL : 'dddd, MMMM [de] D [de] YYYY H:mm'
+        LLL : 'MMMM [de] D [de] YYYY h:mm A',
+        LLLL : 'dddd, MMMM [de] D [de] YYYY h:mm A'
     },
     calendar : {
         sameDay : function () {
@@ -2649,6 +2653,7 @@ moment.defineLocale('es-us', {
         future : 'en %s',
         past : 'hace %s',
         s : 'unos segundos',
+        ss : '%d segundos',
         m : 'un minuto',
         mm : '%d minutos',
         h : 'una hora',
@@ -2669,11 +2674,9 @@ moment.defineLocale('es-us', {
 });
 
 //! moment.js locale configuration
-//! locale : Spanish [es]
-//! author : Julio Napurí : https://github.com/julionc
 
-var monthsShortDot$2 = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_');
-var monthsShort$3 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
+var monthsShortDot$2 = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split('_'),
+    monthsShort$3 = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_');
 
 var monthsParse$1 = [/^ene/i, /^feb/i, /^mar/i, /^abr/i, /^may/i, /^jun/i, /^jul/i, /^ago/i, /^sep/i, /^oct/i, /^nov/i, /^dic/i];
 var monthsRegex$1 = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
@@ -2730,6 +2733,7 @@ moment.defineLocale('es', {
         future : 'en %s',
         past : 'hace %s',
         s : 'unos segundos',
+        ss : '%d segundos',
         m : 'un minuto',
         mm : '%d minutos',
         h : 'una hora',
@@ -2750,13 +2754,11 @@ moment.defineLocale('es', {
 });
 
 //! moment.js locale configuration
-//! locale : Estonian [et]
-//! author : Henry Kehlmann : https://github.com/madhenry
-//! improvements : Illimar Tambek : https://github.com/ragulka
 
 function processRelativeTime$3(number, withoutSuffix, key, isFuture) {
     var format = {
         's' : ['mõne sekundi', 'mõni sekund', 'paar sekundit'],
+        'ss': [number + 'sekundi', number + 'sekundit'],
         'm' : ['ühe minuti', 'üks minut'],
         'mm': [number + ' minuti', number + ' minutit'],
         'h' : ['ühe tunni', 'tund aega', 'üks tund'],
@@ -2799,6 +2801,7 @@ moment.defineLocale('et', {
         future : '%s pärast',
         past   : '%s tagasi',
         s      : processRelativeTime$3,
+        ss     : processRelativeTime$3,
         m      : processRelativeTime$3,
         mm     : processRelativeTime$3,
         h      : processRelativeTime$3,
@@ -2819,8 +2822,6 @@ moment.defineLocale('et', {
 });
 
 //! moment.js locale configuration
-//! locale : Basque [eu]
-//! author : Eneko Illarramendi : https://github.com/eillarra
 
 moment.defineLocale('eu', {
     months : 'urtarrila_otsaila_martxoa_apirila_maiatza_ekaina_uztaila_abuztua_iraila_urria_azaroa_abendua'.split('_'),
@@ -2854,6 +2855,7 @@ moment.defineLocale('eu', {
         future : '%s barru',
         past : 'duela %s',
         s : 'segundo batzuk',
+        ss : '%d segundo',
         m : 'minutu bat',
         mm : '%d minutu',
         h : 'ordu bat',
@@ -2874,8 +2876,6 @@ moment.defineLocale('eu', {
 });
 
 //! moment.js locale configuration
-//! locale : Persian [fa]
-//! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 var symbolMap$5 = {
     '1': '۱',
@@ -2888,8 +2888,7 @@ var symbolMap$5 = {
     '8': '۸',
     '9': '۹',
     '0': '۰'
-};
-var numberMap$4 = {
+}, numberMap$4 = {
     '۱': '1',
     '۲': '2',
     '۳': '3',
@@ -2940,6 +2939,7 @@ moment.defineLocale('fa', {
         future : 'در %s',
         past : '%s پیش',
         s : 'چند ثانیه',
+        ss : 'ثانیه d%',
         m : 'یک دقیقه',
         mm : '%d دقیقه',
         h : 'یک ساعت',
@@ -2970,11 +2970,9 @@ moment.defineLocale('fa', {
 });
 
 //! moment.js locale configuration
-//! locale : Finnish [fi]
-//! author : Tarmo Aidantausta : https://github.com/bleadof
 
-var numbersPast = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' ');
-var numbersFuture = [
+var numbersPast = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' '),
+    numbersFuture = [
         'nolla', 'yhden', 'kahden', 'kolmen', 'neljän', 'viiden', 'kuuden',
         numbersPast[7], numbersPast[8], numbersPast[9]
     ];
@@ -2983,6 +2981,8 @@ function translate$2(number, withoutSuffix, key, isFuture) {
     switch (key) {
         case 's':
             return isFuture ? 'muutaman sekunnin' : 'muutama sekunti';
+        case 'ss':
+            return isFuture ? 'sekunnin' : 'sekuntia';
         case 'm':
             return isFuture ? 'minuutin' : 'minuutti';
         case 'mm':
@@ -3046,6 +3046,7 @@ moment.defineLocale('fi', {
         future : '%s päästä',
         past : '%s sitten',
         s : translate$2,
+        ss : translate$2,
         m : translate$2,
         mm : translate$2,
         h : translate$2,
@@ -3066,8 +3067,6 @@ moment.defineLocale('fi', {
 });
 
 //! moment.js locale configuration
-//! locale : Faroese [fo]
-//! author : Ragnar Johannesen : https://github.com/ragnar123
 
 moment.defineLocale('fo', {
     months : 'januar_februar_mars_apríl_mai_juni_juli_august_september_oktober_november_desember'.split('_'),
@@ -3095,6 +3094,7 @@ moment.defineLocale('fo', {
         future : 'um %s',
         past : '%s síðani',
         s : 'fá sekund',
+        ss : '%d sekundir',
         m : 'ein minutt',
         mm : '%d minuttir',
         h : 'ein tími',
@@ -3115,8 +3115,6 @@ moment.defineLocale('fo', {
 });
 
 //! moment.js locale configuration
-//! locale : French (Canada) [fr-ca]
-//! author : Jonathan Abourbih : https://github.com/jonbca
 
 moment.defineLocale('fr-ca', {
     months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
@@ -3124,7 +3122,7 @@ moment.defineLocale('fr-ca', {
     monthsParseExact : true,
     weekdays : 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
     weekdaysShort : 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
-    weekdaysMin : 'Di_Lu_Ma_Me_Je_Ve_Sa'.split('_'),
+    weekdaysMin : 'di_lu_ma_me_je_ve_sa'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
         LT : 'HH:mm',
@@ -3146,6 +3144,7 @@ moment.defineLocale('fr-ca', {
         future : 'dans %s',
         past : 'il y a %s',
         s : 'quelques secondes',
+        ss : '%d secondes',
         m : 'une minute',
         mm : '%d minutes',
         h : 'une heure',
@@ -3178,8 +3177,6 @@ moment.defineLocale('fr-ca', {
 });
 
 //! moment.js locale configuration
-//! locale : French (Switzerland) [fr-ch]
-//! author : Gaspard Bucher : https://github.com/gaspard
 
 moment.defineLocale('fr-ch', {
     months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
@@ -3187,7 +3184,7 @@ moment.defineLocale('fr-ch', {
     monthsParseExact : true,
     weekdays : 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
     weekdaysShort : 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
-    weekdaysMin : 'Di_Lu_Ma_Me_Je_Ve_Sa'.split('_'),
+    weekdaysMin : 'di_lu_ma_me_je_ve_sa'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
         LT : 'HH:mm',
@@ -3209,6 +3206,7 @@ moment.defineLocale('fr-ch', {
         future : 'dans %s',
         past : 'il y a %s',
         s : 'quelques secondes',
+        ss : '%d secondes',
         m : 'une minute',
         mm : '%d minutes',
         h : 'une heure',
@@ -3245,8 +3243,6 @@ moment.defineLocale('fr-ch', {
 });
 
 //! moment.js locale configuration
-//! locale : French [fr]
-//! author : John Fischer : https://github.com/jfroffice
 
 moment.defineLocale('fr', {
     months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
@@ -3254,7 +3250,7 @@ moment.defineLocale('fr', {
     monthsParseExact : true,
     weekdays : 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
     weekdaysShort : 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
-    weekdaysMin : 'Di_Lu_Ma_Me_Je_Ve_Sa'.split('_'),
+    weekdaysMin : 'di_lu_ma_me_je_ve_sa'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
         LT : 'HH:mm',
@@ -3276,6 +3272,7 @@ moment.defineLocale('fr', {
         future : 'dans %s',
         past : 'il y a %s',
         s : 'quelques secondes',
+        ss : '%d secondes',
         m : 'une minute',
         mm : '%d minutes',
         h : 'une heure',
@@ -3317,11 +3314,9 @@ moment.defineLocale('fr', {
 });
 
 //! moment.js locale configuration
-//! locale : Frisian [fy]
-//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
-var monthsShortWithDots = 'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_');
-var monthsShortWithoutDots = 'jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_');
+var monthsShortWithDots = 'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_'),
+    monthsShortWithoutDots = 'jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_');
 
 moment.defineLocale('fy', {
     months : 'jannewaris_febrewaris_maart_april_maaie_juny_july_augustus_septimber_oktober_novimber_desimber'.split('_'),
@@ -3359,6 +3354,7 @@ moment.defineLocale('fy', {
         future : 'oer %s',
         past : '%s lyn',
         s : 'in pear sekonden',
+        ss : '%d sekonden',
         m : 'ien minút',
         mm : '%d minuten',
         h : 'ien oere',
@@ -3381,8 +3377,6 @@ moment.defineLocale('fy', {
 });
 
 //! moment.js locale configuration
-//! locale : Scottish Gaelic [gd]
-//! author : Jon Ashdown : https://github.com/jonashdown
 
 var months$4 = [
     'Am Faoilleach', 'An Gearran', 'Am Màrt', 'An Giblean', 'An Cèitean', 'An t-Ògmhios', 'An t-Iuchar', 'An Lùnastal', 'An t-Sultain', 'An Dàmhair', 'An t-Samhain', 'An Dùbhlachd'
@@ -3423,6 +3417,7 @@ moment.defineLocale('gd', {
         future : 'ann an %s',
         past : 'bho chionn %s',
         s : 'beagan diogan',
+        ss : '%d diogan',
         m : 'mionaid',
         mm : '%d mionaidean',
         h : 'uair',
@@ -3446,8 +3441,6 @@ moment.defineLocale('gd', {
 });
 
 //! moment.js locale configuration
-//! locale : Galician [gl]
-//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 moment.defineLocale('gl', {
     months : 'xaneiro_febreiro_marzo_abril_maio_xuño_xullo_agosto_setembro_outubro_novembro_decembro'.split('_'),
@@ -3492,6 +3485,7 @@ moment.defineLocale('gl', {
         },
         past : 'hai %s',
         s : 'uns segundos',
+        ss : '%d segundos',
         m : 'un minuto',
         mm : '%d minutos',
         h : 'unha hora',
@@ -3512,12 +3506,11 @@ moment.defineLocale('gl', {
 });
 
 //! moment.js locale configuration
-//! locale : Konkani Latin script [gom-latn]
-//! author : The Discoverer : https://github.com/WikiDiscoverer
 
 function processRelativeTime$4(number, withoutSuffix, key, isFuture) {
     var format = {
         's': ['thodde secondanim', 'thodde second'],
+        'ss': [number + ' secondanim', number + ' second'],
         'm': ['eka mintan', 'ek minute'],
         'mm': [number + ' mintanim', number + ' mintam'],
         'h': ['eka horan', 'ek hor'],
@@ -3561,6 +3554,7 @@ moment.defineLocale('gom-latn', {
         future : '%s',
         past : '%s adim',
         s : processRelativeTime$4,
+        ss : processRelativeTime$4,
         m : processRelativeTime$4,
         mm : processRelativeTime$4,
         h : processRelativeTime$4,
@@ -3623,8 +3617,6 @@ moment.defineLocale('gom-latn', {
 });
 
 //! moment.js locale configuration
-//! locale : Gujarati [gu]
-//! author : Kaushik Thanki : https://github.com/Kaushik1987
 
 var symbolMap$6 = {
         '1': '૧',
@@ -3637,8 +3629,8 @@ var symbolMap$6 = {
         '8': '૮',
         '9': '૯',
         '0': '૦'
-    };
-var numberMap$5 = {
+    },
+    numberMap$5 = {
         '૧': '1',
         '૨': '2',
         '૩': '3',
@@ -3678,6 +3670,7 @@ moment.defineLocale('gu', {
         future: '%s મા',
         past: '%s પેહલા',
         s: 'અમુક પળો',
+        ss: '%d સેકંડ',
         m: 'એક મિનિટ',
         mm: '%d મિનિટ',
         h: 'એક કલાક',
@@ -3736,10 +3729,6 @@ moment.defineLocale('gu', {
 });
 
 //! moment.js locale configuration
-//! locale : Hebrew [he]
-//! author : Tomer Cohen : https://github.com/tomer
-//! author : Moshe Simantov : https://github.com/DevelopmentIL
-//! author : Tal Ater : https://github.com/TalAter
 
 moment.defineLocale('he', {
     months : 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split('_'),
@@ -3771,6 +3760,7 @@ moment.defineLocale('he', {
         future : 'בעוד %s',
         past : 'לפני %s',
         s : 'מספר שניות',
+        ss : '%d שניות',
         m : 'דקה',
         mm : '%d דקות',
         h : 'שעה',
@@ -3824,8 +3814,6 @@ moment.defineLocale('he', {
 });
 
 //! moment.js locale configuration
-//! locale : Hindi [hi]
-//! author : Mayank Singhal : https://github.com/mayanksinghal
 
 var symbolMap$7 = {
     '1': '१',
@@ -3838,8 +3826,8 @@ var symbolMap$7 = {
     '8': '८',
     '9': '९',
     '0': '०'
-};
-var numberMap$6 = {
+},
+numberMap$6 = {
     '१': '1',
     '२': '2',
     '३': '3',
@@ -3879,6 +3867,7 @@ moment.defineLocale('hi', {
         future : '%s में',
         past : '%s पहले',
         s : 'कुछ ही क्षण',
+        ss : '%d सेकंड',
         m : 'एक मिनट',
         mm : '%d मिनट',
         h : 'एक घंटा',
@@ -3937,12 +3926,19 @@ moment.defineLocale('hi', {
 });
 
 //! moment.js locale configuration
-//! locale : Croatian [hr]
-//! author : Bojan Marković : https://github.com/bmarkovic
 
 function translate$3(number, withoutSuffix, key) {
     var result = number + ' ';
     switch (key) {
+        case 'ss':
+            if (number === 1) {
+                result += 'sekunda';
+            } else if (number === 2 || number === 3 || number === 4) {
+                result += 'sekunde';
+            } else {
+                result += 'sekundi';
+            }
+            return result;
         case 'm':
             return withoutSuffix ? 'jedna minuta' : 'jedne minute';
         case 'mm':
@@ -4051,6 +4047,7 @@ moment.defineLocale('hr', {
         future : 'za %s',
         past   : 'prije %s',
         s      : 'par sekundi',
+        ss     : translate$3,
         m      : translate$3,
         mm     : translate$3,
         h      : translate$3,
@@ -4071,8 +4068,6 @@ moment.defineLocale('hr', {
 });
 
 //! moment.js locale configuration
-//! locale : Hungarian [hu]
-//! author : Adam Brunner : https://github.com/adambrunner
 
 var weekEndings = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
 function translate$4(number, withoutSuffix, key, isFuture) {
@@ -4080,6 +4075,8 @@ function translate$4(number, withoutSuffix, key, isFuture) {
     switch (key) {
         case 's':
             return (isFuture || withoutSuffix) ? 'néhány másodperc' : 'néhány másodperce';
+        case 'ss':
+            return num + (isFuture || withoutSuffix) ? ' másodperc' : ' másodperce';
         case 'm':
             return 'egy' + (isFuture || withoutSuffix ? ' perc' : ' perce');
         case 'mm':
@@ -4148,6 +4145,7 @@ moment.defineLocale('hu', {
         future : '%s múlva',
         past : '%s',
         s : translate$4,
+        ss : translate$4,
         m : translate$4,
         mm : translate$4,
         h : translate$4,
@@ -4168,8 +4166,6 @@ moment.defineLocale('hu', {
 });
 
 //! moment.js locale configuration
-//! locale : Armenian [hy-am]
-//! author : Armendarabyan : https://github.com/armendarabyan
 
 moment.defineLocale('hy-am', {
     months : {
@@ -4204,6 +4200,7 @@ moment.defineLocale('hy-am', {
         future : '%s հետո',
         past : '%s առաջ',
         s : 'մի քանի վայրկյան',
+        ss : '%d վայրկյան',
         m : 'րոպե',
         mm : '%d րոպե',
         h : 'ժամ',
@@ -4252,13 +4249,10 @@ moment.defineLocale('hy-am', {
 });
 
 //! moment.js locale configuration
-//! locale : Indonesian [id]
-//! author : Mohammad Satrio Utomo : https://github.com/tyok
-//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 moment.defineLocale('id', {
     months : 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_November_Desember'.split('_'),
-    monthsShort : 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Ags_Sep_Okt_Nov_Des'.split('_'),
+    monthsShort : 'Jan_Feb_Mar_Apr_Mei_Jun_Jul_Agt_Sep_Okt_Nov_Des'.split('_'),
     weekdays : 'Minggu_Senin_Selasa_Rabu_Kamis_Jumat_Sabtu'.split('_'),
     weekdaysShort : 'Min_Sen_Sel_Rab_Kam_Jum_Sab'.split('_'),
     weekdaysMin : 'Mg_Sn_Sl_Rb_Km_Jm_Sb'.split('_'),
@@ -4306,6 +4300,7 @@ moment.defineLocale('id', {
         future : 'dalam %s',
         past : '%s yang lalu',
         s : 'beberapa detik',
+        ss : '%d detik',
         m : 'semenit',
         mm : '%d menit',
         h : 'sejam',
@@ -4324,8 +4319,6 @@ moment.defineLocale('id', {
 });
 
 //! moment.js locale configuration
-//! locale : Icelandic [is]
-//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 function plural$2(n) {
     if (n % 100 === 11) {
@@ -4340,6 +4333,11 @@ function translate$5(number, withoutSuffix, key, isFuture) {
     switch (key) {
         case 's':
             return withoutSuffix || isFuture ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
+        case 'ss':
+            if (plural$2(number)) {
+                return result + (withoutSuffix || isFuture ? 'sekúndur' : 'sekúndum');
+            }
+            return result + 'sekúnda';
         case 'm':
             return withoutSuffix ? 'mínúta' : 'mínútu';
         case 'mm':
@@ -4420,6 +4418,7 @@ moment.defineLocale('is', {
         future : 'eftir %s',
         past : 'fyrir %s síðan',
         s : translate$5,
+        ss : translate$5,
         m : translate$5,
         mm : translate$5,
         h : 'klukkustund',
@@ -4440,9 +4439,6 @@ moment.defineLocale('is', {
 });
 
 //! moment.js locale configuration
-//! locale : Italian [it]
-//! author : Lorenzo : https://github.com/aliem
-//! author: Mattia Larentis: https://github.com/nostalgiaz
 
 moment.defineLocale('it', {
     months : 'gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre'.split('_'),
@@ -4456,7 +4452,7 @@ moment.defineLocale('it', {
         L : 'DD/MM/YYYY',
         LL : 'D MMMM YYYY',
         LLL : 'D MMMM YYYY HH:mm',
-        LLLL : 'dddd, D MMMM YYYY HH:mm'
+        LLLL : 'dddd D MMMM YYYY HH:mm'
     },
     calendar : {
         sameDay: '[Oggi alle] LT',
@@ -4479,6 +4475,7 @@ moment.defineLocale('it', {
         },
         past : '%s fa',
         s : 'alcuni secondi',
+        ss : '%d secondi',
         m : 'un minuto',
         mm : '%d minuti',
         h : 'un\'ora',
@@ -4499,8 +4496,6 @@ moment.defineLocale('it', {
 });
 
 //! moment.js locale configuration
-//! locale : Japanese [ja]
-//! author : LI Long : https://github.com/baryon
 
 moment.defineLocale('ja', {
     months : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
@@ -4554,6 +4549,7 @@ moment.defineLocale('ja', {
         future : '%s後',
         past : '%s前',
         s : '数秒',
+        ss : '%d秒',
         m : '1分',
         mm : '%d分',
         h : '1時間',
@@ -4568,9 +4564,6 @@ moment.defineLocale('ja', {
 });
 
 //! moment.js locale configuration
-//! locale : Javanese [jv]
-//! author : Rony Lantip : https://github.com/lantip
-//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 moment.defineLocale('jv', {
     months : 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_Nopember_Desember'.split('_'),
@@ -4622,6 +4615,7 @@ moment.defineLocale('jv', {
         future : 'wonten ing %s',
         past : '%s ingkang kepengker',
         s : 'sawetawis detik',
+        ss : '%d detik',
         m : 'setunggal menit',
         mm : '%d menit',
         h : 'setunggal jam',
@@ -4640,8 +4634,6 @@ moment.defineLocale('jv', {
 });
 
 //! moment.js locale configuration
-//! locale : Georgian [ka]
-//! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 
 moment.defineLocale('ka', {
     months : {
@@ -4687,6 +4679,7 @@ moment.defineLocale('ka', {
             }
         },
         s : 'რამდენიმე წამი',
+        ss : '%d წამი',
         m : 'წუთი',
         mm : '%d წუთი',
         h : 'საათი',
@@ -4718,8 +4711,6 @@ moment.defineLocale('ka', {
 });
 
 //! moment.js locale configuration
-//! locale : Kazakh [kk]
-//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 var suffixes$1 = {
     0: '-ші',
@@ -4770,6 +4761,7 @@ moment.defineLocale('kk', {
         future : '%s ішінде',
         past : '%s бұрын',
         s : 'бірнеше секунд',
+        ss : '%d секунд',
         m : 'бір минут',
         mm : '%d минут',
         h : 'бір сағат',
@@ -4794,8 +4786,6 @@ moment.defineLocale('kk', {
 });
 
 //! moment.js locale configuration
-//! locale : Cambodian [km]
-//! author : Kruy Vanna : https://github.com/kruyvanna
 
 moment.defineLocale('km', {
     months: 'មករា_កុម្ភៈ_មីនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ'.split('_'),
@@ -4823,6 +4813,7 @@ moment.defineLocale('km', {
         future: '%sទៀត',
         past: '%sមុន',
         s: 'ប៉ុន្មានវិនាទី',
+        ss: '%d វិនាទី',
         m: 'មួយនាទី',
         mm: '%d នាទី',
         h: 'មួយម៉ោង',
@@ -4841,8 +4832,6 @@ moment.defineLocale('km', {
 });
 
 //! moment.js locale configuration
-//! locale : Kannada [kn]
-//! author : Rajeev Naik : https://github.com/rajeevnaikte
 
 var symbolMap$8 = {
     '1': '೧',
@@ -4855,8 +4844,8 @@ var symbolMap$8 = {
     '8': '೮',
     '9': '೯',
     '0': '೦'
-};
-var numberMap$7 = {
+},
+numberMap$7 = {
     '೧': '1',
     '೨': '2',
     '೩': '3',
@@ -4871,7 +4860,7 @@ var numberMap$7 = {
 
 moment.defineLocale('kn', {
     months : 'ಜನವರಿ_ಫೆಬ್ರವರಿ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂಬರ್_ಅಕ್ಟೋಬರ್_ನವೆಂಬರ್_ಡಿಸೆಂಬರ್'.split('_'),
-    monthsShort : 'ಜನ_ಫೆಬ್ರ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂಬ_ಅಕ್ಟೋಬ_ನವೆಂಬ_ಡಿಸೆಂಬ'.split('_'),
+    monthsShort : 'ಜನ_ಫೆಬ್ರ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂ_ಅಕ್ಟೋ_ನವೆಂ_ಡಿಸೆಂ'.split('_'),
     monthsParseExact: true,
     weekdays : 'ಭಾನುವಾರ_ಸೋಮವಾರ_ಮಂಗಳವಾರ_ಬುಧವಾರ_ಗುರುವಾರ_ಶುಕ್ರವಾರ_ಶನಿವಾರ'.split('_'),
     weekdaysShort : 'ಭಾನು_ಸೋಮ_ಮಂಗಳ_ಬುಧ_ಗುರು_ಶುಕ್ರ_ಶನಿ'.split('_'),
@@ -4896,6 +4885,7 @@ moment.defineLocale('kn', {
         future : '%s ನಂತರ',
         past : '%s ಹಿಂದೆ',
         s : 'ಕೆಲವು ಕ್ಷಣಗಳು',
+        ss : '%d ಸೆಕೆಂಡುಗಳು',
         m : 'ಒಂದು ನಿಮಿಷ',
         mm : '%d ನಿಮಿಷ',
         h : 'ಒಂದು ಗಂಟೆ',
@@ -4956,9 +4946,6 @@ moment.defineLocale('kn', {
 });
 
 //! moment.js locale configuration
-//! locale : Korean [ko]
-//! author : Kyungwook, Park : https://github.com/kyungw00k
-//! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 moment.defineLocale('ko', {
     months : '1월_2월_3월_4월_5월_6월_7월_8월_9월_10월_11월_12월'.split('_'),
@@ -4969,11 +4956,11 @@ moment.defineLocale('ko', {
     longDateFormat : {
         LT : 'A h:mm',
         LTS : 'A h:mm:ss',
-        L : 'YYYY.MM.DD',
+        L : 'YYYY.MM.DD.',
         LL : 'YYYY년 MMMM D일',
         LLL : 'YYYY년 MMMM D일 A h:mm',
         LLLL : 'YYYY년 MMMM D일 dddd A h:mm',
-        l : 'YYYY.MM.DD',
+        l : 'YYYY.MM.DD.',
         ll : 'YYYY년 MMMM D일',
         lll : 'YYYY년 MMMM D일 A h:mm',
         llll : 'YYYY년 MMMM D일 dddd A h:mm'
@@ -5028,9 +5015,6 @@ moment.defineLocale('ko', {
 });
 
 //! moment.js locale configuration
-//! locale : Kyrgyz [ky]
-//! author : Chyngyz Arystan uulu : https://github.com/chyngyz
-
 
 var suffixes$2 = {
     0: '-чү',
@@ -5081,6 +5065,7 @@ moment.defineLocale('ky', {
         future : '%s ичинде',
         past : '%s мурун',
         s : 'бирнече секунд',
+        ss : '%d секунд',
         m : 'бир мүнөт',
         mm : '%d мүнөт',
         h : 'бир саат',
@@ -5105,9 +5090,6 @@ moment.defineLocale('ky', {
 });
 
 //! moment.js locale configuration
-//! locale : Luxembourgish [lb]
-//! author : mweimerskirch : https://github.com/mweimerskirch
-//! author : David Raison : https://github.com/kwisatz
 
 function processRelativeTime$5(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -5211,6 +5193,7 @@ moment.defineLocale('lb', {
         future : processFutureTime,
         past : processPastTime,
         s : 'e puer Sekonnen',
+        ss : '%d Sekonnen',
         m : processRelativeTime$5,
         mm : '%d Minutten',
         h : processRelativeTime$5,
@@ -5231,8 +5214,6 @@ moment.defineLocale('lb', {
 });
 
 //! moment.js locale configuration
-//! locale : Lao [lo]
-//! author : Ryan Hart : https://github.com/ryanhart2
 
 moment.defineLocale('lo', {
     months : 'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split('_'),
@@ -5272,6 +5253,7 @@ moment.defineLocale('lo', {
         future : 'ອີກ %s',
         past : '%sຜ່ານມາ',
         s : 'ບໍ່ເທົ່າໃດວິນາທີ',
+        ss : '%d ວິນາທີ' ,
         m : '1 ນາທີ',
         mm : '%d ນາທີ',
         h : '1 ຊົ່ວໂມງ',
@@ -5290,10 +5272,9 @@ moment.defineLocale('lo', {
 });
 
 //! moment.js locale configuration
-//! locale : Lithuanian [lt]
-//! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 var units = {
+    'ss' : 'sekundė_sekundžių_sekundes',
     'm' : 'minutė_minutės_minutę',
     'mm': 'minutės_minučių_minutes',
     'h' : 'valanda_valandos_valandą',
@@ -5374,6 +5355,7 @@ moment.defineLocale('lt', {
         future : 'po %s',
         past : 'prieš %s',
         s : translateSeconds,
+        ss : translate$6,
         m : translateSingular,
         mm : translate$6,
         h : translateSingular,
@@ -5396,11 +5378,9 @@ moment.defineLocale('lt', {
 });
 
 //! moment.js locale configuration
-//! locale : Latvian [lv]
-//! author : Kristaps Karlsons : https://github.com/skakri
-//! author : Jānis Elmeris : https://github.com/JanisE
 
 var units$1 = {
+    'ss': 'sekundes_sekundēm_sekunde_sekundes'.split('_'),
     'm': 'minūtes_minūtēm_minūte_minūtes'.split('_'),
     'mm': 'minūtes_minūtēm_minūte_minūtes'.split('_'),
     'h': 'stundas_stundām_stunda_stundas'.split('_'),
@@ -5462,6 +5442,7 @@ moment.defineLocale('lv', {
         future : 'pēc %s',
         past : 'pirms %s',
         s : relativeSeconds,
+        ss : relativeTimeWithPlural$1,
         m : relativeTimeWithSingular,
         mm : relativeTimeWithPlural$1,
         h : relativeTimeWithSingular,
@@ -5482,11 +5463,10 @@ moment.defineLocale('lv', {
 });
 
 //! moment.js locale configuration
-//! locale : Montenegrin [me]
-//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 var translator = {
     words: { //Different grammatical cases
+        ss: ['sekund', 'sekunda', 'sekundi'],
         m: ['jedan minut', 'jednog minuta'],
         mm: ['minut', 'minuta', 'minuta'],
         h: ['jedan sat', 'jednog sata'],
@@ -5562,6 +5542,7 @@ moment.defineLocale('me', {
         future : 'za %s',
         past   : 'prije %s',
         s      : 'nekoliko sekundi',
+        ss     : translator.translate,
         m      : translator.translate,
         mm     : translator.translate,
         h      : translator.translate,
@@ -5582,8 +5563,6 @@ moment.defineLocale('me', {
 });
 
 //! moment.js locale configuration
-//! locale : Maori [mi]
-//! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 moment.defineLocale('mi', {
     months: 'Kohi-tāte_Hui-tanguru_Poutū-te-rangi_Paenga-whāwhā_Haratua_Pipiri_Hōngoingoi_Here-turi-kōkā_Mahuru_Whiringa-ā-nuku_Whiringa-ā-rangi_Hakihea'.split('_'),
@@ -5615,6 +5594,7 @@ moment.defineLocale('mi', {
         future: 'i roto i %s',
         past: '%s i mua',
         s: 'te hēkona ruarua',
+        ss: '%d hēkona',
         m: 'he meneti',
         mm: '%d meneti',
         h: 'te haora',
@@ -5635,8 +5615,6 @@ moment.defineLocale('mi', {
 });
 
 //! moment.js locale configuration
-//! locale : Macedonian [mk]
-//! author : Borislav Mickov : https://github.com/B0k0
 
 moment.defineLocale('mk', {
     months : 'јануари_февруари_март_април_мај_јуни_јули_август_септември_октомври_ноември_декември'.split('_'),
@@ -5676,6 +5654,7 @@ moment.defineLocale('mk', {
         future : 'после %s',
         past : 'пред %s',
         s : 'неколку секунди',
+        ss : '%d секунди',
         m : 'минута',
         mm : '%d минути',
         h : 'час',
@@ -5714,8 +5693,6 @@ moment.defineLocale('mk', {
 });
 
 //! moment.js locale configuration
-//! locale : Malayalam [ml]
-//! author : Floyd Pink : https://github.com/floydpink
 
 moment.defineLocale('ml', {
     months : 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split('_'),
@@ -5744,6 +5721,7 @@ moment.defineLocale('ml', {
         future : '%s കഴിഞ്ഞ്',
         past : '%s മുൻപ്',
         s : 'അൽപ നിമിഷങ്ങൾ',
+        ss : '%d സെക്കൻഡ്',
         m : 'ഒരു മിനിറ്റ്',
         mm : '%d മിനിറ്റ്',
         h : 'ഒരു മണിക്കൂർ',
@@ -5784,9 +5762,6 @@ moment.defineLocale('ml', {
 });
 
 //! moment.js locale configuration
-//! locale : Marathi [mr]
-//! author : Harshad Kale : https://github.com/kalehv
-//! author : Vivek Athalye : https://github.com/vnathalye
 
 var symbolMap$9 = {
     '1': '१',
@@ -5799,8 +5774,8 @@ var symbolMap$9 = {
     '8': '८',
     '9': '९',
     '0': '०'
-};
-var numberMap$8 = {
+},
+numberMap$8 = {
     '१': '1',
     '२': '2',
     '३': '3',
@@ -5819,6 +5794,7 @@ function relativeTimeMr(number, withoutSuffix, string, isFuture)
     if (withoutSuffix) {
         switch (string) {
             case 's': output = 'काही सेकंद'; break;
+            case 'ss': output = '%d सेकंद'; break;
             case 'm': output = 'एक मिनिट'; break;
             case 'mm': output = '%d मिनिटे'; break;
             case 'h': output = 'एक तास'; break;
@@ -5834,6 +5810,7 @@ function relativeTimeMr(number, withoutSuffix, string, isFuture)
     else {
         switch (string) {
             case 's': output = 'काही सेकंदां'; break;
+            case 'ss': output = '%d सेकंदां'; break;
             case 'm': output = 'एका मिनिटा'; break;
             case 'mm': output = '%d मिनिटां'; break;
             case 'h': output = 'एका तासा'; break;
@@ -5876,6 +5853,7 @@ moment.defineLocale('mr', {
         future: '%sमध्ये',
         past: '%sपूर्वी',
         s: relativeTimeMr,
+        ss: relativeTimeMr,
         m: relativeTimeMr,
         mm: relativeTimeMr,
         h: relativeTimeMr,
@@ -5932,9 +5910,6 @@ moment.defineLocale('mr', {
 });
 
 //! moment.js locale configuration
-//! locale : Malay [ms-my]
-//! note : DEPRECATED, the correct one is [ms]
-//! author : Weldan Jamili : https://github.com/weldan
 
 moment.defineLocale('ms-my', {
     months : 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
@@ -5986,6 +5961,7 @@ moment.defineLocale('ms-my', {
         future : 'dalam %s',
         past : '%s yang lepas',
         s : 'beberapa saat',
+        ss : '%d saat',
         m : 'seminit',
         mm : '%d minit',
         h : 'sejam',
@@ -6004,8 +5980,6 @@ moment.defineLocale('ms-my', {
 });
 
 //! moment.js locale configuration
-//! locale : Malay [ms]
-//! author : Weldan Jamili : https://github.com/weldan
 
 moment.defineLocale('ms', {
     months : 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
@@ -6057,6 +6031,7 @@ moment.defineLocale('ms', {
         future : 'dalam %s',
         past : '%s yang lepas',
         s : 'beberapa saat',
+        ss : '%d saat',
         m : 'seminit',
         mm : '%d minit',
         h : 'sejam',
@@ -6075,10 +6050,54 @@ moment.defineLocale('ms', {
 });
 
 //! moment.js locale configuration
-//! locale : Burmese [my]
-//! author : Squar team, mysquar.com
-//! author : David Rossellat : https://github.com/gholadr
-//! author : Tin Aung Lin : https://github.com/thanyawzinmin
+
+moment.defineLocale('mt', {
+    months : 'Jannar_Frar_Marzu_April_Mejju_Ġunju_Lulju_Awwissu_Settembru_Ottubru_Novembru_Diċembru'.split('_'),
+    monthsShort : 'Jan_Fra_Mar_Apr_Mej_Ġun_Lul_Aww_Set_Ott_Nov_Diċ'.split('_'),
+    weekdays : 'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split('_'),
+    weekdaysShort : 'Ħad_Tne_Tli_Erb_Ħam_Ġim_Sib'.split('_'),
+    weekdaysMin : 'Ħa_Tn_Tl_Er_Ħa_Ġi_Si'.split('_'),
+    longDateFormat : {
+        LT : 'HH:mm',
+        LTS : 'HH:mm:ss',
+        L : 'DD/MM/YYYY',
+        LL : 'D MMMM YYYY',
+        LLL : 'D MMMM YYYY HH:mm',
+        LLLL : 'dddd, D MMMM YYYY HH:mm'
+    },
+    calendar : {
+        sameDay : '[Illum fil-]LT',
+        nextDay : '[Għada fil-]LT',
+        nextWeek : 'dddd [fil-]LT',
+        lastDay : '[Il-bieraħ fil-]LT',
+        lastWeek : 'dddd [li għadda] [fil-]LT',
+        sameElse : 'L'
+    },
+    relativeTime : {
+        future : 'f’ %s',
+        past : '%s ilu',
+        s : 'ftit sekondi',
+        ss : '%d sekondi',
+        m : 'minuta',
+        mm : '%d minuti',
+        h : 'siegħa',
+        hh : '%d siegħat',
+        d : 'ġurnata',
+        dd : '%d ġranet',
+        M : 'xahar',
+        MM : '%d xhur',
+        y : 'sena',
+        yy : '%d sni'
+    },
+    dayOfMonthOrdinalParse : /\d{1,2}º/,
+    ordinal: '%dº',
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
+    }
+});
+
+//! moment.js locale configuration
 
 var symbolMap$10 = {
     '1': '၁',
@@ -6091,8 +6110,7 @@ var symbolMap$10 = {
     '8': '၈',
     '9': '၉',
     '0': '၀'
-};
-var numberMap$9 = {
+}, numberMap$9 = {
     '၁': '1',
     '၂': '2',
     '၃': '3',
@@ -6132,6 +6150,7 @@ moment.defineLocale('my', {
         future: 'လာမည့် %s မှာ',
         past: 'လွန်ခဲ့သော %s က',
         s: 'စက္ကန်.အနည်းငယ်',
+        ss : '%d စက္ကန့်',
         m: 'တစ်မိနစ်',
         mm: '%d မိနစ်',
         h: 'တစ်နာရီ',
@@ -6160,9 +6179,6 @@ moment.defineLocale('my', {
 });
 
 //! moment.js locale configuration
-//! locale : Norwegian Bokmål [nb]
-//! authors : Espen Hovlandsdal : https://github.com/rexxars
-//!           Sigurd Gartmann : https://github.com/sigurdga
 
 moment.defineLocale('nb', {
     months : 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split('_'),
@@ -6192,6 +6208,7 @@ moment.defineLocale('nb', {
         future : 'om %s',
         past : '%s siden',
         s : 'noen sekunder',
+        ss : '%d sekunder',
         m : 'ett minutt',
         mm : '%d minutter',
         h : 'en time',
@@ -6212,8 +6229,6 @@ moment.defineLocale('nb', {
 });
 
 //! moment.js locale configuration
-//! locale : Nepalese [ne]
-//! author : suvash : https://github.com/suvash
 
 var symbolMap$11 = {
     '1': '१',
@@ -6226,8 +6241,8 @@ var symbolMap$11 = {
     '8': '८',
     '9': '९',
     '0': '०'
-};
-var numberMap$10 = {
+},
+numberMap$10 = {
     '१': '1',
     '२': '2',
     '३': '3',
@@ -6306,6 +6321,7 @@ moment.defineLocale('ne', {
         future : '%sमा',
         past : '%s अगाडि',
         s : 'केही क्षण',
+        ss : '%d सेकेण्ड',
         m : 'एक मिनेट',
         mm : '%d मिनेट',
         h : 'एक घण्टा',
@@ -6324,12 +6340,9 @@ moment.defineLocale('ne', {
 });
 
 //! moment.js locale configuration
-//! locale : Dutch (Belgium) [nl-be]
-//! author : Joris Röling : https://github.com/jorisroling
-//! author : Jacob Middag : https://github.com/middagj
 
-var monthsShortWithDots$1 = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_');
-var monthsShortWithoutDots$1 = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_');
+var monthsShortWithDots$1 = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
+    monthsShortWithoutDots$1 = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_');
 
 var monthsParse$2 = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i];
 var monthsRegex$2 = /^(januari|februari|maart|april|mei|april|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
@@ -6379,6 +6392,7 @@ moment.defineLocale('nl-be', {
         future : 'over %s',
         past : '%s geleden',
         s : 'een paar seconden',
+        ss : '%d seconden',
         m : 'één minuut',
         mm : '%d minuten',
         h : 'één uur',
@@ -6401,12 +6415,9 @@ moment.defineLocale('nl-be', {
 });
 
 //! moment.js locale configuration
-//! locale : Dutch [nl]
-//! author : Joris Röling : https://github.com/jorisroling
-//! author : Jacob Middag : https://github.com/middagj
 
-var monthsShortWithDots$2 = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_');
-var monthsShortWithoutDots$2 = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_');
+var monthsShortWithDots$2 = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
+    monthsShortWithoutDots$2 = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_');
 
 var monthsParse$3 = [/^jan/i, /^feb/i, /^maart|mrt.?$/i, /^apr/i, /^mei$/i, /^jun[i.]?$/i, /^jul[i.]?$/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i];
 var monthsRegex$3 = /^(januari|februari|maart|april|mei|april|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
@@ -6456,6 +6467,7 @@ moment.defineLocale('nl', {
         future : 'over %s',
         past : '%s geleden',
         s : 'een paar seconden',
+        ss : '%d seconden',
         m : 'één minuut',
         mm : '%d minuten',
         h : 'één uur',
@@ -6478,8 +6490,6 @@ moment.defineLocale('nl', {
 });
 
 //! moment.js locale configuration
-//! locale : Nynorsk [nn]
-//! author : https://github.com/mechuwind
 
 moment.defineLocale('nn', {
     months : 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split('_'),
@@ -6507,6 +6517,7 @@ moment.defineLocale('nn', {
         future : 'om %s',
         past : '%s sidan',
         s : 'nokre sekund',
+        ss : '%d sekund',
         m : 'eit minutt',
         mm : '%d minutt',
         h : 'ein time',
@@ -6527,8 +6538,6 @@ moment.defineLocale('nn', {
 });
 
 //! moment.js locale configuration
-//! locale : Punjabi (India) [pa-in]
-//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 var symbolMap$12 = {
     '1': '੧',
@@ -6541,8 +6550,8 @@ var symbolMap$12 = {
     '8': '੮',
     '9': '੯',
     '0': '੦'
-};
-var numberMap$11 = {
+},
+numberMap$11 = {
     '੧': '1',
     '੨': '2',
     '੩': '3',
@@ -6582,6 +6591,7 @@ moment.defineLocale('pa-in', {
         future : '%s ਵਿੱਚ',
         past : '%s ਪਿਛਲੇ',
         s : 'ਕੁਝ ਸਕਿੰਟ',
+        ss : '%d ਸਕਿੰਟ',
         m : 'ਇਕ ਮਿੰਟ',
         mm : '%d ਮਿੰਟ',
         h : 'ਇੱਕ ਘੰਟਾ',
@@ -6640,17 +6650,17 @@ moment.defineLocale('pa-in', {
 });
 
 //! moment.js locale configuration
-//! locale : Polish [pl]
-//! author : Rafal Hirsz : https://github.com/evoL
 
-var monthsNominative = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_');
-var monthsSubjective = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_');
+var monthsNominative = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_'),
+    monthsSubjective = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_');
 function plural$3(n) {
     return (n % 10 < 5) && (n % 10 > 1) && ((~~(n / 10) % 10) !== 1);
 }
 function translate$7(number, withoutSuffix, key) {
     var result = number + ' ';
     switch (key) {
+        case 'ss':
+            return result + (plural$3(number) ? 'sekundy' : 'sekund');
         case 'm':
             return withoutSuffix ? 'minuta' : 'minutę';
         case 'mm':
@@ -6733,6 +6743,7 @@ moment.defineLocale('pl', {
         future : 'za %s',
         past : '%s temu',
         s : 'kilka sekund',
+        ss : translate$7,
         m : translate$7,
         mm : translate$7,
         h : translate$7,
@@ -6753,8 +6764,6 @@ moment.defineLocale('pl', {
 });
 
 //! moment.js locale configuration
-//! locale : Portuguese (Brazil) [pt-br]
-//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 moment.defineLocale('pt-br', {
     months : 'janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro'.split('_'),
@@ -6785,7 +6794,7 @@ moment.defineLocale('pt-br', {
     },
     relativeTime : {
         future : 'em %s',
-        past : '%s atrás',
+        past : 'há %s',
         s : 'poucos segundos',
         ss : '%d segundos',
         m : 'um minuto',
@@ -6804,8 +6813,6 @@ moment.defineLocale('pt-br', {
 });
 
 //! moment.js locale configuration
-//! locale : Portuguese [pt]
-//! author : Jefferson : https://github.com/jalex79
 
 moment.defineLocale('pt', {
     months : 'janeiro_fevereiro_março_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro'.split('_'),
@@ -6838,6 +6845,7 @@ moment.defineLocale('pt', {
         future : 'em %s',
         past : 'há %s',
         s : 'segundos',
+        ss : '%d segundos',
         m : 'um minuto',
         mm : '%d minutos',
         h : 'uma hora',
@@ -6858,12 +6866,10 @@ moment.defineLocale('pt', {
 });
 
 //! moment.js locale configuration
-//! locale : Romanian [ro]
-//! author : Vlad Gurdiga : https://github.com/gurdiga
-//! author : Valentin Agachi : https://github.com/avaly
 
 function relativeTimeWithPlural$2(number, withoutSuffix, key) {
     var format = {
+            'ss': 'secunde',
             'mm': 'minute',
             'hh': 'ore',
             'dd': 'zile',
@@ -6904,6 +6910,7 @@ moment.defineLocale('ro', {
         future : 'peste %s',
         past : '%s în urmă',
         s : 'câteva secunde',
+        ss : relativeTimeWithPlural$2,
         m : 'un minut',
         mm : relativeTimeWithPlural$2,
         h : 'o oră',
@@ -6922,10 +6929,6 @@ moment.defineLocale('ro', {
 });
 
 //! moment.js locale configuration
-//! locale : Russian [ru]
-//! author : Viktorminator : https://github.com/Viktorminator
-//! Author : Menelion Elensúle : https://github.com/Oire
-//! author : Коренберг Марк : https://github.com/socketpair
 
 function plural$4(word, num) {
     var forms = word.split('_');
@@ -6933,6 +6936,7 @@ function plural$4(word, num) {
 }
 function relativeTimeWithPlural$3(number, withoutSuffix, key) {
     var format = {
+        'ss': withoutSuffix ? 'секунда_секунды_секунд' : 'секунду_секунды_секунд',
         'mm': withoutSuffix ? 'минута_минуты_минут' : 'минуту_минуты_минут',
         'hh': 'час_часа_часов',
         'dd': 'день_дня_дней',
@@ -6984,12 +6988,12 @@ moment.defineLocale('ru', {
     // Выражение, которое соотвествует только сокращённым формам
     monthsShortStrictRegex: /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
     longDateFormat : {
-        LT : 'HH:mm',
-        LTS : 'HH:mm:ss',
+        LT : 'H:mm',
+        LTS : 'H:mm:ss',
         L : 'DD.MM.YYYY',
         LL : 'D MMMM YYYY г.',
-        LLL : 'D MMMM YYYY г., HH:mm',
-        LLLL : 'dddd, D MMMM YYYY г., HH:mm'
+        LLL : 'D MMMM YYYY г., H:mm',
+        LLLL : 'dddd, D MMMM YYYY г., H:mm'
     },
     calendar : {
         sameDay: '[Сегодня в] LT',
@@ -7045,6 +7049,7 @@ moment.defineLocale('ru', {
         future : 'через %s',
         past : '%s назад',
         s : 'несколько секунд',
+        ss : relativeTimeWithPlural$3,
         m : relativeTimeWithPlural$3,
         mm : relativeTimeWithPlural$3,
         h : 'час',
@@ -7094,8 +7099,6 @@ moment.defineLocale('ru', {
 });
 
 //! moment.js locale configuration
-//! locale : Sindhi [sd]
-//! author : Narain Sagar : https://github.com/narainsagar
 
 var months$5 = [
     'جنوري',
@@ -7157,6 +7160,7 @@ moment.defineLocale('sd', {
         future : '%s پوء',
         past : '%s اڳ',
         s : 'چند سيڪنڊ',
+        ss : '%d سيڪنڊ',
         m : 'هڪ منٽ',
         mm : '%d منٽ',
         h : 'هڪ ڪلاڪ',
@@ -7181,9 +7185,6 @@ moment.defineLocale('sd', {
 });
 
 //! moment.js locale configuration
-//! locale : Northern Sami [se]
-//! authors : Bård Rolstad Henriksen : https://github.com/karamell
-
 
 moment.defineLocale('se', {
     months : 'ođđajagemánnu_guovvamánnu_njukčamánnu_cuoŋománnu_miessemánnu_geassemánnu_suoidnemánnu_borgemánnu_čakčamánnu_golggotmánnu_skábmamánnu_juovlamánnu'.split('_'),
@@ -7211,6 +7212,7 @@ moment.defineLocale('se', {
         future : '%s geažes',
         past : 'maŋit %s',
         s : 'moadde sekunddat',
+        ss: '%d sekunddat',
         m : 'okta minuhta',
         mm : '%d minuhtat',
         h : 'okta diimmu',
@@ -7231,8 +7233,6 @@ moment.defineLocale('se', {
 });
 
 //! moment.js locale configuration
-//! locale : Sinhalese [si]
-//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 /*jshint -W100*/
 moment.defineLocale('si', {
@@ -7262,6 +7262,7 @@ moment.defineLocale('si', {
         future : '%sකින්',
         past : '%sකට පෙර',
         s : 'තත්පර කිහිපය',
+        ss : 'තත්පර %d',
         m : 'මිනිත්තුව',
         mm : 'මිනිත්තු %d',
         h : 'පැය',
@@ -7291,12 +7292,9 @@ moment.defineLocale('si', {
 });
 
 //! moment.js locale configuration
-//! locale : Slovak [sk]
-//! author : Martin Minka : https://github.com/k2s
-//! based on work of petrbela : https://github.com/petrbela
 
-var months$6 = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_');
-var monthsShort$5 = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
+var months$6 = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_'),
+    monthsShort$5 = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
 function plural$5(n) {
     return (n > 1) && (n < 5);
 }
@@ -7305,6 +7303,13 @@ function translate$8(number, withoutSuffix, key, isFuture) {
     switch (key) {
         case 's':  // a few seconds / in a few seconds / a few seconds ago
             return (withoutSuffix || isFuture) ? 'pár sekúnd' : 'pár sekundami';
+        case 'ss': // 9 seconds / in 9 seconds / 9 seconds ago
+            if (withoutSuffix || isFuture) {
+                return result + (plural$5(number) ? 'sekundy' : 'sekúnd');
+            } else {
+                return result + 'sekundami';
+            }
+            break;
         case 'm':  // a minute / in a minute / a minute ago
             return withoutSuffix ? 'minúta' : (isFuture ? 'minútu' : 'minútou');
         case 'mm': // 9 minutes / in 9 minutes / 9 minutes ago
@@ -7410,6 +7415,7 @@ moment.defineLocale('sk', {
         future : 'za %s',
         past : 'pred %s',
         s : translate$8,
+        ss : translate$8,
         m : translate$8,
         mm : translate$8,
         h : translate$8,
@@ -7430,14 +7436,23 @@ moment.defineLocale('sk', {
 });
 
 //! moment.js locale configuration
-//! locale : Slovenian [sl]
-//! author : Robert Sedovšek : https://github.com/sedovsek
 
 function processRelativeTime$6(number, withoutSuffix, key, isFuture) {
     var result = number + ' ';
     switch (key) {
         case 's':
             return withoutSuffix || isFuture ? 'nekaj sekund' : 'nekaj sekundami';
+        case 'ss':
+            if (number === 1) {
+                result += withoutSuffix ? 'sekundo' : 'sekundi';
+            } else if (number === 2) {
+                result += withoutSuffix || isFuture ? 'sekundi' : 'sekundah';
+            } else if (number < 5) {
+                result += withoutSuffix || isFuture ? 'sekunde' : 'sekundah';
+            } else {
+                result += withoutSuffix || isFuture ? 'sekund' : 'sekund';
+            }
+            return result;
         case 'm':
             return withoutSuffix ? 'ena minuta' : 'eno minuto';
         case 'mm':
@@ -7561,6 +7576,7 @@ moment.defineLocale('sl', {
         future : 'čez %s',
         past   : 'pred %s',
         s      : processRelativeTime$6,
+        ss     : processRelativeTime$6,
         m      : processRelativeTime$6,
         mm     : processRelativeTime$6,
         h      : processRelativeTime$6,
@@ -7581,10 +7597,6 @@ moment.defineLocale('sl', {
 });
 
 //! moment.js locale configuration
-//! locale : Albanian [sq]
-//! author : Flakërim Ismani : https://github.com/flakerimi
-//! author : Menelion Elensúle : https://github.com/Oire
-//! author : Oerd Cukalla : https://github.com/oerd
 
 moment.defineLocale('sq', {
     months : 'Janar_Shkurt_Mars_Prill_Maj_Qershor_Korrik_Gusht_Shtator_Tetor_Nëntor_Dhjetor'.split('_'),
@@ -7620,6 +7632,7 @@ moment.defineLocale('sq', {
         future : 'në %s',
         past : '%s më parë',
         s : 'disa sekonda',
+        ss : '%d sekonda',
         m : 'një minutë',
         mm : '%d minuta',
         h : 'një orë',
@@ -7640,11 +7653,10 @@ moment.defineLocale('sq', {
 });
 
 //! moment.js locale configuration
-//! locale : Serbian Cyrillic [sr-cyrl]
-//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 var translator$1 = {
     words: { //Different grammatical cases
+        ss: ['секунда', 'секунде', 'секунди'],
         m: ['један минут', 'једне минуте'],
         mm: ['минут', 'минуте', 'минута'],
         h: ['један сат', 'једног сата'],
@@ -7719,6 +7731,7 @@ moment.defineLocale('sr-cyrl', {
         future : 'за %s',
         past   : 'пре %s',
         s      : 'неколико секунди',
+        ss     : translator$1.translate,
         m      : translator$1.translate,
         mm     : translator$1.translate,
         h      : translator$1.translate,
@@ -7739,11 +7752,10 @@ moment.defineLocale('sr-cyrl', {
 });
 
 //! moment.js locale configuration
-//! locale : Serbian [sr]
-//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 var translator$2 = {
     words: { //Different grammatical cases
+        ss: ['sekunda', 'sekunde', 'sekundi'],
         m: ['jedan minut', 'jedne minute'],
         mm: ['minut', 'minute', 'minuta'],
         h: ['jedan sat', 'jednog sata'],
@@ -7818,6 +7830,7 @@ moment.defineLocale('sr', {
         future : 'za %s',
         past   : 'pre %s',
         s      : 'nekoliko sekundi',
+        ss     : translator$2.translate,
         m      : translator$2.translate,
         mm     : translator$2.translate,
         h      : translator$2.translate,
@@ -7838,9 +7851,6 @@ moment.defineLocale('sr', {
 });
 
 //! moment.js locale configuration
-//! locale : siSwati [ss]
-//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
-
 
 moment.defineLocale('ss', {
     months : "Bhimbidvwane_Indlovana_Indlov'lenkhulu_Mabasa_Inkhwekhweti_Inhlaba_Kholwane_Ingci_Inyoni_Imphala_Lweti_Ingongoni".split('_'),
@@ -7869,6 +7879,7 @@ moment.defineLocale('ss', {
         future : 'nga %s',
         past : 'wenteka nga %s',
         s : 'emizuzwana lomcane',
+        ss : '%d mzuzwana',
         m : 'umzuzu',
         mm : '%d emizuzu',
         h : 'lihora',
@@ -7916,8 +7927,6 @@ moment.defineLocale('ss', {
 });
 
 //! moment.js locale configuration
-//! locale : Swedish [sv]
-//! author : Jens Alm : https://github.com/ulmus
 
 moment.defineLocale('sv', {
     months : 'januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december'.split('_'),
@@ -7947,6 +7956,7 @@ moment.defineLocale('sv', {
         future : 'om %s',
         past : 'för %s sedan',
         s : 'några sekunder',
+        ss : '%d sekunder',
         m : 'en minut',
         mm : '%d minuter',
         h : 'en timme',
@@ -7974,8 +7984,6 @@ moment.defineLocale('sv', {
 });
 
 //! moment.js locale configuration
-//! locale : Swahili [sw]
-//! author : Fahad Kassim : https://github.com/fadsel
 
 moment.defineLocale('sw', {
     months : 'Januari_Februari_Machi_Aprili_Mei_Juni_Julai_Agosti_Septemba_Oktoba_Novemba_Desemba'.split('_'),
@@ -8004,6 +8012,7 @@ moment.defineLocale('sw', {
         future : '%s baadaye',
         past : 'tokea %s',
         s : 'hivi punde',
+        ss : 'sekunde %d',
         m : 'dakika moja',
         mm : 'dakika %d',
         h : 'saa limoja',
@@ -8022,8 +8031,6 @@ moment.defineLocale('sw', {
 });
 
 //! moment.js locale configuration
-//! locale : Tamil [ta]
-//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 var symbolMap$13 = {
     '1': '௧',
@@ -8036,8 +8043,7 @@ var symbolMap$13 = {
     '8': '௮',
     '9': '௯',
     '0': '௦'
-};
-var numberMap$12 = {
+}, numberMap$12 = {
     '௧': '1',
     '௨': '2',
     '௩': '3',
@@ -8076,6 +8082,7 @@ moment.defineLocale('ta', {
         future : '%s இல்',
         past : '%s முன்',
         s : 'ஒரு சில விநாடிகள்',
+        ss : '%d விநாடிகள்',
         m : 'ஒரு நிமிடம்',
         mm : '%d நிமிடங்கள்',
         h : 'ஒரு மணி நேரம்',
@@ -8141,8 +8148,6 @@ moment.defineLocale('ta', {
 });
 
 //! moment.js locale configuration
-//! locale : Telugu [te]
-//! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 moment.defineLocale('te', {
     months : 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జూలై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split('_'),
@@ -8171,6 +8176,7 @@ moment.defineLocale('te', {
         future : '%s లో',
         past : '%s క్రితం',
         s : 'కొన్ని క్షణాలు',
+        ss : '%d సెకన్లు',
         m : 'ఒక నిమిషం',
         mm : '%d నిమిషాలు',
         h : 'ఒక గంట',
@@ -8219,16 +8225,13 @@ moment.defineLocale('te', {
 });
 
 //! moment.js locale configuration
-//! locale : Tetun Dili (East Timor) [tet]
-//! author : Joshua Brooks : https://github.com/joshbrooks
-//! author : Onorio De J. Afonso : https://github.com/marobo
 
 moment.defineLocale('tet', {
-    months : 'Janeiru_Fevereiru_Marsu_Abril_Maiu_Juniu_Juliu_Augustu_Setembru_Outubru_Novembru_Dezembru'.split('_'),
-    monthsShort : 'Jan_Fev_Mar_Abr_Mai_Jun_Jul_Aug_Set_Out_Nov_Dez'.split('_'),
-    weekdays : 'Domingu_Segunda_Tersa_Kuarta_Kinta_Sexta_Sabadu'.split('_'),
-    weekdaysShort : 'Dom_Seg_Ters_Kua_Kint_Sext_Sab'.split('_'),
-    weekdaysMin : 'Do_Seg_Te_Ku_Ki_Sex_Sa'.split('_'),
+    months : 'Janeiru_Fevereiru_Marsu_Abril_Maiu_Juñu_Jullu_Agustu_Setembru_Outubru_Novembru_Dezembru'.split('_'),
+    monthsShort : 'Jan_Fev_Mar_Abr_Mai_Jun_Jul_Ago_Set_Out_Nov_Dez'.split('_'),
+    weekdays : 'Domingu_Segunda_Tersa_Kuarta_Kinta_Sesta_Sabadu'.split('_'),
+    weekdaysShort : 'Dom_Seg_Ters_Kua_Kint_Sest_Sab'.split('_'),
+    weekdaysMin : 'Do_Seg_Te_Ku_Ki_Ses_Sa'.split('_'),
     longDateFormat : {
         LT : 'HH:mm',
         LTS : 'HH:mm:ss',
@@ -8249,10 +8252,11 @@ moment.defineLocale('tet', {
         future : 'iha %s',
         past : '%s liuba',
         s : 'minutu balun',
+        ss : 'minutu %d',
         m : 'minutu ida',
-        mm : 'minutus %d',
-        h : 'horas ida',
-        hh : 'horas %d',
+        mm : 'minutu %d',
+        h : 'oras ida',
+        hh : 'oras %d',
         d : 'loron ida',
         dd : 'loron %d',
         M : 'fulan ida',
@@ -8276,8 +8280,110 @@ moment.defineLocale('tet', {
 });
 
 //! moment.js locale configuration
-//! locale : Thai [th]
-//! author : Kridsada Thanabulpong : https://github.com/sirn
+
+var suffixes$3 = {
+    0: '-ум',
+    1: '-ум',
+    2: '-юм',
+    3: '-юм',
+    4: '-ум',
+    5: '-ум',
+    6: '-ум',
+    7: '-ум',
+    8: '-ум',
+    9: '-ум',
+    10: '-ум',
+    12: '-ум',
+    13: '-ум',
+    20: '-ум',
+    30: '-юм',
+    40: '-ум',
+    50: '-ум',
+    60: '-ум',
+    70: '-ум',
+    80: '-ум',
+    90: '-ум',
+    100: '-ум'
+};
+
+moment.defineLocale('tg', {
+    months : 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
+    monthsShort : 'янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек'.split('_'),
+    weekdays : 'якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе'.split('_'),
+    weekdaysShort : 'яшб_дшб_сшб_чшб_пшб_ҷум_шнб'.split('_'),
+    weekdaysMin : 'яш_дш_сш_чш_пш_ҷм_шб'.split('_'),
+    longDateFormat : {
+        LT : 'HH:mm',
+        LTS : 'HH:mm:ss',
+        L : 'DD/MM/YYYY',
+        LL : 'D MMMM YYYY',
+        LLL : 'D MMMM YYYY HH:mm',
+        LLLL : 'dddd, D MMMM YYYY HH:mm'
+    },
+    calendar : {
+        sameDay : '[Имрӯз соати] LT',
+        nextDay : '[Пагоҳ соати] LT',
+        lastDay : '[Дирӯз соати] LT',
+        nextWeek : 'dddd[и] [ҳафтаи оянда соати] LT',
+        lastWeek : 'dddd[и] [ҳафтаи гузашта соати] LT',
+        sameElse : 'L'
+    },
+    relativeTime : {
+        future : 'баъди %s',
+        past : '%s пеш',
+        s : 'якчанд сония',
+        m : 'як дақиқа',
+        mm : '%d дақиқа',
+        h : 'як соат',
+        hh : '%d соат',
+        d : 'як рӯз',
+        dd : '%d рӯз',
+        M : 'як моҳ',
+        MM : '%d моҳ',
+        y : 'як сол',
+        yy : '%d сол'
+    },
+    meridiemParse: /шаб|субҳ|рӯз|бегоҳ/,
+    meridiemHour: function (hour, meridiem) {
+        if (hour === 12) {
+            hour = 0;
+        }
+        if (meridiem === 'шаб') {
+            return hour < 4 ? hour : hour + 12;
+        } else if (meridiem === 'субҳ') {
+            return hour;
+        } else if (meridiem === 'рӯз') {
+            return hour >= 11 ? hour : hour + 12;
+        } else if (meridiem === 'бегоҳ') {
+            return hour + 12;
+        }
+    },
+    meridiem: function (hour, minute, isLower) {
+        if (hour < 4) {
+            return 'шаб';
+        } else if (hour < 11) {
+            return 'субҳ';
+        } else if (hour < 16) {
+            return 'рӯз';
+        } else if (hour < 19) {
+            return 'бегоҳ';
+        } else {
+            return 'шаб';
+        }
+    },
+    dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
+    ordinal: function (number) {
+        var a = number % 10,
+            b = number >= 100 ? 100 : null;
+        return number + (suffixes$3[number] || suffixes$3[a] || suffixes$3[b]);
+    },
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 7  // The week that contains Jan 1th is the first week of the year.
+    }
+});
+
+//! moment.js locale configuration
 
 moment.defineLocale('th', {
     months : 'มกราคม_กุมภาพันธ์_มีนาคม_เมษายน_พฤษภาคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม'.split('_'),
@@ -8318,6 +8424,7 @@ moment.defineLocale('th', {
         future : 'อีก %s',
         past : '%sที่แล้ว',
         s : 'ไม่กี่วินาที',
+        ss : '%d วินาที',
         m : '1 นาที',
         mm : '%d นาที',
         h : '1 ชั่วโมง',
@@ -8332,8 +8439,6 @@ moment.defineLocale('th', {
 });
 
 //! moment.js locale configuration
-//! locale : Tagalog (Philippines) [tl-ph]
-//! author : Dan Hagman : https://github.com/hagmandan
 
 moment.defineLocale('tl-ph', {
     months : 'Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre'.split('_'),
@@ -8361,6 +8466,7 @@ moment.defineLocale('tl-ph', {
         future : 'sa loob ng %s',
         past : '%s ang nakalipas',
         s : 'ilang segundo',
+        ss : '%d segundo',
         m : 'isang minuto',
         mm : '%d minuto',
         h : 'isang oras',
@@ -8383,8 +8489,6 @@ moment.defineLocale('tl-ph', {
 });
 
 //! moment.js locale configuration
-//! locale : Klingon [tlh]
-//! author : Dominika Kruk : https://github.com/amaranthrose
 
 var numbersNouns = 'pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut'.split('_');
 
@@ -8415,6 +8519,8 @@ function translatePast(output) {
 function translate$9(number, withoutSuffix, string, isFuture) {
     var numberNoun = numberAsNoun(number);
     switch (string) {
+        case 'ss':
+            return numberNoun + ' lup';
         case 'mm':
             return numberNoun + ' tup';
         case 'hh':
@@ -8472,6 +8578,7 @@ moment.defineLocale('tlh', {
         future : translateFuture,
         past : translatePast,
         s : 'puS lup',
+        ss : translate$9,
         m : 'wa’ tup',
         mm : translate$9,
         h : 'wa’ rep',
@@ -8491,12 +8598,7 @@ moment.defineLocale('tlh', {
     }
 });
 
-//! moment.js locale configuration
-//! locale : Turkish [tr]
-//! authors : Erhan Gundogan : https://github.com/erhangundogan,
-//!           Burak Yiğit Kaya: https://github.com/BYK
-
-var suffixes$3 = {
+var suffixes$4 = {
     1: '\'inci',
     5: '\'inci',
     8: '\'inci',
@@ -8543,6 +8645,7 @@ moment.defineLocale('tr', {
         future : '%s sonra',
         past : '%s önce',
         s : 'birkaç saniye',
+        ss : '%d saniye',
         m : 'bir dakika',
         mm : '%d dakika',
         h : 'bir saat',
@@ -8554,15 +8657,22 @@ moment.defineLocale('tr', {
         y : 'bir yıl',
         yy : '%d yıl'
     },
-    dayOfMonthOrdinalParse: /\d{1,2}'(inci|nci|üncü|ncı|uncu|ıncı)/,
-    ordinal : function (number) {
-        if (number === 0) {  // special case for zero
-            return number + '\'ıncı';
+    ordinal: function (number, period) {
+        switch (period) {
+            case 'd':
+            case 'D':
+            case 'Do':
+            case 'DD':
+                return number;
+            default:
+                if (number === 0) {  // special case for zero
+                    return number + '\'ıncı';
+                }
+                var a = number % 10,
+                    b = number % 100 - a,
+                    c = number >= 100 ? 100 : null;
+                return number + (suffixes$4[a] || suffixes$4[b] || suffixes$4[c]);
         }
-        var a = number % 10,
-            b = number % 100 - a,
-            c = number >= 100 ? 100 : null;
-        return number + (suffixes$3[a] || suffixes$3[b] || suffixes$3[c]);
     },
     week : {
         dow : 1, // Monday is the first day of the week.
@@ -8571,9 +8681,6 @@ moment.defineLocale('tr', {
 });
 
 //! moment.js locale configuration
-//! locale : Talossan [tzl]
-//! author : Robin van der Vliet : https://github.com/robin0van0der0v
-//! author : Iustì Canun
 
 // After the year there should be a slash and the amount of years since December 26, 1979 in Roman numerals.
 // This is currently too difficult (maybe even impossible) to add.
@@ -8614,6 +8721,7 @@ moment.defineLocale('tzl', {
         future : 'osprei %s',
         past : 'ja%s',
         s : processRelativeTime$7,
+        ss : processRelativeTime$7,
         m : processRelativeTime$7,
         mm : processRelativeTime$7,
         h : processRelativeTime$7,
@@ -8636,6 +8744,7 @@ moment.defineLocale('tzl', {
 function processRelativeTime$7(number, withoutSuffix, key, isFuture) {
     var format = {
         's': ['viensas secunds', '\'iensas secunds'],
+        'ss': [number + ' secunds', '' + number + ' secunds'],
         'm': ['\'n míut', '\'iens míut'],
         'mm': [number + ' míuts', '' + number + ' míuts'],
         'h': ['\'n þora', '\'iensa þora'],
@@ -8651,8 +8760,6 @@ function processRelativeTime$7(number, withoutSuffix, key, isFuture) {
 }
 
 //! moment.js locale configuration
-//! locale : Central Atlas Tamazight Latin [tzm-latn]
-//! author : Abdel Said : https://github.com/abdelsaid
 
 moment.defineLocale('tzm-latn', {
     months : 'innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir'.split('_'),
@@ -8680,6 +8787,7 @@ moment.defineLocale('tzm-latn', {
         future : 'dadkh s yan %s',
         past : 'yan %s',
         s : 'imik',
+        ss : '%d imik',
         m : 'minuḍ',
         mm : '%d minuḍ',
         h : 'saɛa',
@@ -8698,8 +8806,6 @@ moment.defineLocale('tzm-latn', {
 });
 
 //! moment.js locale configuration
-//! locale : Central Atlas Tamazight [tzm]
-//! author : Abdel Said : https://github.com/abdelsaid
 
 moment.defineLocale('tzm', {
     months : 'ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ'.split('_'),
@@ -8727,6 +8833,7 @@ moment.defineLocale('tzm', {
         future : 'ⴷⴰⴷⵅ ⵙ ⵢⴰⵏ %s',
         past : 'ⵢⴰⵏ %s',
         s : 'ⵉⵎⵉⴽ',
+        ss : '%d ⵉⵎⵉⴽ',
         m : 'ⵎⵉⵏⵓⴺ',
         mm : '%d ⵎⵉⵏⵓⴺ',
         h : 'ⵙⴰⵄⴰ',
@@ -8744,10 +8851,114 @@ moment.defineLocale('tzm', {
     }
 });
 
+//! moment.js language configuration
+
+moment.defineLocale('ug-cn', {
+    months: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
+        '_'
+    ),
+    monthsShort: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
+        '_'
+    ),
+    weekdays: 'يەكشەنبە_دۈشەنبە_سەيشەنبە_چارشەنبە_پەيشەنبە_جۈمە_شەنبە'.split(
+        '_'
+    ),
+    weekdaysShort: 'يە_دۈ_سە_چا_پە_جۈ_شە'.split('_'),
+    weekdaysMin: 'يە_دۈ_سە_چا_پە_جۈ_شە'.split('_'),
+    longDateFormat: {
+        LT: 'HH:mm',
+        LTS: 'HH:mm:ss',
+        L: 'YYYY-MM-DD',
+        LL: 'YYYY-يىلىM-ئاينىڭD-كۈنى',
+        LLL: 'YYYY-يىلىM-ئاينىڭD-كۈنى، HH:mm',
+        LLLL: 'dddd، YYYY-يىلىM-ئاينىڭD-كۈنى، HH:mm'
+    },
+    meridiemParse: /يېرىم كېچە|سەھەر|چۈشتىن بۇرۇن|چۈش|چۈشتىن كېيىن|كەچ/,
+    meridiemHour: function (hour, meridiem) {
+        if (hour === 12) {
+            hour = 0;
+        }
+        if (
+            meridiem === 'يېرىم كېچە' ||
+            meridiem === 'سەھەر' ||
+            meridiem === 'چۈشتىن بۇرۇن'
+        ) {
+            return hour;
+        } else if (meridiem === 'چۈشتىن كېيىن' || meridiem === 'كەچ') {
+            return hour + 12;
+        } else {
+            return hour >= 11 ? hour : hour + 12;
+        }
+    },
+    meridiem: function (hour, minute, isLower) {
+        var hm = hour * 100 + minute;
+        if (hm < 600) {
+            return 'يېرىم كېچە';
+        } else if (hm < 900) {
+            return 'سەھەر';
+        } else if (hm < 1130) {
+            return 'چۈشتىن بۇرۇن';
+        } else if (hm < 1230) {
+            return 'چۈش';
+        } else if (hm < 1800) {
+            return 'چۈشتىن كېيىن';
+        } else {
+            return 'كەچ';
+        }
+    },
+    calendar: {
+        sameDay: '[بۈگۈن سائەت] LT',
+        nextDay: '[ئەتە سائەت] LT',
+        nextWeek: '[كېلەركى] dddd [سائەت] LT',
+        lastDay: '[تۆنۈگۈن] LT',
+        lastWeek: '[ئالدىنقى] dddd [سائەت] LT',
+        sameElse: 'L'
+    },
+    relativeTime: {
+        future: '%s كېيىن',
+        past: '%s بۇرۇن',
+        s: 'نەچچە سېكونت',
+        ss: '%d سېكونت',
+        m: 'بىر مىنۇت',
+        mm: '%d مىنۇت',
+        h: 'بىر سائەت',
+        hh: '%d سائەت',
+        d: 'بىر كۈن',
+        dd: '%d كۈن',
+        M: 'بىر ئاي',
+        MM: '%d ئاي',
+        y: 'بىر يىل',
+        yy: '%d يىل'
+    },
+
+    dayOfMonthOrdinalParse: /\d{1,2}(-كۈنى|-ئاي|-ھەپتە)/,
+    ordinal: function (number, period) {
+        switch (period) {
+            case 'd':
+            case 'D':
+            case 'DDD':
+                return number + '-كۈنى';
+            case 'w':
+            case 'W':
+                return number + '-ھەپتە';
+            default:
+                return number;
+        }
+    },
+    preparse: function (string) {
+        return string.replace(/،/g, ',');
+    },
+    postformat: function (string) {
+        return string.replace(/,/g, '،');
+    },
+    week: {
+        // GB/T 7408-1994《数据元和交换格式·信息交换·日期和时间表示法》与ISO 8601:1988等效
+        dow: 1, // Monday is the first day of the week.
+        doy: 7 // The week that contains Jan 1st is the first week of the year.
+    }
+});
+
 //! moment.js locale configuration
-//! locale : Ukrainian [uk]
-//! author : zemlanin : https://github.com/zemlanin
-//! Author : Menelion Elensúle : https://github.com/Oire
 
 function plural$6(word, num) {
     var forms = word.split('_');
@@ -8755,6 +8966,7 @@ function plural$6(word, num) {
 }
 function relativeTimeWithPlural$4(number, withoutSuffix, key) {
     var format = {
+        'ss': withoutSuffix ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
         'mm': withoutSuffix ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
         'hh': withoutSuffix ? 'година_години_годин' : 'годину_години_годин',
         'dd': 'день_дні_днів',
@@ -8836,6 +9048,7 @@ moment.defineLocale('uk', {
         future : 'за %s',
         past : '%s тому',
         s : 'декілька секунд',
+        ss : relativeTimeWithPlural$4,
         m : relativeTimeWithPlural$4,
         mm : relativeTimeWithPlural$4,
         h : 'годину',
@@ -8885,9 +9098,6 @@ moment.defineLocale('uk', {
 });
 
 //! moment.js locale configuration
-//! locale : Urdu [ur]
-//! author : Sawood Alam : https://github.com/ibnesayeed
-//! author : Zack : https://github.com/ZackVision
 
 var months$7 = [
     'جنوری',
@@ -8949,6 +9159,7 @@ moment.defineLocale('ur', {
         future : '%s بعد',
         past : '%s قبل',
         s : 'چند سیکنڈ',
+        ss : '%d سیکنڈ',
         m : 'ایک منٹ',
         mm : '%d منٹ',
         h : 'ایک گھنٹہ',
@@ -8973,8 +9184,6 @@ moment.defineLocale('ur', {
 });
 
 //! moment.js locale configuration
-//! locale : Uzbek Latin [uz-latn]
-//! author : Rasulbek Mirzayev : github.com/Rasulbeeek
 
 moment.defineLocale('uz-latn', {
     months : 'Yanvar_Fevral_Mart_Aprel_May_Iyun_Iyul_Avgust_Sentabr_Oktabr_Noyabr_Dekabr'.split('_'),
@@ -9002,6 +9211,7 @@ moment.defineLocale('uz-latn', {
         future : 'Yaqin %s ichida',
         past : 'Bir necha %s oldin',
         s : 'soniya',
+        ss : '%d soniya',
         m : 'bir daqiqa',
         mm : '%d daqiqa',
         h : 'bir soat',
@@ -9020,8 +9230,6 @@ moment.defineLocale('uz-latn', {
 });
 
 //! moment.js locale configuration
-//! locale : Uzbek [uz]
-//! author : Sardor Muminov : https://github.com/muminoff
 
 moment.defineLocale('uz', {
     months : 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split('_'),
@@ -9049,6 +9257,7 @@ moment.defineLocale('uz', {
         future : 'Якин %s ичида',
         past : 'Бир неча %s олдин',
         s : 'фурсат',
+        ss : '%d фурсат',
         m : 'бир дакика',
         mm : '%d дакика',
         h : 'бир соат',
@@ -9067,8 +9276,6 @@ moment.defineLocale('uz', {
 });
 
 //! moment.js locale configuration
-//! locale : Vietnamese [vi]
-//! author : Bang Nguyen : https://github.com/bangnk
 
 moment.defineLocale('vi', {
     months : 'tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12'.split('_'),
@@ -9113,6 +9320,7 @@ moment.defineLocale('vi', {
         future : '%s tới',
         past : '%s trước',
         s : 'vài giây',
+        ss : '%d giây' ,
         m : 'một phút',
         mm : '%d phút',
         h : 'một giờ',
@@ -9135,8 +9343,6 @@ moment.defineLocale('vi', {
 });
 
 //! moment.js locale configuration
-//! locale : Pseudo [x-pseudo]
-//! author : Andrew Hood : https://github.com/andrewhood125
 
 moment.defineLocale('x-pseudo', {
     months : 'J~áñúá~rý_F~ébrú~árý_~Márc~h_Áp~ríl_~Máý_~Júñé~_Júl~ý_Áú~gúst~_Sép~témb~ér_Ó~ctób~ér_Ñ~óvém~bér_~Décé~mbér'.split('_'),
@@ -9165,6 +9371,7 @@ moment.defineLocale('x-pseudo', {
         future : 'í~ñ %s',
         past : '%s á~gó',
         s : 'á ~féw ~sécó~ñds',
+        ss : '%d s~écóñ~ds',
         m : 'á ~míñ~úté',
         mm : '%d m~íñú~tés',
         h : 'á~ñ hó~úr',
@@ -9192,8 +9399,6 @@ moment.defineLocale('x-pseudo', {
 });
 
 //! moment.js locale configuration
-//! locale : Yoruba Nigeria [yo]
-//! author : Atolagbe Abisoye : https://github.com/andela-batolagbe
 
 moment.defineLocale('yo', {
     months : 'Sẹ́rẹ́_Èrèlè_Ẹrẹ̀nà_Ìgbé_Èbibi_Òkùdu_Agẹmo_Ògún_Owewe_Ọ̀wàrà_Bélú_Ọ̀pẹ̀̀'.split('_'),
@@ -9221,6 +9426,7 @@ moment.defineLocale('yo', {
         future : 'ní %s',
         past : '%s kọjá',
         s : 'ìsẹjú aayá die',
+        ss :'aayá %d',
         m : 'ìsẹjú kan',
         mm : 'ìsẹjú %d',
         h : 'wákati kan',
@@ -9241,9 +9447,6 @@ moment.defineLocale('yo', {
 });
 
 //! moment.js locale configuration
-//! locale : Chinese (China) [zh-cn]
-//! author : suupic : https://github.com/suupic
-//! author : Zeno Zeng : https://github.com/zenozeng
 
 moment.defineLocale('zh-cn', {
     months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
@@ -9254,14 +9457,14 @@ moment.defineLocale('zh-cn', {
     longDateFormat : {
         LT : 'HH:mm',
         LTS : 'HH:mm:ss',
-        L : 'YYYY年MMMD日',
-        LL : 'YYYY年MMMD日',
-        LLL : 'YYYY年MMMD日Ah点mm分',
-        LLLL : 'YYYY年MMMD日ddddAh点mm分',
-        l : 'YYYY年MMMD日',
-        ll : 'YYYY年MMMD日',
-        lll : 'YYYY年MMMD日 HH:mm',
-        llll : 'YYYY年MMMD日dddd HH:mm'
+        L : 'YYYY/MM/DD',
+        LL : 'YYYY年M月D日',
+        LLL : 'YYYY年M月D日Ah点mm分',
+        LLLL : 'YYYY年M月D日ddddAh点mm分',
+        l : 'YYYY/M/D',
+        ll : 'YYYY年M月D日',
+        lll : 'YYYY年M月D日 HH:mm',
+        llll : 'YYYY年M月D日dddd HH:mm'
     },
     meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
     meridiemHour: function (hour, meridiem) {
@@ -9322,6 +9525,7 @@ moment.defineLocale('zh-cn', {
         future : '%s内',
         past : '%s前',
         s : '几秒',
+        ss : '%d 秒',
         m : '1 分钟',
         mm : '%d 分钟',
         h : '1 小时',
@@ -9341,10 +9545,6 @@ moment.defineLocale('zh-cn', {
 });
 
 //! moment.js locale configuration
-//! locale : Chinese (Hong Kong) [zh-hk]
-//! author : Ben : https://github.com/ben-lin
-//! author : Chris Lam : https://github.com/hehachris
-//! author : Konstantin : https://github.com/skfd
 
 moment.defineLocale('zh-hk', {
     months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
@@ -9355,14 +9555,14 @@ moment.defineLocale('zh-hk', {
     longDateFormat : {
         LT : 'HH:mm',
         LTS : 'HH:mm:ss',
-        L : 'YYYY年MMMD日',
-        LL : 'YYYY年MMMD日',
-        LLL : 'YYYY年MMMD日 HH:mm',
-        LLLL : 'YYYY年MMMD日dddd HH:mm',
-        l : 'YYYY年MMMD日',
-        ll : 'YYYY年MMMD日',
-        lll : 'YYYY年MMMD日 HH:mm',
-        llll : 'YYYY年MMMD日dddd HH:mm'
+        L : 'YYYY/MM/DD',
+        LL : 'YYYY年M月D日',
+        LLL : 'YYYY年M月D日 HH:mm',
+        LLLL : 'YYYY年M月D日dddd HH:mm',
+        l : 'YYYY/M/D',
+        ll : 'YYYY年M月D日',
+        lll : 'YYYY年M月D日 HH:mm',
+        llll : 'YYYY年M月D日dddd HH:mm'
     },
     meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
     meridiemHour : function (hour, meridiem) {
@@ -9421,6 +9621,7 @@ moment.defineLocale('zh-hk', {
         future : '%s內',
         past : '%s前',
         s : '幾秒',
+        ss : '%d 秒',
         m : '1 分鐘',
         mm : '%d 分鐘',
         h : '1 小時',
@@ -9435,9 +9636,6 @@ moment.defineLocale('zh-hk', {
 });
 
 //! moment.js locale configuration
-//! locale : Chinese (Taiwan) [zh-tw]
-//! author : Ben : https://github.com/ben-lin
-//! author : Chris Lam : https://github.com/hehachris
 
 moment.defineLocale('zh-tw', {
     months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
@@ -9448,14 +9646,14 @@ moment.defineLocale('zh-tw', {
     longDateFormat : {
         LT : 'HH:mm',
         LTS : 'HH:mm:ss',
-        L : 'YYYY年MMMD日',
-        LL : 'YYYY年MMMD日',
-        LLL : 'YYYY年MMMD日 HH:mm',
-        LLLL : 'YYYY年MMMD日dddd HH:mm',
-        l : 'YYYY年MMMD日',
-        ll : 'YYYY年MMMD日',
-        lll : 'YYYY年MMMD日 HH:mm',
-        llll : 'YYYY年MMMD日dddd HH:mm'
+        L : 'YYYY/MM/DD',
+        LL : 'YYYY年M月D日',
+        LLL : 'YYYY年M月D日 HH:mm',
+        LLLL : 'YYYY年M月D日dddd HH:mm',
+        l : 'YYYY/M/D',
+        ll : 'YYYY年M月D日',
+        lll : 'YYYY年M月D日 HH:mm',
+        llll : 'YYYY年M月D日dddd HH:mm'
     },
     meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
     meridiemHour : function (hour, meridiem) {
@@ -9514,6 +9712,7 @@ moment.defineLocale('zh-tw', {
         future : '%s內',
         past : '%s前',
         s : '幾秒',
+        ss : '%d 秒',
         m : '1 分鐘',
         mm : '%d 分鐘',
         h : '1 小時',
