@@ -36,11 +36,12 @@ Blockly.JavaScript['_tat_de'] = function(block) {
 
 
 Blockly.JavaScript['quand'] = function(block) {
-  var dropdown_name = block.getFieldValue('NAME');
-  var dropdown_state = block.getFieldValue('state');
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+ var dropdown_name = block.getFieldValue('NAME');
+ var dropdown_state = block.getFieldValue('state');
+ var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
   // TODO: Assemble JavaScript into code variable.
-  var code = 'globalVariable.event.on("'+ dropdown_name + dropdown_state+'",function(){\n'+ statements_name +'});';
+  var code = 'globalVariable.event.on("'+ dropdown_name + dropdown_state+'",function(){'+ statements_name +'});';
+  
   return code;
 };
 
@@ -48,7 +49,7 @@ Blockly.JavaScript['pratos_set_state'] = function(block) {
   var dropdown_name = block.getFieldValue('NAME');
   // TODO: Assemble JavaScript into code variable.
 var val = block.getFieldValue('NAME');
-  var code = 'functions.pratos_state("'+val+'",globalVariable); \n';
+  var code = 'functions.pratos_state("'+val+'",globalVariable);';
   return code;
 };
 
@@ -59,7 +60,7 @@ Blockly.JavaScript['plugins_do'] = function(block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
  
 
-  var code = 'functions.pratos_pluginsDo("'+ dropdown_plugins +'", "'+ dropdown_name +'",globalVariable ,function(){\n'+ statements_name +'});';
+  var code = 'functions.pratos_pluginsDo("'+ dropdown_plugins +'", "'+ dropdown_name +'",globalVariable ,function(){'+ statements_name +'});';
  
   return code;
 };
@@ -73,7 +74,7 @@ Blockly.JavaScript['datetime'] = function(block) {
   var number_seconds = block.getFieldValue('seconds');
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
   // TODO: Assemble JavaScript into code variable.
-  var code = 'schedule.scheduleJob(new Date('+ number_year +', '+(parseInt(number_month )-1)+', '+ number_day +', '+ number_hour +', '+ number_minutes +', '+ number_seconds +'),function(){\n '+ statements_name +'});\n';
+  var code = 'schedule.scheduleJob(new Date('+ number_year +', '+(parseInt(number_month )-1)+', '+ number_day +', '+ number_hour +', '+ number_minutes +', '+ number_seconds +'),function(){ '+ statements_name +'});';
   return code;
 };
 
@@ -82,13 +83,36 @@ Blockly.JavaScript['cronjob'] = function(block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
   // TODO: Assemble JavaScript into code variable.
 var val = block.getFieldValue('cronval');
-  var code = 'schedule.scheduleJob("'+ val +'", function(){\n '+statements_name+'});\n';
+  var code = 'schedule.scheduleJob("'+ val +'", function(){ '+statements_name+'});';
   return code;
 };
 
 Blockly.JavaScript['get_date'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
-  var code = 'Date.now ()';
+  var code = 'Date.now()';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+Blockly.JavaScript['timeout'] = function(block) {
+  var number_sec = block.getFieldValue('sec');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'setTimeout(function(){'+statements_name+'},'+number_sec+');';
+  return code;
+};
+
+Blockly.JavaScript['clearinterval'] = function(block) {
+  var value_name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'clearInterval('+value_name+');';
+  return code;
+};
+
+Blockly.JavaScript['setinterval'] = function(block) {
+  var number_name = block.getFieldValue('NAME');
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'setInterval(function(){'+statements_name+'},'+number_name+')';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

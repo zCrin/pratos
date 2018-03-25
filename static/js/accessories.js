@@ -55,7 +55,7 @@ all_infos = data.accessories;
 					accessoriesUniq += '<div>' + val.state + '</div>';
 
 				}
-				accessoriesUniq += '<span id="accessory_name">' + val.name + '</span><span onClick="update_accessory(' + val.aid + ')" class="update_object"><i class="fa fa-pencil" aria-hidden="true"></i></span></div>';
+				accessoriesUniq += '<span id="accessory_name">' + val.name + "</span><span  onClick='update_accessory(" + val.aid +",\"" + val.oldName +"\")'" +" class='update_object'><i class='fa fa-pencil' aria-hidden='true'></i></span></div>";
 if(room == 'all' || room == null|| val.room == room){
 accessories += accessoriesUniq;
 }
@@ -138,13 +138,16 @@ var img_style = " ";
 
 	});
 var menuGenerated=0;
-function update_accessory(aid){
+function update_accessory(aid,oldName){
+
 if(menuGenerated != 0){
 $('#update_accessory_room').selectmenu("destroy");
 
 } 
 show_actual = '.updating_page';
 accesorie_editing_aid = aid;
+accesorie_editing_oldName = oldName;
+
 $('#acc_aid').val(aid);
 	$('.updating_page').show(1000);
 if($('#' + aid + ' > img').length){

@@ -11,10 +11,23 @@ function isJson(str) { //function to know if a variable is JSON
 
 
 fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
-		if(isJson(settings)){
+			if(isJson(settings)){
+				var ObjectID = require('mongodb').ObjectID;
+				var MongoClient =require('mongodb').MongoClient;
+			MongoClient.connect("mongodb://localhost/pratos", function(error, db) {
+    if (error) throw error;
+if(!error){
+var globalVariable = [];
+globalVariable.database = {
+	ObjectID:ObjectID,
+	MongoClient:MongoClient,
+	mongoDB:db
+};
+
 			settings = JSON.parse(settings);
 
 var http = require('http'),
+ //proxy  = require('http-proxy-middleware'),
 	EventEmitter = require("events").EventEmitter,
 	express = require('express'),
 	fileUpload = require('express-fileupload'),
@@ -30,23 +43,43 @@ IOcookieParser = require('socket.io-cookie'),
 	Cookies = require("cookies"),
 	User = require("pratos_user_class"),
 	
-	globalVariable = [],
+	 ioServer = require('socket.io'),
+	  io = new ioServer(),
 	app = express(),
 	plugins = require("pratos_plugin_class"),
 	uuidV1 = require('uuid/v1');
+	 http = require('http'),
+	 
 	globalVariable.event = new EventEmitter(),
 	cmd=require('node-cmd'),
 	proxyPort=settings.website.proxy_port;
 	webserverPort= settings.website.webserver_port;
-
+var Accessories = require("pratos_accessories_class");
 var style = require("pratos_style_class");
 style.init(globalVariable);
 /** Configuration */
 var conditions = require('pratos_conditions_class');
-/*
+var homebridgeIsrestarting=0;
+globalVariable.restart_homebridge =function(callback){
+	if(homebridgeIsrestarting == 0){
+		console.log('Homebridge will restart');
+		homebridgeIsrestarting=1;
+	cmd.get("sudo /etc/init.d/homebridge restart", function(out){
+		
+  						if(out){
+							console.log('Homebridge has restarted');
+							setTimeout(function(){ console.log('Resuming homebridge restart');homebridgeIsrestarting = 0; return callback();},20000);
+						}
+		});
+	}else{
+	setTimeout(function(){ console.log('Resuming homebridge restart');homebridgeIsrestarting = 0; return callback();},20000);
+	}
+};
+		
+
 if(settings.https.https_enable){
 app.enable('trust proxy');
-
+}/*
 // Add a handler to inspect the req.secure flag (see 
 // http://expressjs.com/api#req.secure). This allows us 
 // to know whether the request was via http or https.
@@ -60,8 +93,26 @@ app.use (function (req, res, next) {
         }
 });
 }*/
-app.use(bodyParser.json())
+app
+/*
+.use(function(req,res,next){
+		req.headers.host = (!req.headers.host)? "": req.headers.host;
+    	var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host;
+    	var pathname = url.parse(req.url).pathname;
+		req.headers['x-forwarded-for'] = getClientIP(req);
+		if(req.headers['x-forwarded-for'] != undefined){ 
+			if(settings.DNS[hostname]){
+ proxy({target:settings.DNS[hostname], changeOrigin: true,xforward: true});
+
+			}else{
+				 proxy({target:"http://localhost:"+ webserverPort, changeOrigin: true,xforward: true});
+			
+			}
+      }
+	
+})*/
 .use(fileUpload())
+.use(bodyParser.json())
 .use(bodyParser.urlencoded({
 	extended: true
 }))
@@ -172,7 +223,7 @@ app.get('/list_accessories/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
-			var Accessories = require("pratos_accessories_class");
+			
 				Accessories.list_accessories(globalVariable, function(data){
 			
 					res.end(data);
@@ -194,8 +245,8 @@ app.get('/list_rooms/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
-			var Accessories = require("pratos_accessories_class");
-				Accessories.list_rooms(globalVariable);
+			
+				Accessories.rooms.list(globalVariable);
 				globalVariable.event.on("accessories", show_list_rooms);
 				function show_list_rooms (answer, data){
 					if(answer == "listRooms:obtained"){
@@ -217,8 +268,8 @@ app.get('/add_room/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'text/html');
-			var Accessories = require("pratos_accessories_class");
-				Accessories.add_rooms(req.user_id, globalVariable, function(data){
+			
+				Accessories.rooms.add(req.user_id, globalVariable, function(data){
 						res.end(data);
 delete globalVariable[req.user_id];
 					});
@@ -236,8 +287,8 @@ app.get('/update_room/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'text/html');
-			var Accessories = require("pratos_accessories_class");
-				Accessories.update_rooms(req.user_id, globalVariable, function(data){
+			
+				Accessories.rooms.update(req.user_id, globalVariable, function(data){
 						res.end(data);
 delete globalVariable[req.user_id];
 					});
@@ -255,8 +306,8 @@ app.get('/delete_room/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'text/html');
-			var Accessories = require("pratos_accessories_class");
-				Accessories.delete_rooms(req.user_id, globalVariable, function(data){
+			
+				Accessories.rooms.remove(req.user_id, globalVariable, function(data){
 						res.end(data);
 delete globalVariable[req.user_id];
 					});
@@ -311,7 +362,7 @@ app.get('/change_state/', function(req, res) {
 	User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
-			var Accessories = require("pratos_accessories_class");
+			
 		var aid = globalVariable[req.user_id].request.query.aid,
 			iid = globalVariable[req.user_id].request.query.iid,
 			value = globalVariable[req.user_id].request.query.value;
@@ -332,8 +383,8 @@ app.post('/update_accessory/', function(req, res) {
 User.verify_connection(req.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 			res.setHeader('Content-Type', 'application/json');
-			var Accessories = require("pratos_accessories_class");
-				Accessories.update_accessory(req.user_id,globalVariable, function(data){
+			
+				Accessories.update_accessories(req.user_id,globalVariable, function(data){
 					res.end("true");
 delete globalVariable[req.user_id];
 			});
@@ -543,10 +594,10 @@ globalVariable.event.removeListener("cookiesLoaded", cookiesLoadedCallback);
 globalVariable[user_id].cookies = data;
 callback();
 }
-var AccessoriesHomebridge = require("pratos_accessories_class");
 
 
-AccessoriesHomebridge.has_change_happened(globalVariable);
+
+Accessories.detect_change(globalVariable);
 
 
 app.use(express.static(__dirname + '/static'));
@@ -558,8 +609,10 @@ console.log("Pratos : webserver listening on port :"+ webserverPort);
 
 var httpProxy = require('http-proxy'),
 	proxy = httpProxy.createProxyServer({});
+	app.use(bodyParser.json());
 cmd.get("sudo kill $(sudo lsof -t -i:"+ proxyPort+")", function(){
 	var serverCreated = http.createServer(function(req, res) {
+		
 		globalVariable.event.emit("http","Request Received",req);
 		req.headers.host = (!req.headers.host)? "": req.headers.host;
     	var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host;
@@ -579,6 +632,7 @@ cmd.get("sudo kill $(sudo lsof -t -i:"+ proxyPort+")", function(){
   					changeOrigin: false});
 			}
       }
+	  
 	});
 if(settings.https.https_enable){
 	var https = require('https');
@@ -589,13 +643,13 @@ if(settings.https.https_enable){
   			cert: fs.readFileSync('cert.pem')
 	}, app).listen(settings.https.https_port);
 console.log("Pratos : HTTPS server started on port : "+ settings.https.https_port);
-var io = require('socket.io')(httpsServer);
+io.attach(httpsServer);
 
  }
 
- else{
-var io = require('socket.io')(serverCreated);
-}
+
+io.attach(serverCreated);
+
 
 
 io.use(sharedsession(session, {
@@ -621,7 +675,10 @@ client.user_id = user_id;
 next();
 });
 
-
+io.on('error', function(ex) {
+  console.log("handled error");
+  console.log(ex);
+});
 
 io.on('connection', function(client){
 
@@ -644,7 +701,7 @@ User.verify_connection(client.user_id,globalVariable, function(user_res){
 		if(user_res == true){
 	
 
-       var Accessories = require("pratos_accessories_class");
+      
 				Accessories.list_accessories(globalVariable,function(data){
 						
         client.emit('accessoriesList', data);
@@ -657,6 +714,8 @@ if(answer == "change:detected"){
 						
 						
         client.emit('accessoriesList', data);
+		
+		
 					}
 }
 
@@ -665,10 +724,11 @@ if(answer == "change:detected"){
 
 });
 });
+
 });
 serverCreated.listen(proxyPort, function() {
     console.log('Pratos : proxyserver listening on port :' + proxyPort);
-	
+	http.get('http://'+settings.website.webserver_name)
 
 });
 // We simulate the 3 target applications
@@ -677,3 +737,5 @@ serverCreated.listen(proxyPort, function() {
 });
 				}
 			});
+		}
+});

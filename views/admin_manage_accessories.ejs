@@ -92,6 +92,7 @@ if(roomName != null){
 }
 var roomSaved = 0;
 		var is_updating = false, //pour savoir si on est  en train de modifier les accessoires
+accesorie_editing_oldName = null,
 			accesorie_editing_aid = null,
 			first_load = true, //pour savoir si l'image de chargement a deja ete cachee
 
@@ -242,7 +243,8 @@ room: roomid,
 		icon_on : icon_src.replace('0', '1'),
 		icon_off : icon_src.replace('1', '0'),
 		model : $('#update_accessory_model').val(),
-		manufacturer : $('#update_accessory_manufacturer').val()
+		manufacturer : $('#update_accessory_manufacturer').val(),
+oldName : accesorie_editing_oldName
 	},function(res){
 		if(res == 'error'){
 			alert("Erreur lors de la transmission. Rechargez la page et réessayez.");
