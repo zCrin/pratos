@@ -4,113 +4,6 @@
 *** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
 *** WARNING *** Please fix your application to use the native API of Avahi!
 *** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-(node:30262) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-(node:30262) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-(node:30730) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-(node:14696) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-(node:14696) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-undefined:1
-couldn	 do the job 240 accessories
-^
-
-SyntaxError: Unexpected token c in JSON at position 0
-    at JSON.parse (<anonymous>)
-    at /var/www/pratos/node_modules/pratos_conditions_class/lib/web.js:144:15
-    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:139:1
-    at /var/www/pratos/node_modules/node-cmd/cmd.js:25:21
-    at ChildProcess.exithandler (child_process.js:218:5)
-    at emitTwo (events.js:106:13)
-    at ChildProcess.emit (events.js:191:7)
-    at maybeClose (internal/child_process.js:877:16)
-    at Socket.<anonymous> (internal/child_process.js:334:11)
-    at emitOne (events.js:96:13)
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-(node:27159) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-(node:27159) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-(node:27159) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-/var/www/pratos/node_modules/mongodb/lib/utils.js:123
-    process.nextTick(function() { throw err; });
-                                  ^
-
-TypeError: Cannot read property 'length' of undefined
-    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:111:74
-    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
-    at /var/www/pratos/node_modules/mongodb/lib/collection.js:1416:5
-    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
-    at /var/www/pratos/node_modules/mongodb/lib/cursor.js:683:5
-    at handleCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:171:5)
-    at nextFunction (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:689:5)
-    at /var/www/pratos/node_modules/mongodb-core/lib/cursor.js:600:7
-    at queryCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:253:5)
-    at /var/www/pratos/node_modules/mongodb-core/lib/connection/pool.js:469:18
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-/var/www/pratos/node_modules/mongodb/lib/utils.js:123
-    process.nextTick(function() { throw err; });
-                                  ^
-
-TypeError: Cannot read property 'length' of undefined
-    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:111:74
-    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
-    at /var/www/pratos/node_modules/mongodb/lib/collection.js:1416:5
-    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
-    at /var/www/pratos/node_modules/mongodb/lib/cursor.js:683:5
-    at handleCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:171:5)
-    at nextFunction (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:689:5)
-    at /var/www/pratos/node_modules/mongodb-core/lib/cursor.js:600:7
-    at queryCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:253:5)
-    at /var/www/pratos/node_modules/mongodb-core/lib/connection/pool.js:469:18
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
 events.js:160
       throw er; // Unhandled 'error' event
       ^
@@ -123,12 +16,6 @@ Error: socket hang up
     at endReadableNT (_stream_readable.js:974:12)
     at _combinedTickCallback (internal/process/next_tick.js:74:11)
     at process._tickCallback (internal/process/next_tick.js:98:9)
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
 events.js:160
       throw er; // Unhandled 'error' event
       ^
@@ -141,21 +28,4 @@ Error: socket hang up
     at endReadableNT (_stream_readable.js:974:12)
     at _combinedTickCallback (internal/process/next_tick.js:74:11)
     at process._tickCallback (internal/process/next_tick.js:98:9)
-*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
-*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
-*** WARNING *** Please fix your application to use the native API of Avahi!
-*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
-events.js:160
-      throw er; // Unhandled 'error' event
-      ^
-
-Error: socket hang up
-    at createHangUpError (_http_client.js:253:15)
-    at Socket.socketOnEnd (_http_client.js:345:23)
-    at emitNone (events.js:91:20)
-    at Socket.emit (events.js:185:7)
-    at endReadableNT (_stream_readable.js:974:12)
-    at _combinedTickCallback (internal/process/next_tick.js:74:11)
-    at process._tickCallback (internal/process/next_tick.js:98:9)
+(node:14998) DeprecationWarning: Calling an asynchronous function without callback is deprecated.

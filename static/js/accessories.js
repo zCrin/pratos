@@ -1,8 +1,10 @@
 
 
 var socket = io.connect("//" + document.domain, {secure: true});
+
 var lastReceived;
  socket.on('connect', function(data) {
+
 setInterval(function(){socket.emit('accessoriesRequest');},1000);
     socket.emit('sendAccessoriesList');
 	socket.on('accessoriesList', function(data) {

@@ -591,19 +591,26 @@ $("#saveColors").click(function(){
 
 
 var colorSet = 0;
-var socket = io.connect("https://" + document.domain,{secure:true});
+var socket = io.connect("//" + document.domain, {secure: true});
 var lastReceived;
 var nC = $('#cp8_container').data('colorpicker').color. toRgbString();
+var nO = $('#cp9_container').data('colorpicker').color. toRgbString();
  socket.on('connect', function(data) {
 if(!colorSet){
-    socket.emit('updateCSSRequest', nC, $('#cp9_container').data('colorpicker').color. toRgbString());
+	
+    socket.emit('updateCSSRequest', nC, nO);
 $("#styleBox button").hide(1000);
 $("#flexStyle").html("<div id='progressbar'></div> <div id='styleState'>Chargement...<br /> Cela peut prendre quelques minutes. </div>");
 $( "#progressbar" ).progressbar({
       value: false
     });
 $( "#progressbar" ).find( ".ui-progressbar-value" ).css("background-color",nC);
-socket.on('disconnect',function(){alert('er');});
+socket.on('disconnect',function(){alert('eror socket disconnected');});
+
+		socket.on('ping',function(data){
+			socket.emit('pong');
+			
+		});
 socket.on('updateCSSERROR',function(x){alert(x);});
 	socket.on('updateCSS', function(ans,step) {
 setInterval(function(){socket.emit('updateCSSRECONNECTION');},1000);

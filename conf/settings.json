@@ -8,7 +8,12 @@
 	},
 	"https": {
 		"https_enable": true,
-		"https_port": 443
+		"https_port": 443,
+		"DNS": {
+			"pratos.ga": "http://localhost:3003",
+			"www.pratos.ga": "http://localhost:3003",
+			"cloud.pratos.ga": "http://pratos.ga"
+		}
 	},
 	"logs": {
 		"user_log": "/log/user.log",
@@ -21,15 +26,13 @@
 	},
 	"DNS": {
 		"pratos.ga": "http://localhost:3003",
-		"cloud.pratos.ga": "http://192.168.0.41",
+		"cloud.pratos.ga": "http://pratos.ga",
 		"webcam.pratos.ga": "http://localhost:8081",
 		"webcam-setting.pratos.ga": "http://localhost:8080"
 	},
 	"plugins": [
-		"pratos_favorite_accessories",
-		"pratos_google_home",
 		"pratos_my_accessories",
-		"pratos_restart_homebridge"
+		"pratos_weather"
 	],
 	"ports_used": [
 		"3000",
