@@ -31,7 +31,10 @@
 		"webcam-setting.pratos.ga": "http://localhost:8080"
 	},
 	"plugins": [
+		"pratos_favorite_accessories",
+		"pratos_google_home",
 		"pratos_my_accessories",
+		"pratos_restart_homebridge",
 		"pratos_weather"
 	],
 	"ports_used": [

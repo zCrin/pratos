@@ -23,6 +23,7 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					MongoClient:MongoClient,
 					mongoDB:db
 				};
+				
 				var express = require('express'),
 				app = express(),
 				fileUpload = require('express-fileupload'),
@@ -48,8 +49,8 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				ioServer = require('socket.io'),
 				io = new ioServer(),
 				sharedsession =require('socket.io-express-session'),
-				IOcookieParser = require('socket.io-cookie');
-				//conditions = require('pratos_conditions_class');
+				IOcookieParser = require('socket.io-cookie'),
+				conditions = require('pratos_conditions_class');
 				
 				style.init(globalVariable);
 
@@ -163,6 +164,7 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					io.attach(httpsServer);
 					start_io();
 					console.log(("\nSystem : HTTPS server started on port : "+ settings.https.https_port).blue);
+
 						});
 
 				}
@@ -170,6 +172,7 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					var serverCreated = http.createServer(proxySend ,app).listen(settings.website.webserver_port);
 					
 					console.log(("\nSystem : HTTP server started on port : "+ settings. website.webserver_port).blue);
+http.get('http://'+settings.website.webserver_name)
 				});
 				cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.website. proxy_port +")", function(){
 						var e = app.listen(settings.website. proxy_port);
@@ -183,16 +186,16 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				webpages(app,globalVariable,Accessories,style);
 				app.use(express.static(__dirname + '/static'));
 				
-				Accessories.detect_change(globalVariable);
+				Accessories.detect_change(globalVariable,function(){
 				
-				//conditions.load(globalVariable);
-				//conditions.webFiles(app,globalVariable);
-				
+				conditions.load(globalVariable);
+				conditions.webFiles(app,globalVariable);
+				});
 				
 				function start_io(){
 					how++;
 					if(how == 2){
-						console.log(("\nSystem : Sockets server is starting.").blue);
+						console.log(("\nSystem : Socket server is starting.").blue);
 						io.use(sharedsession(session, {
 							autoSave:true
 						}))
