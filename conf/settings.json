@@ -26,7 +26,8 @@
 	},
 	"DNS": {
 		"pratos.ga": "http://localhost:3003",
-		"cloud.pratos.ga": "http://pratos.ga",
+		"cloud.pratos.ga": "https://pratos.ga",
+		"www.pratos.ga": "http://localhost:3003",
 		"webcam.pratos.ga": "http://localhost:8081",
 		"webcam-setting.pratos.ga": "http://localhost:8080"
 	},

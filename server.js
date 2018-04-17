@@ -4,6 +4,7 @@
 * v 1.4.0
 */
 var how=0;
+var e =0;
 var fs = require("fs");
 var colors = require('colors');
 fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
@@ -27,8 +28,9 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				var express = require('express'),
 				app = express(),
 				fileUpload = require('express-fileupload'),
-				bodyParser = require('body-parser'),
-				session = require("express-session")({
+				
+				
+				 session = require("express-session")({
     				secret: "s",
     				resave: true,
     				saveUninitialized: true
@@ -39,7 +41,6 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				cmd=require('node-cmd'),
 				http = require('http'),
 				httpProxy = require('http-proxy'),
-				proxy = httpProxy.createProxyServer({}),
 				url = require("url"),
 				webpages = require("./lib/webpages.js"),
 				sockets = require("./lib/sockets.js"),
@@ -60,81 +61,11 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					app.enable('trust proxy');
 				}
 
-   				function proxySend(req,res){ 
-					req.headers.host = (!req.headers.host)? "": req.headers.host;
-    				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
-					pathname = url.parse(req.url).pathname;
-					req.headers['x-forwarded-for'] = getClientIP(req);
-					if(req.headers['x-forwarded-for'] != undefined){ 
-						if(settings.DNS[hostname]){
-							proxy.web(req, res, { 
-									target: settings.DNS[hostname],
-									xforward: true,
-  									changeOrigin: false,
-									ws:true
-
-								},function(e) { 
-									console.log("\nSystem : There was an error while redirecting.".red);
-									console.log(e.red);
-									res.end("Serveur Indisponible");
-							});
-						}else{
-							proxy.web(req, res, { 
-									target: "http://localhost:"+ settings. website.webserver_port,
-									xforward: true,
-									ws:true,
-  									changeOrigin: false
-
-							});
-						}
-					}
-					
-				}
-				function proxySendHttps(req,res){ 
-				
-					req.headers.host = (!req.headers.host)? "": req.headers.host;
-    				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
-					pathname = url.parse(req.url).pathname;
-					req.headers['x-forwarded-for'] = getClientIP(req);
-					if(req.headers['x-forwarded-for'] != undefined){ 
-						if(settings. https.DNS[hostname]){
-							
-							if(settings. https.DNS[hostname] != "http://localhost:"+settings. website.webserver_port){
-							proxy.web(req, res, { 
-									target: settings. https.DNS[hostname],
-									xforward: true,
-  									changeOrigin: false,
-									secure:false,
-									ws:true
-
-								},function(e) { 
-									console.log("\nSystem : There was an error while redirecting.".red);
-									console.log(e.red);
-									res.end("Serveur Indisponible");
-							});}
-							else{
-								app(req,res)
-							}
-						}else{
-							proxy.web(req, res, { 
-									target: "http://localhost:"+settings. website.webserver_port,
-									xforward: true,
-									ws:true,
-									secure:false,
-  									changeOrigin: false
-
-							});
-						}
-					}
-					
-				}
+var qs = require('querystring');
 				app.use(fileUpload())
-				.use(bodyParser.json())
-				.use(bodyParser.urlencoded({
-					extended: true
-				}))
 				.use(session)
 				.use(function(req,res,next){
+					
 					var user_id = uuidV1();
 					globalVariable[user_id] = Object();
 					req.user_id = user_id;
@@ -142,7 +73,35 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					load_cookie(req,res,function(){
 						next();
 					});
-				});
+				}).use(function(req,res,next){
+	
+
+
+    if (req.method == 'POST') {
+        var body = '';
+
+        req.on('data', function (data) {
+            body += data;
+
+            // Too much POST data, kill the connection!
+            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
+            if (body.length > 1e6)
+                req.connection.destroy();
+        });
+
+        req.on('end', function () {
+            var post = qs.parse(body);
+          globalVariable[req.user_id].request.bodyPratos = qs.parse(body);
+		  next();
+        });
+     
+}else{
+	next();
+}
+	
+});
+					
+				
 				function load_cookie(req,res,callback){
 					globalVariable.event.emit("cookiesLoaded", new Cookies( req, res), req.user_id,callback);
 					globalVariable.event.on("cookiesLoaded", cookiesLoadedCallback);
@@ -155,30 +114,108 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				
 
 				if(settings.https.https_enable){
-						cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.https.https_port +")", function(){
-					var https = require('https');
-					var httpsServer = https.createServer({
-  						key: fs.readFileSync('key.pem'),
-  						cert: fs.readFileSync('cert.pem')
-					}, proxySendHttps).listen(settings.https.https_port);
-					io.attach(httpsServer);
-					start_io();
+					cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.https.https_port +")", function(){
+var https = require('https');
+
+var proxyHTTPS = httpProxy.createServer();
+start_io();
+var httpsServer = https.createServer({
+  			key: fs.readFileSync(__dirname+'/key.pem'),
+  			cert: fs.readFileSync(__dirname+'/cert.pem')
+	}, function (req, res) {
+ 
+    req.headers.host = (!req.headers.host)? "": req.headers.host;
+    				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
+					pathname = url.parse(req.url).pathname;
+					req.headers['x-forwarded-for'] = getClientIP(req);
+					if(req.headers['x-forwarded-for'] != undefined){ 
+						if(settings.https.DNS[hostname]){
+
+findTrueForward(hostname, settings.https,function(x){
+
+
+							proxyHTTPS.web(req, res, { 
+									target: x,
+									xforward: true,
+  									changeOrigin: false,
+									ws:true
+
+								},function(e) { 
+									console.log("\nSystem : There was an error while redirecting.".red);
+									console.log(e.red);
+									res.end("Serveur Indisponible");
+							});
+});
+						}else{
+console.log(("\nSystem : There was an error while redirecting to hostname : "+hostname+".").red);
+							res.end("DNS introuvable : "+hostname);
+						}
+					}
+					//app.use(bodyParser.urlencoded({ extended: true }))
+
+// parse application/json
+//app.use(bodyParser.json())
+
+}).listen(settings.https. https_port);
+
+ 
+			
+
+io.attach(httpsServer);
+
 					console.log(("\nSystem : HTTPS server started on port : "+ settings.https.https_port).blue);
-
-						});
-
+					});
 				}
 				cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.website.webserver_port +")", function(){
-					var serverCreated = http.createServer(proxySend ,app).listen(settings.website.webserver_port);
+var e = app.listen(settings.website.webserver_port);
+					io.attach(e);
+					start_io();
 					
 					console.log(("\nSystem : HTTP server started on port : "+ settings. website.webserver_port).blue);
 http.get('http://'+settings.website.webserver_name)
 				});
+
 				cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.website. proxy_port +")", function(){
-						var e = app.listen(settings.website. proxy_port);
-					io.attach(e);
-					start_io();
+
+
+var proxyHTTP = httpProxy.createProxyServer();
+http.createServer(function (req, res) {
+ 
+    req.headers.host = (!req.headers.host)? "": req.headers.host;
+    				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
+					pathname = url.parse(req.url).pathname;
+					req.headers['x-forwarded-for'] = getClientIP(req);
+					if(req.headers['x-forwarded-for'] != undefined){ 
+						if(settings.DNS[hostname]){
+
+findTrueForward(hostname,settings,function(x){
+
+
+							proxyHTTP.web(req, res, { 
+									target: x,
+									xforward: true,
+  									changeOrigin: false,
+									ws:true
+
+								},function(e) { 
+									console.log("\nSystem : There was an error while redirecting.".red);
+									console.log(e.red);
+									res.end("Serveur Indisponible");
+							});
+});
+
+						}else{
+console.log(("\nSystem : There was an error while redirecting to hostname : "+hostname+".").red);
+									
+									res.end("DNS introuvable : "+hostname);
+
+						}
+					}
+}).listen(settings.website. proxy_port);
+
+ 
 				});
+
 				plugins.list(globalVariable, app, function(data){
 					globalVariable = data;
 					plugins.webPages(app, globalVariable);
@@ -191,8 +228,10 @@ http.get('http://'+settings.website.webserver_name)
 				conditions.load(globalVariable);
 				conditions.webFiles(app,globalVariable);
 				});
-				
+								
+		
 				function start_io(){
+
 					how++;
 					if(how == 2){
 						console.log(("\nSystem : Socket server is starting.").blue);
@@ -224,36 +263,46 @@ http.get('http://'+settings.website.webserver_name)
 							next();
 						});
 			
-						sockets(io,globalVariable,Accessories,style);
+					sockets(io,globalVariable,Accessories,style);
 					}
+
 				}
 
 
 
 	
 
-					
-				
+	globalVariable.restart_homebridge=0;
 				globalVariable.restart_homebridge =function(callback){
-					if(homebridgeIsrestarting == 0){
+					if(globalVariable.restart_homebridge == 0){
 						console.log(("\nSystem : Homebridge will restart.").blue);
-						homebridgeIsrestarting=1;
+						globalVariable.restart_homebridge=1;
 						cmd.get("sudo /etc/init.d/homebridge restart", function(out){
 							if(out){
 								console.log(("\nSystem : Homebridge has restarted.").blue);
-								setTimeout(function(){ console.log('Resuming homebridge restart');homebridgeIsrestarting = 0; return callback();},20000);
+								setTimeout(function(){ console.log('Resuming homebridge restart');globalVariable.restart_homebridge = 0; return callback();},20000);
 							}
 						});
 					}else{
 						setTimeout(function(){ 
 							console.log('Resuming homebridge restart');
-							homebridgeIsrestarting = 0; 
+							globalVariable.restart_homebridge = 0; 
 							return callback();
 						},20000);
 					}
 				};
 			}
 		});
+function findTrueForward(x,src,callback){
+var v = x;
+while(src.DNS[x]){
+v = src.DNS[x];
+x = v.replace('http://','').replace('https://','').split(':');
+x = x[0];
+
+}
+return callback(v);
+}
 	}else{
 		console.log("\nSystem : Pratos' configuration file is not JSON format.".red);
 	}

@@ -108,7 +108,18 @@ accesorie_editing_oldName = null,
 
 
 	<script>
+function getKeyByValue(value) {
+var d = Object.keys(all_accessories);
+  var e= d.length;
 
+  for(var g=0; g<e;g++){
+   
+	if(all_accessories[d[g]].aid == value){
+		return d[g];
+	}
+  }
+  
+}
 		$.getJSON( "/accessories_icon/", function(data){
 				img_correspond = data;
 
@@ -117,17 +128,18 @@ accesorie_editing_oldName = null,
 
 		show_actual = '.updating_pic';//on indique le popup dans lequel on travaille
 		aid = $('#change_pic').attr('aid');
-
-			if(all_accessories[aid].state_format != 'float'){
+var keyL = getKeyByValue(aid);
+console.log(all_accessories[keyL].state_format)
+			if(all_accessories[keyL].state_format != 'float'){
 
 $('#select_ico').html('');
 
 				$.each(img_correspond, function(key,val){
 
 
-					if(key.indexOf(all_accessories[aid].state) !== -1){
-if(all_accessories[aid].state_format == 'bool'){
-if(img_correspond[key.replace(all_accessories[aid].state, (all_accessories[aid].state-1)*(all_accessories[aid].state-1))]){
+					if(key.indexOf(all_accessories[keyL].state) !== -1){
+if(all_accessories[keyL].state_format == 'bool'){
+if(img_correspond[key.replace(all_accessories[keyL].state, (all_accessories[keyL].state-1)*(all_accessories[keyL].state-1))]){
 						$('#select_ico').html($('#select_ico').html() + '<img class="all_ico" onclick="select_ico(\''+val + '\' )" src="/img/icons/' + val +'"/>').promise().done(function(){
 			$('.updating_page').hide(1000);
 			$('.updating_pic').show(1000);
