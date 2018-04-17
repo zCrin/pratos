@@ -61,7 +61,7 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					app.enable('trust proxy');
 				}
 
-var qs = require('querystring');
+var qs = require('qs');
 				app.use(fileUpload())
 				.use(session)
 				.use(function(req,res,next){
@@ -99,7 +99,12 @@ var qs = require('querystring');
 	next();
 }
 	
-});
+}).use(logErrors);
+function logErrors(err, req, res, next) {
+  console.error(err);
+  next(err);
+}
+
 					
 				
 				function load_cookie(req,res,callback){
@@ -113,7 +118,7 @@ var qs = require('querystring');
 				}
 				
 
-				if(settings.https.https_enable){
+		if(settings.https.https_enable){
 					cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.https.https_port +")", function(){
 var https = require('https');
 
@@ -123,7 +128,10 @@ var httpsServer = https.createServer({
   			key: fs.readFileSync(__dirname+'/key.pem'),
   			cert: fs.readFileSync(__dirname+'/cert.pem')
 	}, function (req, res) {
- 
+  req.on('error',function(err){
+	 console.log(err)
+	 
+ })
     req.headers.host = (!req.headers.host)? "": req.headers.host;
     				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
 					pathname = url.parse(req.url).pathname;
@@ -151,13 +159,19 @@ console.log(("\nSystem : There was an error while redirecting to hostname : "+ho
 							res.end("DNS introuvable : "+hostname);
 						}
 					}
-					//app.use(bodyParser.urlencoded({ extended: true }))
-
-// parse application/json
-//app.use(bodyParser.json())
 
 }).listen(settings.https. https_port);
+proxyHTTPS.on('proxyReq', function(proxyReq, req) {
+    // keep a ref
+    req._proxyReq = proxyReq;
+});
 
+proxyHTTPS.on('error', function(err, req, res) {
+	console.log(err)
+  if (req.socket.destroyed && err.code === 'ECONNRESET') {
+    req._proxyReq.abort();
+  }
+});
  
 			
 
@@ -166,13 +180,20 @@ io.attach(httpsServer);
 					console.log(("\nSystem : HTTPS server started on port : "+ settings.https.https_port).blue);
 					});
 				}
+				
 				cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.website.webserver_port +")", function(){
 var e = app.listen(settings.website.webserver_port);
 					io.attach(e);
-					start_io();
 					
+					start_io();
 					console.log(("\nSystem : HTTP server started on port : "+ settings. website.webserver_port).blue);
-http.get('http://'+settings.website.webserver_name)
+http.get('http://'+settings.website.webserver_name).on("error", (err) => {
+if(err.message == 'socket hang up'){
+console.log("\nError (normal): init connection failed allowing new connections".yellow);
+}else{
+  console.log("Error: " + err.message);
+}
+});
 				});
 
 				cmd.get("sudo kill $(sudo lsof -t -i:"+ settings.website. proxy_port +")", function(){
@@ -180,7 +201,10 @@ http.get('http://'+settings.website.webserver_name)
 
 var proxyHTTP = httpProxy.createProxyServer();
 http.createServer(function (req, res) {
- 
+ req.on('error',function(err){
+	 console.log(err)
+	 
+ })
     req.headers.host = (!req.headers.host)? "": req.headers.host;
     				var hostname = ((req.headers.host).match(":"))?req.headers.host.split(":")[0] : req.headers.host,
 					pathname = url.parse(req.url).pathname;
@@ -213,13 +237,22 @@ console.log(("\nSystem : There was an error while redirecting to hostname : "+ho
 					}
 }).listen(settings.website. proxy_port);
 
- 
-				});
+ proxyHTTP.on('proxyReq', function(proxyReq, req) {
+    // keep a ref
+    req._proxyReq = proxyReq;
+});
 
+proxyHTTP.on('error', function(err, req, res) {
+		console.log(err)
+  if (req.socket.destroyed && err.code === 'ECONNRESET') {
+    req._proxyReq.abort();
+  }
+});
+				});
 				plugins.list(globalVariable, app, function(data){
 					globalVariable = data;
 					plugins.webPages(app, globalVariable);
-				});
+				}); 
 				webpages(app,globalVariable,Accessories,style);
 				app.use(express.static(__dirname + '/static'));
 				
@@ -228,9 +261,9 @@ console.log(("\nSystem : There was an error while redirecting to hostname : "+ho
 				conditions.load(globalVariable);
 				conditions.webFiles(app,globalVariable);
 				});
-								
+					
 		
-				function start_io(){
+		function start_io(){
 
 					how++;
 					if(how == 2){
