@@ -305,21 +305,21 @@ proxyHTTP.on('error', function(err, req, res) {
 
 	
 
-	globalVariable.restart_homebridge=0;
+	globalVariable.restart_homebridgeState=0;
 				globalVariable.restart_homebridge =function(callback){
-					if(globalVariable.restart_homebridge == 0){
+					if(globalVariable.restart_homebridgeState == 0){
 						console.log(("\nSystem : Homebridge will restart.").blue);
-						globalVariable.restart_homebridge=1;
+						globalVariable.restart_homebridgeState =1;
 						cmd.get("sudo /etc/init.d/homebridge restart", function(out){
 							if(out){
 								console.log(("\nSystem : Homebridge has restarted.").blue);
-								setTimeout(function(){ console.log('Resuming homebridge restart');globalVariable.restart_homebridge = 0; return callback();},20000);
+								setTimeout(function(){ console.log('Resuming homebridge restart');globalVariable.restart_homebridgeState = 0; return callback();},20000);
 							}
 						});
 					}else{
 						setTimeout(function(){ 
 							console.log('Resuming homebridge restart');
-							globalVariable.restart_homebridge = 0; 
+							globalVariable.restart_homebridgeState = 0; 
 							return callback();
 						},20000);
 					}
