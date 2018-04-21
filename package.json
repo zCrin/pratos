@@ -26,12 +26,17 @@
     "pratos_user_class": "*",
     "serialport": "^6.1.1",
     "sharp": "*",
-    "socket.io-cookie": "0.0.1",
-    "socket.io-express-session": "^0.1.3",
+    "socket.io-cookie": "*",
+    "socket.io-express-session": "*",
     "string-similarity": "^1.2.0",
     "user-agent-parser": "^0.6.0",
     "uuid": "*",
-    "youtube-mp3-downloader": "^0.5.3"
+    "youtube-mp3-downloader": "*",
+    "colors": "*",
+    "mongodb": "*",
+    "socket.io": "*",
+    "qs": "*",
+    "http-proxy-middleware": "*"
   },
   "devDependencies": {},
   "repository": {

@@ -5455,3 +5455,2022 @@ Sat, 21 Apr 2018 12:42:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response
 Sat, 21 Apr 2018 12:42:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
 Sat, 21 Apr 2018 12:42:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
 Sat, 21 Apr 2018 12:42:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] HTTP server listening on port 39101
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46201
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35631
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 39.7
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43901
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41257
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39181
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 32969
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:42:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42093
+Sat, 21 Apr 2018 12:42:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:42:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:42:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] HTTP server listening on port 38631
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:42:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45307
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:42:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:42:58 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40459
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:42:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:42:58 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:42:58 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 39.7
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38113
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:42:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:42:58 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:42:58 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43949
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:42:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44299
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:42:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36645
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:42:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46173
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:42:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:42:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:42:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] HTTP server listening on port 46371
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33269
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41179
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 39.7
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33923
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44939
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43113
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 37723
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:08 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36279
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] HTTP server listening on port 43867
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36369
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33139
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 39.7
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46677
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42771
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44395
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44167
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43269
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:19 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:19 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:19 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] HTTP server listening on port 33743
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41613
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41447
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44637
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45333
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35525
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41827
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42853
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:32 GMT EventedHTTPServer [::ffff:192.168.0.46] Client connection closed
+Sat, 21 Apr 2018 12:43:32 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:32 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] HTTP server listening on port 42995
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43153
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40475
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39787
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 37629
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40549
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45889
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:38 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36367
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] New connection from client
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP server listening on port 37093
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP request: /pair-verify
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 1/2
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP request: /pair-verify
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 2/2
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] Client 1363C64E-0C39-45C3-A60B-91453E65D0DD verification complete
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:40 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /accessories
+Sat, 21 Apr 2018 12:43:40 GMT EventedHTTPServer [::ffff:192.168.0.46] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] HTTP server listening on port 42885
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42231
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36867
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34593
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35581
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34979
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35795
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42115
+Sat, 21 Apr 2018 12:43:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] HTTP server listening on port 36595
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39953
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38205
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33721
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42163
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34377
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:58 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 37385
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:43:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40287
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:43:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:43:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:43:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] HTTP server listening on port 33819
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 37919
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36631
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35161
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34221
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41877
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36045
+Sat, 21 Apr 2018 12:44:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:08 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42259
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] HTTP server listening on port 45047
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46057
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39677
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36857
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41663
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35187
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43407
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44833
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:19 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:19 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:19 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] HTTP server listening on port 39049
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43319
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38139
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36711
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43687
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43129
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39321
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46605
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] HTTP server listening on port 35637
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42155
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46871
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 32825
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45043
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34509
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:38 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43899
+Sat, 21 Apr 2018 12:44:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40273
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] HTTP server listening on port 36177
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45315
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42033
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35981
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39621
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39401
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34681
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44387
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] HTTP server listening on port 45857
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39629
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36647
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44761
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33657
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39517
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45081
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:58 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42921
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:44:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:44:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:44:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] HTTP server listening on port 39643
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42111
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40087
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41397
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35207
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:08 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42233
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39929
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44015
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] HTTP server listening on port 44175
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33641
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 32967
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44717
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42993
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40561
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34973
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44567
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:19 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:19 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:19 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] HTTP server listening on port 42171
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33843
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36157
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41753
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33215
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43447
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36399
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:28 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36287
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] HTTP server listening on port 37349
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41387
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36009
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34539
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35849
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34857
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:38 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43951
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45451
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] HTTP server listening on port 32867
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33123
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43957
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33963
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34497
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33211
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45885
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38595
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] HTTP server listening on port 37855
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45469
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46581
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38847
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40453
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34047
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40501
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:58 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35531
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:45:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:45:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:45:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] HTTP server listening on port 41603
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42637
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35755
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38157
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40001
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:08 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:08 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:08 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35061
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41913
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46281
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:09 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:09 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:09 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] HTTP server listening on port 40607
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40159
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45463
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44091
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35907
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43391
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:18 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:18 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:18 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 40003
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:19 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:19 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:19 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41043
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:19 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:19 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:19 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:19 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] HTTP server listening on port 44177
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34741
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:28 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35315
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:28 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:28 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43919
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:28 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:28 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:28 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:28 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36215
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35799
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46577
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42843
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:29 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:29 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:29 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] HTTP server listening on port 38899
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39701
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 38441
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41773
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 36987
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:38 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:38 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:38 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 43295
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33927
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 45239
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:39 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:39 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:39 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] HTTP server listening on port 40363
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42007
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44877
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46315
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 34843
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35899
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:48 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:48 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:48 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 35151
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41543
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:49 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:49 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:49 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:49 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] New connection from client
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] HTTP server listening on port 35963
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] HTTP request: /accessories
+Sat, 21 Apr 2018 12:46:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /accessories
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] Client connection closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 41095
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=1.
+Sat, 21 Apr 2018 12:46:58 GMT Accessory [Pratos] Could not find a Characteristic with iid of 1 and aid of NaN
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42725
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=7.13
+Sat, 21 Apr 2018 12:46:58 GMT Accessory [Pratos] Getting value for Characteristic "Current Temperature"
+Sat, 21 Apr 2018 12:46:58 GMT Accessory [Pratos] Got Characteristic "Current Temperature" value: 40.2
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 44235
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:58 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=8.10
+Sat, 21 Apr 2018 12:46:58 GMT Accessory [Pratos] Getting value for Characteristic "Motion Detected"
+Sat, 21 Apr 2018 12:46:58 GMT Accessory [Pratos] Got Characteristic "Motion Detected" value: false
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:58 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 42625
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=9.13
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Getting value for Characteristic "Contact Sensor State"
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Got Characteristic "Contact Sensor State" value: 1
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 33533
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=10.10
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 46797
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=14.10
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] New connection from client
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server listening on port 39523
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP request: /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:59 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /characteristics?id=12.10
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Getting value for Characteristic "On"
+Sat, 21 Apr 2018 12:46:59 GMT Accessory [Pratos] Got Characteristic "On" value: false
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP Response is finished
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP connection was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] HTTP server was closed
+Sat, 21 Apr 2018 12:46:59 GMT EventedHTTPServer [::ffff:127.0.0.1] Client connection closed
