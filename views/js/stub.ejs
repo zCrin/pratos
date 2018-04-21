@@ -116,3 +116,46 @@ Blockly.JavaScript['setinterval'] = function(block) {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+Blockly.JavaScript['request_get'] = function(block) {
+  var dropdown_type = block.getFieldValue('type');
+  var dropdown_format = block.getFieldValue('format');
+  var text_httpget = block.getFieldValue('httpGet');
+  var variable_name = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('NAME'), Blockly.Variables.NAME_TYPE);
+  var variable_resp = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('resp'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['appreceive'] = function(block) {
+  var text_path = block.getFieldValue('path');
+  var dropdown_method = block.getFieldValue('method');
+  var variable_req = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('req'), Blockly.Variables.NAME_TYPE);
+  var variable_res = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('res'), Blockly.Variables.NAME_TYPE);
+  var variable_globalvariable = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('globalVariable'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['cmd'] = function(block) {
+  var text_cmd = block.getFieldValue('cmd');
+  var variable_err = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('err'), Blockly.Variables.NAME_TYPE);
+  var variable_rep = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('rep'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['portreceive'] = function(block) {
+  var text_port = block.getFieldValue('port');
+  var text_baudrate = block.getFieldValue('baudRate');
+  var variable_data = Blockly.JavaScript.variableDB_.getName(block.getFieldValue('data'), Blockly.Variables.NAME_TYPE);
+  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
+  // TODO: Assemble JavaScript into code variable.
+  var code = '...;\n';
+  return code;
+};
