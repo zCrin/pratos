@@ -41,6 +41,10 @@ extern "C" {
 /* Renamed types.
  */
 
+/* We have this misspelt in earlier versions :(
+ */
+#define VIPS_META_IPCT_NAME VIPS_META_IPTC_NAME 
+
 #define IM_D93_X0 VIPS_D93_X0 
 #define IM_D93_Y0 VIPS_D93_Y0 
 #define IM_D93_Z0 VIPS_D93_Z0 
@@ -462,7 +466,6 @@ int im_wrapmany( VipsImage **in, VipsImage *out,
 
 #define IM_META_EXIF_NAME VIPS_META_EXIF_NAME 
 #define IM_META_ICC_NAME VIPS_META_ICC_NAME 
-#define IM_META_XML VIPS_META_XML 
 #define IM_META_RESOLUTION_UNIT VIPS_META_RESOLUTION_UNIT 
 #define IM_TYPE_SAVE_STRING VIPS_TYPE_SAVE_STRING 
 #define IM_TYPE_BLOB VIPS_TYPE_BLOB 

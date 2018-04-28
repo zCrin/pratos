@@ -1,7 +1,8 @@
 /*
 * License MIT
 * « Copyright © 2018, Pratos »
-* v 1.4.0
+* v 1.4.1
+!!! don't use formdata anymore for uploading files
 */
 var how=0;
 var e =0;
@@ -52,7 +53,7 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 				sharedsession =require('socket.io-express-session'),
 				IOcookieParser = require('socket.io-cookie'),
 				conditions = require('pratos_conditions_class');
-				
+			
 				style.init(globalVariable);
 
 				globalVariable.event = new EventEmitter();
@@ -61,9 +62,11 @@ fs.readFile( __dirname + "/conf/settings.json", 'utf8', function(err, settings){
 					app.enable('trust proxy');
 				}
 
+	
 var qs = require('qs');
-				app.use(fileUpload())
-				.use(session)
+var Busboy = require('busboy');
+				
+				app	.use(session)
 				.use(function(req,res,next){
 					
 					var user_id = uuidV1();
@@ -73,33 +76,57 @@ var qs = require('qs');
 					load_cookie(req,res,function(){
 						next();
 					});
-				}).use(function(req,res,next){
-	
-
-
-    if (req.method == 'POST') {
+				})
+				.use(function(req,res,next){
+					  if (req.method === 'POST') {
+						  if(/multipart\/form-data/.test(req.headers['content-type'])) {
+						  globalVariable[req.user_id].request.bodyPratos = {}
+    var busboy = new Busboy({ headers: req.headers });
+    busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
+     
+      file.on('data', function(data) {
+        
+		globalVariable[req.user_id].request.bodyPratos[fieldname] = data;
+      });
+     
+    });
+    busboy.on('field', function(fieldname, val, fieldnameTruncated, valTruncated, encoding, mimetype) {
+    
+	  		globalVariable[req.user_id].request.bodyPratos[fieldname] = val;
+    });
+    busboy.on('finish', function() {
+     next();
+    });
+    req.pipe(busboy);
+						  }
+						  else{
+							 var r = req.headers['content-length'];
         var body = '';
-
         req.on('data', function (data) {
             body += data;
-
-            // Too much POST data, kill the connection!
-            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
-            if (body.length > 1e6)
+			
+			if (body.length > 1e6) { 
+                console.log('destroyed')
                 req.connection.destroy();
+            }
         });
 
         req.on('end', function () {
-            var post = qs.parse(body);
+		
+			if(! /multipart\/form-data/.test(req.headers['content-type'])) {
+            
           globalVariable[req.user_id].request.bodyPratos = qs.parse(body);
-		  next();
-        });
-     
-}else{
-	next();
-}
+		  next(); 
+						  }
+		});
+						  }  
+  }else{
+	  next();
+  }
+				})
+			
 	
-}).use(logErrors);
+.use(logErrors);
 function logErrors(err, req, res, next) {
   console.error(err);
   next(err);

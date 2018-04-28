@@ -4,7 +4,7 @@
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
- * version 2 of the License, or (at your option) any later version.
+ * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -113,16 +113,17 @@ gpointer g_try_realloc_n  (gpointer	 mem,
 #define g_clear_pointer(pp, destroy) \
   G_STMT_START {                                                               \
     G_STATIC_ASSERT (sizeof *(pp) == sizeof (gpointer));                       \
-    /* Only one access, please */                                              \
-    gpointer *_pp = (gpointer *) (pp);                                         \
+    /* Only one access, please; work around type aliasing */                   \
+    union { char *in; gpointer *out; } _pp;                                    \
     gpointer _p;                                                               \
     /* This assignment is needed to avoid a gcc warning */                     \
     GDestroyNotify _destroy = (GDestroyNotify) (destroy);                      \
                                                                                \
-    _p = *_pp;                                                                 \
+    _pp.in = (char *) (pp);                                                    \
+    _p = *_pp.out;                                                             \
     if (_p) 								       \
       { 								       \
-        *_pp = NULL;							       \
+        *_pp.out = NULL;                                                       \
         _destroy (_p);                                                         \
       }                                                                        \
   } G_STMT_END

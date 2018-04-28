@@ -119,9 +119,9 @@ typedef struct _VipsForeignLoad {
 	VipsForeign parent_object;
 	/*< private >*/
 
-	/* Open to disc (default is to open to memory).
+	/* Set TRUE to force open via memory. 
 	 */
-	gboolean disc;
+	gboolean memory;
 
 	/* Type of access upstream wants and the loader must supply. 
 	 */
@@ -130,6 +130,10 @@ typedef struct _VipsForeignLoad {
 	/* Flags for this load operation.
 	 */
 	VipsForeignFlags flags;
+
+	/* Stop load on first warning.
+	 */
+	gboolean fail;
 
 	/* Deprecated and unused, just here for compat.
 	 */
@@ -149,6 +153,11 @@ typedef struct _VipsForeignLoad {
 	/* Set this to tag the operation as nocache.
 	 */
 	gboolean nocache;
+
+	/* Deprecated: the memory option used to be called disc and default
+	 * TRUE.
+	 */
+	gboolean disc;
 } VipsForeignLoad;
 
 typedef struct _VipsForeignLoadClass {
@@ -225,6 +234,8 @@ gboolean vips_foreign_is_a( const char *loader, const char *filename );
 gboolean vips_foreign_is_a_buffer( const char *loader, 
 	const void *data, size_t size );
 
+void vips_foreign_load_invalidate( VipsImage *image );
+
 #define VIPS_TYPE_FOREIGN_SAVE (vips_foreign_save_get_type())
 #define VIPS_FOREIGN_SAVE( obj ) \
 	(G_TYPE_CHECK_INSTANCE_CAST( (obj), \
@@ -272,6 +283,10 @@ typedef struct _VipsForeignSave {
 	 * 0 (black).
 	 */
 	VipsArrayDouble *background;
+
+	/* Set to non-zero to set the page size for multi-page save.
+	 */
+	int page_height;
 
 	/*< public >*/
 
@@ -436,6 +451,8 @@ int vips_tiffload( const char *filename, VipsImage **out, ... )
 int vips_tiffload_buffer( void *buf, size_t len, VipsImage **out, ... )
 	__attribute__((sentinel));
 int vips_tiffsave( VipsImage *in, const char *filename, ... )
+	__attribute__((sentinel));
+int vips_tiffsave_buffer( VipsImage *in, void **buf, size_t *len, ... )
 	__attribute__((sentinel));
 
 int vips_openexrload( const char *filename, VipsImage **out, ... )

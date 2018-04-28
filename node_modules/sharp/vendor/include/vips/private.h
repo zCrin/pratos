@@ -56,11 +56,6 @@ extern "C" {
  */
 #define VIPS_SIZEOF_HEADER (64)
 
-/* Startup ABI check.
- */
-int vips__init( const char *argv0 );
-size_t vips__get_sizeof_vipsobject( void );
-
 /* What we track for each mmap window. Have a list of these on an openin
  * VipsImage.
  */
@@ -78,7 +73,8 @@ typedef struct {
 
 /* window manager.
  */
-VipsWindow *vips_window_ref( struct _VipsImage *im, int top, int height );
+VipsWindow *vips_window_ref( VipsWindow *window, 
+	struct _VipsImage *im, int top, int height );
 int vips_window_unref( VipsWindow *window );
 void vips_window_print( VipsWindow *window );
 
@@ -89,13 +85,16 @@ typedef struct {
 	GThread *thread;	/* Just for sanity checking */
 } VipsBufferThread;
 
-/* Per-image buffer cache. Hash to this from VipsBufferThread::hash.
+/* Per-image buffer cache. This keeps a list of "done" VipsBuffer that this
+ * worker has generated. We use this to reuse results within a thread. 
+ *
+ * Hash to this from VipsBufferThread::hash.
  * We can't store the GSList directly in the hash table as GHashTable lacks an
  * update operation and we'd need to _remove() and _insert() on every list
  * operation.
  */
 typedef struct _VipsBufferCache {
-	GSList *buffers;	/* GSList of VipsBuffer* */
+	GSList *buffers;	/* GSList of "done" VipsBuffer* */
 	GThread *thread;	/* Just for sanity checking */
 	struct _VipsImage *im;
 	VipsBufferThread *buffer_thread;
@@ -105,13 +104,15 @@ typedef struct _VipsBufferCache {
 
 /* What we track for each pixel buffer. These can move between caches and
  * between threads, but not between images. 
+ *
+ * Moving between threads is difficult, use region ownership stuff. 
  */
 typedef struct _VipsBuffer {
 	int ref_count;		/* # of regions referencing us */
 	struct _VipsImage *im;	/* VipsImage we are attached to */
 
 	VipsRect area;		/* Area this pixel buffer covers */
-	gboolean done;		/* Calculated and in cache */
+	gboolean done;		/* Calculated and in a cache */
 	VipsBufferCache *cache;	/* The cache this buffer is published on */
 	VipsPel *buf;		/* Private malloc() area */
 	size_t bsize;		/* Size of private malloc() */
@@ -162,7 +163,7 @@ void vips__region_no_ownership( struct _VipsRegion *reg );
 
 typedef int (*VipsRegionFillFn)( struct _VipsRegion *, void * );
 int vips_region_fill( struct _VipsRegion *reg, 
-	VipsRect *r, VipsRegionFillFn fn, void *a );
+	const VipsRect *r, VipsRegionFillFn fn, void *a );
 
 int vips__image_wio_output( struct _VipsImage *image );
 int vips__image_pio_output( struct _VipsImage *image );
@@ -177,6 +178,19 @@ void vips__demand_hint_array( struct _VipsImage *image,
 	int hint, struct _VipsImage **in );
 int vips__image_copy_fields_array( struct _VipsImage *out, 
 	struct _VipsImage *in[] );
+
+void vips__region_count_pixels( struct _VipsRegion *region, const char *nickname );
+void vips_region_dump_all( void );
+
+/* Deprecated.
+ */
+int vips__init( const char *argv0 );
+size_t vips__get_sizeof_vipsobject( void );
+int vips_region_prepare_many( struct _VipsRegion **reg, const VipsRect *r );
+
+/* Handy for debugging.
+ */
+int vips__view_image( struct _VipsImage *image );
 
 #ifdef __cplusplus
 }

@@ -86,6 +86,14 @@ extern "C" {
 #define VIPS_FMIN( A, B ) VIPS_MIN( A, B )
 #endif
 
+/* Testing status before the function call saves a lot of time.
+ */
+#define VIPS_ONCE( ONCE, FUNC, CLIENT ) \
+G_STMT_START { \
+        if( G_UNLIKELY( (ONCE)->status != G_ONCE_STATUS_READY ) ) \
+		(void) g_once( ONCE, FUNC, CLIENT ); \
+} G_STMT_END
+
 /* VIPS_RINT() does "bankers rounding", it rounds to the nerarest even integer.
  * For things like image geometry, we want strict nearest int.
  *
@@ -135,6 +143,14 @@ G_STMT_START { \
 	} \
 } G_STMT_END
 
+/* The g_info() macro was added in 2.40.
+ */
+#ifndef g_info
+/* Hopefully we have varargs macros. Maybe revisit this. 
+ */
+#define g_info(...) \
+	 g_log( G_LOG_DOMAIN, G_LOG_LEVEL_INFO, __VA_ARGS__ )
+#endif
 
 /* Various integer range clips. Record over/under flows.
  */
@@ -319,6 +335,12 @@ void vips__change_suffix( const char *name, char *out, int mx,
         const char *new_suff, const char **olds, int nolds );
 
 char *vips_realpath( const char *path );
+
+guint32 vips__random( guint32 seed );
+guint32 vips__random_add( guint32 seed, int value );
+
+const char *vips__icc_dir( void );
+const char *vips__windows_prefix( void );
 
 #ifdef __cplusplus
 }

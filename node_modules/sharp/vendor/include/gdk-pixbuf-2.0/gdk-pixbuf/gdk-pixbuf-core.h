@@ -115,7 +115,7 @@ G_BEGIN_DECLS
  *  In the future it will do full alpha compositing.
  * 
  * These values can be passed to
- * gdk_pixbuf_render_to_drawable_alpha() to control how the alpha
+ * gdk_pixbuf_xlib_render_to_drawable_alpha() to control how the alpha
  * channel of an image should be handled.  This function can create a
  * bilevel clipping mask (black and white) and use it while painting
  * the image.  In the future, when the X Window System gets an alpha
@@ -270,6 +270,13 @@ GDK_PIXBUF_AVAILABLE_IN_ALL
 GdkPixbuf *gdk_pixbuf_new (GdkColorspace colorspace, gboolean has_alpha, int bits_per_sample,
 			   int width, int height);
 
+GDK_PIXBUF_AVAILABLE_IN_2_36
+gint gdk_pixbuf_calculate_rowstride (GdkColorspace colorspace,
+				     gboolean      has_alpha,
+				     int           bits_per_sample,
+				     int           width,
+				     int           height);
+
 /* Copy a pixbuf */
 GDK_PIXBUF_AVAILABLE_IN_ALL
 GdkPixbuf *gdk_pixbuf_copy (const GdkPixbuf *pixbuf);
@@ -284,13 +291,25 @@ GdkPixbuf *gdk_pixbuf_new_subpixbuf (GdkPixbuf *src_pixbuf,
 
 /* Simple loading */
 
-#ifndef __GTK_DOC_IGNORE__
 #ifdef G_OS_WIN32
-/* DLL ABI stability hack. */
-#define gdk_pixbuf_new_from_file gdk_pixbuf_new_from_file_utf8
-#define gdk_pixbuf_new_from_file_at_size gdk_pixbuf_new_from_file_at_size_utf8
-#define gdk_pixbuf_new_from_file_at_scale gdk_pixbuf_new_from_file_at_scale_utf8
-#endif
+/* In previous versions these _utf8 variants where exported and linked to
+ * by default. Export them here for ABI (and gi API) compat.
+ */
+
+GDK_PIXBUF_AVAILABLE_IN_ALL
+GdkPixbuf *gdk_pixbuf_new_from_file_utf8 (const char *filename,
+                                          GError    **error);
+GDK_PIXBUF_AVAILABLE_IN_2_4
+GdkPixbuf *gdk_pixbuf_new_from_file_at_size_utf8 (const char *filename,
+                                                  int         width,
+                                                  int         height,
+                                                  GError    **error);
+GDK_PIXBUF_AVAILABLE_IN_2_6
+GdkPixbuf *gdk_pixbuf_new_from_file_at_scale_utf8 (const char *filename,
+                                                   int         width,
+                                                   int         height,
+                                                   gboolean    preserve_aspect_ratio,
+                                                   GError    **error);
 #endif
 
 GDK_PIXBUF_AVAILABLE_IN_ALL
@@ -357,7 +376,6 @@ void       gdk_pixbuf_fill              (GdkPixbuf    *pixbuf,
 #ifdef G_OS_WIN32
 /* DLL ABI stability hack. */
 #define gdk_pixbuf_save gdk_pixbuf_save_utf8
-#define gdk_pixbuf_savev gdk_pixbuf_savev_utf8
 #endif
 #endif
 
@@ -375,6 +393,16 @@ gboolean gdk_pixbuf_savev          (GdkPixbuf  *pixbuf,
                                     char      **option_keys,
                                     char      **option_values,
                                     GError    **error);
+
+#ifdef G_OS_WIN32
+GDK_PIXBUF_AVAILABLE_IN_ALL
+gboolean gdk_pixbuf_savev_utf8     (GdkPixbuf  *pixbuf,
+                                    const char *filename,
+                                    const char *type,
+                                    char      **option_keys,
+                                    char      **option_values,
+                                    GError    **error);
+#endif
 
 /* Saving to a callback function */
 

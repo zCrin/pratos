@@ -1,5 +1,5 @@
 // bodies for vips operations
-// Thu 18 Aug 16:01:57 BST 2016
+// Sun 26 Nov 17:44:23 GMT 2017
 // this file is generated automatically, do not edit!
 
 void VImage::system( char * cmd_format , VOption *options )
@@ -231,7 +231,7 @@ VImage VImage::round( VipsOperationRound round , VOption *options )
     return( out );
 }
 
-VImage VImage::relational_const( std::vector<double> c , VipsOperationRelational relational , VOption *options )
+VImage VImage::relational_const( VipsOperationRelational relational , std::vector<double> c , VOption *options )
 {
     VImage out;
 
@@ -239,8 +239,8 @@ VImage VImage::relational_const( std::vector<double> c , VipsOperationRelational
         (options ? options : VImage::option()) ->
             set( "in", *this ) ->
             set( "out", &out ) ->
-            set( "c", c ) ->
-            set( "relational", relational ) );
+            set( "relational", relational ) ->
+            set( "c", c ) );
 
     return( out );
 }
@@ -258,7 +258,7 @@ VImage VImage::remainder_const( std::vector<double> c , VOption *options )
     return( out );
 }
 
-VImage VImage::boolean_const( std::vector<double> c , VipsOperationBoolean boolean , VOption *options )
+VImage VImage::boolean_const( VipsOperationBoolean boolean , std::vector<double> c , VOption *options )
 {
     VImage out;
 
@@ -266,13 +266,13 @@ VImage VImage::boolean_const( std::vector<double> c , VipsOperationBoolean boole
         (options ? options : VImage::option()) ->
             set( "in", *this ) ->
             set( "out", &out ) ->
-            set( "c", c ) ->
-            set( "boolean", boolean ) );
+            set( "boolean", boolean ) ->
+            set( "c", c ) );
 
     return( out );
 }
 
-VImage VImage::math2_const( std::vector<double> c , VipsOperationMath2 math2 , VOption *options )
+VImage VImage::math2_const( VipsOperationMath2 math2 , std::vector<double> c , VOption *options )
 {
     VImage out;
 
@@ -280,8 +280,8 @@ VImage VImage::math2_const( std::vector<double> c , VipsOperationMath2 math2 , V
         (options ? options : VImage::option()) ->
             set( "in", *this ) ->
             set( "out", &out ) ->
-            set( "c", c ) ->
-            set( "math2", math2 ) );
+            set( "math2", math2 ) ->
+            set( "c", c ) );
 
     return( out );
 }
@@ -487,14 +487,29 @@ std::vector<double> VImage::getpoint( int x , int y , VOption *options )
     return( out_array );
 }
 
+int VImage::find_trim( int * top , int * width , int * height , VOption *options )
+{
+    int left;
+
+    call( "find_trim" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "left", &left ) ->
+            set( "top", top ) ->
+            set( "width", width ) ->
+            set( "height", height ) );
+
+    return( left );
+}
+
 VImage VImage::copy( VOption *options )
 {
     VImage out;
 
     call( "copy" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -505,8 +520,8 @@ VImage VImage::tilecache( VOption *options )
 
     call( "tilecache" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -517,8 +532,8 @@ VImage VImage::linecache( VOption *options )
 
     call( "linecache" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -529,8 +544,8 @@ VImage VImage::sequential( VOption *options )
 
     call( "sequential" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -541,8 +556,8 @@ VImage VImage::cache( VOption *options )
 
     call( "cache" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -563,14 +578,29 @@ VImage VImage::embed( int x , int y , int width , int height , VOption *options 
     return( out );
 }
 
+VImage VImage::gravity( VipsCompassDirection direction , int width , int height , VOption *options )
+{
+    VImage out;
+
+    call( "gravity" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "out", &out ) ->
+            set( "direction", direction ) ->
+            set( "width", width ) ->
+            set( "height", height ) );
+
+    return( out );
+}
+
 VImage VImage::flip( VipsDirection direction , VOption *options )
 {
     VImage out;
 
     call( "flip" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
             set( "in", *this ) ->
+            set( "out", &out ) ->
             set( "direction", direction ) );
 
     return( out );
@@ -627,6 +657,20 @@ VImage VImage::extract_area( int left , int top , int width , int height , VOpti
             set( "out", &out ) ->
             set( "left", left ) ->
             set( "top", top ) ->
+            set( "width", width ) ->
+            set( "height", height ) );
+
+    return( out );
+}
+
+VImage VImage::smartcrop( int width , int height , VOption *options )
+{
+    VImage out;
+
+    call( "smartcrop" ,
+        (options ? options : VImage::option()) ->
+            set( "input", *this ) ->
+            set( "out", &out ) ->
             set( "width", width ) ->
             set( "height", height ) );
 
@@ -728,8 +772,8 @@ VImage VImage::cast( VipsBandFormat format , VOption *options )
 
     call( "cast" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
             set( "in", *this ) ->
+            set( "out", &out ) ->
             set( "format", format ) );
 
     return( out );
@@ -741,8 +785,8 @@ VImage VImage::rot( VipsAngle angle , VOption *options )
 
     call( "rot" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
             set( "in", *this ) ->
+            set( "out", &out ) ->
             set( "angle", angle ) );
 
     return( out );
@@ -754,8 +798,8 @@ VImage VImage::rot45( VOption *options )
 
     call( "rot45" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -766,8 +810,8 @@ VImage VImage::autorot( VOption *options )
 
     call( "autorot" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -805,8 +849,8 @@ VImage VImage::bandfold( VOption *options )
 
     call( "bandfold" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -817,8 +861,8 @@ VImage VImage::bandunfold( VOption *options )
 
     call( "bandunfold" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -829,8 +873,8 @@ VImage VImage::flatten( VOption *options )
 
     call( "flatten" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -841,8 +885,8 @@ VImage VImage::premultiply( VOption *options )
 
     call( "premultiply" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -853,8 +897,8 @@ VImage VImage::unpremultiply( VOption *options )
 
     call( "unpremultiply" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -865,8 +909,8 @@ VImage VImage::grid( int tile_height , int across , int down , VOption *options 
 
     call( "grid" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
             set( "in", *this ) ->
+            set( "out", &out ) ->
             set( "tile-height", tile_height ) ->
             set( "across", across ) ->
             set( "down", down ) );
@@ -880,8 +924,8 @@ VImage VImage::scale( VOption *options )
 
     call( "scale" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -892,8 +936,8 @@ VImage VImage::wrap( VOption *options )
 
     call( "wrap" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -944,8 +988,8 @@ VImage VImage::byteswap( VOption *options )
 
     call( "byteswap" ,
         (options ? options : VImage::option()) ->
-            set( "out", &out ) ->
-            set( "in", *this ) );
+            set( "in", *this ) ->
+            set( "out", &out ) );
 
     return( out );
 }
@@ -970,6 +1014,19 @@ VImage VImage::gamma( VOption *options )
         (options ? options : VImage::option()) ->
             set( "in", *this ) ->
             set( "out", &out ) );
+
+    return( out );
+}
+
+VImage VImage::composite( std::vector<VImage> in , std::vector<int> mode , VOption *options )
+{
+    VImage out;
+
+    call( "composite" ,
+        (options ? options : VImage::option()) ->
+            set( "in", in ) ->
+            set( "out", &out ) ->
+            set( "mode", mode ) );
 
     return( out );
 }
@@ -1757,6 +1814,18 @@ void VImage::dzsave( char * filename , VOption *options )
             set( "filename", filename ) );
 }
 
+VipsBlob * VImage::dzsave_buffer( VOption *options )
+{
+    VipsBlob * buffer;
+
+    call( "dzsave_buffer" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "buffer", &buffer ) );
+
+    return( buffer );
+}
+
 void VImage::pngsave( char * filename , VOption *options )
 {
     call( "pngsave" ,
@@ -1832,12 +1901,63 @@ void VImage::tiffsave( char * filename , VOption *options )
             set( "filename", filename ) );
 }
 
+VipsBlob * VImage::tiffsave_buffer( VOption *options )
+{
+    VipsBlob * buffer;
+
+    call( "tiffsave_buffer" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "buffer", &buffer ) );
+
+    return( buffer );
+}
+
 void VImage::fitssave( char * filename , VOption *options )
 {
     call( "fitssave" ,
         (options ? options : VImage::option()) ->
             set( "in", *this ) ->
             set( "filename", filename ) );
+}
+
+VImage VImage::thumbnail( char * filename , int width , VOption *options )
+{
+    VImage out;
+
+    call( "thumbnail" ,
+        (options ? options : VImage::option()) ->
+            set( "filename", filename ) ->
+            set( "out", &out ) ->
+            set( "width", width ) );
+
+    return( out );
+}
+
+VImage VImage::thumbnail_buffer( VipsBlob * buffer , int width , VOption *options )
+{
+    VImage out;
+
+    call( "thumbnail_buffer" ,
+        (options ? options : VImage::option()) ->
+            set( "buffer", buffer ) ->
+            set( "out", &out ) ->
+            set( "width", width ) );
+
+    return( out );
+}
+
+VImage VImage::thumbnail_image( int width , VOption *options )
+{
+    VImage out;
+
+    call( "thumbnail_image" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "out", &out ) ->
+            set( "width", width ) );
+
+    return( out );
 }
 
 VImage VImage::mapim( VImage index , VOption *options )
@@ -2756,6 +2876,18 @@ VImage VImage::labelregions( VOption *options )
             set( "mask", &mask ) );
 
     return( mask );
+}
+
+VImage VImage::fill_nearest( VOption *options )
+{
+    VImage out;
+
+    call( "fill_nearest" ,
+        (options ? options : VImage::option()) ->
+            set( "in", *this ) ->
+            set( "out", &out ) );
+
+    return( out );
 }
 
 void VImage::draw_rect( std::vector<double> ink , int left , int top , int width , int height , VOption *options )

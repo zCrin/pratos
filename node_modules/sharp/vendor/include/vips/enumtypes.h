@@ -5,10 +5,11 @@
 #define VIPS_ENUM_TYPES_H
 
 G_BEGIN_DECLS
-
 /* enumerations from "../../../libvips/include/vips/resample.h" */
 GType vips_kernel_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_KERNEL (vips_kernel_get_type())
+GType vips_size_get_type (void) G_GNUC_CONST;
+#define VIPS_TYPE_SIZE (vips_size_get_type())
 /* enumerations from "../../../libvips/include/vips/foreign.h" */
 GType vips_foreign_flags_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_FOREIGN_FLAGS (vips_foreign_flags_get_type())
@@ -50,6 +51,8 @@ GType vips_operation_complexget_get_type (void) G_GNUC_CONST;
 /* enumerations from "../../../libvips/include/vips/conversion.h" */
 GType vips_extend_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_EXTEND (vips_extend_get_type())
+GType vips_compass_direction_get_type (void) G_GNUC_CONST;
+#define VIPS_TYPE_COMPASS_DIRECTION (vips_compass_direction_get_type())
 GType vips_direction_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_DIRECTION (vips_direction_get_type())
 GType vips_align_get_type (void) G_GNUC_CONST;
@@ -58,6 +61,10 @@ GType vips_angle_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_ANGLE (vips_angle_get_type())
 GType vips_angle45_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_ANGLE45 (vips_angle45_get_type())
+GType vips_interesting_get_type (void) G_GNUC_CONST;
+#define VIPS_TYPE_INTERESTING (vips_interesting_get_type())
+GType vips_blend_mode_get_type (void) G_GNUC_CONST;
+#define VIPS_TYPE_BLEND_MODE (vips_blend_mode_get_type())
 /* enumerations from "../../../libvips/include/vips/util.h" */
 GType vips_token_get_type (void) G_GNUC_CONST;
 #define VIPS_TYPE_TOKEN (vips_token_get_type())
