@@ -37943,3 +37943,31 @@ Wed, 23 May 2018 19:43:25 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /ch
 Wed, 23 May 2018 19:43:25 GMT Accessory [Pratos] Processing characteristic set: [{"aid":9,"iid":13,"ev":true}]
 Wed, 23 May 2018 19:43:25 GMT Accessory [Pratos] Registering Characteristic "Contact Sensor State" for events
 Wed, 23 May 2018 19:43:25 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 19:49:10 GMT EventedHTTPServer [::ffff:192.168.0.15] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 19:49:10 GMT EventedHTTPServer [::ffff:192.168.0.3] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 19:49:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 19:49:49 GMT EventedHTTPServer [::ffff:192.168.0.18] Client connection closed
+Wed, 23 May 2018 19:49:49 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP connection was closed
+Wed, 23 May 2018 19:49:49 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP server was closed
+Wed, 23 May 2018 19:50:12 GMT EventedHTTPServer [::ffff:192.168.0.18] New connection from client
+Wed, 23 May 2018 19:50:12 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP server listening on port 40027
+Wed, 23 May 2018 19:50:12 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /pair-verify
+Wed, 23 May 2018 19:50:12 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Wed, 23 May 2018 19:50:12 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 1/2
+Wed, 23 May 2018 19:50:12 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 19:50:13 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /pair-verify
+Wed, 23 May 2018 19:50:13 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Wed, 23 May 2018 19:50:13 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 2/2
+Wed, 23 May 2018 19:50:13 GMT HAPServer [CC:28:3D:E5:CD:80] Client 1363C64E-0C39-45C3-A60B-91453E65D0DD verification complete
+Wed, 23 May 2018 19:50:13 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 19:50:13 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /accessories
+Wed, 23 May 2018 19:50:13 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /accessories
+Wed, 23 May 2018 19:50:13 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 19:50:14 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /characteristics
+Wed, 23 May 2018 19:50:14 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /characteristics
+Wed, 23 May 2018 19:50:14 GMT Accessory [Pratos] Processing characteristic set: [{"aid":9,"iid":13,"ev":true}]
+Wed, 23 May 2018 19:50:14 GMT Accessory [Pratos] Registering Characteristic "Contact Sensor State" for events
+Wed, 23 May 2018 19:50:14 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 19:59:10 GMT EventedHTTPServer [::ffff:192.168.0.15] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 19:59:10 GMT EventedHTTPServer [::ffff:192.168.0.3] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 19:59:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
