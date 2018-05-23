@@ -227,13 +227,6 @@
         </shadow>
       </value>
     </block>
-    <block type="text_print">
-      <value name="TEXT">
-        <shadow type="text">
-          <field name="TEXT">abc</field>
-        </shadow>
-      </value>
-    </block>
     <block type="text_prompt_ext">
       <mutation type="TEXT"></mutation>
       <field name="TYPE">TEXT</field>
@@ -413,7 +406,7 @@
       <field name="cmd">??cmd??</field>
       <field name="err" id="FFK(*xiOFWXOBVBd}t]]" variabletype="">erreur</field>
       <field name="rep" id="asvG^bv~soC-X_IG9I(J" variabletype="">réponse</field>
-    </block>
+    </block><!--
     <block type="appreceive">
       <field name="path">??path??</field>
       <field name="method">get</field>
@@ -421,6 +414,7 @@
       <field name="res" id="hxaY1hiF,7TX,Rvho:Ld" variabletype="">res</field>
       <field name="globalVariable" id="+}u7(v6a0:vc50ueVbfg" variabletype="">globalVariable</field>
     </block>
+-->
     <block type="request_get">
       <field name="type">GET</field>
       <field name="format">http</field>
@@ -428,6 +422,23 @@
       <field name="NAME" id="G#7u#ncQQ@$@[2@7Iijl" variabletype="">??paramètres??</field>
       <field name="resp" id="w_6#ZGv/d!!;hUo18x5U" variabletype="">response</field>
     </block>
+   <block type="consolelog">
+    <value name="NAME">
+      <shadow type="text">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+   
+	
   </category>
+  <category name="Object (JS)">
+  <block type="createobject">
+      <field name="NAME" id="b!~b0kMxi;RBPzHkS(ou" variabletype="">item</field>
+    </block>
+    <block type="objetchelper">
+      <field name="NAME">optional</field>
+      <field name="object2N">optional</field>
+    </block>
   </category>
 </xml>

@@ -1,1 +1,17 @@
-{"Switch1":"switch1.png","Switch0":"switch0.png","Lightbulb1":"lightbulb1.png","Lightbulb0":"lightbulb0.png","Motion Sensor1":"motion sensor1.png","Motion Sensor0":"motion sensor0.png","c63584782a4638c3274fb59a5758a1.PNG":"/c63584782a4638c3274fb59a5758a1.PNG","c63584782a4638c3274fb59a5758a0.PNG":"/c63584782a4638c3274fb59a5758a0.PNG","Homebridge0":"homebridge0.png","Contact Sensor0":"/contact sensor0.png","Contact Sensor1":"/contact sensor1.png","9ba72ee-4ad3-e8-9dcd-79eb55adf6e71.png":"/9ba72ee-4ad3-e8-9dcd-79eb55adf6e71.png","9ba72ee-4ad3-e8-9dcd-79eb55adf6e70.png":"/9ba72ee-4ad3-e8-9dcd-79eb55adf6e70.png","a7a84da-4ad3-e8-9dcd-79eb55adf6e71.png":"/a7a84da-4ad3-e8-9dcd-79eb55adf6e71.png","a7a84da-4ad3-e8-9dcd-79eb55adf6e70.png":"/a7a84da-4ad3-e8-9dcd-79eb55adf6e70.png"}
+{
+    "Switch1": "switch1.png",
+    "Switch0": "switch0.png",
+    "Lightbulb1": "lightbulb1.png",
+    "Lightbulb0": "lightbulb0.png",
+    "Motion Sensor1": "motion sensor1.png",
+    "Motion Sensor0": "motion sensor0.png",
+    "c63584782a4638c3274fb59a5758a1.PNG": "/c63584782a4638c3274fb59a5758a1.PNG",
+    "c63584782a4638c3274fb59a5758a0.PNG": "/c63584782a4638c3274fb59a5758a0.PNG",
+    "Homebridge0": "homebridge0.png",
+    "Contact Sensor0": "/contact sensor0.png",
+    "Contact Sensor1": "/contact sensor1.png",
+    "9ba72ee-4ad3-e8-9dcd-79eb55adf6e71.png": "/9ba72ee-4ad3-e8-9dcd-79eb55adf6e71.png",
+    "9ba72ee-4ad3-e8-9dcd-79eb55adf6e70.png": "/9ba72ee-4ad3-e8-9dcd-79eb55adf6e70.png",
+    "a7a84da-4ad3-e8-9dcd-79eb55adf6e71.png": "/a7a84da-4ad3-e8-9dcd-79eb55adf6e71.png",
+    "a7a84da-4ad3-e8-9dcd-79eb55adf6e70.png": "/a7a84da-4ad3-e8-9dcd-79eb55adf6e70.png"
+}
