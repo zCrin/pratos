@@ -37977,3 +37977,31 @@ Wed, 23 May 2018 20:09:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HT
 Wed, 23 May 2018 20:19:10 GMT EventedHTTPServer [::ffff:192.168.0.15] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
 Wed, 23 May 2018 20:19:10 GMT EventedHTTPServer [::ffff:192.168.0.3] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
 Wed, 23 May 2018 20:19:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:26:25 GMT EventedHTTPServer [::ffff:192.168.0.18] Client connection closed
+Wed, 23 May 2018 20:26:25 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP connection was closed
+Wed, 23 May 2018 20:26:25 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP server was closed
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] New connection from client
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP server listening on port 34231
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /pair-verify
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 1/2
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /pair-verify
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: POST /pair-verify
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] Pair verify step 2/2
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] Client 1363C64E-0C39-45C3-A60B-91453E65D0DD verification complete
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 20:26:34 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /accessories
+Wed, 23 May 2018 20:26:34 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: GET /accessories
+Wed, 23 May 2018 20:26:35 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 20:26:36 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP request: /characteristics
+Wed, 23 May 2018 20:26:36 GMT HAPServer [CC:28:3D:E5:CD:80] HAP Request: PUT /characteristics
+Wed, 23 May 2018 20:26:36 GMT Accessory [Pratos] Processing characteristic set: [{"aid":9,"iid":13,"ev":true}]
+Wed, 23 May 2018 20:26:36 GMT Accessory [Pratos] Registering Characteristic "Contact Sensor State" for events
+Wed, 23 May 2018 20:26:36 GMT EventedHTTPServer [::ffff:192.168.0.18] HTTP Response is finished
+Wed, 23 May 2018 20:29:10 GMT EventedHTTPServer [::ffff:192.168.0.15] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:29:10 GMT EventedHTTPServer [::ffff:192.168.0.3] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:29:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:39:10 GMT EventedHTTPServer [::ffff:192.168.0.15] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:39:10 GMT EventedHTTPServer [::ffff:192.168.0.3] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
+Wed, 23 May 2018 20:39:10 GMT EventedHTTPServer [::ffff:192.168.0.18] Sending HTTP event 'keepalive' with data: {"characteristics":[]}
