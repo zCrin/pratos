@@ -1,0 +1,26 @@
+[32m
+System : Pratos is starting, please wait.
+
+If you have troubles with Pratos, any bug, feel free to contact the owner or its father, zCrin.[39m
+[32m
+System : Connected to Pratos' database.[39m
+[34m
+System : HTTPS server started on port : 443[39m
+[34m
+System : Socket server is starting.[39m
+[34m
+System : HTTP server started on port : 3003[39m
+[35m
+Weather Plugin : Connected to Pratos' databases.[39m
+[31m
+System : There was an error while redirecting to hostname : check2.zennolab.com.[39m
+[31m
+System : There was an error while redirecting to hostname : dict.baidu.com.[39m
+[31m
+System : There was an error while redirecting to hostname : check2.zennolab.com.[39m
+[31m
+System : There was an error while redirecting to hostname : check2.zennolab.com.[39m
+[31m
+System : There was an error while redirecting to hostname : chek.zennolab.com.[39m
+[33m
+Error (normal): init connection failed allowing new connections[39m
