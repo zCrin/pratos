@@ -65,7 +65,7 @@ for(var i = 0; i < settingsL; i++){ %>
 <button id='modifyRecipe'>Modifier une recette</button>
 </div>
 <div id="blocklyDiv"></div>
-<%	include includes/xmlBlocksBlockly.include.ejs %>
+<%	// include includes/xmlBlocksBlockly.include.ejs %>
 
 <textarea id='genratorBlockly'></textarea>
 
@@ -253,6 +253,8 @@ $("#createNewRecipe").hide(0);
 $("#saveConditions").hide(0);
 $("#deleteConditions").hide(0);
 $("#saveConditionsFile").hide(0);
+$.get("/blocks.xml",function(blocksXml){ 
+$("body").append(blocksXml);
 $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.js" ).done(function( script, textStatus ) {
 $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js" ).done(function( script, textStatus ){
 
@@ -260,7 +262,7 @@ $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js
   $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js" ).done(function( script, textStatus ) {
 $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/javascript_compressed.js" ).done(function( script, textStatus ) {
 loadJS('/blocks.js', function(){
-loadJS('/js/stub.ejs', function(){
+loadJS('/blocks.exec.js', function(){
 
 
          $("#createNewRecipe").fadeIn(1000); 
@@ -280,7 +282,7 @@ $("#deleteConditions").hide(0);
 
 
 });
-
+});
 });
 
 

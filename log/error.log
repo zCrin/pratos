@@ -7,3 +7,28 @@
 (node:17376) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
 (node:17376) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
 (node:17376) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:614) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:615) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:615) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:2340) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:2340) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
