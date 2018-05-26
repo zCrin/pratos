@@ -36,6 +36,7 @@
 		"pratos_favorite_accessories",
 		"pratos_google_home",
 		"pratos_my_accessories",
+		"pratos_restart_homebridge",
 		"pratos_things_finder",
 		"pratos_weather"
 	],

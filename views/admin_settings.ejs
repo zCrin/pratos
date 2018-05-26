@@ -65,7 +65,7 @@ for(var i = 0; i < settingsL; i++){ %>
 <button id='modifyRecipe'>Modifier une recette</button>
 </div>
 <div id="blocklyDiv"></div>
-<%	// include includes/xmlBlocksBlockly.include.ejs %>
+
 
 <textarea id='genratorBlockly'></textarea>
 
@@ -122,50 +122,10 @@ var nbLoaded=0;
 var workspacePlayground;
 var conditionsEditingName;
 var modifyBlocks;
-function deleteRecipe(){		
-$('#rebootpopup').html("<h2>Supprimer</h2><p>Voulez-vous vraiment supprimer cette recette</p><button onClick='validateDeleteRecipe(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}
-function validateDeleteRecipe(state){
-if(state){
-var recipeId = $("#saveConditionsFile").attr('idRecipe');
-$.post("/recipe_delete/",{recipeId:recipeId},function(data){
-if(data == '1'){
-reload_recipesList(function(){
-$("#modifyRecipe").click();
-});
-$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour supprimer cette recette, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}else if(data == '01'){
-$('#rebootpopup').html("<h2>Erreur</h2><p>Impossible de supprimer cette recette car elle n'existe pas...</p><button onClick='reboot(false)' id='validate_ban'>OK</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}else{
-$('#rebootpopup').html("<h2>Erreur</h2><button onClick='reboot(false)' id='validate_ban'>OK</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}
-});
-}
-}
-var loadJS = function(url, implementationCode, location){
-    //url is URL of external file, implementationCode is the code
-    //to be called from the file, location is the location to 
-    //insert the <script> element
+</script>
+
+<script>
+var loadJS = function (url, implementationCode, location) {
 
     var scriptTag = document.createElement('script');
     scriptTag.src = url;
@@ -175,461 +135,212 @@ var loadJS = function(url, implementationCode, location){
 
     location.appendChild(scriptTag);
 };
-function updateRecipe(recipeName,recipeId){
-$.post("/recipe_code/",{recipeId:recipeId},function(data){
-$("#blocklyDiv").html("");
-$("#blocklyDiv").css("width","100%");
-$("#genratorBlockly").css("width","100%");
-$("#genratorBlockly").css("height","200px");
-$("#blocklyDiv").fadeIn(1000); 
-$("#saveConditionsFile").val(recipeName);
-$("#saveConditionsFile").attr('idRecipe',recipeId);
-
-workspacePlayground = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
-
-workspacePlayground.clear();
-
-Blockly.Xml. domToWorkspace(workspacePlayground, Blockly.Xml.textToDom(data));
-function myUpdateFunction(event) {
-  var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
-  
-}
-
-workspacePlayground.addChangeListener(myUpdateFunction);
-//$("#createNewRecipe").fadeOut(500);
-$("#saveConditions").fadeIn(500);
-$("#saveConditionsFile").fadeIn(500);
-$("#deleteConditions").fadeIn(500);
-
-});
-}
-function saveRecipe(){
-var q = $("#saveConditionsFile").val();
-
-var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
-
-var wk = Blockly.Xml .domToText (Blockly.Xml.workspaceToDom(workspacePlayground));
-var idRecipe = ($("#saveConditionsFile").attr('idRecipe'))?$("#saveConditionsFile").attr('idrecipe'):0;
-
-
-$.post('/conditionsRegister',{name:q,code:code ,workspace:wk,recipeId:idRecipe},function(data){
-data = parseInt(data);
-if(data){
-if(idRecipe==0){
-reload_recipesList(function(){
-$("#modifyRecipe").click();
-});
-}else{
- reload_recipesList();
- }
-		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer votre recette, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}
-else{
-
-}});
-
-}
-
-
-
-$("#modifyRecipe").click(function(){
-$("#blocklyDiv").html("");
-var we =  Object.keys(modifyBlocks.recipes),
-w = we.length;
-for(var c=0;c<w;c++){
-$("#blocklyDiv").append(
-"<div class='updateRecipeSelect' onclick='updateRecipe(\""+ modifyBlocks.recipes[we[c]]+"\",\""+ we[c] +"\")'>"+ modifyBlocks.recipes[we[c]]+"</div>");
-
-}
-$("#blocklyDiv").fadeIn(500);
-});
-$("#conditionsButton").click(function(){
-$("#createNewRecipe").hide(0);
-$("#saveConditions").hide(0);
-$("#deleteConditions").hide(0);
-$("#saveConditionsFile").hide(0);
-$.get("/blocks.xml",function(blocksXml){ 
-$("body").append(blocksXml);
-$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.js" ).done(function( script, textStatus ) {
-$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.js" ).done(function( script, textStatus ){
-
-
-  $.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/fr.js" ).done(function( script, textStatus ) {
-$.cachedScript( "https://cdn.jsdelivr.net/npm/blockly@1.0.0/javascript_compressed.js" ).done(function( script, textStatus ) {
-loadJS('/blocks.js', function(){
-loadJS('/blocks.exec.js', function(){
-
-
-         $("#createNewRecipe").fadeIn(1000); 
-$.getJSON('/recipes_list/',function(data){
-modifyBlocks=data;
-$("#deleteConditions").hide(0);
-         $("#modifyRecipe").fadeIn(1000); 
-
-});
-
-}, document.body);
-}, document.body);
-});
-});
-});
-
-
-
-});
-});
-});
-
-
-
-
-jQuery.cachedScript = function( url, options ) {
- 
-  // Allow user to set any option except for dataType, cache, and url
-  options = $.extend( options || {}, {
-    dataType: "script",
-    cache: true,
-    url: url
-  });
- 
-  // Use $.ajax() since it is more flexible than $.getScript
-  // Return the jqXHR object so we can chain callbacks
-  return jQuery.ajax( options );
+jQuery.cachedScript = function (url, options) {
+    options = $.extend(options || {}, {
+            dataType: "script",
+            cache: true,
+            url: url
+        });
+    return jQuery.ajax(options);
 };
- 
-// Usage
 
-		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
-			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
-				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
-   				$('.popup').each(function(){
-					$(show_actual).hide(1000);
-});//on cache le popup actuel
-			}
-		});
+$("#conditionsButton").click(function () {
+    loadJS('/js/recipes.js', function () {
+        startRecipe();
+    }, document.body);
+});
 
+$('.page').mousedown(function (e) { //fonction qui permet de cacher les popup lorsqu'on clique a coté
+    if (!$(show_actual).is(e.target) // if the target of the click isn't the container
+         && $(show_actual).has(e.target).length === 0) { //nor a descendant of the container
+        $('.popup').each(function () {
+            $(show_actual).hide(1000);
+        }); //on cache le popup actuel
+    }
+});
 $(".settings_menu_button").click(menuButton);
-function menuButton(){
-var toOpen = $(this).attr("id").replace("Button","Box");
+function menuButton() {
+    var toOpen = $(this).attr("id").replace("Button", "Box");
 
-$("#"+toOpen).show(500);
-$(this).parent().hide(500);
-$("#settings-step-back").show(100);
+    $("#" + toOpen).show(500);
+    $(this).parent().hide(500);
+    $("#settings-step-back").show(100);
 }
 
+$("#settings-step-back").click(function () {
+    var toClose = '#' + $('.settings_page:visible').attr("id");
+    var toOpenButton = toClose.replace("Box", "Button");
+    var toOpen = $(toOpenButton).parent();
 
-$("#settings-step-back").click(function(){
-	var toClose = '#'+$('.settings_page:visible').attr("id");
-	var toOpenButton = toClose.replace("Box","Button");
-var toOpen = $(toOpenButton).parent();
-
-	
-
-
-	
-$(toClose).hide(500);
-toOpen.show(500);
-if(toOpen.attr('id') == 'settings_main_menu'){
-$("#settings-step-back").hide(100);
-}
-});
-$("#turnPluginsButton").click(function(){
-$.getJSON("/list_plugins/",function(data){
-var old = put_in_object(data.plugins);
-var pluginsName = Object.keys(data.plugins),
-	dataLength = pluginsName.length;
-var txt ='';
-var arrayCheck = ['','checked'];
-for(var i = 0; i < dataLength; i++){
-
-txt += '<div class="downloaded_plugin"><div class="downloaded_plugin_name">'+ pluginsName[i].replace('pratos_',''). replace('_plugin','') + '</div><label class="switch"><input '+ arrayCheck[data.plugins [pluginsName[i]]] + '  type="checkbox" id="'+ pluginsName[i]+'"><span class="sliderSettings round"></span></label></div>';
-
-}
-$("#turnPluginsBox").html('<h2>Gérer</h2> '+txt);
-$(".switch > input").unbind();
-$(".switch > input").change(function(){
-var type = 0;
-$(".savedPluginsTurn").remove();
-if($(this).is(":checked")){type=1;}
-data.plugins[$(this).attr('id')] = type;
-if(!is_same(data.plugins,old)){
-
-$("#turnPluginsBox").append("<div class='savedPluginsTurn ' id='savedPlugins'><button>Sauvegarder</button></div>");
-$('.savedPluginsTurn').show(1000);
-$(".savedPluginsTurn > button").unbind();
-$(".savedPluginsTurn > button").click(function(){
-
-$.post('/toggle_plugins/', {pluginsList:data},function(response){
-if(response == 'reboot_allowed'){
-		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-}
-else{
-alert('Erreur');
-}
+    $(toClose).hide(500);
+    toOpen.show(500);
+    if (toOpen.attr('id') == 'settings_main_menu') {
+        $("#settings-step-back").hide(100);
+    }
 });
 
-});
-}
-else{
-$('.savedPluginsTurn').hide(1000);
-$(".savedPluginsTurn").remove();
-}
-});
-});
+$("#turnPluginsButton").click(function () {
+
+    loadJS('/js/pluginsManager.js', function () {
+        turnPluginStart();
+    }, document.body);
 
 });
 
-$("#deletePluginsButton").click(function(){
-$.getJSON("/list_plugins/",function(data){
-var pluginsName = Object.keys(data.plugins),
-	dataLength = pluginsName.length;
-var txt ='';
-var arrayCheck = ['inactive_plugin','active_plugin'];
-for(var i = 0; i < dataLength; i++){
-
-txt += '<div class="downloaded_plugin '+ arrayCheck[data.plugins [pluginsName[i]]] + '"><div class="downloaded_plugin_name">'+ pluginsName[i].replace('pratos_',''). replace('_plugin','') + '</div><input  class="delete_plugin_check" type="checkbox"></div>';
-
-}
-$("#deletePluginsBox").html('<h2>Supprimer</h2> '+ txt);
-$(".delete_plugin_check").change(function(){
-var has_checked = 0;
-var listPlugins = Array();
-$(".delete_plugin_check").each(function(){
-
-if($(this).is(':checked')){
-listPlugins.push('pratos_'  + $(this).siblings('.downloaded_plugin_name').text() + '_plugin');
-has_checked = 1;
-}
+$("#deletePluginsButton").click(function () {
+    loadJS('/js/pluginsManager.js', function () {
+        deletePluginStart();
+    }, document.body);
 
 });
-if(has_checked){
-has_checked=0;
-$(".savedPluginsDelete").remove();
-$("#deletePluginsBox").append("<div class='savedPluginsDelete' id='savedPlugins'><button>Sauvegarder</button></div>");
+function is_same(objOne, objTwo) {
+    var objOneKeys = Object.keys(objOne),
+    objOneLength = objOneKeys.length,
+    objTwoKeys = Object.keys(objTwo),
+    objTwoLength = objTwoKeys.length;
 
-$('.savedPluginsDelete').show(1000);
-$(".savedPluginsDelete > button"). unbind();
-$(".savedPluginsDelete > button"). click(function(){
+    if (objOneLength == objTwoLength) {
+        for (var i = 0; i < objOneLength; i++) {
 
+            if (objOne[objOneKeys[i]] != objTwo[objTwoKeys[i]]) {
+                return false;
+            } else if (objOne[objOneKeys[i]] == objTwo[objTwoKeys[i]] && i == (objOneLength - 1)) {
+                return true;
+            }
+        }
 
-$.post('/remove_plugins/', {pluginsList:listPlugins},function(response){
-if(response == 'reboot_allowed'){
-		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer les modifications, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-}
-else{
-alert('Erreur');
-}
-});
-});
-}
-else{
-$('.savedPluginsDelete').hide(1000);
-$(".savedPluginsDelete").remove();
-}
-});
-});
+    } else {
 
-});
-function is_same(objOne, objTwo){
-var objOneKeys = Object.keys(objOne),
-	objOneLength = objOneKeys.length,
-	objTwoKeys = Object.keys(objTwo),
-	objTwoLength = objTwoKeys.length;
+        return false;
+    }
+}
+function put_in_object(objOne) {
+    var objOneKeys = Object.keys(objOne),
+    objOneLength = objOneKeys.length;
+    var n = Object();
+    for (var i = 0; i < objOneLength; i++) {
+        n[objOneKeys[i]] = objOne[objOneKeys[i]];
+    }
 
-if(objOneLength==objTwoLength){
-for(var i = 0; i < objOneLength; i++){
+    return n;
+}
+function reboot(t) {
+    if (!t) {
+        $(show_actual).hide(1000);
+    } else {
+        $.get('/reboot/', function (data) {
+            if (data == 'rebooting') {
+                alert('Pratos is rebooting, please wait');
+                setTimeout(function () {
+                    location.reload()
+                }, 5000);
+            } else {
+                alert('Erreur');
+            }
+        });
 
-if(objOne[objOneKeys[i]] != objTwo[objTwoKeys[i]]){
-return false;
-}
-else if(objOne[objOneKeys[i]] == objTwo[objTwoKeys[i]] && i == (objOneLength-1)){
-return true;
-}
-}
-
-}
-else{
-
-return false;
-}
-}
-function put_in_object(objOne){
-var objOneKeys = Object.keys(objOne),
-	objOneLength = objOneKeys.length;
-var n = Object();
-for(var i = 0; i < objOneLength; i++){
-n[objOneKeys[i]] = objOne[objOneKeys[i]];
+    }
 }
 
-return n;
-}
-function reboot(t){
-if(!t){
-		$(show_actual).hide(1000);
-}
-else{
-$.get('/reboot/',function(data){
-	if(data == 'rebooting'){
-		alert('Pratos is rebooting, please wait');
-		setTimeout(function(){location.reload()},5000);
-}
-else{
-alert('Erreur');
-}
-});
-
-}
-}
-function reload_recipesList(callback){
-$.getJSON('/recipes_list/',function(data){
-modifyBlocks=data;
-if(callback){
-callback();
-}
-});
-}
-$("#createNewRecipe").click(function(){
-
-$("#blocklyDiv").html("");
-$("#blocklyDiv").css("width","100%");
-$("#genratorBlockly").css("width","100%");
-$("#genratorBlockly").css("height","200px");
-$("#blocklyDiv").fadeIn(1000);
-$("#saveConditionsFile").removeAttr('idRecipe');
-workspacePlayground = Blockly.inject('blocklyDiv',{toolbox: document.getElementById('toolbox')});
-
-function myUpdateFunction(event) {
-  var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
-  document.getElementById('genratorBlockly').value = code;
-}
-workspacePlayground.addChangeListener(myUpdateFunction);
-//$("#createNewRecipe").fadeOut(500);
-$("#saveConditions").fadeIn(500);
-$("#saveConditionsFile").fadeIn(500);
-
-
-});
-function condtionsSaveForce(sate){
-if(sate){
-		$(show_actual).hide(1000);
-var q = $("#saveConditionsFile").val();
-var code = Blockly.JavaScript.workspaceToCode(workspacePlayground);
-var wk = Blockly.Xml .domToText (Blockly.Xml.workspaceToDom(workspacePlayground));
-
-$.post('/conditionsRegister',{name:q,code:code,changeConfirmed:"true",workspace:wk},function(data){
-reload_recipesList();
-data = parseInt(data);
-if(data){
-		$('#rebootpopup').html("<h2>Redémarrer</h2><p>Pour appliquer votre recette, Pratos doit redémarrer. Voulez-vous redémarrer maintenant ?</p><button onClick='reboot(true)'  id='validate_ban'>Oui</button><button onClick='reboot(false)' id='validate_ban'>Non</button>");
-$('#rebootpopup').show(1000);
-show_actual = '#rebootpopup';
-$('html, body').animate({
-        scrollTop: $('h1').offset().top
-    }, 500);
-}
-else{
-alert('erreur');
-}
-});
-}else{
-		$(show_actual).hide(1000);
-}
-}
-$("#styleButton").click(function(){
-var global_color = $("h2").css("color");
-var background_color = $("body").css("background-color");
+$("#styleButton").click(function () {
+    var global_color = $("h2").css("color");
+    var background_color = $("body").css("background-color");
     $('#cp8_container').colorpicker({
-      color: global_color,
-      inline: true,
-      container: true,
-useAlpha: false,
-format: "rgba"
-    }). on('colorpickerChange colorpickerCreate', function (e) {
-        
-           $("h1,h2, #nav .fa-bars, #nav .closebtn, #nav .colored, #menu-step-back").css('color', e.color.toRgbString());
-           $("header,  .settings_menu_button,#nav .colored").css('border-color', e.color.toRgbString());
-           $(".settings_pagebox input:checked").css('background-color', e.color.toRgbString());
+        color: global_color,
+        inline: true,
+        container: true,
+        useAlpha: false,
+        format: "rgba"
+    }).on('colorpickerChange colorpickerCreate', function (e) {
 
-        $('#nav').addClass('full-nav'). promise().done(function(){ 
-           $(".full-nav").css('border-color', e.color.toRgbString()) .promise().done(function(){ 
-        $('#nav').removeClass('full-nav');
-});
-});
-});
-    $('#cp9_container').colorpicker({
-      color: background_color,
-      inline: true,
-      container: true,
+        $("h1,h2, #nav .fa-bars, #nav .closebtn, #nav .colored, #menu-step-back").css('color', e.color.toRgbString());
+        $("header,  .settings_menu_button,#nav .colored").css('border-color', e.color.toRgbString());
+        $(".settings_pagebox input:checked").css('background-color', e.color.toRgbString());
 
-format: "rgba",
-useAlpha: false,
-		
-    }). on('colorpickerChange colorpickerCreate', function (e) {
-        $('#nav').addClass('full-nav'). promise().done(function(){ 
-           $(".full-nav").css('background-color', e.color.toRgbString()) .promise().done(function(){ 
-        $('#nav').removeClass('full-nav');
-});
-});
-
-           $("html,body").css('background-color', e.color.toRgbString());
-           $("#nav .not_colored").css('color', e.color.toRgbString());
-
-});
-
-});
-$("#resetColors").click(function(){
-  $('#cp9_container'). colorpicker('setValue',"#350E00");
-  $('#cp8_container'). colorpicker('setValue',"#05FEFF");
-});
-$("#saveColors").click(function(){
-
-
-var colorSet = 0;
-var socket = io.connect("//" + document.domain, {secure: true});
-var lastReceived;
-var nC = $('#cp8_container').data('colorpicker').color. toRgbString();
-var nO = $('#cp9_container').data('colorpicker').color. toRgbString();
- socket.on('connect', function(data) {
-if(!colorSet){
-	
-    socket.emit('updateCSSRequest', nC, nO);
-$("#styleBox button").hide(1000);
-$("#flexStyle").html("<div id='progressbar'></div> <div id='styleState'>Chargement...<br /> Cela peut prendre quelques minutes. </div>");
-$( "#progressbar" ).progressbar({
-      value: false
+        $('#nav').addClass('full-nav').promise().done(function () {
+            $(".full-nav").css('border-color', e.color.toRgbString()).promise().done(function () {
+                $('#nav').removeClass('full-nav');
+            });
+        });
     });
-$( "#progressbar" ).find( ".ui-progressbar-value" ).css("background-color",nC);
-socket.on('disconnect',function(){alert('eror socket disconnected');});
+    $('#cp9_container').colorpicker({
+        color: background_color,
+        inline: true,
+        container: true,
 
-		socket.on('ping',function(data){
-			socket.emit('pong');
-			
-		});
-socket.on('updateCSSERROR',function(x){alert(x);});
-	socket.on('updateCSS', function(ans,step) {
-setInterval(function(){socket.emit('updateCSSRECONNECTION');},1000);
-setTimeout(function(){alert("Quelque chose a disfonctionné");location.reload();},360000);
+        format: "rgba",
+        useAlpha: false,
 
-if(step == 6){
-socket.emit('updateCSSConfirm');
-setTimeout(function(){location.reload();},2000);
+    }).on('colorpickerChange colorpickerCreate', function (e) {
+        $('#nav').addClass('full-nav').promise().done(function () {
+            $(".full-nav").css('background-color', e.color.toRgbString()).promise().done(function () {
+                $('#nav').removeClass('full-nav');
+            });
+        });
 
-}
+        $("html,body").css('background-color', e.color.toRgbString());
+        $("#nav .not_colored").css('color', e.color.toRgbString());
 
-colorSet = 1;
+    });
+
 });
-}
+$("#resetColors").click(function () {
+    $('#cp9_container').colorpicker('setValue', "#350E00");
+    $('#cp8_container').colorpicker('setValue', "#05FEFF");
 });
+$("#saveColors").click(function () {
+
+    var colorSet = 0;
+    var socket = io.connect("//" + document.domain, {
+            secure: true
+        });
+    var lastReceived;
+    var nC = $('#cp8_container').data('colorpicker').color.toRgbString();
+    var nO = $('#cp9_container').data('colorpicker').color.toRgbString();
+    socket.on('connect', function (data) {
+        if (!colorSet) {
+
+            socket.emit('updateCSSRequest', nC, nO);
+            $("#styleBox button").hide(1000);
+            $("#flexStyle").html("<div id='progressbar'></div> <div id='styleState'>Chargement...<br /> Cela peut prendre quelques minutes. </div>");
+            $("#progressbar").progressbar({
+                value: false
+            });
+            $("#progressbar").find(".ui-progressbar-value").css("background-color", nC);
+            socket.on('disconnect', function () {
+                alert('eror socket disconnected');
+            });
+
+            socket.on('ping', function (data) {
+                socket.emit('pong');
+
+            });
+            socket.on('updateCSSERROR', function (x) {
+                alert(x);
+            });
+            socket.on('updateCSS', function (ans, step) {
+                setInterval(function () {
+                    socket.emit('updateCSSRECONNECTION');
+                }, 1000);
+                setTimeout(function () {
+                    alert("Quelque chose a disfonctionné");
+                    location.reload();
+                }, 360000);
+
+                if (step == 6) {
+                    socket.emit('updateCSSConfirm');
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+
+                }
+
+                colorSet = 1;
+            });
+        }
+    });
 });
+
 
 
 </script>

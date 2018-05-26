@@ -1,6 +1,6 @@
 {
   "name": "pratos",
-  "version": "3.1.0",
+  "version": "1.2.3",
   "description": "Controll your house anywhere.",
   "main": "server2.js",
   "scripts": {
