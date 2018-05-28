@@ -13,7 +13,7 @@ function startSytleManager() {
         $("h1,h2, #nav .fa-bars, #nav .closebtn, #nav .colored, #menu-step-back").css('color', e.color.toRgbString());
         $("header,  .settings_menu_button,#nav .colored").css('border-color', e.color.toRgbString());
         $(".settings_pagebox input:checked").css('background-color', e.color.toRgbString());
-
+        $("#logo").css('fill', e.color.toRgbString());
         $('#nav').addClass('full-nav').promise().done(function () {
             $(".full-nav").css('border-color', e.color.toRgbString()).promise().done(function () {
                 $('#nav').removeClass('full-nav');

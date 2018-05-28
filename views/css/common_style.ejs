@@ -87,10 +87,14 @@ border-radius:0;border:0;
 	box-shadow: 0 2px 2px 2px orange;
 	background-color: white;
 color:orange;
+	cursor:pointer;
+
 	font-family: San Francisco;
 	font-weight:200;padding:1%; font-size: 100%;
 }
 #modifyRecipe {
+	cursor:pointer;
+
 display:none;
 -moz-appearance:none;-webkit-appearance:none;-appearance:none;
 
@@ -105,6 +109,7 @@ color: lightgreen;
 #saveConditions{
 display:none;
 -moz-appearance:none;-webkit-appearance:none;-appearance:none;
+	cursor:pointer;
 
 border-radius:0;border:0;
 	text-align:center;
@@ -121,6 +126,8 @@ text-align:center;
 display:none;
 }
 #deleteConditionsButt{
+	cursor:pointer;
+
 -moz-appearance:none;-webkit-appearance:none;-appearance:none;
 margin:0px auto 30px auto;
 
@@ -142,6 +149,7 @@ margin:2% auto;
 height:800px;
 }
 #saveConditionsFile{-moz-appearance:none;-webkit-appearance:none;-appearance:none;
+	cursor:pointer;
 
 border-radius:0;border:1px  #D8D8D8 solid;
 	text-align:center;
@@ -153,6 +161,7 @@ margin-bottom:3%;
 }
 #conditionsButtons,#buttonsTopRecipe{
 display:flex;
+	cursor:pointer;
 
 	justify-content: space-between;
 	align-items: center;
@@ -160,6 +169,8 @@ display:flex;
 
 }
 .updateRecipeSelect{
+	cursor:pointer;
+
 	border: 1px solid <%= global_color %>;
 	background-color: white;
 color: <%= global_color %>;
@@ -204,3 +215,31 @@ width:100%;
 color:white;
 margin-top:3%;
 }
+#showConditionCode{
+    background-color: white;
+	cursor:pointer;
+    color: <%= global_color %>;
+	border:1px solid <%= global_color %>;
+    display: table;
+    padding: 1%;
+    border-radius: 50px;
+    text-align: center;
+    margin: 1% auto;
+    font-size: 90%;
+	}
+	#genratorBlockly{
+	display:none;
+	background-color:white;
+	border-radius:50px;
+	color: black;
+    font-size: 90%;
+    border: 2px solid yellow;
+    letter-spacing: 0.7px;
+padding:3% 2%;
+        font-family: monospace;
+	white-space: pre-wrap;
+	}
+	#showConditionCode{
+	display:none;
+	}
+	

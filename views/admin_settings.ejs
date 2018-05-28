@@ -67,8 +67,8 @@ for(var i = 0; i < settingsL; i++){ %>
 <div id="blocklyDiv"></div>
 
 
-<textarea id='genratorBlockly'></textarea>
-
+<div id='genratorBlockly'></div>
+<span id="showConditionCode">Voir le code <i class="fa fa-caret-down" aria-hidden="true"></i></span>
 
 <div id='conditionsButtons'>
 <input type='text' placeholder='Nom de la recette' id='saveConditionsFile'/>
@@ -144,12 +144,6 @@ jQuery.cachedScript = function (url, options) {
     return jQuery.ajax(options);
 };
 
-$("#conditionsButton").click(function () {
-    loadJS('/js/recipes.js', function () {
-        startRecipe();
-    }, document.body);
-});
-
 $('.page').mousedown(function (e) { //fonction qui permet de cacher les popup lorsqu'on clique a coté
     if (!$(show_actual).is(e.target) // if the target of the click isn't the container
          && $(show_actual).has(e.target).length === 0) { //nor a descendant of the container
@@ -179,20 +173,6 @@ $("#settings-step-back").click(function () {
     }
 });
 
-$("#turnPluginsButton").click(function () {
-
-    loadJS('/js/pluginsManager.js', function () {
-        turnPluginStart();
-    }, document.body);
-
-});
-
-$("#deletePluginsButton").click(function () {
-    loadJS('/js/pluginsManager.js', function () {
-        deletePluginStart();
-    }, document.body);
-
-});
 function is_same(objOne, objTwo) {
     var objOneKeys = Object.keys(objOne),
     objOneLength = objOneKeys.length,
@@ -241,6 +221,20 @@ function reboot(t) {
 
     }
 }
+$("#turnPluginsButton").click(function () {
+
+    loadJS('/js/pluginsManager.js', function () {
+        turnPluginStart();
+    }, document.body);
+
+});
+
+$("#deletePluginsButton").click(function () {
+    loadJS('/js/pluginsManager.js', function () {
+        deletePluginStart();
+    }, document.body);
+
+});
 
 $("#styleButton").click(function () {
  loadJS('/js/styleManager.js', function () {
@@ -248,7 +242,11 @@ $("#styleButton").click(function () {
     }, document.body);
 });
 
-
+$("#conditionsButton").click(function () {
+    loadJS('/js/recipesManager.js', function () {
+        startRecipe();
+    }, document.body);
+});
 </script>
 <style>
 </style>
