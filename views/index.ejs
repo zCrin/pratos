@@ -6,36 +6,40 @@
 		<%	include includes/css.include.ejs %>
 		<script src="/js/jquery-1.11.3.min.js"></script>
 		<script src="/js/stay_standalone.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
 	<body>
 		<% include includes/header.include.ejs %>
 		<div class='page' id='home_page'>
-			<div id='password_page'>
-				<div id='password_state'></div>
-				<div id='password_part'>
-					<div>
-						<button>1</button>							<button>2</button>
-						<button>3</button>
-					</div>
-					<div>
-						<button>4</button>							<button>5</button>
-						<button>6</button>
-					</div>
-					<div>
-						<button>7</button>							<button>8</button>
-						<button>9</button>
-					</div>
-					<div id='zero_button_password'>
-						<button>0</button>
-					</div>
-					<div id='delete_n'>Effacer</div>
-					<form action="/user_connect/" id='validate' method="post">
-						<input type="hidden" id='password' name="password"/>
-					</form>
+	
+			<div class="material-shadow-2" id='input-password-page'>
+			<h3>Admin</h3>
+			
+				<div id="admin-input-password">
+				<div id='paswordValidation'></div>
+					<table>
+					<tr>
+					<td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">1</td><td data-ripple="rgba(0,0,0, 0.3)" class='input-button-password'>2</td><td data-ripple="rgba(0,0,0, 0.3)" class='input-button-password'>3</td>
+					</tr>
+					<tr>
+					<td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">4</td><td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">5</td><td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">6</td>
+					</tr><tr>
+					<td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">7</td><td data-ripple="rgba(0,0,0, 0.3)" class='input-button-password'>8</td><td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">9</td>
+					</tr>
+					<tr>
+					<td></td><td class='input-button-password' data-ripple="rgba(0,0,0, 0.3)">0</td><td id='backspace-login'><svg class="DOripple"  viewBox="0 0 24 24">
+    <path  d="M22,3H7C6.31,3 5.77,3.35 5.41,3.88L0,12L5.41,20.11C5.77,20.64 6.31,21 7,21H22A2,2 0 0,0 24,19V5A2,2 0 0,0 22,3M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12" />
+</svg></td>
+					</tr>
+					</table>
+				</div>
+				<div id="user-input-password">
+				
 				</div>
 			</div>
+			
 			<div id='right_block'>
+			<div class="material-shadow-2">
 				<div id="current_time">
 					<% var d = new Date();
 						var h = d.getHours();
@@ -49,10 +53,104 @@
 					%><%= h %> : <%= m %>
 </div>
 				<div id="current_date"><%= show_date(); %></div>
+				</div>
 			</div>
 		</div>
+		<div id="slectUser" data-ripple="rgba(0,0,0, 0.3)" class="material-shadow-2"><i class="fa fa-user-o" aria-hidden="true"></i></div>
+		<div class="material-shadow-2" id="usersList">
+		<div id="adminUserList">Admin</div>
+		
+		</div>
+		
 	</body>
 	<script src="/js/passcode_page.js"></script>
+<script src='/js/snackbar.min.js'></script>
+<script>
+var message = '<%- error %>';
+var toSay = {
+'password': {text:'Mot de passe invalide',action:'Perdu', onActionClick:function(){redirect('askPassword')}},
+'Session expired' : 'La session a expiré',
+'sessionDoesntExistAnymore': 'La session a expiré',
+'user':'Utilisateur invalide',
+'banned':{text:'Utilisateur banni',action:'Aide', onActionClick:function(){getHelp(301)}},
+'disconnected':'Déconnecté',
+'alreadyDisconnected':'Déjà déconnecté'
+};
+
+if(toSay[message]){
+if(!toSay[message].action){
+Snackbar.show({
+text: toSay[message],
+pos:'top-center',
+showAction: false
+}); 
+}else{
+Snackbar.show({
+text: toSay[message].text,
+pos:'top-center',
+showAction: true,
+actionText: toSay[message].action,
+actionTextColor:'red',
+onActionClick: toSay[message].onActionClick
+}); 
+}
+
+}
+function getHelp(nb){
+alert(nb)
+}
+function redirect(page){
+alert(page)
+}
+
+
+</script>
+	<script>
+	jQuery(function($) {
+
+  // MAD-RIPPLE // (jQ+CSS)
+  $(document).on("mousedown touchstart", "[data-ripple]", function(e) {
+
+    var $self = $(this);
+
+    if($self.is(".btn-disabled")) {
+      return;
+    }
+    if($self.closest("[data-ripple]")) {
+      e.stopPropagation();
+    }
+
+    var initPos = $self.css("position"),
+        offs = $self.offset(),
+        x = e.pageX - offs.left,
+        y = e.pageY - offs.top,
+        dia = Math.min(this.offsetHeight, this.offsetWidth, 100), // start diameter
+        $ripple = $('<div/>', {class : "ripple",appendTo : $self });
+
+    if(!initPos || initPos==="static") {
+      $self.css({position:"relative"});
+    }
+
+    $('<div/>', {
+      class : "rippleWave",
+      css : {
+        background: $self.data("ripple"),
+        width: dia,
+        height: dia,
+        left: x - (dia/2),
+        top: y - (dia/2),
+      },
+      appendTo : $ripple,
+      one : {
+        animationend : function(){
+          $ripple.remove();
+        }
+      }
+    });
+  });
+
+});
+</script>
 	<% 
 var contentNames = Object.keys(content);
 var contentL = contentNames.length;
@@ -66,6 +164,7 @@ loaded[content[contentNames[u]].script] == 1;%>
 	<%	}}
 	%>
 </html>
+
 <%
 function show_date(){
 	var d = new Date(),
@@ -73,4 +172,5 @@ function show_date(){
 	jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
 	return jours[d.getDay()] + ' ' + d.getDate() + ' ' + mois[d.getMonth()];
 }
+
 %>

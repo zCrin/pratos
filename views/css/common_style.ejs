@@ -242,4 +242,243 @@ padding:3% 2%;
 	#showConditionCode{
 	display:none;
 	}
+	#slectUser{
+	color: white;
+   font-size:160%;
+   text-align:center;
+    background-color: <%= global_color %>;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    border-radius: 50px;
+    bottom: 10px;
+    right: 10px;
+	  display: table;
+}
+@media only screen and (max-width: 320px){
+#slectUser{
+
+    left: 10px;
+	right:auto;
+
+}
+#usersList{  display: table;
+   
+    left: 45px;
+	right:auto
+    bottom: 45px;
+}
+}
+#slectUser i{
+display: table-cell;
+
+  vertical-align: middle;}
+.material-shadow-1{
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+.material-shadow-2{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+.material-shadow-3{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+.material-shadow-4{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+.material-shadow-5{
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+	  #usersList{  /* display: table; */
+	  display:none;
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    background-color: white;
+	min-width:90px;
+	text-align:center;
+    padding: 2%;
 	
+	}
+	#usersList #adminUserList{
+	padding-bottom: 7.5px;
+	padding-top: 4px;
+	}
+	#usersList #childUser{
+	padding-top: 10px;
+	padding-bottom: 6px;
+	border-top:0.5px solid lightgrey;
+	}
+	#usersList div:hover{
+		color:<%= global_color %>;
+		
+	}
+	.ripple{
+  position: absolute;
+  top:0; left:0; bottom:0; right:0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0); /* to contain zoomed ripple */
+  transform: translateZ(0);
+  border-radius: inherit; /* inherit from parent (rounded buttons etc) */
+  pointer-events: none; /* allow user interaction */
+          animation: ripple-shadow 0.4s forwards;
+  -webkit-animation: ripple-shadow 0.4s forwards;
+}
+.rippleWave{
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0.7); -webkit-transform: scale(0.7);
+  background: rgba(255,255,255, 1);
+  opacity: 0.45;
+          animation: ripple 2s forwards;
+  -webkit-animation: ripple 2s forwards;
+}
+@keyframes ripple-shadow {
+  0%   {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+  20%  {box-shadow: 0 4px 16px rgba(0,0,0,0.3);}
+  100% {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+}
+@-webkit-keyframes ripple-shadow {
+  0%   {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+  20%  {box-shadow: 0 4px 16px rgba(0,0,0,0.3);}
+  100% {box-shadow: 0 0 0 rgba(0,0,0,0.0);}
+}
+@keyframes ripple {
+  to {transform: scale(24); opacity:0;}
+}
+@-webkit-keyframes ripple {
+  to {-webkit-transform: scale(24); opacity:0;}
+}
+#password_part{
+ background-color: white;
+    padding: 2% 2% 0% 2%;
+	margin-bottom:4%;
+    border-radius: 25px;
+	
+}
+
+#delete_n{
+    background-color: white;
+    display: table;
+    margin-left: 200px;
+    padding: 2%;
+}
+
+
+#input-password-page{
+display:table;
+background-color: white;
+   width:80%;
+    margin: 2% auto;
+    border-radius: 20px;
+    height: 90%;
+}
+#input-password-page table{
+  
+    height: 100%;
+	border-spacing:15px;
+	    margin: auto;
+}
+#input-password-page table .input-button-password{
+  color: #bdb8b8;
+	
+    background-color: white;
+    font-weight: 200;
+border:2px solid  <%= global_color %>;
+ outline: none;
+ font-size:240%;
+ border-radius:50px;
+ width:60px;
+ height:60px;
+ text-align:center;
+
+}
+#input-password-page h3{
+font-weight:200;
+color:<%= global_color %>;
+text-align:center;
+margin:0%;
+padding:10% 0 0 0;
+font-size:150%;
+}
+#right_block {
+   height:auto;
+   padding:2%;
+    width: 40%;
+	    position: relative;
+    top: -140px;
+	
+}
+#right_block div{
+background-color:white;
+display:block;
+
+width:80%;
+margin:1% auto;
+text-align:center;
+    padding: 1% 4%;
+}
+#right_block #current_date{
+
+margin: 2% auto;
+}
+#right_block #current_time {
+    
+    margin-top: 0px;
+	}
+	#home_page { padding-top:1%; 
+    height: auto;
+	 flex-grow: 1;
+}
+body{
+    display: flex;
+    
+    flex-direction: column;
+	}
+	@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape){ /*tablette landscape */
+#input-password-page{
+ width:350px;
+ }
+  #input-password-page table .input-button-password{
+	 
+font-size: 280%;
+  
+    width: 65px;
+    height: 65px;
+	 }
+}
+@media only screen and (min-width : 1025px){
+#input-password-page{ width:350px;}
+ #input-password-page table .input-button-password{
+	 
+font-size: 280%;
+
+   width: 65px;
+    height: 65px;
+	 }
+}
+#backspace-login svg{
+	fill:<%= global_color %>;
+width:35px;height:35px
+}
+
+#backspace-login svg:active{
+	
+	 animation-name: clickedSvgMaterial;
+    animation-duration: 0.1s;
+ animation-iteration-count: 1;
+}
+@keyframes clickedSvgMaterial {
+    from {fill: <%= global_color %>;width:35px;height:35px}
+    to {fill: lightgrey; width:40px;height:40px}
+}
+#backspace-login{
+		text-align:center;
+}
+#paswordValidation{
+	font-size: 80%;
+    color: #ececec;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 2% auto 0 auto;
+}

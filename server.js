@@ -21,7 +21,16 @@ fs.readFile(__dirname + "/conf/settings.json", 'utf8', function (err, settingsRa
                 throw error;
             if (!error) {
                 console.log("\nSystem : Connected to Pratos' database.".green);
+db.collection("users_cookies").remove({expiration:{$lt:(Date.now() - 3.6e+6)}},function(){
+system("Removed old sessions from database (doing this every 5 hours)");
+setInterval(function(){
+db.collection("users_cookies").remove({expiration:{$lt:(Date.now() - 3.6e+6)}},function(){
+system("Removed old sessions from database (doing this every 5 hours)");
+});
+}, 1.8e+7);
+});
                 var globalVariable = [];
+				global.globalVariable = globalVariable;
                 globalVariable.database = {
                     ObjectID: mongo.ObjectID,
                     MongoClient: MongoClient,
