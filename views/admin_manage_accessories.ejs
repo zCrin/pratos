@@ -6,7 +6,7 @@
 
 		<script src="/js/jquery-1.11.3.min.js"></script>
 		<script src="/js/stay_standalone.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<%	include includes/css.include.ejs %>
@@ -16,27 +16,13 @@
 		<%- include("includes/navbar.include.ejs", {nav : nav})%>
 		<div id='manage_accessories' class='page page-nav'>
 			<div id="access_header">
-				<div id='change_disp' class='hide_options'>
-					<i id='show_options' class="fa fa-caret-down" aria-hidden="true"></i>
-					<i id='hide_options' class="fa fa-caret-up" aria-hidden="true"></i>
-					<div id='change_dispo'>
-						<div id='display_list'>
-							<i  class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;
-							<span id='label_disp'>Liste</span>
-						</div>
-						<span id='disp_bar' style="border-left:1px solid #D8D8D8; margin: 0 0.2%;height:95%;"></span>&nbsp;&nbsp;
-						<div id='display_block'>
-							<i class="fa fa-th" aria-hidden="true"></i>
-							<span id='label_disp'>Grille</span>
-						</div>
-					</div>
-				</div>
-				<h2 id='all_acch2'>Tous les accessoires &nbsp;&nbsp; <i class='fa fa-caret-down'></i></h2>
+				
+				<h2 id='all_acch2' class="material-shadow-2" >Tous les accessoires &nbsp;&nbsp; <i class='fa fa-caret-down'></i></h2>
 			</div>
 			<img id='loading_accessories' src="/img/loading.gif"/>
 			<div id='all_accessories'></div>
-			<div id='update'>Modifier</div>
-			<div class='updating_page'>
+			<div id='update' data-ripple="rgba(0,0,0, 0.3)" class="material-shadow-2 material-design-normal-button" >Modifier</div>
+		<!--	<div class='updating_page'>
 				<h2>Modifier l'accessoire</h2>
 					<div id='div1'>
 						<span id='change_pic'></span>
@@ -58,6 +44,7 @@
 					</div>
 					<button id='validate_update_accessory' onclick='validate_update_accessory()'>Valider</button>
 			</div>
+			-->
 <div class='rooms_list'>
 <h2>Pièces</h2>
 <div id='listRooms_block'></div>
@@ -83,8 +70,11 @@
 				<input type='file' name='files' multiple id='upload_img'/>
 			</div>
 		</div>
+		<div data-ripple="rgba(0,0,0, 0.3)" class="material-button material-shadow-3 "><i class="fa fa-th" aria-hidden="true"></i></div>
 	</body>
-
+  <script src='/js/snackbar.min.js'></script>
+<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 	<script>
 var roomName = localStorage.getItem('roomName');
 if(roomName != null){

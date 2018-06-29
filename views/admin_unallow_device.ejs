@@ -16,10 +16,25 @@
 		<div class='page page-nav'>
 			<h2>Annuler cet appareil ?</h2>
 			<p>Il ne pourra plus se connecter à Pratos sans mot de passe</p>
-			<a id="add_device" href="/remove_allowed_device/">OUI</a>
+			<i id="remove_device">OUI</i>
 		</div>
 	</body>
+	<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 	<script src='/js/navbar_auto.js'></script>
+		<script>
+	$('#remove_device').click(function(){
+	var alwaysConnectedId = localStorage.getItem('alwaysAllowedId');
+if(alwaysConnectedId){
+	$.post('/remove_allowed_device/', {id:alwaysConnectedId},function(resp){
+	
+		  localStorage.setItem('alwaysAllowedId',"");
+		  window.location.replace('/admin/index/?error=removedAllowed')
+	});
+	}
+	});
+	
+	</script>
 		<% 
 var contentNames = Object.keys(content);
 var contentL = contentNames.length;

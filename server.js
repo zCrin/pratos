@@ -49,7 +49,7 @@ system("Removed old sessions from database (doing this every 5 hours)");
                     }),
                 uuidV1 = require('uuid/v1'),
                 EventEmitter = require("events").EventEmitter,
-                Cookies = require("cookies"),
+               cookieParser = require('cookie-parser'),
                 cmd = require('node-cmd'),
                 http = require('http'),
                 httpProxy = require('http-proxy'),
@@ -74,16 +74,20 @@ system("Removed old sessions from database (doing this every 5 hours)");
                 }
 
                 app.use(session)
+				.use(cookieParser())
                 .use(function (req, res, next) {
 
                     var user_id = uuidV1();
                     globalVariable[user_id] = Object();
                     req.user_id = user_id;
                     globalVariable[user_id].request = req;
-                    load_cookie(req, res, function () {
+                    /*load_cookie(req, res, function () {
                         next();
                     });
+					*/
+					next();
                 })
+
                 .use(function (req, res, next) {
                     if (req.method === 'POST') {
                         if (/multipart\/form-data/.test(req.headers['content-type'])) {

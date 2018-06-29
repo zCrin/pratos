@@ -48,7 +48,8 @@ for(var y = 0; y <= number_of_boxes; y++){
 			if(o == 3){
 							o = 0;
 						}
-						toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_") +"_plugin' class='slide'>";
+						
+						toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_") +"_plugin' class='material-shadow-2 slide'>";
 corres[homepage[objectId].name.replace(" ","_")] = l;
 					var classTo = "", 
 						title = "<div class='slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
@@ -56,7 +57,7 @@ corres[homepage[objectId].name.replace(" ","_")] = l;
 							classTo += " no_title ";
 							title = "";
 						}
-				toWrite += 	"<div class='content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
+				toWrite += 	"<div class='material-shadow-3 content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
 			delete homepage[objectId];
 		}
 		else{
@@ -79,12 +80,12 @@ corres[homepage[objectId].name.replace(" ","_")] = l;
 			if(o == 3){ o = 0; }
 			toWrite += "<div id='"+ homepage[objectId].name.replace(" ","_")  +"_plugin' class='slide'>";
 			var classTo = "", 
-				title = "<div class='slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
+				title = "<div class='material-shadow-2 slide-title slide-" + colors[o] + "'>" + homepage[objectId].name + "</div>";
 			if(!homepage[objectId].show_name){
 				classTo += " no_title ";
 				title = "";
 			}
-			toWrite += 	"<div class='content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
+			toWrite += 	"<div class='material-shadow-3 content " + classTo + " '>" + homepage[objectId].content + "</div> " + title + " </div>";
 			delete homepage[objectId];
 		}
 		else{
@@ -114,6 +115,9 @@ arrows: false
 
     });
   </script>
+  <script src='/js/snackbar.min.js'></script>
+<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 	<% 
 var contentNames = Object.keys(content);
 var contentL = contentNames.length;

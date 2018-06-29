@@ -1,27 +1,27 @@
-	<nav id='nav' class='small-nav'>
-		<div class="fa fa-bars" aria-hidden="true"></div>		<div class="closebtn">&times;</div>
-		<div class="fa fa-chevron-left fa-2x" id="menu-step-back" aria-hidden="true"></div>
-		<div id='menu'>
+<i id='open-nav-button' class="fa fa-bars" aria-hidden="true"></i>
+<nav><i id='close-nav-button' class="closebtn">&times;</i>
+<i class="fa fa-chevron-left fa-2x" id="menu-step-back" aria-hidden="true"></i>
+	<div id='menu'>
 			<div id='menu-flex'>
 <% 
 	var linksName = Object.keys(nav),
 		nbLinks = linksName.length,
-		colors = Array('not_colored','colored');
+		colors = Array('not_colored is_lighttext is_lightborder','colored');
 	var nC = 0;
 	for(var u = 0; u < nbLinks; u++){
 		nC = ((nC-1) * (nC - 1));
 		if(nav[linksName[u]].is_group){
 			var id =linksName[u].toLowerCase().replace(' ','_'); %>
-			<div class='menu-button grouped-button first-menu-button <%= colors[nC] %>' act='<%= id %>'>
+			<div data-ripple='rgba(0,0,0, 0.3)' class='menu-button material-shadow-2 grouped-button first-menu-button <%= colors[nC] %>' act='<%= id %>'><div>
 				<%- nav[linksName[u]].icon %><br />
 				<%= linksName[u] %>
-			</div>
+			</div></div>
 	<%	}
 		else{ %>
-			<a href="<%- nav[linksName[u]].link %>" class="menu-button first-menu-button <%= colors[nC] %>" >
+			<a href="<%- nav[linksName[u]].link %>" data-ripple="rgba(0,0,0, 0.3)" class="menu-button material-shadow-2 first-menu-button <%= colors[nC] %>" ><div>
 				<%- nav[linksName[u]].icon %><br />
 				<%= linksName[u] %>
-			</a>
+			</div></a>
 	<% }
 	} %>
 </div>
@@ -38,10 +38,10 @@ for(var u = 0; u < nbLinks; u++){
 <%
 		for(var o = 0; o < nbGroupedLinks; o++){
 			if(linksOfGroup[o] != "is_group" && linksOfGroup[o] != "icon"){ %>
-			<a href="<%- nav[linksName[u]][linksOfGroup[o]].link %>" class="menu-button <%= colors[nT] %>" >
+			<a href="<%- nav[linksName[u]][linksOfGroup[o]].link %>" data-ripple="rgba(0,0,0, 0.3)" class="material-shadow-2 menu-button <%= colors[nT] %>" ><div>
 				<%- nav[linksName[u]][linksOfGroup[o]].icon %><br />
 				<%= linksOfGroup[o] %>
-			</a>
+			</div></a>
 				<%	nT = ((nT-1) * (nT - 1));			} 
 		} %>
 </div>
@@ -50,4 +50,6 @@ for(var u = 0; u < nbLinks; u++){
 	}
 }
 %>
+
+
 </nav>

@@ -102,3 +102,179 @@ jQuery is not defined
 *** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
 (node:613) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
 (node:613) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:615) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:615) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:12632) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:12632) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:12632) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+ReferenceError: /var/www/pratos/views/admin_manage_accessories.ejs:88
+    86| 	</body>
+    87|   <script src='/js/snackbar.min.js'></script>
+ >> 88| <script>var message = '<%- error %>';</script>
+    89| 	<script src="/js/common.js"></script>
+    90| 	<script>
+    91| var roomName = localStorage.getItem('roomName');
+
+error is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:549:12), <anonymous>:69:17)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:580:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:223:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:437:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at Function.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/lib/webpages.js:99:11
+    at Object.construct (/var/www/pratos/node_modules/pratos_navbar_class/index.js:25:4)
+ReferenceError: /var/www/pratos/views/admin_manage_accessories.ejs:88
+    86| 	</body>
+    87|   <script src='/js/snackbar.min.js'></script>
+ >> 88| <script>var message = '<%- error %>';</script>
+    89| 	<script src="/js/common.js"></script>
+    90| 	<script>
+    91| var roomName = localStorage.getItem('roomName');
+
+error is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:549:12), <anonymous>:69:17)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:580:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:223:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:437:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at Function.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/lib/webpages.js:99:11
+    at Object.construct (/var/www/pratos/node_modules/pratos_navbar_class/index.js:25:4)
+ReferenceError: /var/www/pratos/views/admin_manage_accessories.ejs:88
+    86| 	</body>
+    87|   <script src='/js/snackbar.min.js'></script>
+ >> 88| <script>var message = '<%- error %>';</script>
+    89| 	<script src="/js/common.js"></script>
+    90| 	<script>
+    91| var roomName = localStorage.getItem('roomName');
+
+error is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:549:12), <anonymous>:69:17)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:580:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:223:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:437:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at Function.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/lib/webpages.js:99:11
+    at Object.construct (/var/www/pratos/node_modules/pratos_navbar_class/index.js:25:4)
+ReferenceError: /var/www/pratos/views/admin_manage_accessories.ejs:88
+    86| 	</body>
+    87|   <script src='/js/snackbar.min.js'></script>
+ >> 88| <script>var message = '<%- error %>';</script>
+    89| 	<script src="/js/common.js"></script>
+    90| 	<script>
+    91| var roomName = localStorage.getItem('roomName');
+
+error is not defined
+    at eval (eval at compile (/var/www/pratos/node_modules/ejs/lib/ejs.js:549:12), <anonymous>:69:17)
+    at returnedFn (/var/www/pratos/node_modules/ejs/lib/ejs.js:580:17)
+    at tryHandleCache (/var/www/pratos/node_modules/ejs/lib/ejs.js:223:34)
+    at View.exports.renderFile [as engine] (/var/www/pratos/node_modules/ejs/lib/ejs.js:437:10)
+    at View.render (/var/www/pratos/node_modules/express/lib/view.js:128:8)
+    at tryRender (/var/www/pratos/node_modules/express/lib/application.js:640:10)
+    at Function.render (/var/www/pratos/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/var/www/pratos/node_modules/express/lib/response.js:966:7)
+    at /var/www/pratos/lib/webpages.js:99:11
+    at Object.construct (/var/www/pratos/node_modules/pratos_navbar_class/index.js:25:4)
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:11728) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:11728) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:605) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:605) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:641) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:641) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+/var/www/pratos/node_modules/mongodb/lib/utils.js:123
+    process.nextTick(function() { throw err; });
+                                  ^
+
+ReferenceError: uniqID is not defined
+    at /var/www/pratos/lib/users.js:155:21
+    at /var/www/pratos/node_modules/mongodb/lib/collection.js:535:5
+    at /var/www/pratos/node_modules/mongodb/lib/collection.js:713:5
+    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
+    at executeCommands (/var/www/pratos/node_modules/mongodb/lib/bulk/ordered.js:398:12)
+    at resultHandler (/var/www/pratos/node_modules/mongodb/lib/bulk/ordered.js:425:5)
+    at /var/www/pratos/node_modules/mongodb-core/lib/wireprotocol/2_4_support.js:422:9
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:611) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:611) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:605) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:605) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:605) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:605) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:605) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:5685) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:6880) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:6880) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6880) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+(node:6880) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+/var/www/pratos/node_modules/mongodb/lib/utils.js:123
+    process.nextTick(function() { throw err; });
+                                  ^
+
+ReferenceError: remove_always_connected is not defined
+    at /var/www/pratos/lib/users.js:197:6
+    at handleCallback (/var/www/pratos/node_modules/mongodb/lib/utils.js:120:56)
+    at /var/www/pratos/node_modules/mongodb/lib/cursor.js:861:16
+    at handleCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:171:5)
+    at setCursorDeadAndNotified (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:505:3)
+    at nextFunction (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:658:7)
+    at Cursor.next [as _next] (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:699:3)
+    at fetchDocs (/var/www/pratos/node_modules/mongodb/lib/cursor.js:857:10)
+    at /var/www/pratos/node_modules/mongodb/lib/cursor.js:880:7
+    at handleCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:171:5)

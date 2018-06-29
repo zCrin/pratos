@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 	<head>
 		<% include includes/head-content.include.ejs %>
@@ -34,7 +34,12 @@
 					</table>
 				</div>
 				<div id="user-input-password">
-				
+					<table>
+					<div id="userPassword-box">
+					<input type='password' placeholder='Password' id='userPassword'>
+					</div>
+					<div data-ripple="rgba(0,0,0, 0.3)"  class='material-shadow-1 button-send-user-password'>Connexion</div>
+					</table>
 				</div>
 			</div>
 			
@@ -65,91 +70,20 @@
 	</body>
 	<script src="/js/passcode_page.js"></script>
 <script src='/js/snackbar.min.js'></script>
+<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 <script>
-var message = '<%- error %>';
-var toSay = {
-'password': {text:'Mot de passe invalide',action:'Perdu', onActionClick:function(){redirect('askPassword')}},
-'Session expired' : 'La session a expiré',
-'sessionDoesntExistAnymore': 'La session a expiré',
-'user':'Utilisateur invalide',
-'banned':{text:'Utilisateur banni',action:'Aide', onActionClick:function(){getHelp(301)}},
-'disconnected':'Déconnecté',
-'alreadyDisconnected':'Déjà déconnecté'
-};
 
-if(toSay[message]){
-if(!toSay[message].action){
-Snackbar.show({
-text: toSay[message],
-pos:'top-center',
-showAction: false
-}); 
-}else{
-Snackbar.show({
-text: toSay[message].text,
-pos:'top-center',
-showAction: true,
-actionText: toSay[message].action,
-actionTextColor:'red',
-onActionClick: toSay[message].onActionClick
-}); 
+
+reset_position();
+$(window).resize(function(){
+
+reset_position();
+})
+function reset_position(){
+
+$("#input-password-page").css('margin-top',(($('.page').height()-$('.page').css('padding-bottom') .replace('px','') -$('.page').css('padding-top') .replace('px','')-$("#input-password-page").height()-($('#input-password-page').css('padding-top').replace('px','')/2)-($('#input-password-page').css('padding-bottom').replace('px','')/2))/2) - 4+'px')
 }
-
-}
-function getHelp(nb){
-alert(nb)
-}
-function redirect(page){
-alert(page)
-}
-
-
-</script>
-	<script>
-	jQuery(function($) {
-
-  // MAD-RIPPLE // (jQ+CSS)
-  $(document).on("mousedown touchstart", "[data-ripple]", function(e) {
-
-    var $self = $(this);
-
-    if($self.is(".btn-disabled")) {
-      return;
-    }
-    if($self.closest("[data-ripple]")) {
-      e.stopPropagation();
-    }
-
-    var initPos = $self.css("position"),
-        offs = $self.offset(),
-        x = e.pageX - offs.left,
-        y = e.pageY - offs.top,
-        dia = Math.min(this.offsetHeight, this.offsetWidth, 100), // start diameter
-        $ripple = $('<div/>', {class : "ripple",appendTo : $self });
-
-    if(!initPos || initPos==="static") {
-      $self.css({position:"relative"});
-    }
-
-    $('<div/>', {
-      class : "rippleWave",
-      css : {
-        background: $self.data("ripple"),
-        width: dia,
-        height: dia,
-        left: x - (dia/2),
-        top: y - (dia/2),
-      },
-      appendTo : $ripple,
-      one : {
-        animationend : function(){
-          $ripple.remove();
-        }
-      }
-    });
-  });
-
-});
 </script>
 	<% 
 var contentNames = Object.keys(content);

@@ -16,10 +16,21 @@
 		<div class='page page-nav'>
 			<h2>Ajouter cet appareil ?</h2>
 		<p>Il pourra se connecter à Pratos sans mot de passe</p>
-			<a id="add_device" href="/add_allowed_device/">OUI</a>
+			<i id="add_device">OUI</i>
 		</div>
 	</body>
+	<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 	<script src='/js/navbar_auto.js'></script>
+	<script>
+	$('#add_device').click(function(){
+	$.get('/add_allowed_device/',function(ans){
+		  localStorage.setItem('alwaysAllowedId',ans);
+		  window.location.replace('/admin/index/?error=addedAllowed')
+	});
+	});
+	
+	</script>
 		<% 
 var contentNames = Object.keys(content);
 var contentL = contentNames.length;
