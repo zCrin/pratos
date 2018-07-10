@@ -278,3 +278,88 @@ ReferenceError: remove_always_connected is not defined
     at fetchDocs (/var/www/pratos/node_modules/mongodb/lib/cursor.js:857:10)
     at /var/www/pratos/node_modules/mongodb/lib/cursor.js:880:7
     at handleCallback (/var/www/pratos/node_modules/mongodb-core/lib/cursor.js:171:5)
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:614) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:614) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 accessories listeners added. Use emitter.setMaxListeners() to increase limit
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) DeprecationWarning: Calling an asynchronous function without callback is deprecated.
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 2): Error: Input buffer contains unsupported image format
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 3): Error: Input buffer contains unsupported image format
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:616) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:616) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:614) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:614) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+/var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-event.js:84
+			if(!Lastall_infos[z] || val.state != Lastall_infos[z].state){
+			                 ^
+
+TypeError: Cannot read property '0' of undefined
+    at findSpecificChange (/var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-event.js:84:21)
+    at emitChange (/var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-event.js:67:5)
+    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-event.js:58:4
+    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:124:13
+    at get_state_accessories (/var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:161:8)
+    at /var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:157:1
+    at Request.request [as _callback] (/var/www/pratos/node_modules/pratos_accessories_class/lib/accessories-list.js:229:11)
+    at Request.self.callback (/var/www/pratos/node_modules/request/request.js:188:22)
+    at emitTwo (events.js:106:13)
+    at Request.emit (events.js:191:7)
+*** WARNING *** The program 'node' uses the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node>
+*** WARNING *** The program 'node' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/avahi-compat?s=libdns_sd&e=node&f=DNSServiceRegister>
+(node:23906) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Error: No such file or directory, cannot open /dev/ttyACM0
+(node:23906) DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.

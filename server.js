@@ -16,21 +16,31 @@ fs.readFile(__dirname + "/conf/settings.json", 'utf8', function (err, settingsRa
         var mongo = require('mongodb'),
         MongoClient = mongo.MongoClient,
         settings = JSON.parse(settingsRaw);
+
         MongoClient.connect("mongodb://localhost/pratos", function (error, db) {
             if (error)
                 throw error;
             if (!error) {
                 console.log("\nSystem : Connected to Pratos' database.".green);
-db.collection("users_cookies").remove({expiration:{$lt:(Date.now() - 3.6e+6)}},function(){
-system("Removed old sessions from database (doing this every 5 hours)");
-setInterval(function(){
-db.collection("users_cookies").remove({expiration:{$lt:(Date.now() - 3.6e+6)}},function(){
-system("Removed old sessions from database (doing this every 5 hours)");
-});
-}, 1.8e+7);
-});
+                db.collection("users_cookies").remove({
+                    expiration: {
+                        $lt: (Date.now() - 3.6e+6)
+                    }
+                }, function () {
+                    system("Removed old sessions from database (doing this every 5 hours)");
+                    setInterval(function () {
+                        db.collection("users_cookies").remove({
+                            expiration: {
+                                $lt: (Date.now() - 3.6e+6)
+                            }
+                        }, function () {
+                            system("Removed old sessions from database (doing this every 5 hours)");
+                        });
+                    }, 1.8e+7);
+                })
+
                 var globalVariable = [];
-				global.globalVariable = globalVariable;
+                global.globalVariable = globalVariable;
                 globalVariable.database = {
                     ObjectID: mongo.ObjectID,
                     MongoClient: MongoClient,
@@ -49,7 +59,7 @@ system("Removed old sessions from database (doing this every 5 hours)");
                     }),
                 uuidV1 = require('uuid/v1'),
                 EventEmitter = require("events").EventEmitter,
-               cookieParser = require('cookie-parser'),
+                cookieParser = require('cookie-parser'),
                 cmd = require('node-cmd'),
                 http = require('http'),
                 httpProxy = require('http-proxy'),
@@ -65,6 +75,10 @@ system("Removed old sessions from database (doing this every 5 hours)");
                 IOcookieParser = require('socket.io-cookie'),
                 conditions = require('pratos_conditions_class');
 
+                cmd.get("sudo rm " + __dirname + "/uploads/*", function () {
+                    system("Removed old uploads from directory /uploads");
+                });
+
                 style.init(globalVariable);
 
                 globalVariable.event = new EventEmitter();
@@ -74,7 +88,7 @@ system("Removed old sessions from database (doing this every 5 hours)");
                 }
 
                 app.use(session)
-				.use(cookieParser())
+                .use(cookieParser())
                 .use(function (req, res, next) {
 
                     var user_id = uuidV1();
@@ -82,24 +96,31 @@ system("Removed old sessions from database (doing this every 5 hours)");
                     req.user_id = user_id;
                     globalVariable[user_id].request = req;
                     /*load_cookie(req, res, function () {
-                        next();
+                    next();
                     });
-					*/
-					next();
+                     */
+                    next();
                 })
 
                 .use(function (req, res, next) {
                     if (req.method === 'POST') {
                         if (/multipart\/form-data/.test(req.headers['content-type'])) {
+
                             globalVariable[req.user_id].request.bodyPratos = {}
                             var busboy = new Busboy({
                                     headers: req.headers
                                 });
                             busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
-
+                                var uniqId = uuidV1();
+                                file.pipe(fs.createWriteStream(__dirname + "/uploads/" + filename));
                                 file.on('data', function (data) {
+                                    globalVariable[req.user_id].request.bodyPratos[fieldname] = {
+                                        name: filename,
+                                        encoding: encoding,
+                                        mimetype: mimetype,
+                                        path: __dirname + "/uploads/" + filename
+                                    }
 
-                                    globalVariable[req.user_id].request.bodyPratos[fieldname] = data;
                                 });
 
                             });

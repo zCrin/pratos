@@ -14,16 +14,19 @@
 		<% include includes/header.include.ejs %>
 		<%- include("includes/navbar.include.ejs", {nav : nav})%>
 		<div class='page page-nav'>
-			<h2>Annuler cet appareil ?</h2>
+			<h2>Supprimer cet appareil ?</h2>
 			<p>Il ne pourra plus se connecter à Pratos sans mot de passe</p>
-			<i id="remove_device">OUI</i>
+			<div style='text-align:center;'>
+			<div id="remove_deviceF" class='material-design-normal-button'  data-ripple='rgba(0,0,0, 0.3)'>Dé-autoriser</div>
+			
+			</div>
 		</div>
 	</body>
 	<script>var message = '<%- error %>';</script>
 	<script src="/js/common.js"></script>
 	<script src='/js/navbar_auto.js'></script>
 		<script>
-	$('#remove_device').click(function(){
+	$('#remove_deviceF').click(function(){
 	var alwaysConnectedId = localStorage.getItem('alwaysAllowedId');
 if(alwaysConnectedId){
 	$.post('/remove_allowed_device/', {id:alwaysConnectedId},function(resp){

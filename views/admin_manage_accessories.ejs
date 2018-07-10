@@ -17,58 +17,14 @@
 		<div id='manage_accessories' class='page page-nav'>
 			<div id="access_header">
 				
-				<h2 id='all_acch2' class="material-shadow-2" >Tous les accessoires &nbsp;&nbsp; <i class='fa fa-caret-down'></i></h2>
+				<h2 id='all_acch2' data-ripple='rgba(0,0,0, 0.3)' class=" material-shadow-fade-3" >Tous &nbsp;&nbsp; <i class='fa fa-caret-down'></i></h2>
 			</div>
 			<img id='loading_accessories' src="/img/loading.gif"/>
 			<div id='all_accessories'></div>
 			<div id='update' data-ripple="rgba(0,0,0, 0.3)" class="material-shadow-2 material-design-normal-button" >Modifier</div>
-		<!--	<div class='updating_page'>
-				<h2>Modifier l'accessoire</h2>
-					<div id='div1'>
-						<span id='change_pic'></span>
-						<input type='hidden' id='acc_aid'/>
-						<input type='text' id='update_accessory_name' value='Raspberry Pi'/>
-					</div>
-					<div id='div2'>
-						<label for="update_accessory_model">Modèle : </label>
-						<input type='text' id='update_accessory_model'/>
-						<br />
-						<label for="update_accessory_manufacturer">Fabricant : </label>
-						<input type='text' id='update_accessory_manufacturer'/>
-<br />
-						<label for="update_accessory_room">Pièces : </label>
-						<select id='update_accessory_room'/>
-<option>Aucune</option>
+		
 
-						</select>
-					</div>
-					<button id='validate_update_accessory' onclick='validate_update_accessory()'>Valider</button>
-			</div>
-			-->
-<div class='rooms_list'>
-<h2>Pièces</h2>
-<div id='listRooms_block'></div>
-</div>
-			<div class='updating_pic'>
-				<h2>Sélectionner une icône</h2>
-				<div id='select_ico'></div>
-				<table id='image_chosen'>
-					<tr>
-						<td>Allumé</td>
-						<td><img src='' id='image_chosen1'/></td>
-					</tr>
-					<tr>
-						<td>Éteint</td>
-						<td><img src='' id='image_chosen2'/></td>
-					</tr>
-				</table>
-				<label for='upload_img' id='add_ico'>Importer</label>
-				<div id='update_selected_pic'>
-					<label for='upload_img' id='update_selected_pic_button'>Modifier</label>
-					<button onclick='validate_import_ico()' id='validate_import_ico'>OK</button>
-				</div>
-				<input type='file' name='files' multiple id='upload_img'/>
-			</div>
+	
 		</div>
 		<div data-ripple="rgba(0,0,0, 0.3)" class="material-button material-shadow-3 "><i class="fa fa-th" aria-hidden="true"></i></div>
 	</body>
@@ -99,185 +55,27 @@ accesorie_editing_oldName = null,
 
 	<script>
 function getKeyByValue(value) {
-var d = Object.keys(all_accessories);
-  var e= d.length;
+    var d = Object.keys(all_accessories);
+    var e = d.length;
 
-  for(var g=0; g<e;g++){
-   
-	if(all_accessories[d[g]].aid == value){
-		return d[g];
-	}
-  }
-  
+    for (var g = 0; g < e; g++) {
+
+        if (all_accessories[d[g]].aid == value) {
+            return d[g];
+        }
+    }
+
 }
-		$.getJSON( "/accessories_icon/", function(data){
-				img_correspond = data;
+$.getJSON("/accessories_icon/", function (data) {
+    img_correspond = data;
 
-			});
-					$('#change_pic').click(function(){//si on clique sur l'icone pour changer l'icone de l'accessoire
-
-		show_actual = '.updating_pic';//on indique le popup dans lequel on travaille
-		aid = $('#change_pic').attr('aid');
-accesorie_editing_aid = getKeyByValue(aid);
-
-			if(all_accessories[accesorie_editing_aid].state_format != 'float'){
-
-$('#select_ico').html('');
-
-				$.each(img_correspond, function(key,val){
-
-
-					if(key.indexOf(all_accessories[accesorie_editing_aid].state) !== -1){
-if(all_accessories[accesorie_editing_aid].state_format == 'bool'){
-if(img_correspond[key.replace(all_accessories[accesorie_editing_aid].state, (all_accessories[accesorie_editing_aid].state-1)*(all_accessories[accesorie_editing_aid].state-1))]){
-						$('#select_ico').html($('#select_ico').html() + '<img class="all_ico" onclick="select_ico(\''+val + '\' )" src="/img/icons/' + val +'"/>').promise().done(function(){
-			$('.updating_page').hide(1000);
-			$('.updating_pic').show(1000);
-				});
-}
-}
-else{
-						$('#select_ico').html($('#select_ico').html() + '<img class="all_ico" onclick="select_ico(\''+val + '\' )" src="/img/icons/' + val +'"/>').promise().done(function(){
-			$('.updating_page').hide(1000);
-			$('.updating_pic').show(1000);
-				});
-}
-					}
-				});
-			}
-		});
-function select_ico(k){
-	$('.updating_page').show(1000);
-	$('#change_pic > img').attr('src', "/img/icons/" + k);
-	show_actual = '.updating_page';
-			$('.updating_pic').hide();
-}
-
-document.querySelector('#upload_img').addEventListener('change', function() {
-
-	var f = this.files;
-	for(var i = 0; i < 2; i++){
-		if (f[i].type.match('image.*')) {
-			var reader = new FileReader();
-			reader.onload = function() {
-				var image = new Image();
-				image.src = this.result;
-				image.onload = function() {
-					if(this.width > 32){
-						alert('La taille conseillée pour les icônes est un carré de 32 pixels');
-					}
-				};
-				$('#image_chosen' + (this.i + 1)).attr('src', this.result); //rfhchocuebfobcfoucbeknfi
-			};
-			reader.i = i;
-			reader.readAsDataURL(f[i]);
-		}
-	}
-		$('#image_chosen').show(1000);
-		$('#update_selected_pic').css('display', 'flex');
-		$('#add_ico').hide(1000).promise().done(function(){
-		$('#update_selected_pic').css('display', 'flex');
-		});
 });
-$('#add_ico').click(function(){
-alert('Sélectionnez d\'abord l\'image pour l\'accessoire allumé puis celle pour l\'accessoire éteint.');
-});
-function validate_import_ico(){
-
-var i = document.querySelector('#upload_img').files;
 
 
-    var form = new FormData();
-	form.append("type", all_accessories[accesorie_editing_aid].state_format);
-	form.append('file1', i[0]);
-	form.append('file2', i[1]);
-	
-    $.ajax({
-        url: '/register_new_icon/',
-        type: 'POST',
-        success: function(data){
-			console.log(data)
-			an = data;
-		
-			if(all_accessories[accesorie_editing_aid]['state'] == 1){
-				select_ico('/' + an.icon_on);
-			}
-			else{
-				select_ico('/' + an.icon_off);
-			}
-			$.getJSON( "/accessories_icon/", function(res){
-				img_correspond = res;
-			});
-		},
-        // Form data
-        data: form,
-        //Options to tell jQuery not to process data or worry about content-type.
-        cache: false,
-        contentType: false,
-        processData: false
-    });
-
-
- 
-}
-</script>
-<script>
-function validate_update_accessory(){
-
-var icon_src = '';
-
-if($('#change_pic > img').length){
-icon_src = $('#change_pic > img').attr('src');}
-
-
-
-
-roomSplitted= $('#update_accessory_room').val().split(".");
-if(roomSplitted[0] == "0"){
-var roomid = "all";
-}
-else{
-var roomid = roomSaved [roomSplitted[0]-1] ['_id'];
-}
-
-
-$.post('/update_accessory/', {
-		aid : accesorie_editing_aid,
-		name : $('#update_accessory_name').val(),
-room: roomid,
-		icon_on : icon_src.replace('0', '1'),
-		icon_off : icon_src.replace('1', '0'),
-		model : $('#update_accessory_model').val(),
-		manufacturer : $('#update_accessory_manufacturer').val(),
-oldName : accesorie_editing_oldName
-	},function(res){
-		if(res == 'error'){
-			alert("Erreur lors de la transmission. Rechargez la page et réessayez.");
-		}
-		else{
-			$('.updating_page').hide(1000);
-			$('#' + accesorie_editing_aid + ' > #accessory_name').text($('#update_accessory_name').val());
-			$('#' + accesorie_editing_aid + ' > img').attr('src', $('#change_pic > img').attr('src'));
-all_accessories[accesorie_editing_aid].icon_on = icon_src.replace('0', '1');
-all_accessories[accesorie_editing_aid].icon_off = icon_src.replace('1', '0');
-all_accessories[accesorie_editing_aid].name = $('#update_accessory_name').val();
-all_accessories[accesorie_editing_aid].model = $('#update_accessory_model').val();
-all_accessories[accesorie_editing_aid].manufacturer = $('#update_accessory_manufacturer').val();
-all_accessories[accesorie_editing_aid].room =roomid;
-		}
-	});
-}
 
 </script>
-<script>
-		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a cot\351
-			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
-				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
-   				$(show_actual).hide(1000); //on cache le popup actuel
-			}
-		});
 
-	</script>
+
 		<% 
 var contentNames = Object.keys(content);
 var contentL = contentNames.length;

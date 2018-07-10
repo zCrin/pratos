@@ -120,45 +120,19 @@ jQuery(function ($) {
 
 });
 
-function popup(content, callback) {
-    $('.material-popup').remove();
-    $('.material-popup-background').remove();
-    $('body').append("<div class='material-popup-background'data-ripple='rgba(0,0,0, 0.3)' onClick='popup_close()'></div><div class='material-popup material-shadow-2'>" + content + "</div>")
-    $('.material-popup').animate({
-        left: "50%"
-    }, 200)
-    $('.material-popup-background').animate({
-        height: "100%"
-    }, 200)
-    if (callback) {
-        callback();
-    }
-}
-function popup_close() {
-    $('.material-popup-background').animate({
-        top: "100%",
-        height: "0px"
-    }, 200);
-    $('.material-popup').css({
-        left: "200%"
-    })
-
-}
-
 function inputbottombar() {
     $('input').blur(function () {
         $('.material-input-focus').toggleClass('material-input-focus-scale material-input-focus-unscale');
     });
     $('input').focusin(function () {
-    
 
-            $(this).attr('tabindex', "0")
-            $('.material-input-focus').remove()
-            $('<hr class="material-input-focus">').insertAfter($(this)).promise().done(function () {
+        $(this).attr('tabindex', "0")
+        $('.material-input-focus').remove()
+        $('<hr class="material-input-focus">').insertAfter($(this)).promise().done(function () {
 
-                $('.material-input-focus').addClass('material-input-focus-scale');
+            $('.material-input-focus').addClass('material-input-focus-scale');
 
-            });
+        });
 
     })
 }
@@ -200,12 +174,11 @@ function inputplaceholder() {
 
             t.css('margin-top', '0')
             t.blur(function () {
-                console.log('is not focused')
+
                 if (t.val() != "") {
                     $("[theplaceholderID='" + id + "'").css('color', 'grey')
-                    console.log('has text')
+
                 } else {
-                    console.log('has no text')
 
                     $("[input-placeholder-style='" + id + "']").remove();
 
@@ -260,4 +233,152 @@ function rgbToHsl(r, g, b) {
     }
 
     return [h, s, l];
+}
+//select material design class
+var MaterialSelect = function (obj) {
+    this.build(obj)
+}
+MaterialSelect.prototype.build = function (obj) {
+    this.select = obj
+}
+MaterialSelect.prototype.load = function () {
+    var that = this;
+    var Select = this.select;
+    var target = $(Select.target);
+    if (Select.selected) {
+		var parameters = (Select.options[Select.selected].parameters)?Select.options[Select.selected].parameters:"";
+        target.html("<span " + parameters + " class='material-design-selected'>" + Select.options[Select.selected].text + "</span><i class='material-design-selected fa fa-caret-down'></i>")
+    } else {
+        target.html("<span class='material-design-selected'>" + Select.name + "</span><i class='material-design-selected fa fa-caret-down'></i>")
+    }
+
+    target.addClass('material-select')
+    that.selectOpt(Select.selected)
+    target.click(function () {
+        $(this).attr('tabindex', "0")
+        $('.material-input-focus').remove()
+        $('<hr class="material-input-focus">').insertAfter($(this)).promise().done(function () {
+            $('.material-input-focus').addClass('material-input-focus-scale');
+            $("[selected-placeholderID='" + Select.name + "']").css('color', 'red')
+            var options = '';
+            var h = Select.options.length;
+            for (var d = 0; d < h; d++) {
+                var x = Select.options[d];
+                options += "<div id='options-list-" + d + "' " + x.parameters + "><span>" + x.text + "</span><i class='fa fa-caret-right'></i></div>";
+            }
+            $("body").append("<div class='material-select-background'  id='material-select-bck-" + Select.name + "'data-ripple='rgba(0,0,0, 0.3)'></div><div id='material-select-" + Select.name + "' class='material-selct material-shadow-2'><span class='material-select-title'>" + Select.name + "</span>" + options + "</div>")
+
+            $('.material-selct').animate({
+                left: "50%"
+            }, 200)
+            $('.material-select-background').animate({
+                height: "100%"
+            }, 200)
+            if (Select.loaded) {
+                Select.loaded();
+            }
+            $("#material-select-bck-" + Select.name).click(function () {
+                that.close(function () {
+                    if (Select.earlyLeave) {
+                        Select.earlyLeave();
+                    }
+                });
+            });
+            $('.material-selct >div').click(function () {
+                var nb = $(this).attr('id').replace('options-list-', '');
+
+                that.selectOpt(nb);
+                that.close(function () {
+                    if (Select.onSelect) {
+                        Select.onSelect(nb);
+                    }
+                });
+            });
+        });
+
+    })
+}
+MaterialSelect.prototype.close = function (callback) {
+    var Select = this.select;
+    var target = $(Select.target);
+    $("[selected-placeholderID='" + Select.name + "']").css('color', 'grey')
+    $('#material-select-bck-' + Select.name).animate({
+        top: "100%",
+        height: "0px"
+    }, 200);
+    $('#material-select-' + Select.name).css({
+        left: "200%"
+    })
+    $('.material-input-focus').toggleClass('material-input-focus-scale material-input-focus-unscale');
+    $(window).resize()
+    setTimeout(function () {
+        $('#material-select-' + Select.name).remove()
+        $('#material-select-bck-' + Select.name).remove()
+        if (Select.earlyLeave) {
+            Select.earlyLeave();
+        }
+    }, 1000);
+
+}
+MaterialSelect.prototype.selectOpt = function (nb) {
+    var Select = this.select;
+    Select.selected = nb;
+    if (Select.options[Select.selected] && Select.options[Select.selected].text && Select.options[Select.selected].text != "") {
+        $(Select.target).html("<span " + Select.options[nb].parameters + " class='material-design-selected material-design-option''>" + Select.options[nb].text + "</span><i class='material-design-selected fa fa-caret-down'></i>")
+        var marginTop = ($("[selected-placeholderID='" + Select.name + "']").css('margin-top')) ? $("[selected-placeholderID='" + Select.name + "']").css('margin-top') : $(Select.target).css('margin-top');
+
+        $("[selected-placeholderID='" + Select.name + "']").remove()
+        $('<span selected-placeholderID="' + Select.name + '"style="margin-top:' + marginTop + '"class="material-select-placeholder">' + Select.name + '</span>').insertBefore($(Select.target))
+        $(Select.target).css('margin-top', '0')
+    }
+}
+MaterialSelect.prototype.destroy = function () {
+    delete this;
+}
+//Material Popup
+MaterialPopup = function (obj) {
+    this.build(obj)
+
+}
+MaterialPopup.prototype.build = function (obj) {
+    this.Popup = obj;
+    this.id = Date.now();
+}
+MaterialPopup.prototype.load = function () {
+	 $("html, body").animate({ scrollTop: 0 }, "slow")
+    var that = this;
+    var name = (this.Popup.name) ? "<span class='material-popup-title '>" + this.Popup.name + "</span>" : "";
+
+    $('body').append("<div class='material-popup-background' popupBckID='" + this.id + "'data-ripple='rgba(0,0,0, 0.3)'></div><div class='material-popup material-shadow-2' popupID='" + this.id + "'>" + name + this.Popup.content + "</div>")
+    $("[popupID='" + this.id + "']").animate({
+        left: "50%"
+    }, 200)
+    $("[popupBckID='" + this.id + "']").animate({
+        height: "100%"
+    }, 200)
+    if (this.Popup.onLoad) {
+        this.Popup.onLoad();
+    }
+    $("[popupBckID='" + this.id + "']").click(function () {
+        that.close();
+    });
+}
+MaterialPopup.prototype.close = function () {
+    var that = this;
+    $("[popupBckID='" + that.id + "']").animate({
+        top: "100%",
+        height: "0px"
+    }, 200);
+
+    $("[popupID='" + that.id + "']").css({
+        left: "200%"
+    })
+    if (that.Popup.onExit) {
+        that.Popup.onExit();
+    }
+    $(window).resize();
+    setTimeout(function () {
+        $("[popupID='" + that.id + "']").remove();
+        $("[popupBckID='" + that.id + "']").remove();
+    }, 1000);
 }

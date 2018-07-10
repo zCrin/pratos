@@ -17,15 +17,18 @@
 		<h2>Bannir, Débannir</h2>
 		<p>Bannir ou débannir une adresse IP. <br />
 			Elle ne pourra plus se connecter à Pratos</p>
-		<div id='banUnban_buttonBlock'>
-			<button id="bannir">Bannir</button> <button id="debannir">Débannir</button>
-		</div>
-		<div id='banpopup' class='popup'>
-			<h2>Bannir</h2>
-			<label for='ipInput'>Adresse IP </label>
-			<input type='text' placeholder='ex : 82.456.9.0' id='ip_toBan'/>
-					<button onclick='validate_ban()' id='validate_ban'>Bannir</button>
-		</div>
+			
+		
+		
+		<div style='text-align:center; display:flex;justify-content:space-around;margin-top:4%;'>
+			<div id="bannirButton" class='material-design-normal-button'  data-ripple='rgba(0,0,0, 0.3)'>Bannir</div>
+			
+			
+			<div id="debannirButton" class='material-design-normal-button'  data-ripple='rgba(0,0,0, 0.3)'>Débannir</div>
+			</div>
+		
+		
+		
 		<div id='debanpopup' class='popup'>
 			<h2>Débannir</h2>
 			<table>
@@ -41,19 +44,20 @@
 		</div>
 	</body>
 	<script src='/js/navbar_auto.js'></script>
+	<script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
 <script>
-var show_actual;
-		$('.page').mousedown(function(e){ //fonction qui permet de cacher les popup lorsqu'on clique a coté
-			if(! $(show_actual).is(e.target) // if the target of the click isn't the container
-				&&  $(show_actual).has(e.target).length === 0){ //nor a descendant of the container
-   				$('.popup').each(function(){
-					$(show_actual).hide(1000);
-});//on cache le popup actuel
-			}
-		});
-$('#bannir').click(function(){
-show_actual = '#banpopup';
-$('#banpopup').show(1000);
+ 
+$('#bannirButton').click(function(){
+var popupAdd = new MaterialPopup({
+                        name: "Bannir",
+                        content: "<div class='update_roomBox'><div class='input-div-box '><input id='ip_toBan' type='text' placeholder='Adresse IP' ></div></div> <button id='validate_room_creationButton' class='material-design-normal-button' data-ripple='rgba(0,0,0, 0.3)' onclick='validate_ban()' id='validate_ban'>Bannir</button>",
+                        onLoad: function () {
+                            inputbottombar();
+                            inputplaceholder();
+                        }
+                    });
+                popupAdd.load()
 });
 $('#debannir').click(function(){
 show_actual = '#debanpopup';
