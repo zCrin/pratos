@@ -29,63 +29,63 @@
 		
 		
 		
-		<div id='debanpopup' class='popup'>
-			<h2>Débannir</h2>
-			<table>
-				<thead>
-					<tr>
-						<td>IP</td>
-						<td>Infos</td>
-						<td>Débannir</td>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
-		</div>
 	</body>
 	<script src='/js/navbar_auto.js'></script>
 	<script>var message = '<%- error %>';</script>
 	<script src="/js/common.js"></script>
 <script>
  
-$('#bannirButton').click(function(){
-var popupAdd = new MaterialPopup({
-                        name: "Bannir",
-                        content: "<div class='update_roomBox'><div class='input-div-box '><input id='ip_toBan' type='text' placeholder='Adresse IP' ></div></div> <button id='validate_room_creationButton' class='material-design-normal-button' data-ripple='rgba(0,0,0, 0.3)' onclick='validate_ban()' id='validate_ban'>Bannir</button>",
-                        onLoad: function () {
-                            inputbottombar();
-                            inputplaceholder();
-                        }
-                    });
-                popupAdd.load()
+$('#bannirButton').click(function () {
+    var popupAdd = new MaterialPopup({
+            name: "Bannir",
+            content: "<div class='update_roomBox'><div class='input-div-box '><input id='ip_toBan' type='text' placeholder='Adresse IP' ></div></div> <button id='validate_room_creationButton' class='material-design-normal-button' data-ripple='rgba(0,0,0, 0.3)' onclick='validate_ban()' id='validate_ban'>Bannir</button>",
+            onLoad: function () {
+                inputbottombar();
+                var roomNamePlace = new MaterialPlaceholder({
+                        text: "Adresse IP",
+                        target: "#ip_toBan"
+                    }).load();
+            }
+        }).load()
 });
-$('#debannir').click(function(){
-show_actual = '#debanpopup';
-$('tbody').html('');
-$.getJSON('/get_banned_ip/', function(data){
-$.each(data, function(key, val){
-$('tbody').append('<tr><td>' + key + '</td><td>' + val + '</td><td><button onClick="unban(\'' + key + '\')">Débannir</button></td></tr>');
+$('#debannirButton').click(function () {
+   
+    $.getJSON('/get_banned_ip/', function (data) {
+		var g = Object.keys(data),
+		e = g.length,
+		i ="";
+		for(var h =0;h<g;h++){
+			i = '<tr><td>' + g[h] + '</td><td>' + data[g[h]] + '</td><td><button onClick="unban(\'' + g[h] + '\')">Débannir</button></td></tr>'
+		}
+	 var popupAdd = new MaterialPopup({
+            name: "Débannir",
+            content: "<table id='ipBanTable'><thead><tr><td>IP</td><td>Infos</td><td>Débannir</td></tr></thead><tbody>"+i+"</tbody></table>"
+        }).load()
+       
+       
+    });
 });
-$('#debanpopup').show(1000);
-});
-});
-function validate_ban(){
-	$.post('/ban_ip/', { ip : $('#ip_toBan').val() }, function(data){
-if(data != "true"){
-alert('Erreur');}
-else{
-$('#banpopup').hide(1000);
+function validate_ban() {
+    $.post('/ban_ip/', {
+        ip: $('#ip_toBan').val()
+    }, function (data) {
+        if (data != "true") {
+            alert('Erreur');
+        } else {
+            $('#banpopup').hide(1000);
+        }
+    });
 }
-});
-}
-function unban(ipt){
-	$.post('/unban_ip/', { ip : ipt }, function(data){
-		if(data != "true"){
-alert('Erreur');}
-else{
-$('#debanpopup').hide(1000);
-}
-});
+function unban(ipt) {
+    $.post('/unban_ip/', {
+        ip: ipt
+    }, function (data) {
+        if (data != "true") {
+            alert('Erreur');
+        } else {
+            $('#debanpopup').hide(1000);
+        }
+    });
 }
 </script>
 		<% 

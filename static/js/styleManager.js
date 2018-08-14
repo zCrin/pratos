@@ -10,9 +10,9 @@ function startSytleManager() {
         format: "rgba"
     }).on('colorpickerChange colorpickerCreate', function (e) {
 
-        $("h1,h2, #nav .fa-bars, #nav .closebtn, #nav .colored, #menu-step-back").css('color', e.color.toRgbString());
-        $("header,  .settings_menu_button,#nav .colored").css('border-color', e.color.toRgbString());
-        $(".settings_pagebox input:checked").css('background-color', e.color.toRgbString());
+        $("h1,h2, #open-nav-button, .closebtn, .colored, #menu-step-back").css('color', e.color.toRgbString());
+        $("header,  .settings_menu_button, .colored").css('border-color', e.color.toRgbString());
+       
         $("#logo").css('fill', e.color.toRgbString());
         $('#nav').addClass('full-nav').promise().done(function () {
             $(".full-nav").css('border-color', e.color.toRgbString()).promise().done(function () {
@@ -41,11 +41,11 @@ function startSytleManager() {
     });
 
 }
-$("#resetColors").click(function () {
+$("#resetNewColors").click(function () {
     $('#cp9_container').colorpicker('setValue', "#350E00");
     $('#cp8_container').colorpicker('setValue', "#05FEFF");
 });
-$("#saveColors").click(function () {
+$("#saveNewColors").click(function () {
 
     var colorSet = 0;
     var socket = io.connect("//" + document.domain, {

@@ -137,23 +137,7 @@ margin-bottom:3%;
 text-align:center;
 display:none;
 }
-#deleteConditionsButt{
-	cursor:pointer;
 
--moz-appearance:none;-webkit-appearance:none;-appearance:none;
-margin:0px auto 30px auto;
-
-border-radius:0;border:0;
-	text-align:center;
-	box-shadow: 0 2px 2px 2px red;
-	background-color: white;
-color: red;
-width:30%;
-	font-family: San Francisco;
-	font-weight:200;padding:1%; font-size: 100%;
-
-margin-bottom:3%;
-}
 #blocklyDiv{
 
 display:none;
@@ -501,7 +485,8 @@ font-size: 280%;
 }
 #backspace-login svg{
 	fill:<%= global_color %>;
-width:35px;height:35px
+width:35px;height:35px;
+cursor:pointer;
 }
 
 #backspace-login svg:active{
@@ -540,7 +525,7 @@ margin: 60px auto;
     text-align: center;
 letter-spacing: 5px;
 color:lightgrey;
-    margin:0;
+    margin:0 auto;
 	outline:none;
 display:block;
     border-radius: 0;
@@ -565,6 +550,7 @@ padding:2%;
 }
 #open-nav-button{
     font-size: 200%;
+	
     position: relative;
     top: 20px;
     left: 20px;
@@ -577,10 +563,10 @@ padding:2%;
 	 font-size: 350%;
 	 cursor:pointer;
 	
-   position:relative;
+   position:absolute;
 	color: <%= global_color %>;
 	    width: fit-content;
-		padding:2%;
+		padding:0;
 	}
 	#menu-step-back{
 	 font-size: 200%;
@@ -593,8 +579,7 @@ padding:2%;
 	}
 	h2{
 	margin: 0 auto 1% auto;
-	position:relative;
-	top: -40%;
+	
 	}
 	.slide{
 	margin-top:1%;
@@ -664,7 +649,7 @@ display:none;
 display:block;
     margin-left: 55px;
 	    position: relative;
-    top: -60px;
+   
 }
 .colored{
 color: <%= global_color %>;
@@ -713,6 +698,8 @@ margin:2% auto;
 	    background-color: white;
     padding: 1% 2%;
     border-radius: 2px;
+	 color: <%= global_color %>;
+	 font-weight:200;
    }
    
 	.material-button{
@@ -753,6 +740,7 @@ display: table;
 	background-color:white;
 	    padding: 1.5%;
 		font-size:90%;
+		outline:none;
 }
 #update{
 display: table;
@@ -848,10 +836,7 @@ animation: reversefullScale 0.4s forwards;
         transform:scale(0);
     }
 }
-.settings_menu_button{
-background-color:white;
-color:lightgrey;
-}
+
 .input-div-box{
 
     display: inline-block;
@@ -1055,4 +1040,178 @@ p{
     font-size: 120%;
 	border-bottom:1px solid lightgrey;
 outline:none;
+}
+#ipBanTable{
+
+width: 94%;
+margin: 2% auto;
+}
+#ipBanTable thead td {
+padding: 1% 0;
+border-bottom: 1px solid #D8D8D8;
+
+width: 33%;
+
+}
+#ipBanTable tbody td {
+padding: 1% 0;
+
+
+width: 33%;
+
+}
+#ipBanTable td:nth-child(2){
+	border-left:1px solid #D8D8D8;
+	border-right:1px solid #D8D8D8;
+	transition: 0.3s ease;
+}
+#ipBanTable {
+	  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	  padding:2% 0;
+}
+#settings_main_menu{
+	
+}
+h2{
+	margin:0 auto;
+	top:0px;
+	position:relative;
+	width: 100%;
+	    display: table;
+    width: auto;
+  
+}
+.settings_menu_button{
+background-color:white;
+color:lightgrey;
+display:table;
+width:94%;
+margin-top: 20px;
+}
+.settings_menu_button i{
+	display:table-cell;
+	width:40%;
+}
+.settings_menu_button span{
+	display:table-cell;
+	width:60%;
+}
+.settings_pagebox{
+	display:none;
+}
+#settingsButton-step-back{
+	font-size:70%;
+	background-color:lightgrey;
+	color:white;
+}
+#togglePluginsPage, #deletePluginsPage, #stylePage{
+	background-color:white;
+	margin: 2% auto;
+	padding: 2%;
+	color:lightgrey;
+	
+	
+}
+.downloaded_plugin{
+	border-bottom:1px solid lightgrey;
+	padding-bottom:1%;
+}
+.savedPluginsTurn, .savedPluginsDelete{
+	margin: 1% auto;
+}
+.material-popup p{
+	color:lightgrey;
+	    font-size: 110%;
+}
+#rebootPopupButtonBar {
+	
+	    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+#doRebootButton,#saveNewColors,#createRecipe{
+	color:white;
+	background-color:lightgreen;
+}
+#dontRebootButton,#dontRebootButtohn{
+	color:white;
+	background-color:red;
+}
+.delete_plugin_check{
+	border:1px solid lightgrey;
+	outline:none;
+	cursor:pointer;
+		transition: 0.3s ease;
+}
+.settings_pagebox input:checked {
+    background-color: lightgrey;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	
+}
+.disconnectButton {
+	color:red;
+	
+}
+.stylePaheH3{ margin: 10% 0%; }
+
+#changeStyleButtonBar {
+	font-size:80%;
+	   display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+ #buttonsTopRecipe{
+	 margin:3% 0%;
+ }
+
+#modifyOldRecipe{
+	color:white;
+	background-color:midnightblue;
+}
+#conditionsButtons{
+	margin:2% auto;
+	background-color:white;
+	padding:2% 0%;
+transition: 0.3s ease;
+display:none;
+justify-content:space-around;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.input-name-recipe{
+margin:0 auto;
+width:100%;
+}
+.input-name-recipe input{
+font-size: 120%;
+text-align:left;
+border:0;
+border-bottom:1px solid lightgrey;
+
+ margin: 0;
+		
+    outline: none;
+    width:100%;
+	padding:0;
+
+}
+#saveConditionsNameInputBox{
+	display: flex;  margin-left:5%;flex-direction: column;
+	width:50%;
+}
+#registerConditions{
+	font-size:80%;
+}
+.updateRecipeSelect{
+background-color:white;
+color:lightgrey;
+display:table;
+width:94%;
+margin: 10px auto;
+    text-transform: none;
+}
+#deleteConditionsButt{
+	background-color:red;
+	color:white;
+	margin:2% auto;
+	font-size: 80%;
 }

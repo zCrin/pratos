@@ -208,7 +208,9 @@ function update_accessory(aid, oldName) {
                 },
                 onLoad: function () {
                     inputbottombar();
-                    inputplaceholder();
+                   
+					var accessoryModel = new MaterialPlaceholder({text:"Modèle",target:"#update_accessory_model" }).load();
+					var accessoryManufacturer = new MaterialPlaceholder({text:"Fabricant",target:"#update_accessory_manufacturer" }).load();
                     newSelect.load()
                     $('#change_pic').click(function () { //si on clique sur l'icone pour changer l'icone de l'accessoire
 
@@ -347,10 +349,7 @@ function update_accessory(aid, oldName) {
 
 $("#all_acch2").click(function () {
     $.getJSON('/list_rooms/', function (rooms) {
-        var popup = new MaterialPopup({
-                name: "Pièces",
-                content: content
-            });
+       
 
         roomSaved = rooms;
 
@@ -405,7 +404,7 @@ $("#all_acch2").click(function () {
                         content: content,
                         onLoad: function () {
                             inputbottombar();
-                            inputplaceholder();
+                            var roomNamePlace = new MaterialPlaceholder({text:"Nom",target:"#room_name" }).load();
                         }
                     });
                 popupAdd.load()
@@ -436,7 +435,7 @@ $("#all_acch2").click(function () {
                         content: content,
                         onLoad: function () {
                             inputbottombar();
-                            inputplaceholder();
+                           var roomNamePlace = new MaterialPlaceholder({text:"Nom",target:"#room_name" }).load();
                             $("#validate_room_creationButton").click(function () {
                                 $.get("/update_room/?name=" + $("#room_name ").val() + "&id=" + rooms[id]["_id"], function (res) {
                                     localStorage.setItem('room', rooms[id]['_id']);

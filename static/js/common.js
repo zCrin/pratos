@@ -70,6 +70,7 @@ function getHelp(nb) {
 function redirect(page) {
     alert(page)
 }
+
 jQuery(function ($) {
 
     // MAD-RIPPLE // (jQ+CSS)
@@ -137,60 +138,6 @@ function inputbottombar() {
     })
 }
 
-var nb = 0;
-function inputplaceholder() {
-    setTimeout(function () {
-        $("input[placeholder]").each(function () {
-            $(this).focusin().blur();
-
-        });
-    }, 500);
-    $("input[placeholder]").focusin(function () {
-        var t = $(this);
-        var marginTop = t.css('margin-top')
-            t.css('margin-top', '0')
-            var id = t.attr('placeholderID')
-            if (!id) {
-                nb++;
-                id = nb;
-                t.attr('placeholderID', id)
-                var placeholder = t.attr('placeholder')
-
-                    $('<span theplaceholderID="' + id + '"style="margin-top:' + marginTop + '"class="material-input-placeholder">' + placeholder + '</span>').insertBefore($(this).parent()).promise().done(function () {
-                        $('body').append("<style input-placeholder-style='" + id + "'>input[placeholderID='" + id + "']::placeholder {color:white;}</style>");
-
-                    });
-            }
-            if (t.val() != "") {
-                $("[theplaceholderID='" + id + "'").css('color', $('h1').css('color'))
-            } else {
-                var placeholder = t.attr('placeholder')
-
-                    $('<span theplaceholderID="' + id + '"style="margin-top:' + marginTop + '"class="material-input-placeholder">' + placeholder + '</span>').insertBefore($(this).parent()).promise().done(function () {
-                        $('body').append("<style input-placeholder-style='" + id + "'>input[placeholderID='" + id + "']::placeholder {color:white;}</style>");
-
-                    });
-            }
-
-            t.css('margin-top', '0')
-            t.blur(function () {
-
-                if (t.val() != "") {
-                    $("[theplaceholderID='" + id + "'").css('color', 'grey')
-
-                } else {
-
-                    $("[input-placeholder-style='" + id + "']").remove();
-
-                    t.css('margin-top', $("[theplaceholderID='" + id + "'").css('margin-top'))
-                    $("[theplaceholderID='" + id + "'").hide('1000').remove();
-                }
-            })
-
-    })
-
-}
-
 function is_light() {
     var rgb = $('body').css('background-color').match(/\d+/g);
     var e = rgbToHsl(rgb[0], rgb[1], rgb[2])
@@ -246,7 +193,7 @@ MaterialSelect.prototype.load = function () {
     var Select = this.select;
     var target = $(Select.target);
     if (Select.selected) {
-		var parameters = (Select.options[Select.selected].parameters)?Select.options[Select.selected].parameters:"";
+        var parameters = (Select.options[Select.selected].parameters) ? Select.options[Select.selected].parameters : "";
         target.html("<span " + parameters + " class='material-design-selected'>" + Select.options[Select.selected].text + "</span><i class='material-design-selected fa fa-caret-down'></i>")
     } else {
         target.html("<span class='material-design-selected'>" + Select.name + "</span><i class='material-design-selected fa fa-caret-down'></i>")
@@ -259,7 +206,7 @@ MaterialSelect.prototype.load = function () {
         $('.material-input-focus').remove()
         $('<hr class="material-input-focus">').insertAfter($(this)).promise().done(function () {
             $('.material-input-focus').addClass('material-input-focus-scale');
-            $("[selected-placeholderID='" + Select.name + "']").css('color', 'red')
+            $("[selected-placeholderID='" + Select.name + "']").css('color', $('h1').css('color'))
             var options = '';
             var h = Select.options.length;
             for (var d = 0; d < h; d++) {
@@ -298,6 +245,11 @@ MaterialSelect.prototype.load = function () {
 
     })
 }
+
+$('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', '')))/2  + 'px');
+$(window).resize(function () {
+    $('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', '')))/2  + 'px');
+});
 MaterialSelect.prototype.close = function (callback) {
     var Select = this.select;
     var target = $(Select.target);
@@ -345,7 +297,9 @@ MaterialPopup.prototype.build = function (obj) {
     this.id = Date.now();
 }
 MaterialPopup.prototype.load = function () {
-	 $("html, body").animate({ scrollTop: 0 }, "slow")
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow")
     var that = this;
     var name = (this.Popup.name) ? "<span class='material-popup-title '>" + this.Popup.name + "</span>" : "";
 
@@ -356,6 +310,7 @@ MaterialPopup.prototype.load = function () {
     $("[popupBckID='" + this.id + "']").animate({
         height: "100%"
     }, 200)
+
     if (this.Popup.onLoad) {
         this.Popup.onLoad();
     }
@@ -365,6 +320,7 @@ MaterialPopup.prototype.load = function () {
 }
 MaterialPopup.prototype.close = function () {
     var that = this;
+		
     $("[popupBckID='" + that.id + "']").animate({
         top: "100%",
         height: "0px"
@@ -376,9 +332,62 @@ MaterialPopup.prototype.close = function () {
     if (that.Popup.onExit) {
         that.Popup.onExit();
     }
+
     $(window).resize();
     setTimeout(function () {
         $("[popupID='" + that.id + "']").remove();
         $("[popupBckID='" + that.id + "']").remove();
     }, 1000);
+}
+MaterialPlaceholder = function (obj) {
+    this.build(obj)
+}
+MaterialPlaceholder.prototype.build = function (obj) {
+    this.Placeholder = obj;
+    this.id = Date.now();
+}
+MaterialPlaceholder.prototype.load = function () {
+    var that = this;
+    var Placeholder = this.Placeholder;
+    var target = Placeholder.target;
+    this.marginTop = $(target).css('margin-top');
+
+    if ($(target).val() != "") {
+        $(target).css('margin-top', '0')
+        $('<span theplaceholderID="' + this.id + '"style="color:grey;margin-top:' + this.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
+
+            $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "::placeholder {color:white;}</style>");
+
+        });
+
+    }
+    $(target).focusin(function () {
+        $("[theplaceholderID='" + that.id + "']").remove();
+        $(target).css('margin-top', '0')
+        $('<span theplaceholderID="' + that.id + '"style="margin-top:' + that.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
+            $(target).attr('placeholderID', that.id)
+            $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "::placeholder {color:white;}</style>");
+            $("[theplaceholderID='" + that.id + "'").css('color', $('h1').css('color'))
+        });
+    });
+    $(target).blur(function () {
+
+        if ($(target).val() != "") {
+            $("[theplaceholderID='" + that.id + "']").remove();
+            $(target).css('margin-top', '0')
+            $('<span theplaceholderID="' + that.id + '"style="color:grey;margin-top:' + that.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
+                $(target).attr('placeholderID', that.id)
+                $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "	::placeholder {color:white;}</style>");
+
+            });
+
+        } else {
+
+            $("[input-placeholder-style='" + that.id + "']").remove();
+
+            $(target).css('margin-top', $("[theplaceholderID='" + that.id + "'").css('margin-top'))
+            $("[theplaceholderID='" + that.id + "'").hide('1000').remove();
+        }
+    })
+
 }

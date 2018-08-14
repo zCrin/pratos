@@ -19,83 +19,22 @@
 		<% include includes/header.include.ejs %>
 		<%- include("includes/navbar.include.ejs", {nav : nav})%>
 		<div  id='settings_page'  class='page page-nav'>
+<h2>Réglages</h2>
 
-<div id="settings-step-back"> <i class='fa fa-chevron-left'></i>  Retour</div>
 <div id='settings_main_menu'>
-			<h2>Réglages</h2>
-<div id='pluginsButton' class='settings_menu_button'>
-<i class='fa fa-plug'></i><span>Plugins</span> </div>
-<div id='styleButton' class='settings_menu_button'>
-<i class='fa fa-pencil'></i><span>Style</span></div>
-<div id='conditionsButton' class='settings_menu_button'>
-<i class='fa fa-codepen'></i><span>Recettes</span></div>
+
 
 <% 
 		var settingsN = Object.keys(settings);
 	var settingsL = settingsN.length;
 for(var i = 0; i < settingsL; i++){ %>
-	<%- "<div id='"+ settings [settingsN[i]]. buttonName +"'class='settings_menu_button'>"+ settings [settingsN[i]]. buttonIcon +"<span>"+ settings [settingsN[i]].title+"</span></div> "%>
+	<%- "<div id='"+ settings [settingsN[i]]. buttonName +"'data-ripple='rgba(0,0,0, 0.3)' class='material-shadow-2 material-design-normal-button settings_menu_button'>"+ settings [settingsN[i]]. buttonIcon +"<span>"+ settings [settingsN[i]].title+"</span></div> "%>
 	<%	}
 	%>
 </div>
-<div class='settings_page settings_menu' id='styleBox'>
-<h2>Style</h2>
-<div id='flexStyle'>
-<div>
-<h3>Couleur primaire</h3>
-<div id="cp8_container">
-
-</div>
-</div><div>
-<h3>Couleur de l’arrière-plan</h3>
-<div id="cp9_container">
-
-</div>
-</div>
-</div>
-<button id='resetColors'>Original</button>
-<button id='saveColors'>Sauvegarder</button>
-</div>
-
-<div class='settings_page settings_menu' id='conditionsBox'>
-<h2>Recettes</h2>
-<p>Ici vous pouvez créer/modifier une nouvelle recette, des actions lancées à partir d'évênements, conditions.</p>
-<div id='buttonsTopRecipe'>
-<button id='createNewRecipe'>Créer une nouvelle recette</button>
-<button id='modifyRecipe'>Modifier une recette</button>
-</div>
-<div id="blocklyDiv"></div>
 
 
-<div id='genratorBlockly'></div>
-<span id="showConditionCode">Voir le code <i class="fa fa-caret-down" aria-hidden="true"></i></span>
 
-<div id='conditionsButtons'>
-<input type='text' placeholder='Nom de la recette' id='saveConditionsFile'/>
-<button id='saveConditions' onclick='saveRecipe()'>Sauvegarder</button>
-</div>
-<div id='deleteConditions'><button onclick='deleteRecipe()' id='deleteConditionsButt'>Supprimer</button></div>
-</div>
-
-
-<div class='settings_page settings_menu' id='pluginsBox'>
-<h2>Plugins</h2>
-
-<div id='deletePluginsButton' class='settings_menu_button'>
-<i class='fa fa-trash'></i><span>Supprimer</span> </div>
-
-<div id='turnPluginsButton' class='settings_menu_button'>
-<i class='fa fa-eye-slash'></i><span>Gérer</span> </div>
-</div>
-
-<div class='settings_page settings_pagebox  settings_menu' id='deletePluginsBox'>
-
-
-</div>
-
-<div class='settings_page settings_pagebox settings_menu' id='turnPluginsBox'>
-
-</div>
 <%
 for(var i = 0; i < settingsL; i++){ %>
 	<%- "<div class='settings_page settings_pagebox settings_menu' id='"+ settings [settingsN[i]].buttonName.replace("Button","Box")+"'>"+ settings [settingsN[i]].boxContent +"</div> "%>
@@ -115,16 +54,86 @@ for(var i = 0; i < settingsL; i++){ %>
 	<script src='/js/navbar_auto.js'></script>
 		<script src="/js/bootstrap-colorpicker.min.js"></script>
  <script src="/socket.io/socket.io.js"></script>
-
+ <script>var message = '<%- error %>';</script>
+	<script src="/js/common.js"></script>
+<script src="/js/settingsManager.js"></script>
 <script>
-var show_actual;
-var nbLoaded=0;
+var nbLoaded = 0;
 var workspacePlayground;
 var conditionsEditingName;
 var modifyBlocks;
-</script>
+var plugins = new Settings({
+        target: "#settings_main_menu",
+        title: "<i class='fa fa-plug'></i><span>Plugins</span>",
+        boxName: "Plugins",
+        content: '',
+        onOpened: function (id) {
+            var switchPlugin = new Settings({
+                    target: "#" + id + "_settingsPage",
+                    title: "<i class='fa fa-eye-slash'></i><span>Gérer</span>",
+                    boxName: "Gérer",
 
-<script>
+                    content: "",
+                    onOpened: function (id) {
+                        loadJS('/js/pluginsManager.js', function () {
+                            turnPluginStart(id);
+                        }, document.body);
+                    }
+                }).load();
+            var deletePlugin = new Settings({
+                    target: "#" + id + "_settingsPage",
+                    title: "<i class='fa fa-trash'></i><span>Supprimer</span>",
+                    boxName: "Supprimer",
+
+                    content: "",
+                    onOpened: function (id) {
+                        loadJS('/js/pluginsManager.js', function () {
+                            deletePluginStart(id);
+                        }, document.body);
+                    }
+
+                }).load();
+        }
+    }).load();
+
+var style = new Settings({
+        target: "#settings_main_menu",
+        title: "<i class='fa fa-pencil'></i><span>Style</span>",
+        boxName: "Style",
+
+        content: "<div id='stylePage'  class='material-shadow-2'><div id='flexStyle'><div><div class='stylePaheH3'>Couleur primaire</div><div id='cp8_container'></div></div><div><div class='stylePaheH3'>Couleur de l’arrière-plan</div><div id='cp9_container'></div></div></div><div id='changeStyleButtonBar'> <button class='material-design-normal-button' id='resetNewColors'>Original</button><button class='material-design-normal-button' id='saveNewColors'>Sauvegarder</button></div></div>",
+        onOpened: function (id) {
+            loadJS('/js/styleManager.js', function () {
+                startSytleManager();
+            }, document.body);
+        }
+    }).load();
+	
+var recipes = new Settings({
+        target: "#settings_main_menu",
+        title: "<i class='fa fa-codepen'></i><span>Recettes</span>",
+        boxName: "Recettes",
+        toHide: "#settings_main_menu",
+        content: "<div id='buttonsTopRecipe'><button class='material-design-normal-button'  id='createRecipe'>Créer une recette</button><button class='material-design-normal-button' id='modifyOldRecipe'>Modifier une recette</button></div><div id='conditionsButtons'><div id='saveConditionsNameInputBox'><div class='input-div-box input-name-recipe'><input type='text' placeholder='Nom de la recette' id='saveConditionsName' spellcheck='false' /></div></div><button class='material-design-normal-button' id='registerConditions' onclick='saveRecipe()'>Sauvegarder</button></div><div id='blocklyDiv' class='material-shadow-1' ></div><div id='listOldrecipesBlock'></div><div id='genratorBlockly' class='material-shadow-1'></div><span class='material-design-normal-button'  id='showConditionCode'>Voir le code <i class='fa fa-caret-down' aria-hidden='true'></i></span><div id='deleteConditions'><button onclick='deleteRecipe()' id='deleteConditionsButt' class='material-design-normal-button'>Supprimer</button></div>",
+        onOpened: function (id) {
+            loadJS('/js/recipesManager.js', function () {
+                startRecipe();
+				 inputbottombar();
+			new MaterialPlaceholder({text:"Nom de la recette",target:"#saveConditionsName" }).load();
+            }, document.body);
+        }
+    }).load();
+var disconnect = new Settings({
+        target: "#settings_main_menu",
+        title: "<i class='fa fa-sign-out' aria-hidden='true'></i><span>Se déconnecter</span>",
+        boxName: "",
+		classAttr:"disconnectButton",
+		ask:true,
+        content: "",
+        onClick: function () {
+         window.location = "/disconnect"
+        }
+    }).load();
 var loadJS = function (url, implementationCode, location) {
 
     var scriptTag = document.createElement('script');
@@ -143,35 +152,6 @@ jQuery.cachedScript = function (url, options) {
         });
     return jQuery.ajax(options);
 };
-
-$('.page').mousedown(function (e) { //fonction qui permet de cacher les popup lorsqu'on clique a coté
-    if (!$(show_actual).is(e.target) // if the target of the click isn't the container
-         && $(show_actual).has(e.target).length === 0) { //nor a descendant of the container
-        $('.popup').each(function () {
-            $(show_actual).hide(1000);
-        }); //on cache le popup actuel
-    }
-});
-$(".settings_menu_button").click(menuButton);
-function menuButton() {
-    var toOpen = $(this).attr("id").replace("Button", "Box");
-
-    $("#" + toOpen).show(500);
-    $(this).parent().hide(500);
-    $("#settings-step-back").show(100);
-}
-
-$("#settings-step-back").click(function () {
-    var toClose = '#' + $('.settings_page:visible').attr("id");
-    var toOpenButton = toClose.replace("Box", "Button");
-    var toOpen = $(toOpenButton).parent();
-
-    $(toClose).hide(500);
-    toOpen.show(500);
-    if (toOpen.attr('id') == 'settings_main_menu') {
-        $("#settings-step-back").hide(100);
-    }
-});
 
 function is_same(objOne, objTwo) {
     var objOneKeys = Object.keys(objOne),
@@ -205,48 +185,28 @@ function put_in_object(objOne) {
     return n;
 }
 function reboot(t) {
-    if (!t) {
-        $(show_actual).hide(1000);
-    } else {
-        $.get('/reboot/', function (data) {
-            if (data == 'rebooting') {
-                alert('Pratos is rebooting, please wait');
+
+    $.get('/reboot/', function (data) {
+        if (data == 'rebooting') {
+            var popup = new MaterialPopup({
+                    name: "Système",
+                    content: "<p>Pratos is rebooting, please wait</p>"
+                }).load()
+
                 setTimeout(function () {
                     location.reload()
                 }, 5000);
-            } else {
-                alert('Erreur');
-            }
-        });
+        } else {
+            alert('Erreur');
+        }
+    });
 
-    }
 }
-$("#turnPluginsButton").click(function () {
 
-    loadJS('/js/pluginsManager.js', function () {
-        turnPluginStart();
-    }, document.body);
 
-});
 
-$("#deletePluginsButton").click(function () {
-    loadJS('/js/pluginsManager.js', function () {
-        deletePluginStart();
-    }, document.body);
 
-});
 
-$("#styleButton").click(function () {
- loadJS('/js/styleManager.js', function () {
-        startSytleManager();
-    }, document.body);
-});
-
-$("#conditionsButton").click(function () {
-    loadJS('/js/recipesManager.js', function () {
-        startRecipe();
-    }, document.body);
-});
 </script>
 <style>
 </style>

@@ -17,7 +17,7 @@
 		<div id='manage_accessories' class='page page-nav'>
 			<div id="access_header">
 				
-				<h2 id='all_acch2' data-ripple='rgba(0,0,0, 0.3)' class=" material-shadow-fade-3" >Tous &nbsp;&nbsp; <i class='fa fa-caret-down'></i></h2>
+				<div id='all_acch2' data-ripple='rgba(0,0,0, 0.3)' class=" material-shadow-fade-3" >Tous &nbsp;&nbsp; <i class='fa fa-caret-down'></i></div>
 			</div>
 			<img id='loading_accessories' src="/img/loading.gif"/>
 			<div id='all_accessories'></div>
@@ -37,13 +37,13 @@ if(roomName != null){
 			$('#all_acch2').html(roomName +" &nbsp;&nbsp; <i class='fa fa-caret-down'></i>");
 }
 var roomSaved = 0;
-		var is_updating = false, //pour savoir si on est  en train de modifier les accessoires
+		var
 accesorie_editing_oldName = null,
 			accesorie_editing_aid = null,
 			first_load = true, //pour savoir si l'image de chargement a deja ete cachee
-
+is_updating = false,
 			all_accessories = {}, //stocke le tableau de tous les accessoires
-			show_actual = '#empty', //lors ce que l'on edit, pour savoir qu'elle popup cacher lorsqu'on clique a cote
+			
 			img_correspond = 0,
 			form_display = '';//tableau faisant correspondre les identifiants des accessoires aux icones correspondantes
 	</script>

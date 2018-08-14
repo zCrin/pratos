@@ -5,6 +5,7 @@ $('.not_colored').css('color',$('nav').css('background-color'))
 $('#open-nav-button').click(function(){
 	  var $self = $('body');
 	  $('.page').fadeOut(500);
+	   $('.material-button').fadeOut(500);
 
     var initPos = $self.css("position"),
         offs = $self.offset(),
@@ -33,14 +34,15 @@ $('#open-nav-button').click(function(){
  offs =$('#open-nav-button').offset(),
         x = offs.left,
         y =  offs.top;
-		$('#close-nav-button').css({
-			 left: x,
 		
-        top: y 
+		$('#close-nav-button').css({
+			 left: x-parseFloat($('#close-nav-button').css('padding-left').replace('px','')),
+		
+        top: y  +parseFloat($('#close-nav-button').css('padding-top').replace('px',''))/2
 		}); $('.menu-button').css('font-size',$('.menu-button').width()/6.5);
 			$('nav').fadeIn(500);
 				
-       
+     //  $('#menu').css('top','-'+parseFloat($('#close-nav-button').css('height').replace('px',''))+'px')
         
         }
       }
@@ -49,6 +51,7 @@ $('#open-nav-button').click(function(){
 
 $('#close-nav-button').click(function(){
 		 $('.page').fadeIn(500);
+		  $('.material-button').fadeIn(500);
 	$('nav').hide();
 	$('.rippleNav').addClass('remove-navbar')
   });
