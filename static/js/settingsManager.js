@@ -33,6 +33,7 @@ Settings.prototype.openSetting = function () {
     var that = this;
 
     var boxName = (that.construtor.boxName) ? that.construtor.boxName : that.construtor.title;
+	that.oldHTwo =  $('h2').html();
     $('h2').html(boxName);
     $(that.construtor.target).fadeOut(500); //target correspond to the previous menu you wanna hide when you open the new page
 
@@ -47,6 +48,7 @@ Settings.prototype.openSetting = function () {
     }
 	$('.' + that.id + '_settingsBack').show(500).click(function(){
 		
+		 $('h2').html(that.oldHTwo);
 		 $("#" + that.id + "_settingsPage").fadeOut(500);
 		 
     setTimeout(function () {

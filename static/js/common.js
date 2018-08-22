@@ -246,9 +246,9 @@ MaterialSelect.prototype.load = function () {
     })
 }
 
-$('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', '')))/2  + 'px');
+$('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', ''))) / 2 + 'px');
 $(window).resize(function () {
-    $('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', '')))/2  + 'px');
+    $('h2').css('top', (-20) - (parseFloat($('#open-nav-button').css('padding-bottom').replace('px', ''))) / 2 + 'px');
 });
 MaterialSelect.prototype.close = function (callback) {
     var Select = this.select;
@@ -320,7 +320,7 @@ MaterialPopup.prototype.load = function () {
 }
 MaterialPopup.prototype.close = function () {
     var that = this;
-		
+
     $("[popupBckID='" + that.id + "']").animate({
         top: "100%",
         height: "0px"
@@ -339,12 +339,14 @@ MaterialPopup.prototype.close = function () {
         $("[popupBckID='" + that.id + "']").remove();
     }, 1000);
 }
+var noPla = 0;
 MaterialPlaceholder = function (obj) {
     this.build(obj)
 }
 MaterialPlaceholder.prototype.build = function (obj) {
     this.Placeholder = obj;
-    this.id = Date.now();
+	noPla++;
+    this.id =noPla;
 }
 MaterialPlaceholder.prototype.load = function () {
     var that = this;
@@ -360,8 +362,19 @@ MaterialPlaceholder.prototype.load = function () {
 
         });
 
+    } else {
+        if (Placeholder.empty) {
+            if (Placeholder.not_empty) {
+                $(target).parent().removeClass(Placeholder.not_empty);
+            }
+            $(target).parent().addClass(Placeholder.empty);
+        }
     }
     $(target).focusin(function () {
+        if (Placeholder.not_empty) {
+            $(target).parent().removeClass(Placeholder.empty);
+            $(target).parent().addClass(Placeholder.not_empty);
+        }
         $("[theplaceholderID='" + that.id + "']").remove();
         $(target).css('margin-top', '0')
         $('<span theplaceholderID="' + that.id + '"style="margin-top:' + that.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
@@ -386,7 +399,19 @@ MaterialPlaceholder.prototype.load = function () {
             $("[input-placeholder-style='" + that.id + "']").remove();
 
             $(target).css('margin-top', $("[theplaceholderID='" + that.id + "'").css('margin-top'))
-            $("[theplaceholderID='" + that.id + "'").hide('1000').remove();
+
+            $("[theplaceholderID='" + that.id + "'").hide('1000', function () {
+                $(this).remove();
+
+                if (Placeholder.empty) {
+                    if (Placeholder.not_empty) {
+                        $(target).parent().removeClass(Placeholder.not_empty);
+                    }
+                    $(target).parent().addClass(Placeholder.empty);
+
+                }
+
+            });
         }
     })
 

@@ -55,6 +55,7 @@ for(var i = 0; i < settingsL; i++){ %>
 		<script src="/js/bootstrap-colorpicker.min.js"></script>
  <script src="/socket.io/socket.io.js"></script>
  <script>var message = '<%- error %>';</script>
+
 	<script src="/js/common.js"></script>
 <script src="/js/settingsManager.js"></script>
 <script>
@@ -108,7 +109,6 @@ var style = new Settings({
             }, document.body);
         }
     }).load();
-	
 var recipes = new Settings({
         target: "#settings_main_menu",
         title: "<i class='fa fa-codepen'></i><span>Recettes</span>",
@@ -118,20 +118,95 @@ var recipes = new Settings({
         onOpened: function (id) {
             loadJS('/js/recipesManager.js', function () {
                 startRecipe();
-				 inputbottombar();
-			new MaterialPlaceholder({text:"Nom de la recette",target:"#saveConditionsName" }).load();
+                inputbottombar();
+                new MaterialPlaceholder({
+                    text: "Nom de la recette",
+                    target: "#saveConditionsName"
+                }).load();
             }, document.body);
         }
     }).load();
+ <% // if(client.userName" == "admin"){ %>
+var users = new Settings({
+        target: "#settings_main_menu",
+        title: "<i class='fa fa-user'></i><span>Utilisateurs</span>",
+        boxName: "Utilisateurs",
+
+        content: '	<div data-ripple="rgba(0,0,0, 0.3)" class="material-button material-shadow-3 "><i class="fa fa-plus" aria-hidden="true"></i></div>',
+        onOpened: function (id) {
+            $.getJSON("/get_userList/", function (res) {
+                if (!res.error) {
+                    var e = res.length;
+                    for (var f = 0; f < e; f++) {
+                        var user = res[f];
+                        var userIcon = (user.icon) ? "<img src='" + user.icon + "' class='user-manage-icon'/>" : "<div class='user-manage-icon' style='background-color:#" + user.userID.substring(0, 6) + ";'></div>";
+                        var rO = (user.userName == "admin") ? "readonly" : "";
+                        var name = (user.name) ? user.name : "";
+						 var surname = (user.surname) ? user.surname : "";
+  var email = (user.email) ? user.email : "";
+  var birthday = (user.birthday) ? user.birthday : "";
+
+                        var me = new Settings({
+                                target: "#" + id + "_settingsPage",
+                                title: userIcon + "<span class='user-manage-username'>" + user.userName + "</span>",
+                                boxName: "Modifier profil",
+
+                                content: "  <div class='edit_user_box'> <div class='flex-edit_user_box'> <div class='img-edit_user_box' style='background-color:#" + user.userID.substring(0, 6) + ";'></div><div class='input-edit_user_box'> <div class='first-input-edit_user_box'> <div class='group-input-edit-box'> <div class='input-div-box input-edit-username'> <input placeholder='Pseudo' value='" + user.userName + "' "+rO+" type='text' id='update_username' spellcheck='false'/> </div></div><div class='group-input-edit-box'> <div class='input-div-box input-edit-username'> <input value='" + name + "' type='text' placeholder='Nom' id='update_name' spellcheck='false'/> </div></div></div><div class='first-input-edit_user_box'> <div class='group-input-edit-box'> <div class='input-div-box input-edit-username'> <input value='" + email + "' type='text' placeholder='Email' id='update_email' spellcheck='false'/> </div></div><div class='group-input-edit-box'> <div class='input-div-box input-edit-username'> <input value='" + surname + "' type='text' placeholder='Prénom' id='update_surname' spellcheck='false'/> </div></div></div><div class='first-input-edit_user_box'> <div class='group-input-edit-box'> <div class='input-div-box input-edit-username'> <input value='" + birthday + "' type='text' placeholder='Date de naissance' id='update_birthday' spellcheck='false'/> </div></div></div><div class='second-input-edit_user_box'></div></div></div></div>",
+                                onOpened: function (id) {
+                                    inputbottombar();
+                                    new MaterialPlaceholder({
+                                        text: "Pseudo",
+                                        target: "#update_username",
+										  empty: "empty-input-userEdit",
+                                        not_empty: "not_empty-input-userEdit"
+                                    }).load();
+                                    new MaterialPlaceholder({
+                                        text: "Nom",
+                                        target: "#update_name",
+                                        empty: "empty-input-userEdit",
+                                        not_empty: "not_empty-input-userEdit"
+                                    }).load();
+									 new MaterialPlaceholder({
+                                        text: "Email",
+                                        target: "#update_email",
+                                        empty: "empty-input-userEdit",
+                                        
+                                        not_empty: "not_empty-input-userEdit"
+                                        
+                                    }).load();
+									 new MaterialPlaceholder({
+                                        text: "Prénom",
+                                        target: "#update_surname",
+                                        empty: "empty-input-userEdit",
+                                        not_empty: "not_empty-input-userEdit"
+                                    }).load();
+									 new MaterialPlaceholder({
+                                        text: "Date de naissance",
+                                        target: "#update_birthday",
+                                        empty: "empty-input-userEdit",
+                                        not_empty: "not_empty-input-userEdit"
+                                    }).load();
+									$("#update_birthday").focusin(function(){
+									console.log('r')
+									});
+                                }
+                            }).load();
+                    }
+                }
+            });
+        }
+
+    }).load();
+//}
 var disconnect = new Settings({
         target: "#settings_main_menu",
         title: "<i class='fa fa-sign-out' aria-hidden='true'></i><span>Se déconnecter</span>",
         boxName: "",
-		classAttr:"disconnectButton",
-		ask:true,
+        classAttr: "disconnectButton",
+        ask: true,
         content: "",
         onClick: function () {
-         window.location = "/disconnect"
+            window.location = "/disconnect"
         }
     }).load();
 var loadJS = function (url, implementationCode, location) {
@@ -202,8 +277,6 @@ function reboot(t) {
     });
 
 }
-
-
 
 
 

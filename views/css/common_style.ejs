@@ -1104,7 +1104,7 @@ margin-top: 20px;
 	background-color:lightgrey;
 	color:white;
 }
-#togglePluginsPage, #deletePluginsPage, #stylePage{
+#togglePluginsPage, #deletePluginsPage, #stylePage,.edit_user_box{
 	background-color:white;
 	margin: 2% auto;
 	padding: 2%;
@@ -1215,3 +1215,93 @@ margin: 10px auto;
 	margin:2% auto;
 	font-size: 80%;
 }
+.user-manage-icon{
+	    border-radius: 50%;
+    background-color: red;
+    height: 40px;
+    width: 40px;
+	    vertical-align: middle;
+		margin: 0 auto;
+}
+.user-manage-username{
+	vertical-align: middle;
+}
+.img-edit_user_box{
+	    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 2% 5% 2% 0;
+}
+.flex-edit_user_box{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	
+
+}.input-edit_user_box{
+	height:60vh;
+min-width:70%;
+
+	flex-grow: 1;
+	
+	margin-top: 2%;
+}
+.first-input-edit_user_box{
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+	
+	flex-wrap: wrap;
+	
+}
+.first-input-edit_user_box .group-input-edit-box{
+	width: 40%;
+	    min-width: 266px;
+	
+	
+}
+.input-edit-username{
+margin:0 auto;
+width:100%;
+margin-bottom: 12%;
+}
+.input-edit-username input{
+	
+font-size: 120%;
+text-align:left;
+border:0;
+border-bottom:1px solid lightgrey;
+
+
+		
+    outline: none;
+   
+	padding:0;
+
+	
+	width:100%;
+}
+
+.empty-input-userEdit{
+	transition: 1s ease;
+	 position: relative;
+	top:22.5px;   
+	    margin-bottom: 20%;
+	
+}
+.not_empty-input-userEdit{
+	transition: 1s ease;
+	 position: initial;
+	top:0px;                                
+}
+@media only screen and (max-width: 622px){
+.empty-input-userEdit{
+	transition: 1s ease;
+	 position: inital;
+	top:0px;         
+  margin-bottom: 15%;	
+}
+}
+
+.edit_user_box{padding-bottom: 44px;}

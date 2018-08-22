@@ -12,7 +12,7 @@ function startSytleManager() {
 
         $("h1,h2, #open-nav-button, .closebtn, .colored, #menu-step-back").css('color', e.color.toRgbString());
         $("header,  .settings_menu_button, .colored").css('border-color', e.color.toRgbString());
-       
+
         $("#logo").css('fill', e.color.toRgbString());
         $('#nav').addClass('full-nav').promise().done(function () {
             $(".full-nav").css('border-color', e.color.toRgbString()).promise().done(function () {
@@ -46,54 +46,13 @@ $("#resetNewColors").click(function () {
     $('#cp8_container').colorpicker('setValue', "#05FEFF");
 });
 $("#saveNewColors").click(function () {
-
-    var colorSet = 0;
-    var socket = io.connect("//" + document.domain, {
-            secure: true
-        });
-    var lastReceived;
-    var nC = $('#cp8_container').data('colorpicker').color.toRgbString();
-    var nO = $('#cp9_container').data('colorpicker').color.toRgbString();
-    socket.on('connect', function (data) {
-        if (!colorSet) {
-
-            socket.emit('updateCSSRequest', nC, nO);
-            $("#styleBox button").hide(1000);
-            $("#flexStyle").html("<div id='progressbar'></div> <div id='styleState'>Chargement...<br /> Cela peut prendre quelques minutes. </div>");
-            $("#progressbar").progressbar({
-                value: false
-            });
-            $("#progressbar").find(".ui-progressbar-value").css("background-color", nC);
-            socket.on('disconnect', function () {
-                alert('eror socket disconnected');
-            });
-
-            socket.on('ping', function (data) {
-                socket.emit('pong');
-
-            });
-            socket.on('updateCSSERROR', function (x) {
-                alert(x);
-            });
-            socket.on('updateCSS', function (ans, step) {
-                setInterval(function () {
-                    socket.emit('updateCSSRECONNECTION');
-                }, 1000);
-                setTimeout(function () {
-                    alert("Quelque chose a disfonctionné");
-                    location.reload();
-                }, 360000);
-
-                if (step == 6) {
-                    socket.emit('updateCSSConfirm');
-                    setTimeout(function () {
-                        location.reload();
-                    }, 2000);
-
-                }
-
-                colorSet = 1;
-            });
+    $.post('/change_style/', {
+        mainColor: $('#cp8_container').data('colorpicker').color.toRgbString(),
+        secondColor: $('#cp9_container').data('colorpicker').color.toRgbString()
+    }, function (res) {
+        if (res = 'reload') {
+            location.reload();
         }
     });
+
 });

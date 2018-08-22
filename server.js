@@ -1,9 +1,9 @@
 /*
  * License MIT
  * « Copyright © 2018, Pratos »
- * v 1.4.1
-
+ * v 1.5.0
  */
+
 var how = 0;
 
 var fs = require("fs");
@@ -79,7 +79,7 @@ fs.readFile(__dirname + "/conf/settings.json", 'utf8', function (err, settingsRa
                     system("Removed old uploads from directory /uploads");
                 });
 
-                style.init(globalVariable);
+               // style.init(globalVariable);
 
                 globalVariable.event = new EventEmitter();
 

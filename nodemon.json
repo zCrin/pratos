@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "ignore": ["conf/*", "log/*","static/*","uploads/*","views/*"],
+   "ignoreRoot": [".git","node_modules/!(pratos(.*))/*"]
+ 
+}
