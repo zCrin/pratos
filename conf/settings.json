@@ -33,6 +33,7 @@
 		"82.239.21.245": "http://localhost:3003"
 	},
 	"plugins": [
+		"pratos_favorite_accessories",
 		"pratos_google_home",
 		"pratos_my_accessories",
 		"pratos_restart_homebridge",

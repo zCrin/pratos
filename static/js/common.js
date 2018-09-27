@@ -5,7 +5,8 @@ var toSay = {
         action: 'Perdu',
         onActionClick: function () {
             redirect('askPassword')
-        }
+        },
+		rewrite:true
     },
     'Session expired': 'La session a expiré',
     'sessionDoesntExistAnymore': 'La session a expiré',
@@ -62,7 +63,9 @@ if (toSay[message]) {
             onActionClick: toSay[message].onActionClick
         });
     }
-
+if(toSay[message].rewrite){
+	window.history.pushState("", "", location.protocol + '//' + location.host + location.pathname);
+}
 }
 function getHelp(nb) {
     alert(nb)
@@ -122,10 +125,10 @@ jQuery(function ($) {
 });
 
 function inputbottombar() {
-    $('input').blur(function () {
+    $('input').not("input[type='checkbox']").blur(function () {
         $('.material-input-focus').toggleClass('material-input-focus-scale material-input-focus-unscale');
     });
-    $('input').focusin(function () {
+    $('input').not("input[type='checkbox']").focusin(function () {
 
         $(this).attr('tabindex', "0")
         $('.material-input-focus').remove()
@@ -358,7 +361,7 @@ MaterialPlaceholder.prototype.load = function () {
         $(target).css('margin-top', '0')
         $('<span theplaceholderID="' + this.id + '"style="color:grey;margin-top:' + this.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
 
-            $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "::placeholder {color:white;}</style>");
+            $('body').append("<style input-placeholder-style='" + that.id + "'>input[placeholderID='" + that.id + "']::placeholder {color:white;}</style>");
 
         });
 
@@ -379,7 +382,7 @@ MaterialPlaceholder.prototype.load = function () {
         $(target).css('margin-top', '0')
         $('<span theplaceholderID="' + that.id + '"style="margin-top:' + that.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
             $(target).attr('placeholderID', that.id)
-            $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "::placeholder {color:white;}</style>");
+           $('body').append("<style input-placeholder-style='" + that.id + "'>input[placeholderID='" + that.id + "']::placeholder {color:white;}</style>");
             $("[theplaceholderID='" + that.id + "'").css('color', $('h1').css('color'))
         });
     });
@@ -390,7 +393,7 @@ MaterialPlaceholder.prototype.load = function () {
             $(target).css('margin-top', '0')
             $('<span theplaceholderID="' + that.id + '"style="color:grey;margin-top:' + that.marginTop + '"class="material-input-placeholder">' + Placeholder.text + '</span>').insertBefore($(target).parent()).promise().done(function () {
                 $(target).attr('placeholderID', that.id)
-                $('body').append("<style input-placeholder-style='" + that.id + "'>" + target + "	::placeholder {color:white;}</style>");
+                $('body').append("<style input-placeholder-style='" + that.id + "'>input[placeholderID='" + that.id + "']::placeholder {color:white;}</style>");
 
             });
 

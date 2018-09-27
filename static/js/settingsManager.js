@@ -15,7 +15,7 @@ Settings.prototype.load = function () {
     $(this.construtor.target).append(this.box)
     if (this.construtor.onLoad) {
 
-        this.construtor.onLoad();
+        this.construtor.onLoad(that);
     }
 
     $("[box-id='" + this.id + "']").click(function () {

@@ -43,6 +43,18 @@
   font-weight: 700;
   src: url("fonts/sanfranciscodisplay-bold-webfont.woff");
 }
+body{
+	/* 
+	
+	https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb
+	https://images.pexels.com/photos/37349/rose-beautiful-beauty-bloom.jpg?auto=compress&cs=tinysrgb
+	
+	*/
+	background-image: url(https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb);
+
+	background-repeat: no-repeat;
+    background-position: center top;
+}
 html,body{
 	width:100%;
 	margin: 0;
@@ -995,7 +1007,7 @@ display: table;
 	display:flex;
 	    justify-content: space-around;
 margin-top:3%;
-}#updateRoom,#addRoom,#validate_room_creationButton{
+}#updateRoom,#addRoom,#validate_room_creationButton,#cancelUserDeletionButton{
 	color: white;
     background-color: grey;
     display: inline-block;
@@ -1015,7 +1027,7 @@ border-bottom:1px solid lightgrey;
 outline:none;
 	
 }
-#delete_roomButton{
+#delete_roomButton,#deleteUserValidatebutton{
 	color: white;
     background-color: #dd191d;
     display: inline-block;
@@ -1104,7 +1116,7 @@ margin-top: 20px;
 	background-color:lightgrey;
 	color:white;
 }
-#togglePluginsPage, #deletePluginsPage, #stylePage,.edit_user_box{
+#togglePluginsPage, #deletePluginsPage, #stylePage,.edit_user_box,.add_user_box{
 	background-color:white;
 	margin: 2% auto;
 	padding: 2%;
@@ -1112,6 +1124,7 @@ margin-top: 20px;
 	
 	
 }
+
 .downloaded_plugin{
 	border-bottom:1px solid lightgrey;
 	padding-bottom:1%;
@@ -1237,10 +1250,10 @@ margin: 10px auto;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-around;
-	
+	position:relative;
 
 }.input-edit_user_box{
-	height:60vh;
+	padding-bottom: 50px;
 min-width:70%;
 
 	flex-grow: 1;
@@ -1302,6 +1315,148 @@ border-bottom:1px solid lightgrey;
 	top:0px;         
   margin-bottom: 15%;	
 }
+
 }
 
 .edit_user_box{padding-bottom: 44px;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+
+}
+input[type=number]{
+font-size: 120%;
+text-align:left;
+border:0;
+border-bottom:1px solid lightgrey;
+text-align:center;
+ margin: 0;
+		 width:100%;
+    outline: none;
+   
+	padding:0;
+}
+.box-input-birthday-userEdit{
+	 width:15%;
+	 display:flex;
+	 flex-direction:column;
+	 
+}
+#year-input-birthday-userEdit{
+	width:22%;
+}
+#input-birthday-userEdit{
+	display:flex;
+    justify-content: center;
+	position:relative;
+	top:30px
+}
+#input-birthday-userEdit .separator-input-birthday-userEdit{
+	position: relative;
+    top: 22.5px;
+    color: lightgrey;
+    font-size: 140%;
+    display: block;
+    margin: 0% 1%;
+	font-weight: 200;
+    font-family: San Francisco;
+}
+.material-input-placeholder-birthday{
+	position:absolute;
+	top: -30px;
+color:lightgrey;
+font-weight:200;
+font-family: San Francisco;
+font-size:100%;
+text-align:left;
+}
+.empty-input-userEditBirthday{
+	transition: 1s ease;
+	 position: relative;
+	top:22.5px;   
+	    margin-bottom: 20%;
+	
+}
+.not_empty-input-userEditBirthday{
+	transition: 1s ease;
+	 position: initial;
+	top:0px;                                
+}
+#passwordChangeTitle,#banTitle{
+    width: 90%;
+    border-top: 2px solid lightgrey;
+    padding-top: 4%;
+    text-align: center;
+    color: black;
+    font-family: San Francisco;
+    font-size: 120%;
+    font-weight: 200;
+}
+.first-input-edit_user_box .group-input-edit-box-password{
+	
+	    min-width: 266px;
+	
+	
+}
+.first-input-edit_user_box .group-input-edit-box-password input{
+font-family: San Francisco;
+    font-weight: 200;
+}
+.passwordEditBox, .banBox{
+	    margin-top: 2%;
+		
+}
+#updatePasswordButton,#updateUserInfoButton,#UserButtonBanned,#UserButtonUnbanned,#UserButtonDelete{
+font-size: 90%;
+    margin: 0 auto;
+    padding:2%;
+	margin-top: 2%;
+    background: grey;
+    color: white;
+	}
+	#UserButtonBanned{
+	background: lightgreen;
+	}
+	#UserButtonUnbanned,#UserButtonDelete{
+	background: red;
+	}
+	#updateUserInfoButton{
+	position: relative;
+    
+    top: 30px;
+    margin-bottom: 2%;
+	}
+	#admin-digicode-input{
+	display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+	}
+	.img-edit_user_box-button{
+	position: absolute;top: 0px;left: 0px;
+	  height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 2% 5% 2% 0;
+	    text-align: center;
+		display:flex;
+		flex:1;
+		flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	font-size:120%;
+	opacity:0.8;
+	color:transparent;
+	background-color: transparent;
+	transition: 0.5s ease;
+	cursor:pointer;
+	}
+	.img-edit_user_box-button p, .img-edit_user_box-button i{
+	color:inherit;
+	}
+	.img-edit_user_box-button:hover,.img-edit_user_box-button:active{
+	color:white;
+	background-color: black;
+	cursor:pointer;
+	}
