@@ -32,7 +32,7 @@ if(alwaysConnectedId){
 	$.post('/remove_allowed_device/', {id:alwaysConnectedId},function(resp){
 	
 		  localStorage.setItem('alwaysAllowedId',"");
-		  window.location.replace('/admin/index/?error=removedAllowed')
+		  window.location.replace('/home/?error=removedAllowed')
 	});
 	}
 	});

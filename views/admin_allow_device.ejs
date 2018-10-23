@@ -28,7 +28,7 @@
 	$('#allow_device').click(function(){
 	$.get('/add_allowed_device/',function(ans){
 		  localStorage.setItem('alwaysAllowedId',ans);
-		  window.location.replace('/admin/index/?error=addedAllowed')
+		  window.location.replace('/home/?error=addedAllowed')
 	});
 	});
 	</script>

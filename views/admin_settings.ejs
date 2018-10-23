@@ -132,14 +132,36 @@ var recipes = new Settings({
 						
 var users = new Settings({
         target: "#settings_main_menu",
-        title: "<i class='fa fa-user'></i><span>Utilisateurs</span>",
+        title: "<i class='fa fa-users'></i><span>Utilisateurs</span>",
         boxName: "Utilisateurs",
 
-        content: '	<div data-ripple="rgba(0,0,0, 0.3)" id="addUserButton"class="material-button material-shadow-3 "><i class="fa fa-plus" aria-hidden="true"></i></div>',
+				 content: '',
+        onOpened: function (id) {
+            var userMode = new Settings({
+                    target: "#" + id + "_settingsPage",
+                    title: "<i class='fa fa-user'></i><span>Profils</span>",
+                    boxName: "Profils",
+
+                    content: '<div data-ripple="rgba(0,0,0, 0.3)" id="addUserButton"class="material-button material-shadow-3 "><i class="fa fa-plus" aria-hidden="true"></i></div>',
         onOpened: function(id){loadJS('/js/usersManager.js', function () {
                             startUserManager(id);
                         }, document.body);
-						}
+				} 
+                }).load();
+            var groupMode = new Settings({
+                    target: "#" + id + "_settingsPage",
+                    title: "<i class='fa fa-link'></i><span>Groupes</span>",
+                    boxName: "Groupes",
+
+                   content: '',
+                    onOpened: function (id) {
+                        loadJS('/js/groupManager2.js', function () {
+                           startGroupManager(id);
+                        }, document.body);
+                    }
+
+                }).load();
+        }
 						
 						
 					
@@ -157,16 +179,7 @@ var disconnect = new Settings({
             window.location = "/disconnect"
         }
     }).load();
-var loadJS = function (url, implementationCode, location) {
 
-    var scriptTag = document.createElement('script');
-    scriptTag.src = url;
-
-    scriptTag.onload = implementationCode;
-    scriptTag.onreadystatechange = implementationCode;
-
-    location.appendChild(scriptTag);
-};
 jQuery.cachedScript = function (url, options) {
     options = $.extend(options || {}, {
             dataType: "script",

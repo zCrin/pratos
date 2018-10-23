@@ -28,7 +28,7 @@
 		"pratos.ga": "http://localhost:3003",
 		"cloud.pratos.ga": "https://pratos.ga",
 		"www.pratos.ga": "http://localhost:3003",
-		"webcam.pratos.ga": "http://localhost:8081",
+		"webcam.pratos.ga": "http://192.168.0.28",
 		"webcam-setting.pratos.ga": "http://localhost:8080",
 		"82.239.21.245": "http://localhost:3003"
 	},

@@ -3,6 +3,12 @@
 	vertical-align: middle;
 }
 
+.loading { -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }}
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
@@ -86,6 +92,12 @@ font-family: "San Francisco";
 font-weight:200 !important;
 }
 .ui-button{
+		 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 background-color:white;
 font-family: San Francisco;
 	font-weight:200;padding:1%; font-size: 130%;
@@ -675,6 +687,12 @@ border:1px solid <%= background_color %>;
    display: table; 
 }
 .menu-button{
+		 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
     margin-left: 1.5%;
 
 	display:table;
@@ -715,6 +733,12 @@ margin:2% auto;
    }
    
 	.material-button{
+			 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 	cursor:pointer;
 	color: white;
    font-size:160%;
@@ -745,6 +769,12 @@ margin:2% auto;
 }
 }
 .material-design-normal-button{
+		 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 display: table;
     border-radius: 2px;
     border: 0;
@@ -952,16 +982,19 @@ color:black;
 	 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	}
 	.material-selct div{
+	    font-weight: 400;
+    font-family: San Francisco;
 		cursor:pointer;
 	transition: 0.2s ease;
 	text-align: left;
     font-size: 140%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid lightgrey;
     margin-top: 2%;
     padding: 1% 2%;
     cursor: pointer;
 	display:flex;
 	justify-content: space-between;
+	color:grey;
 	}
 	.material-design-selected{
 		color:lightgrey;
@@ -996,6 +1029,12 @@ display: table;
 		transition: 0.3s ease;
 		cursor:pointer;
 		color:lightgrey;
+			 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
 .all_ico{
@@ -1003,11 +1042,11 @@ display: table;
 
 }
 
-#selectRoomBox,#manageRoomButtonBar{
+#selectRoomBox,#manageRoomButtonBar,#manageGrouptmButtonBar{
 	display:flex;
 	    justify-content: space-around;
 margin-top:3%;
-}#updateRoom,#addRoom,#validate_room_creationButton,#cancelUserDeletionButton{
+}#updateRoom,#addRoom,#validate_room_creationButton,#cancelUserDeletionButton,#updateGroupButton,#showusersGroupButton,#addGroupButton,#deleteGroupButton,#updateGroupInfoButton{
 	color: white;
     background-color: grey;
     display: inline-block;
@@ -1112,11 +1151,12 @@ margin-top: 20px;
 	display:none;
 }
 #settingsButton-step-back{
-	font-size:70%;
+	font-size:80%;
 	background-color:lightgrey;
 	color:white;
+	padding: 2% 2%;
 }
-#togglePluginsPage, #deletePluginsPage, #stylePage,.edit_user_box,.add_user_box{
+#togglePluginsPage, #deletePluginsPage, #stylePage,.edit_user_box,.add_user_box,.manage_groupsBox{
 	background-color:white;
 	margin: 2% auto;
 	padding: 2%;
@@ -1190,11 +1230,11 @@ display:none;
 justify-content:space-around;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.input-name-recipe{
+.input-name-recipe,.input-name-group{
 margin:0 auto;
 width:100%;
 }
-.input-name-recipe input{
+.input-name-recipe input,.input-name-group input{
 font-size: 120%;
 text-align:left;
 border:0;
@@ -1403,7 +1443,7 @@ text-align:left;
 font-family: San Francisco;
     font-weight: 200;
 }
-.passwordEditBox, .banBox{
+.passwordEditBox, .banBox, .deleteBox{
 	    margin-top: 2%;
 		
 }
@@ -1460,3 +1500,112 @@ font-size: 90%;
 	background-color: black;
 	cursor:pointer;
 	}
+	#selectGroupUpper{
+	    width: 40%;
+    min-width: 266px;
+	}
+	#selectGroupUpperTarget{
+	font-size:120%;}
+
+@keyframes bubble {
+    0%   { transform:scale(0); opacity:0.0; }
+   
+    100% { transform:scale(1.0); opacity:1.0; }
+}
+@keyframes bubbleR {
+    0%   { transform:scale(1.0); opacity:1.0; }
+   
+    20%{ opacity:0.0;}
+	100% {transform:scale(0); opacity:0.0;}
+}
+.substrate > span{
+	transform:scale(0); opacity:0.0;
+	margin-top: 5%;
+			margin-bottom: 5%;
+}
+	.substrate{
+		
+		
+		min-width:100%;
+		display:flex;
+			
+	
+		
+		flex-wrap: wrap;
+		flex:1;
+		justify-content: space-around;
+		
+	}
+		.substrate[substrateid="-1"] > span ,.substrateVisibleB{
+		animation: bubble 1.0s forwards;
+-webkit-animation: bubble 1.0s forwards; 
+		
+	}
+	.substrate[substrateid="-1"],.substrateVisible{
+			display:flex;
+			
+			animation: bubble 1.0s forwards;
+-webkit-animation: bubble 1.0s forwards; 
+	
+		
+		flex-wrap: wrap;
+		flex:1;
+		justify-content: space-around;
+		
+		
+	}
+	.substrateHiddenB,.substrateHidden{
+		animation: bubbleR 2.0s forwards;
+-webkit-animation: bubbleR 2.0s forwards; 
+
+
+	}
+	.substrateHidden2{
+	display:none;
+
+	}
+	.disabledGrouptButton{
+		background-color: white;
+    color: grey;
+    position: relative;
+    box-shadow: none;
+   
+    border: 1px solid lightgrey;
+	}
+	.disabledGrouptButton:hover{
+		 box-shadow: none;
+	
+	}
+	#updateGroupButton{
+	color:grey;
+	background-color:white;
+	}#showusersGroupButton{
+		color:white;
+		background-color:<%= background_color %>;
+		/* has to change color if is light */
+	}#addGroupButton{
+		color:white;
+		background-color:<%= global_color %>; 
+		/* has to change color if is light */
+	}#deleteGroupButton{
+		color:white;
+		background-color:red; 
+		    padding: 2%;
+    font-size: 100%;
+	}
+	#updateGroupInfoButton{    padding: 2%;
+    font-size: 100%;}
+	#manageGrouptmButtonBar{
+		opacity: 0;
+    transition: 2s ease;
+display:flex;
+
+	}
+	.add_group_box{
+		display: flex;
+    flex-direction: column;
+    width: 60%;
+	  margin: 2% auto;
+	}
+	
+	.input-name-group input{    margin: 8% 0%; }
