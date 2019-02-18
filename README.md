@@ -1,5 +1,5 @@
 
-<img src="https://github.com/zCrin/pratos/blob/master/static/img/logo.svg.ejs"  id="logo" alt="logo" width="160px" height="160px">
+<img src="https://raw.githubusercontent.com/zCrin/pratos/master/static/img/logo.svg.ejs%20?sanitize=true"  id="logo" alt="logo" width="160px" height="160px">
 
 # Pratos (don't download now, contact me for infos)
 ===================
