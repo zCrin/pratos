@@ -2,8 +2,7 @@
 <img src="https://raw.githubusercontent.com/zCrin/pratos/master/static/img/website-icons/android-chrome-192x192.png"  id="logo" alt="logo" width="160px" height="160px">
 
 # Pratos (don't download now, contact me for infos)
-===================
-
+------------------
 Git : 
 ![Github All Releases](https://img.shields.io/github/downloads/pratos/pratos/total.svg) 
 ![GitHub commit activity the past week, 4 weeks, year](https://img.shields.io/github/commit-activity/y/zCrin/pratos.svg)
@@ -14,6 +13,8 @@ Git :
 npm : 
 ![npm](https://img.shields.io/npm/dw/pratos.svg)
 ![npm](https://img.shields.io/npm/v/pratos.svg)
+-------------
+_Tested with ios 12.2 (iPhone and iPad), Chrome (Version 73.0.3683.103 (Build officiel) (64 bits))_
 
 -------------
 ## The Project 
