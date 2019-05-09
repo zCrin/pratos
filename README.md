@@ -25,6 +25,7 @@ Pratos is a _smart_ personal assistant that is truly personnal. Indeed you can _
 -------------
 Indeed at the beginning, the idea was to allow everyone to control their house with HomeKit on non-Apple Device or without having an Apple TV. Today Pratos perfectly fullfilled this goal. But why stopping here ? 
 I decided to build Pratos as a _personal assistant_.
+With plugins also works for Google Home, Alexa and lots others.
 
 ## How is Pratos personal ?
 -----------
