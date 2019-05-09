@@ -1,7 +1,7 @@
 
 <img src="https://raw.githubusercontent.com/zCrin/pratos/master/static/img/website-icons/android-chrome-192x192.png"  id="logo" alt="logo" width="160px" height="160px">
 
-# Pratos (don't download now, contact me for infos)
+# Pratos (don't download now, contact me for infos) PROJECT STOPPED FOR 2 YEARS (AT LEAST)
 ------------------
 Git : 
 ![Github All Releases](https://img.shields.io/github/downloads/pratos/pratos/total.svg) 
